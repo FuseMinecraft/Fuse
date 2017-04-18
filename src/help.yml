@@ -1,0 +1,11 @@
+# Fuse Help
+# By Telesphoreo
+
+# Configuration File
+# server.spawn_on_join (options: true/false) - Should a player teleport to spawn when they join the game?
+# server.drop_items_on_death (options: true/false) - Should items drop on death after a player dies?
+# server.clear_inventory_on_join (options: true/false) - Should a players inventory be cleared after joining?
+# server.dev (options: true/false) - Turn on developer mode?
+# server.applications_enabled (options: true/false) - Are applications enabled?
+
+

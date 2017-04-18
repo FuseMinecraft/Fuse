@@ -1,0 +1,82 @@
+name: Trident
+version: 6.1
+description: Fuse Networkss Utils plugin
+authors: [PacksGamingHD, OxLemonxO, Adaptified, Madgeek1450, Prozza, _Windows]
+main: com.packsnetwork.trident.Trident
+commands:
+  adminchat:
+    description: Talk with other admins
+    aliases: o
+    permission: packscore.adminchat.use
+    usage: /<command> <message>
+  admininfo:
+    description: Tells a person how to apply for moderator
+    aliases: [ai, apply]
+    usage: /<command>
+  clearlag:
+    description: Removes server entities
+    permission: packscore.clearlag
+    aliases: [ew, rd]
+    usage: /<command> [-s]
+  commandspy:
+    description: Spy on other players commands
+    aliases: cmdspy
+    permission: packscore.cmdspy.use
+    usage: /<command>
+  consolesay:
+    description: Chat from the console
+    aliases: csay
+    usage: /<command> <message>
+  contributors:
+    description: Lists all the contributors
+    aliases: contributers
+    usage: /<command>
+  developer:
+    description: Developer command
+    aliases: dev
+    usage: /<command> <on | off | status>
+  discord:
+    description:  Gives a link to the Discord server
+    usage: /<command>
+  forums:
+    description: Gives a link to the forums
+    aliases: [forum, fourms, fourm]
+    usage: /<command>
+  fw:
+    description: Shoots a firework in the sky
+    usage: /<command>
+  gcmd:
+    description: Makes another player do a command
+    permission: packscore.gcmd
+    usage: /<command> [player] [command]
+  information:
+    description: Shows information about the server you're on
+    usage: /<command>
+  kit:
+    description: Gives a kit
+    aliases: kits
+    usage: /<command>
+  plotworld:
+    description: Teleports a player to the plotworld or the big plotworld
+    usage: /<command> [big]
+  pluginmanage:
+    description: Manage plugins
+    aliases: [plc, pm]
+    permission: packscore.pluginmanage
+    usage: /<command> <<enable | disable | reload> <pluginname>> | list>
+  staff:
+    description: Shows all the staff on Fuse Networks
+    aliases: [admins, adminlist, moderators, modlist, builders, builderlist, developers, devlist]
+    usage: /<command>
+  trident:
+    description: Shows information about Trident
+    aliases: [oxygen, packscore, sky, nitrogen]
+    usage: /<command> [reload | debug]
+  unloadchunks:
+    description: Unloads unused chunks
+    aliases: [uc, rc]
+    permission: packscore.unloadchunks
+    usage: /<command> [-s]
+  website:
+    description: Gives a link to the website
+    usage: /<command>
