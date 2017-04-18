@@ -36,6 +36,7 @@ public class Command_fuse extends BaseCommand {
         sender.sendMessage(ChatColor.RED + "Compiled on " + Fuse.buildDate + " by " + Fuse.buildCreator);
         sender.sendMessage(ChatColor.GREEN + "Type /fuse help for command usage");
         sender.sendMessage(ChatColor.GREEN + "Type /contributors to see who contributed to Fuse");
+        sender.sendMessage(ChatColor.GREEN + "Type /update to check for and install updates.");
         if (dev.equals("true"))
         {
         sender.sendMessage(ChatColor.DARK_AQUA + "Fuse Networks is currently in development mode. "

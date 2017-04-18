@@ -20,7 +20,7 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Updater {
-  	private final String dlLink = "https://www.dropbox.com/s/l3yvrrfbof8kqff/Fuse.jar?dl=1";
+  	private final String dlLink = "http://vps76574.vps.ovh.ca/Fuse.jar";
 	private final String versionLink = "http://vps76574.vps.ovh.ca/version.txt";
 	private Plugin plugin;
 	
