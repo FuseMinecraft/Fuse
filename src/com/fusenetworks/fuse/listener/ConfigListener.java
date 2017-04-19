@@ -21,7 +21,7 @@ public class ConfigListener implements Listener {
 
     @EventHandler
     public void onDrop(PlayerDropItemEvent e) {
-        if(!e.getPlayer().hasPermission("packscore.nodrop.bypass")) {
+        if (!e.getPlayer().hasPermission("fuse.nodrop.bypass")) {
         e.getPlayer().sendMessage(ChatColor.RED + "You cannot drop items!");
         e.setCancelled(true);
         } else {
