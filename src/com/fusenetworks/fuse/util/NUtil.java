@@ -1,10 +1,7 @@
 package com.fusenetworks.fuse.util;
 
 import static com.fusenetworks.fuse.Fuse.plugin;
-import java.io.File;
 import java.lang.reflect.Field;
-import java.net.MalformedURLException;
-import java.net.URISyntaxException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -45,38 +42,38 @@ public class NUtil
         NUtil.playerMsg(sender, message, ChatColor.GRAY);
     }
     public static void moderatorAdminChat(String name, String message) {
-        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("packscore.adminchat.see"))).forEach((player) -> {
+        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("fuse.adminchat"))).forEach((player) -> {
             player.sendMessage("§7[AdminChat] " + ChatColor.BLUE + name + " §8[§dModerator§8]"+ "§f: " + ChatColor.AQUA + message);
         });
     }
     public static void adminAdminChat(String name, String message) {
-        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("packscore.adminchat.see"))).forEach((player) -> {
+        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("fuse.adminchat"))).forEach((player) -> {
             player.sendMessage("§7[AdminChat] " + ChatColor.BLUE + name + " §8[§9Admin§8]" + "§f: " + ChatColor.AQUA + message);
         });
     }
     public static void devAdminChat(String name, String message) {
-        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("packscore.adminchat.see"))).forEach((player) -> {
+        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("fuse.adminchat"))).forEach((player) -> {
             player.sendMessage("§7[AdminChat] " + ChatColor.BLUE + name + " §8[§5Dev§8]"+ "§f: " + ChatColor.AQUA + message);
         });
     }
     
     public static void builderAdminChat(String name, String message) {
-        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("packscore.adminchat.see"))).forEach((player) -> {
+        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("fuse.adminchat"))).forEach((player) -> {
             player.sendMessage("§7[AdminChat] " + ChatColor.BLUE + name + " §8[§bBuilder§8]"+ "§f: " + ChatColor.AQUA + message);
         });
     }
     public static void nullAdminChat(String name, String message) {
-        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("packscore.adminchat.see"))).forEach((player) -> {
+        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("fuse.adminchat"))).forEach((player) -> {
             player.sendMessage("§7[AdminChat] " + ChatColor.BLUE + name + "§f: " + ChatColor.AQUA + message);
         });
     }
     public static void ownerAdminChat(String name, String message) {
-        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("packscore.adminchat.see"))).forEach((player) -> {
+        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("fuse.adminchat"))).forEach((player) -> {
             player.sendMessage("§7[AdminChat] " + ChatColor.BLUE + name + " §8[§4Owner§8]"+ "§f: " + ChatColor.AQUA + message);
         });
     }
     public static void consoleAdminChat(String name, String message) {
-        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("packscore.adminchat.see"))).forEach((player) -> {
+        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("fuse.adminchat"))).forEach((player) -> {
             player.sendMessage("§7[AdminChat] " + ChatColor.BLUE + name + " §8[§5Console§8]"+ "§f: " + ChatColor.AQUA + message);
         });
     }

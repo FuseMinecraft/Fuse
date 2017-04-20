@@ -1,5 +1,5 @@
 name: Fuse
-version: 1.0
+version: 1.0.1
 description: Utility plugin for a server
 authors: [Telesphoreo, OxLemonxO, Madgeek1450, Prozza, _Windows]
 main: com.fusenetworks.fuse.Fuse

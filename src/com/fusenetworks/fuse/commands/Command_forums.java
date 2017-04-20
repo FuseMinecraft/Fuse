@@ -6,7 +6,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.ChatColor;
 
 @CommandPermissions(source = SourceType.BOTH)
-@CommandParameters(description = "Gives a link to the forums", usage = "/<command>", aliases = "forum, forums, fourm, fourms")
+@CommandParameters(description = "Gives a link to the forums", usage = "/<command>", aliases = "forum,forums,fourm,fourms")
 public class Command_forums extends BaseCommand {
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole) 
