@@ -1,12 +1,12 @@
 Bugs
 ----
 
-None
+- help.yml does not generate
 
 High priority bugs
 ------------------
 
-- AdminChat does not register permissions properly and refuses to allow players with packscore.adminchat.use to use adminchats
+None
 
 Security Issues
 ---------------
