@@ -2,7 +2,6 @@ package com.fusenetworks.fuse.commands;
 
 import com.fusenetworks.fuse.util.NLog;
 import com.fusenetworks.fuse.Fuse;
-import org.apache.commons.lang3.StringUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -19,28 +18,8 @@ public class CMD_Handler
     {
         final Player playerSender;
         final boolean senderIsConsole;
-
-        if (sender instanceof Player)
-        {
-            senderIsConsole = false;
-            playerSender = (Player) sender;
-
-            NLog.info(String.format("[PLAYER_COMMAND] %s (%s): /%s %s",
-                    playerSender.getName(),
-                    ChatColor.stripColor(playerSender.getDisplayName()),
-                    commandLabel,
-                    StringUtils.join(args, " ")), true);
-        }
-        else
-        {
-            senderIsConsole = true;
-            playerSender = null;
-
-            NLog.info(String.format("[CONSOLE_COMMAND] %s: /%s %s",
-                    sender.getName(),
-                    commandLabel,
-                    StringUtils.join(args, " ")), true);
-        }
+        senderIsConsole = false;
+        playerSender = (Player) sender;
 
         final BaseCommand dispatcher;
         try

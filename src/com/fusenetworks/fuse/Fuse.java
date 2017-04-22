@@ -15,16 +15,14 @@ import com.fusenetworks.fuse.listener.CommandBlocker;
 import com.fusenetworks.fuse.util.NLog;
 import com.fusenetworks.fuse.util.NUtil;
 import java.io.File;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.io.IOException;
 import org.bukkit.Bukkit;
 import org.bukkit.Server;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.configuration.InvalidConfigurationException;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
+import org.mcstats.Metrics;
 
 public class Fuse extends JavaPlugin {
 
@@ -33,9 +31,8 @@ public class Fuse extends JavaPlugin {
     public static Fuse instance;
 
 
-    public static String buildDate = "4/21/17";
+    public static String buildDate = "4/22/17";
     public static String buildCreator = "Telesphoreo";
-    public static String HELP_CONFIG = "help.yml";
     File jarFile = this.getFile();
     
     @Override
@@ -65,7 +62,6 @@ public class Fuse extends JavaPlugin {
                 CMD_Loader.scan();
             }
         }.runTaskLater(plugin, 20L);
-
         Bukkit.getScheduler().scheduleSyncRepeatingTask(Bukkit.getPluginManager().getPlugin("Fuse"), () -> {
         if ((NUtil.NEntityWiper.wipeEntities(true, true)) == 1)
         {
@@ -75,6 +71,14 @@ public class Fuse extends JavaPlugin {
         }
     }, 1L , (long) 300 * 20);
     instance = this;
+    
+    try {
+    Metrics metrics = new Metrics(this);
+    metrics.start();
+    } catch (IOException e) {
+        // Failed to submit the stats :-(
+    }
+    
     }
 
     @Override

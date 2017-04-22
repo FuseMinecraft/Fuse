@@ -24,7 +24,7 @@ public class Updater {
 	private final String versionLink = "http://vps76574.vps.ovh.ca/version.txt";
 	private Plugin plugin;
 	
-	public Updater(Plugin plugin) {
+	public Updater (Plugin plugin) {
 		this.plugin = plugin;
 	}
         

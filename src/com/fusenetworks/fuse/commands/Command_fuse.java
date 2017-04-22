@@ -1,6 +1,7 @@
 package com.fusenetworks.fuse.commands;
 
 import com.fusenetworks.fuse.Fuse;
+import com.fusenetworks.fuse.Updater;
 import static org.bukkit.Bukkit.getServer;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -36,7 +37,7 @@ public class Command_fuse extends BaseCommand {
         sender.sendMessage(ChatColor.RED + "Compiled on " + Fuse.buildDate + " by " + Fuse.buildCreator);
         sender.sendMessage(ChatColor.GREEN + "Type /fuse help for command usage");
         sender.sendMessage(ChatColor.GREEN + "Type /contributors to see who contributed to Fuse");
-        sender.sendMessage(ChatColor.GREEN + "Type /update to check for and install updates.");
+        sender.sendMessage(ChatColor.GREEN + "Type /fuse update to check for and install updates.");
         if (dev.equals("true"))
         {
         sender.sendMessage(ChatColor.DARK_AQUA + "Fuse Networks is currently in development mode. "
@@ -115,6 +116,17 @@ public class Command_fuse extends BaseCommand {
                     sender.sendMessage(ChatColor.GOLD + "/website - Gives you a link to the website");
                     return true;
                 }
+            }
+            case "update":
+            {
+            if (!sender.hasPermission("fuse.update"))
+            {
+            sender.sendMessage(Messages.MSG_NO_PERMS);
+            return true;
+            }
+            Updater updater = new Updater(Fuse.plugin);
+            updater.update(sender);
+            return true; 
             }
             default:
             {
