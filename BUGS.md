@@ -1,7 +1,7 @@
 Bugs
 ----
 
-- help.yml does not generate
+- Comments are lost when config file is saved
 
 High priority bugs
 ------------------
