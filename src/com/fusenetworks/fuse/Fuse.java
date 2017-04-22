@@ -15,10 +15,14 @@ import com.fusenetworks.fuse.listener.CommandBlocker;
 import com.fusenetworks.fuse.util.NLog;
 import com.fusenetworks.fuse.util.NUtil;
 import java.io.File;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.bukkit.Bukkit;
 import org.bukkit.Server;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.InvalidConfigurationException;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
@@ -28,8 +32,10 @@ public class Fuse extends JavaPlugin {
     public static Server server;
     public static Fuse instance;
 
-    public static String buildDate = "4/19/17";
+
+    public static String buildDate = "4/21/17";
     public static String buildCreator = "Telesphoreo";
+    public static String HELP_CONFIG = "help.yml";
     File jarFile = this.getFile();
     
     @Override
@@ -52,7 +58,7 @@ public class Fuse extends JavaPlugin {
         server.getPluginManager().registerEvents(new NoHunger(), Fuse.plugin);
         server.getPluginManager().registerEvents(new PotionListener(), Fuse.plugin);
         server.getPluginManager().registerEvents(new SignPatch(), Fuse.plugin);
-        loadConfiguration();
+        Config.loadConfigs();
         new BukkitRunnable() {
             @Override
             public void run() {
@@ -84,7 +90,7 @@ public class Fuse extends JavaPlugin {
         return CMD_Handler.handleCommand(sender, cmd, commandLabel, args);
     }
 
-    public void loadConfiguration() {
+    /*public void loadConfiguration() {
         getConfig().options().copyDefaults(true);
         saveConfig();
         //
@@ -93,11 +99,8 @@ public class Fuse extends JavaPlugin {
         String server_clear_inventory_on_join = "server.clear_inventory_on_join"; // clear inventory on join
         String server_fall_damage = "server.fall_damage_enabled";
         String server_hunger = "server.hunger_enabled";
-        String op_kits = "server.op_kits";
         String server_dev = "server.dev";
         String splash_potions_enabled = "server.splash_potions_enabled";
-        String notify_if_update = "server.notify_if_update_is_available";
-        //
         //
         String applications_enabled = "server.applications_enabled";
         String new_thread_link = "server.admin_app_new_thread_link";
@@ -118,7 +121,7 @@ public class Fuse extends JavaPlugin {
         String staff_owner = "staff.owner";
         */
         //
-        String superusers = "players.superusers";
+        /*String superusers = "players.superusers";
         //
         String launchpads_enabled = "launchpads.enabled";
         String launchpads_bottom_block_id = "launchpads.bottom-block-id";
@@ -129,9 +132,7 @@ public class Fuse extends JavaPlugin {
         getConfig().addDefault(server_hunger, "true");
         getConfig().addDefault(server_fall_damage, "true");
         getConfig().addDefault(server_dev, "false");
-        getConfig().addDefault(op_kits, "true");
         getConfig().addDefault(splash_potions_enabled, "true");
-        getConfig().addDefault(notify_if_update, "true");
         //
         getConfig().addDefault(applications_enabled, "false");
         getConfig().addDefault(admin_app_template, "none");
@@ -150,12 +151,12 @@ public class Fuse extends JavaPlugin {
         getConfig().addDefault(staff_owner, "Telesphoreo");
         */
         
-        getConfig().addDefault(superusers, "Telesphoreo, OxLemonxO");
+        /*getConfig().addDefault(superusers, "Telesphoreo, OxLemonxO");
         //
         getConfig().addDefault(launchpads_enabled, "false");
         getConfig().addDefault(launchpads_bottom_block_id, "152");
         //
         getConfig().options().copyDefaults(true);
         saveConfig();
-    }    
+    }*/
 }

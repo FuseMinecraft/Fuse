@@ -116,6 +116,7 @@ public class NUtil
         player.setAllowFlight(false);
         }
     }
+
     @SuppressWarnings("unchecked")
     public static <T> T getField(Object from, String name)
     {

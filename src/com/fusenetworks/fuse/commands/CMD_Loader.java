@@ -61,8 +61,6 @@ public class CMD_Loader
 
             commandMap.register(Fuse.plugin.getDescription().getName(), dynamicCommand);
         });
-
-        NLog.info("[" + plugin.getName() + "] All commands loaded");
     }
 
     public static void unregisterCommand(String commandName)
