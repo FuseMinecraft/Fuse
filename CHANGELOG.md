@@ -1,3 +1,7 @@
+Fuse 1.2
+--------
+- Internal changes
+
 Fuse 1.1
 --------
 - Add metric stats

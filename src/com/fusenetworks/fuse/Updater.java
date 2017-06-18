@@ -28,50 +28,57 @@ public class Updater {
 		this.plugin = plugin;
 	}
         
-	public void update(CommandSender sender) {
+	public void update(CommandSender sender)
+	{
 		int oldVersion = this.getVersionFromString(plugin.getDescription().getVersion());
 		String path = this.getFilePath();
 		
-		try {
+		try
+		{
 			URL url = new URL(versionLink);
 			URLConnection con = url.openConnection();
 			InputStreamReader isr = new InputStreamReader(con.getInputStream());
-                        BufferedReader reader = new BufferedReader(isr);
-                        reader.ready();
+			BufferedReader reader = new BufferedReader(isr);
+            reader.ready();
 			int newVersion = this.getVersionFromString(reader.readLine());
 			reader.close();
 			
-			if (newVersion > oldVersion) {
-				url = new URL(dlLink);
-				con = url.openConnection();
-				InputStream in = con.getInputStream();
-				FileOutputStream out = new FileOutputStream(path);
-				byte[] buffer = new byte[1024];
-				int size = 0;
-				while((size = in.read(buffer)) != -1) {
-				out.write(buffer, 0, size);
-                                }
+				if (newVersion > oldVersion)
+				{
+					url = new URL(dlLink);
+					con = url.openConnection();
+					InputStream in = con.getInputStream();
+					FileOutputStream out = new FileOutputStream(path);
+					byte[] buffer = new byte[1024];
+					int size = 0;
+					while((size = in.read(buffer)) != -1) {
+					out.write(buffer, 0, size);
+				}
 
-			out.close();
-			in.close();
-                        plugin.getLogger().log(Level.INFO, "Successfully updating to the latest version of Fuse");
-                        NUtil.bcastMsg(sender.getName() + " - Updating to the latest version of Fuse", ChatColor.BLUE);
-                        NUtil.bcastMsg(ChatColor.BLUE + "Please wait.");
-                        Bukkit.reload();
-                        NUtil.bcastMsg(ChatColor.BLUE + "Update successful.");
-			}
-			else
-			{
-				sender.sendMessage(ChatColor.GRAY + "There are no updates available for Fuse.");
-			}
-		} catch (IOException e) {
+				out.close();
+				in.close();
+            	plugin.getLogger().log(Level.INFO, "Successfully updating to the latest version of Fuse");
+            	NUtil.bcastMsg(sender.getName() + " - Updating to the latest version of Fuse", ChatColor.BLUE);
+            	NUtil.bcastMsg(ChatColor.BLUE + "Please wait.");
+            	Bukkit.reload();
+            	NUtil.bcastMsg(ChatColor.BLUE + "Update successful.");
+				}
+				else
+				{
+					sender.sendMessage(ChatColor.GRAY + "There are no updates available for Fuse.");
+				}
+		} catch (IOException e)
+		{
 			plugin.getLogger().log(Level.SEVERE, "Failed to auto-update", e);
 		}
 	}
 	
-	private String getFilePath() {
-		if (plugin instanceof JavaPlugin) {
-			try {
+	private String getFilePath()
+	{
+		if (plugin instanceof JavaPlugin)
+		{
+			try
+			{
 				Method method = JavaPlugin.class.getDeclaredMethod("getFile");
 				boolean wasAccessible = method.isAccessible();
 				method.setAccessible(true);
@@ -87,15 +94,17 @@ public class Updater {
 		}
 	}
 	
-	private int getVersionFromString(String from) {
+	private int getVersionFromString(String from)
+	{
 		String result = "";
 		Pattern pattern = Pattern.compile("\\d+");
 		Matcher matcher = pattern.matcher(from);
 		
-		while(matcher.find()) {
+		while(matcher.find())
+		{
 			result += matcher.group();
 		}
 		
 		return result.isEmpty() ? 0 : Integer.parseInt(result);
-        }
+	}
 }

@@ -9,17 +9,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.UUID;
 
-class FetchedUuid
-{
-    private String id;
-    
-    public String getID() 
-    {
-      return id;
-    } 
-}
-
-// UUIDFetcher retrieves UUIDs from usernames via web requests to Mojang.
 public class UUIDFetcher
 {
 
@@ -63,5 +52,16 @@ public class UUIDFetcher
             NLog.severe(ex);
         }
         return null;
+    }
+
+    private static class FetchedUuid
+    {
+
+        private static String id;
+
+        public static String getID()
+        {
+            return id;
+        }
     }
 }

@@ -1,8 +1,8 @@
 package com.fusenetworks.fuse.util;
 
+import com.fusenetworks.fuse.Fuse;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.fusenetworks.fuse.Fuse;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -18,11 +18,12 @@ import org.bukkit.command.CommandSender;
 
 public class History
 {
+
     public static final DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-    
+
     public static void reportHistory(final CommandSender sender, final String username)
     {
-        new BukkitRunnable() 
+        new BukkitRunnable()
         {
             @Override
             public void run()
@@ -36,12 +37,12 @@ public class History
                     {
                         URL url = new URL("https://api.mojang.com/user/profiles/" + compactUuid + "/names");
                         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-                        BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));  
+                        BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                         FName[] oldNames = gson.fromJson(reader, FName[].class);
                         if (oldNames == null)
                         {
-                           FSync.playerMsg(sender, ChatColor.RED + "Player not found!");
-                           return;
+                            FSync.playerMsg(sender, ChatColor.RED + "Player not found!");
+                            return;
                         }
                         reader.close();
                         conn.disconnect();
@@ -62,7 +63,7 @@ public class History
         }.runTaskAsynchronously(Fuse.plugin);
     }
 
-    private static void printHistory(CommandSender sender, FName[] oldNames)  
+    private static void printHistory(CommandSender sender, FName[] oldNames)
     {
         if (oldNames.length == 1)
         {
@@ -72,30 +73,32 @@ public class History
         FSync.playerMsg(sender, ChatColor.GOLD + "Original name: " + ChatColor.GREEN + oldNames[0].getName());
         for (int i = 1; i < oldNames.length; i++)
         {
-             Date date = new Date(oldNames[i].getChangedToAt());
-             String formattedDate = df.format(date);
-             FSync.playerMsg(sender, ChatColor.BLUE + formattedDate + ChatColor.GOLD + " changed to " + ChatColor.GREEN + oldNames[i].getName());
+            Date date = new Date(oldNames[i].getChangedToAt());
+            String formattedDate = df.format(date);
+            FSync.playerMsg(sender, ChatColor.BLUE + formattedDate + ChatColor.GOLD + " changed to " + ChatColor.GREEN + oldNames[i].getName());
         }
     }
-}
 
-class FName implements Comparable<FName>
-{
-    private String name;
-    private long changedToAt;
-
-    @Override
-    public int compareTo(FName other)
+    private static class FName implements Comparable<FName>
     {
-        return Long.compare(this.changedToAt, other.changedToAt);
+
+        private String name;
+        private long changedToAt;
+
+        @Override
+        public int compareTo(FName other)
+        {
+            return Long.compare(this.changedToAt, other.changedToAt);
+        }
+
+        public String getName()
+        {
+            return name;
+        }
+
+        public long getChangedToAt()
+        {
+            return changedToAt;
+        }
     }
-
-    public String getName()
-    {
-        return name;
-    }
-    public long getChangedToAt()
-    {
-        return changedToAt;
-     }
 }

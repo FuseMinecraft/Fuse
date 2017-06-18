@@ -31,7 +31,7 @@ public class Fuse extends JavaPlugin {
     public static Fuse instance;
 
 
-    public static String buildDate = "4/22/17";
+    public static String buildDate = "6/10/17";
     public static String buildCreator = "Telesphoreo";
     File jarFile = this.getFile();
     
@@ -93,74 +93,4 @@ public class Fuse extends JavaPlugin {
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
         return CMD_Handler.handleCommand(sender, cmd, commandLabel, args);
     }
-
-    /*public void loadConfiguration() {
-        getConfig().options().copyDefaults(true);
-        saveConfig();
-        //
-        String server_spawn_on_join = "server.spawn_on_join"; // spawn on join
-        String server_drop_items_on_death = "server.drop_items_on_death"; // drop items on death
-        String server_clear_inventory_on_join = "server.clear_inventory_on_join"; // clear inventory on join
-        String server_fall_damage = "server.fall_damage_enabled";
-        String server_hunger = "server.hunger_enabled";
-        String server_dev = "server.dev";
-        String splash_potions_enabled = "server.splash_potions_enabled";
-        //
-        String applications_enabled = "server.applications_enabled";
-        String new_thread_link = "server.admin_app_new_thread_link";
-        String admin_app_template = "server.admin_application_template";
-        //
-        String website = "server.website";
-        String forums = "server.forums";
-        String discord = "server.discord";
-        //
-
-        //
-        /*
-        Remove for now
-        String staff_moderator = "staff.moderator";
-        String staff_admin = "staff.admin";
-        String staff_developer = "staff.developer";
-        String staff_builder = "staff.builder";
-        String staff_owner = "staff.owner";
-        */
-        //
-        /*String superusers = "players.superusers";
-        //
-        String launchpads_enabled = "launchpads.enabled";
-        String launchpads_bottom_block_id = "launchpads.bottom-block-id";
-        //
-        getConfig().addDefault(server_spawn_on_join, "false");
-        getConfig().addDefault(server_drop_items_on_death, "true");
-        getConfig().addDefault(server_clear_inventory_on_join, "false");
-        getConfig().addDefault(server_hunger, "true");
-        getConfig().addDefault(server_fall_damage, "true");
-        getConfig().addDefault(server_dev, "false");
-        getConfig().addDefault(splash_potions_enabled, "true");
-        //
-        getConfig().addDefault(applications_enabled, "false");
-        getConfig().addDefault(admin_app_template, "none");
-        getConfig().addDefault(new_thread_link, "none");
-        //
-        getConfig().addDefault(website, "none");
-        getConfig().addDefault(forums, "none");
-        getConfig().addDefault(discord, "none");
-        
-        //
-        /*
-        getConfig().addDefault(staff_moderator, "None");
-        getConfig().addDefault(staff_admin, "None");
-        getConfig().addDefault(staff_developer, "Telesphoreo, OxLemonxO");
-        getConfig().addDefault(staff_builder, "None");
-        getConfig().addDefault(staff_owner, "Telesphoreo");
-        */
-        
-        /*getConfig().addDefault(superusers, "Telesphoreo, OxLemonxO");
-        //
-        getConfig().addDefault(launchpads_enabled, "false");
-        getConfig().addDefault(launchpads_bottom_block_id, "152");
-        //
-        getConfig().options().copyDefaults(true);
-        saveConfig();
-    }*/
 }
