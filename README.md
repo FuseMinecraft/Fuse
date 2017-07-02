@@ -8,4 +8,4 @@ Plugin authors:
 - OxLemonxO
 - Madgeek1450
 - Prozza
-- _Windows
+- TheMinecraft

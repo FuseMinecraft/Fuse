@@ -1,7 +1,7 @@
 name: Fuse
-version: 1.2
+version: 1.2.1
 description: Utility plugin for Minecraft servers
-authors: [Telesphoreo, OxLemonxO, Madgeek1450, Prozza, _Windows]
+authors: [Telesphoreo, OxLemonxO, Madgeek1450, Prozza, TheMinecraft]
 main: com.fusenetworks.fuse.Fuse
 commands:
   adminchat:

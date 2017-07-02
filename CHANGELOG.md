@@ -1,3 +1,9 @@
+Fuse 1.2.1
+----------
+- Remove Fuse Networks instances
+- Update _Windows username to TheMinecraft
+- Update autoupdater link
+
 Fuse 1.2
 --------
 - Internal changes

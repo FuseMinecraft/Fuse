@@ -40,7 +40,7 @@ public class Command_fuse extends BaseCommand {
         sender.sendMessage(ChatColor.GREEN + "Type /fuse update to check for and install updates.");
         if (dev.equals("true"))
         {
-        sender.sendMessage(ChatColor.DARK_AQUA + "Fuse Networks is currently in development mode. "
+        sender.sendMessage(ChatColor.DARK_AQUA + "The server is currently in development mode. "
         + "This means there may be unstable plugin builds on this server, and the server could crash more than normal!");
         }
         return true;
