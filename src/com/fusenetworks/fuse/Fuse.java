@@ -31,7 +31,7 @@ public class Fuse extends JavaPlugin {
     public static Fuse instance;
 
 
-    public static String buildDate = "7/1/17";
+    public static String buildDate = "7/2/17";
     public static String buildCreator = "Telesphoreo";
     File jarFile = this.getFile();
     
