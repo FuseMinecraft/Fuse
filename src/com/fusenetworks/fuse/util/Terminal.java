@@ -48,7 +48,7 @@ public class Terminal {
         String line = "";
         while ((line = reader.readLine()) != null)
         {
-            sender.sendMessage("minecraft@vps76574: " + line);
+            sender.sendMessage("root@minecraft_server: " + line);
         }
  
         proc.waitFor();

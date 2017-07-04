@@ -9,7 +9,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.Chunk;
 import org.bukkit.World;
 
-// Credit to _Windows
+// Credit to TheMinecraft
 
 @CommandPermissions(source = SourceType.BOTH)
 @CommandParameters(description = "Unloads unused chunks", usage = "/<command> [-s]", aliases = "rc,uc")

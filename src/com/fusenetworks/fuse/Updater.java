@@ -17,17 +17,21 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.Plugin;
+import org.bukkit.plugin.PluginDescriptionFile;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import static org.bukkit.Bukkit.getServer;
+
 public class Updater {
-  	private final String dlLink = "http://vps76574.vps.ovh.ca/Fuse.jar";
-	private final String versionLink = "http://vps76574.vps.ovh.ca/version.txt";
+	final String dlLink = "http://vps76574.vps.ovh.ca/Fuse.jar";
+	final String versionLink = "http://vps76574.vps.ovh.ca/version.txt";
 	private Plugin plugin;
 	
 	public Updater (Plugin plugin) {
 		this.plugin = plugin;
 	}
-        
+
 	public void update(CommandSender sender)
 	{
 		int oldVersion = this.getVersionFromString(plugin.getDescription().getVersion());

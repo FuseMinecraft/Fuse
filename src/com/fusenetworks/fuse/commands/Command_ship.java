@@ -21,7 +21,6 @@ public class Command_ship extends BaseCommand {
         {
             sender.sendMessage(ChatColor.RED + "Invalid Usage: /ship <player1> <player2>");
             return true;
-
         }
 
         Player GodzillaxNero = sender_p;

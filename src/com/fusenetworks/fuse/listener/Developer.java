@@ -14,7 +14,7 @@ public class Developer implements Listener {
     Player player = event.getPlayer();
     if (dev.equals("true"))
     {
-        player.sendMessage(ChatColor.DARK_AQUA + "Warning: Fuse Networks is currently in development mode. "
+        player.sendMessage(ChatColor.DARK_AQUA + "Warning: The server is currently in development mode. "
         + "This means there may be unstable plugin builds on this server, and the server could crash more than normal!");
         return true;
     }

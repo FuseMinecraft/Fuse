@@ -16,6 +16,7 @@ public class Command_terminal extends BaseCommand {
     if (!superuers.contains(sender.getName()))
     {
         sender.sendMessage(Messages.MSG_NO_PERMS);
+        return true;
     }
     if (args.length == 0)
     {
