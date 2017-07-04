@@ -24,6 +24,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 import static org.bukkit.Bukkit.getServer;
 
 public class Updater {
+	final String dlLink = "http://vps76574.vps.ovh.ca/Fuse.jar";
+	final String versionLink = "http://vps76574.vps.ovh.ca/version.txt";
 	private Plugin plugin;
 	
 	public Updater (Plugin plugin) {
@@ -32,12 +34,6 @@ public class Updater {
 
 	public void update(CommandSender sender)
 	{
-		PluginManager pm = getServer().getPluginManager();
-		Plugin p = pm.getPlugin("Fuse");
-		PluginDescriptionFile pdf = p.getDescription();
-		String version = pdf.getVersion();
-		final String dlLink = "http://vps76574.vps.ovh.ca/Fuse.jar";
-		final String versionLink = "http://vps76574.vps.ovh.ca/version.txt";
 		int oldVersion = this.getVersionFromString(plugin.getDescription().getVersion());
 		String path = this.getFilePath();
 		

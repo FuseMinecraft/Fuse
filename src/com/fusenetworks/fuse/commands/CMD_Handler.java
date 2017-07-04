@@ -2,6 +2,7 @@ package com.fusenetworks.fuse.commands;
 
 import com.fusenetworks.fuse.util.NLog;
 import com.fusenetworks.fuse.Fuse;
+import org.apache.commons.lang3.StringUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -11,15 +12,35 @@ import org.bukkit.entity.Player;
 
 public class CMD_Handler
 {
-    public static final String COMMAND_PATH = BaseCommand.class.getPackage().getName();
+    public static final String COMMAND_PATH = BaseCommand.class.getPackage().getName(); // "com.packsnetwork.packscore.commands"
     public static final String COMMAND_PREFIX = "Command_";
 
     public static boolean handleCommand(CommandSender sender, Command cmd, String commandLabel, String[] args)
     {
         final Player playerSender;
         final boolean senderIsConsole;
-        senderIsConsole = false;
-        playerSender = (Player) sender;
+
+        if (sender instanceof Player)
+        {
+            senderIsConsole = false;
+            playerSender = (Player) sender;
+
+            NLog.info(String.format("[PLAYER_COMMAND] %s (%s): /%s %s",
+                    playerSender.getName(),
+                    ChatColor.stripColor(playerSender.getDisplayName()),
+                    commandLabel,
+                    StringUtils.join(args, " ")), true);
+        }
+        else
+        {
+            senderIsConsole = true;
+            playerSender = null;
+
+            NLog.info(String.format("[CONSOLE_COMMAND] %s: /%s %s",
+                    sender.getName(),
+                    commandLabel,
+                    StringUtils.join(args, " ")), true);
+        }
 
         final BaseCommand dispatcher;
         try
