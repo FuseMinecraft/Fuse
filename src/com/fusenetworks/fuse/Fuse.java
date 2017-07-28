@@ -1,17 +1,8 @@
 package com.fusenetworks.fuse;
 
-import com.fusenetworks.fuse.listener.SignPatch;
-import com.fusenetworks.fuse.listener.NoHunger;
-import com.fusenetworks.fuse.listener.Developer;
-import com.fusenetworks.fuse.listener.NoFall;
-import com.fusenetworks.fuse.listener.Commandspy;
-import com.fusenetworks.fuse.listener.Launchpads;
-import com.fusenetworks.fuse.listener.ConfigListener;
-import com.fusenetworks.fuse.listener.PotionListener;
-import com.fusenetworks.fuse.listener.LoginMessages;
+import com.fusenetworks.fuse.listener.*;
 import com.fusenetworks.fuse.commands.CMD_Handler;
 import com.fusenetworks.fuse.commands.CMD_Loader;
-import com.fusenetworks.fuse.listener.CommandBlocker;
 import com.fusenetworks.fuse.util.NLog;
 import com.fusenetworks.fuse.util.NUtil;
 import java.io.File;
@@ -45,6 +36,7 @@ public class Fuse extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        server.getPluginManager().registerEvents(new AutoUpdate(), Fuse.plugin);
         server.getPluginManager().registerEvents(new CommandBlocker(), Fuse.plugin);
         server.getPluginManager().registerEvents(new Commandspy(), Fuse.plugin);
         server.getPluginManager().registerEvents(new ConfigListener(), Fuse.plugin);
@@ -70,11 +62,6 @@ public class Fuse extends JavaPlugin {
                 NLog.info((NUtil.NEntityWiper.wipeEntities(true, true)) + " entities removed");
             }
         }, 1L , (long) 300 * 20);
-
-        Bukkit.getScheduler().scheduleSyncRepeatingTask(Bukkit.getPluginManager().getPlugin("Fuse"), () -> {
-            Updater updater = new Updater(Fuse.plugin);
-            updater.checkUpdate();
-        }, 1L , (long) 5 * 20);
     instance = this;
     
     try {

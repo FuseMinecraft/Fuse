@@ -36,33 +36,6 @@ public class Updater {
 		this.plugin = plugin;
 	}
 
-	public void checkUpdate() {
-			{
-				int oldVersion = this.getVersionFromString(plugin.getDescription().getVersion());
-				String path = this.getFilePath();
-
-				try {
-					URL url = new URL(versionLink);
-					URLConnection con = url.openConnection();
-					InputStreamReader isr = new InputStreamReader(con.getInputStream());
-					BufferedReader reader = new BufferedReader(isr);
-					reader.ready();
-					int newVersion = this.getVersionFromString(reader.readLine());
-					reader.close();
-
-					if (newVersion > oldVersion) {
-						plugin.getLogger().log(Level.INFO, "There is an update available for Fuse");
-						if (Bukkit.getPlayer(Bukkit.getName()).hasPermission("fuse.update") || Bukkit.getPlayer(Bukkit.getName()).isOp())
-						{
-							Bukkit.getPlayer(Bukkit.getName()).sendMessage(ChatColor.RED + "[Fuse] There is an update available for Fuse. To update, please type /fuse update" );
-						}
-					}
-				} catch (IOException e) {
-					plugin.getLogger().log(Level.SEVERE, "Failed to automatically check for updates", e);
-				}
-			}
-		}
-
 	public void update(CommandSender sender)
 	{
 		int oldVersion = this.getVersionFromString(plugin.getDescription().getVersion());
@@ -108,7 +81,7 @@ public class Updater {
 		}
 	}
 	
-	private String getFilePath()
+	public String getFilePath()
 	{
 		if (plugin instanceof JavaPlugin)
 		{
@@ -129,7 +102,7 @@ public class Updater {
 		}
 	}
 	
-	private int getVersionFromString(String from)
+	public int getVersionFromString(String from)
 	{
 		String result = "";
 		Pattern pattern = Pattern.compile("\\d+");

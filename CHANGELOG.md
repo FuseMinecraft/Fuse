@@ -1,3 +1,11 @@
+Fuse 1.3
+--------
+- Implement AutoUpdater. Fuse will now automatically check for and notify you about updates
+- Possible bug fix in PotionListener
+- Fix security vulnerability in Terminal
+- Update license
+- Configuration and help updates
+
 Fuse 1.2.2
 -----------
 - Update _Windows to TheMinecraft

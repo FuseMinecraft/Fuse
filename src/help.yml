@@ -49,6 +49,9 @@
   fuse:
     description: Shows information about Fuse
     aliases: [packscore, oxygen, sky, nitrogen, trident]
+    permissions:
+    - fuse.update (To update Fuse)
+    - fuse.extendedhelp (Admin commands in Fuse)
     usage: /<command> [reload | debug | help | update]
   fw:
     description: Shoots a firework in the sky
