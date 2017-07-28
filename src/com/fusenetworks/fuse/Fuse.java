@@ -22,7 +22,7 @@ public class Fuse extends JavaPlugin {
     public static Fuse instance;
 
 
-    public static String buildDate = "7/27/17";
+    public static String buildDate = "7/28/17";
     public static String buildCreator = "Telesphoreo";
     File jarFile = this.getFile();
     
@@ -51,6 +51,7 @@ public class Fuse extends JavaPlugin {
         new BukkitRunnable() {
             @Override
             public void run() {
+                CMD_Loader.getCommandMap();
                 CMD_Loader.scan();
             }
         }.runTaskLater(plugin, 20L);

@@ -1,5 +1,5 @@
 name: Fuse
-version: 1.3
+version: 1.3.1
 description: Utility plugin for Minecraft servers
 authors: [Telesphoreo, OxLemonxO, Madgeek1450, Prozza, TheMinecraft]
 main: com.fusenetworks.fuse.Fuse
@@ -45,7 +45,7 @@ commands:
   fuse:
     description: Shows information about Fuse
     aliases: [packscore, oxygen, sky, nitrogen, trident]
-    usage: /<command> [reload | debug]
+    usage: /<command> [reload | debug | help | update]
   fw:
     description: Shoots a firework in the sky
     usage: /<command>
@@ -85,10 +85,6 @@ commands:
     aliases: [uc, rc]
     permission: fuse.unloadchunks
     usage: /<command> [-s]
-  update:
-    description: Updates Fuse
-    permission: fuse.update
-    usage: /<command>
   website:
     description: Gives a link to the website
     usage: /<command>

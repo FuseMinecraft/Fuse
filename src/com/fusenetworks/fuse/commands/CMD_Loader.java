@@ -99,7 +99,7 @@ public class CMD_Loader
     @SuppressWarnings("unchecked")
     public static CommandMap getCommandMap()
     {
-        final Object commandMap = NUtil.getField(Bukkit.getServer().getPluginManager(), "commandMap");
+        final Object commandMap = NUtil.getField(Bukkit.getServer().getPluginManager(), "Fuse");
         if (commandMap != null)
         {
             if (commandMap instanceof CommandMap)
@@ -113,7 +113,7 @@ public class CMD_Loader
     @SuppressWarnings("unchecked")
     public static HashMap<String, Command> getKnownCommands(CommandMap commandMap)
     {
-        Object knownCommands = NUtil.getField(commandMap, "knownCommands");
+        Object knownCommands = NUtil.getField(commandMap, "Fuse");
         if (knownCommands != null)
         {
             if (knownCommands instanceof HashMap)

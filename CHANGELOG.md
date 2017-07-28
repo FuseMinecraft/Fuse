@@ -1,3 +1,7 @@
+Fuse 1.3.1
+----------
+- Fix a bug where help didn't load
+
 Fuse 1.3
 --------
 - Implement AutoUpdater. Fuse will now automatically check for and notify you about updates
