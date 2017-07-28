@@ -16,11 +16,15 @@ import java.util.regex.Pattern;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import static org.bukkit.Bukkit.getPlayer;
 import static org.bukkit.Bukkit.getServer;
 
 public class Updater {
@@ -61,7 +65,7 @@ public class Updater {
 
 				out.close();
 				in.close();
-            	plugin.getLogger().log(Level.INFO, "Successfully updating to the latest version of Fuse");
+            	plugin.getLogger().log(Level.INFO, "Updating to the latest version of Fuse");
             	NUtil.bcastMsg(sender.getName() + " - Updating to the latest version of Fuse", ChatColor.BLUE);
             	NUtil.bcastMsg(ChatColor.BLUE + "Please wait.");
             	Bukkit.reload();
@@ -77,7 +81,7 @@ public class Updater {
 		}
 	}
 	
-	private String getFilePath()
+	public String getFilePath()
 	{
 		if (plugin instanceof JavaPlugin)
 		{
@@ -98,7 +102,7 @@ public class Updater {
 		}
 	}
 	
-	private int getVersionFromString(String from)
+	public int getVersionFromString(String from)
 	{
 		String result = "";
 		Pattern pattern = Pattern.compile("\\d+");

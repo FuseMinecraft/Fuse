@@ -1,6 +1,9 @@
 package com.fusenetworks.fuse.listener;
  
 import static com.fusenetworks.fuse.Fuse.plugin;
+
+import com.fusenetworks.fuse.Fuse;
+import com.oracle.deploy.update.Updater;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -12,10 +15,9 @@ public class Developer implements Listener {
     public boolean onPlayerJoin(PlayerJoinEvent event) {
     String dev = plugin.getConfig().getString("server.dev");
     Player player = event.getPlayer();
-    if (dev.equals("true"))
-    {
+    if (dev.equals("true")) {
         player.sendMessage(ChatColor.DARK_AQUA + "Warning: The server is currently in development mode. "
-        + "This means there may be unstable plugin builds on this server, and the server could crash more than normal!");
+                + "This means there may be unstable plugin builds on this server, and the server could crash more than normal!");
         return true;
     }
     return true;

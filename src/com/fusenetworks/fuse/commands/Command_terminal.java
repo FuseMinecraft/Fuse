@@ -12,8 +12,8 @@ public class Command_terminal extends BaseCommand {
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole) 
     {
-    String superuers = plugin.getConfig().getString("players.superusers");
-    if (!superuers.contains(sender.getName()))
+    String superusers = plugin.getConfig().getString("players.superusers");
+    if (!superusers.equals(sender.getName()))
     {
         sender.sendMessage(Messages.MSG_NO_PERMS);
         return true;

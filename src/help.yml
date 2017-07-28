@@ -1,9 +1,17 @@
-# Fuse v1.2.2 Command and Permission Help
+# Fuse v1.3 Command and Permission Help
+# To block people from dropping items, use the permission node: fuse.nodrop
+# When a command has a -s option, it allows you to use it silently
 
   adminchat:
     description: Talk with other admins
     aliases: o
-    permission: fuse.adminchat
+    permissions:
+    - fuse.adminchat (Required to use it)
+    - fuse.moderator (For moderator)
+    - fuse.admin (For admins)
+    - fuse.developer (For developers)
+    - fuse.builder (For builders)
+    - fuse.owner (For owner)
     usage: /<command> <message>
   admininfo:
     description: Tells a person how to apply for moderator
@@ -41,7 +49,10 @@
   fuse:
     description: Shows information about Fuse
     aliases: [packscore, oxygen, sky, nitrogen, trident]
-    usage: /<command> [reload | debug]
+    permissions:
+    - fuse.update (To update Fuse)
+    - fuse.extendedhelp (Admin commands in Fuse)
+    usage: /<command> [reload | debug | help | update]
   fw:
     description: Shoots a firework in the sky
     usage: /<command>
@@ -81,10 +92,6 @@
     aliases: [uc, rc]
     permission: fuse.unloadchunks
     usage: /<command> [-s]
-  update:
-    description: Updates Fuse
-    permission: fuse.update
-    usage: /<command>
   website:
     description: Gives a link to the website
     usage: /<command>

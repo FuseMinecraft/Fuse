@@ -1,3 +1,24 @@
+Fuse 1.3
+--------
+- Implement AutoUpdater. Fuse will now automatically check for and notify you about updates
+- Possible bug fix in PotionListener
+- Fix security vulnerability in Terminal
+- Update license
+- Configuration and help updates
+
+Fuse 1.2.2
+-----------
+- Update _Windows to TheMinecraft
+- Show No permission before Enter message on adminchat
+- Fixes an issue where the console would not be able to send commands
+- (Attempt) to fix a security flaw in Terminal
+- Add build number when typing /fuse
+- Remove old commands when typing /fuse help
+- Update /fuse command usage
+- Remove null instance from /fuse debug
+- Remove Fuse Network instances
+- Permission node updated. Instead of allowing dropping with fuse.nodrop.bypass, the new permission is now fuse.nodrop, which prevents a person from dropping items.
+
 Fuse 1.2.1
 ----------
 - Remove Fuse Networks instances
