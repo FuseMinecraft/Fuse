@@ -31,7 +31,7 @@ public class Fuse extends JavaPlugin {
     public static Fuse instance;
 
 
-    public static String buildDate = "7/2/17";
+    public static String buildDate = "7/27/17";
     public static String buildCreator = "Telesphoreo";
     File jarFile = this.getFile();
     
@@ -63,13 +63,18 @@ public class Fuse extends JavaPlugin {
             }
         }.runTaskLater(plugin, 20L);
         Bukkit.getScheduler().scheduleSyncRepeatingTask(Bukkit.getPluginManager().getPlugin("Fuse"), () -> {
-        if ((NUtil.NEntityWiper.wipeEntities(true, true)) == 1)
-        {
-            NLog.info((NUtil.NEntityWiper.wipeEntities(true, true)) + " entity removed");
-        } else if ((NUtil.NEntityWiper.wipeEntities(true, true)) != 0) {
-            NLog.info((NUtil.NEntityWiper.wipeEntities(true, true)) + " entities removed");
-        }
-    }, 1L , (long) 300 * 20);
+            if ((NUtil.NEntityWiper.wipeEntities(true, true)) == 1)
+            {
+                NLog.info((NUtil.NEntityWiper.wipeEntities(true, true)) + " entity removed");
+            } else if ((NUtil.NEntityWiper.wipeEntities(true, true)) != 0) {
+                NLog.info((NUtil.NEntityWiper.wipeEntities(true, true)) + " entities removed");
+            }
+        }, 1L , (long) 300 * 20);
+
+        Bukkit.getScheduler().scheduleSyncRepeatingTask(Bukkit.getPluginManager().getPlugin("Fuse"), () -> {
+            Updater updater = new Updater(Fuse.plugin);
+            updater.checkUpdate();
+        }, 1L , (long) 5 * 20);
     instance = this;
     
     try {

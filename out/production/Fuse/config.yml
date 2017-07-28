@@ -1,9 +1,9 @@
 #
-# Fuse v1.2.2 Configuration File
+# Fuse v1.3 Configuration File
 #
 
 server:
-  # Should players spawn when they join?
+  # Should players be teleported to spawn when they join?
   spawn_on_join: 'false'
   # Should items be dropped when a person dies?
   drop_items_on_death: 'true'
@@ -35,5 +35,5 @@ players:
 launchpads:
   # Should launchpads be enabled?
   enabled: 'false'
-  # What is the ID that pushes players?
+  # What is the block ID that pushes players?
   bottom-block-id: '152'

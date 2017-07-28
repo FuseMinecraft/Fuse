@@ -16,11 +16,15 @@ import java.util.regex.Pattern;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import static org.bukkit.Bukkit.getPlayer;
 import static org.bukkit.Bukkit.getServer;
 
 public class Updater {
@@ -31,6 +35,33 @@ public class Updater {
 	public Updater (Plugin plugin) {
 		this.plugin = plugin;
 	}
+
+	public void checkUpdate() {
+			{
+				int oldVersion = this.getVersionFromString(plugin.getDescription().getVersion());
+				String path = this.getFilePath();
+
+				try {
+					URL url = new URL(versionLink);
+					URLConnection con = url.openConnection();
+					InputStreamReader isr = new InputStreamReader(con.getInputStream());
+					BufferedReader reader = new BufferedReader(isr);
+					reader.ready();
+					int newVersion = this.getVersionFromString(reader.readLine());
+					reader.close();
+
+					if (newVersion > oldVersion) {
+						plugin.getLogger().log(Level.INFO, "There is an update available for Fuse");
+						if (Bukkit.getPlayer(Bukkit.getName()).hasPermission("fuse.update") || Bukkit.getPlayer(Bukkit.getName()).isOp())
+						{
+							Bukkit.getPlayer(Bukkit.getName()).sendMessage(ChatColor.RED + "[Fuse] There is an update available for Fuse. To update, please type /fuse update" );
+						}
+					}
+				} catch (IOException e) {
+					plugin.getLogger().log(Level.SEVERE, "Failed to automatically check for updates", e);
+				}
+			}
+		}
 
 	public void update(CommandSender sender)
 	{
@@ -61,7 +92,7 @@ public class Updater {
 
 				out.close();
 				in.close();
-            	plugin.getLogger().log(Level.INFO, "Successfully updating to the latest version of Fuse");
+            	plugin.getLogger().log(Level.INFO, "Updating to the latest version of Fuse");
             	NUtil.bcastMsg(sender.getName() + " - Updating to the latest version of Fuse", ChatColor.BLUE);
             	NUtil.bcastMsg(ChatColor.BLUE + "Please wait.");
             	Bukkit.reload();
