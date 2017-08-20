@@ -33,9 +33,9 @@ public class Command_fuse extends BaseCommand {
         if (args.length == 0)
         {
         sender.sendMessage(ChatColor.GOLD + plugin.getName());
-        sender.sendMessage(ChatColor.GOLD + "Version: 1.3.1");
-        sender.sendMessage(ChatColor.RED + "Fuse is an advanced plugin designed to provide useful utilities for a Minecraft server");
+        sender.sendMessage(ChatColor.GOLD + "Base Version: 1.3.1.1");
         sender.sendMessage(ChatColor.RED + "Compiled on " + Fuse.buildDate + " by " + Fuse.buildCreator);
+        sender.sendMessage(ChatColor.RED + "Fuse is an advanced plugin designed to provide useful utilities for a Minecraft server");
         sender.sendMessage(ChatColor.GREEN + "Type /fuse help for command usage");
         sender.sendMessage(ChatColor.GREEN + "Type /contributors to see who contributed to Fuse");
         sender.sendMessage(ChatColor.GREEN + "Type /fuse update to check for and install updates.");

@@ -1,3 +1,7 @@
+Fuse 1.3.1.1
+------------
+- Update AutoUpdate links for HTTPS
+
 Fuse 1.3.1
 ----------
 - Fix a bug where help didn't load

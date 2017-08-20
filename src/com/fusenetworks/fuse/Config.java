@@ -45,7 +45,7 @@ public class Config {
             config.put(configfile, new YamlConfiguration());
             try {
                 config.get(configfile).load(configFile.get(configfile));
-            } catch (FileNotFoundException ex) {;
+            } catch (FileNotFoundException ex) {
                 loaded.put(configfile, false);
                 return;
             } catch (IOException | InvalidConfigurationException ex) {

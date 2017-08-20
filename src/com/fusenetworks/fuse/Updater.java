@@ -28,8 +28,8 @@ import static org.bukkit.Bukkit.getPlayer;
 import static org.bukkit.Bukkit.getServer;
 
 public class Updater {
-	final String dlLink = "http://vps76574.vps.ovh.ca/Fuse.jar";
-	final String versionLink = "http://vps76574.vps.ovh.ca/version.txt";
+	final String dlLink = "https://vps76574.vps.ovh.ca/Fuse.jar";
+	final String versionLink = "https://vps76574.vps.ovh.ca/version.txt";
 	private Plugin plugin;
 	
 	public Updater (Plugin plugin) {
