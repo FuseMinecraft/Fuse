@@ -61,18 +61,18 @@ class Fuse : JavaPlugin() {
 
     override fun onDisable() {}
 
-    override fun onCommand(sender: CommandSender?, cmd: Command?, commandLabel: String?, args: Array<String>?): Boolean {
+    override fun onCommand(sender: CommandSender, cmd: Command, commandLabel: String, args: Array<String>): Boolean {
         return CMD_Handler.handleCommand(sender, cmd, commandLabel, args)
     }
 
     companion object {
 
-        var plugin: Fuse
-        var server: Server
-        var instance: Fuse
+        var plugin: Fuse? = null
+        var server: Server? = null
+        var instance: Fuse? = null
 
 
-        var buildDate = "8/15/17"
+        var buildDate = "8/19/17"
         var buildCreator = "Telesphoreo"
     }
 }

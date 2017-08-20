@@ -16,18 +16,16 @@ object Config {
     private val configFile = EnumMap<ConfigFile, File>(ConfigFile::class.java)
     private val loaded = EnumMap<ConfigFile, Boolean>(ConfigFile::class.java)
 
-    fun getConfig(configfile: ConfigFile): YamlConfiguration {
-        if (loaded.containsKey(configfile) && !loaded[configfile]) {
+    fun getConfig(configfile: ConfigFile): YamlConfiguration? {
+        if (loaded.containsKey(configfile)) {
             loadConfig(configfile)
         }
         return config[configfile]
     }
 
-    fun getConfigFile(configfile: ConfigFile): File {
-        return configFile[configfile]
-    }
+    fun getConfigFile(configfile: ConfigFile): File? = configFile[configfile]
 
-    fun getLoaded(configfile: ConfigFile): Boolean {
+    fun getLoaded(configfile: ConfigFile): Boolean? {
         return loaded[configfile]
     }
 
@@ -39,7 +37,7 @@ object Config {
 
     fun loadConfig(configfile: ConfigFile) {
         configFile.put(configfile, File(Bukkit.getServer().pluginManager.getPlugin("Fuse").dataFolder, configfile.file))
-        if (configFile[configfile].exists()) {
+        var any = if (configFile.get(configfile).exists()) {
             config.put(configfile, YamlConfiguration())
             try {
                 config[configfile].load(configFile[configfile])

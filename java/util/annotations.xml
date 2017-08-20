@@ -1,0 +1,5 @@
+<root>
+    <item name='java.util.EnumMap V get(java.lang.Object)'>
+        <annotation name='org.jetbrains.annotations.Nullable'/>
+    </item>
+</root>

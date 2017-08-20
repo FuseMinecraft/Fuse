@@ -27,7 +27,7 @@ class Command_unloadchunks : BaseCommand() {
             return true
         } // end senderIsConsole
 
-        if (args.size == 0) {
+        when (args.isEmpty()) {
 
             numChunks = server.worlds.stream().map { world -> unloadUnusedChunks(world) }.reduce(numChunks, BinaryOperator<Int> { a, b -> Integer.sum(a, b) })
             NUtil.playerMsg(sender, numChunks.toString() + " chunks unloaded")

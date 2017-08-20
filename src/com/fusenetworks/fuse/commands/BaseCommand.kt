@@ -9,8 +9,8 @@ import org.bukkit.entity.Player
 // Credit to TF
 
 abstract class BaseCommand {
-    protected var plugin: Fuse
-    protected var server: Server
+    abstract protected var plugin: Fuse
+    abstract protected var server: Server
     private var commandSender: CommandSender? = null
     private var commandClass: Class<*>? = null
 
