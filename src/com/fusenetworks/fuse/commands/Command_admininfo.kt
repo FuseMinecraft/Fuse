@@ -7,7 +7,7 @@ import org.bukkit.ChatColor
 
 @CommandPermissions(source = SourceType.ONLY_IN_GAME)
 @CommandParameters(description = "Tells a person how to apply for admin", usage = "/<command>", aliases = "ai, apply")
-class Command_admininfo : BaseCommand() {
+abstract class Command_admininfo : BaseCommand() {
     override fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
         val applications_enabled = plugin.config.getString("server.applications_enabled")
         val forums = plugin.config.getString("server.forums")

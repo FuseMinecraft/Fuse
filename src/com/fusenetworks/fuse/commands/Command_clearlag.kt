@@ -8,7 +8,7 @@ import org.bukkit.entity.Player
 
 @CommandPermissions(source = SourceType.BOTH)
 @CommandParameters(description = "Clears lag", usage = "/<command> [-s]", aliases = "entitywipe,ew,rd")
-class Command_clearlag : BaseCommand() {
+abstract class Command_clearlag : BaseCommand() {
     override fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
         if (!sender.hasPermission("fuse.clearlag")) {
             sender.sendMessage(Messages.MSG_NO_PERMS)

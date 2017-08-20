@@ -54,7 +54,7 @@ class CMD_Loader private constructor() {
         }
     }
 
-    class PC_DynamicCommand private constructor(val commandInfo: PC_CommandInfo) : Command(commandInfo.commandName, "Admin command/Normal player command", commandInfo.usage, commandInfo.getAliases()), PluginIdentifiableCommand {
+    class PC_DynamicCommand constructor(val commandInfo: PC_CommandInfo) : Command(commandInfo.commandName, "Admin command/Normal player command", commandInfo.usage, commandInfo.getAliases()), PluginIdentifiableCommand {
 
         override fun execute(sender: CommandSender, commandLabel: String, args: Array<String>): Boolean {
             var success = false
@@ -79,7 +79,7 @@ class CMD_Loader private constructor() {
         }
 
         override fun getPlugin(): Plugin {
-            return Fuse.plugin
+            return Fuse()
         }
     }
 
@@ -117,7 +117,7 @@ class CMD_Loader private constructor() {
             }
         }
 
-        fun unregisterCommand(command: Command, commandMap: CommandMap?) {
+        fun unregisterCommand(command: Command, commandMap: CommandMap) {
             try {
                 command.unregister(commandMap)
                 val knownCommands = getKnownCommands(commandMap)
@@ -142,7 +142,7 @@ class CMD_Loader private constructor() {
                 return null
             }
 
-        fun getKnownCommands(commandMap: CommandMap?): HashMap<String, Command>? {
+        fun getKnownCommands(commandMap: CommandMap): HashMap<String, Command>? {
             val knownCommands = NUtil.getField<Any>(commandMap, "Fuse")
             if (knownCommands != null) {
                 if (knownCommands is HashMap<*, *>) {

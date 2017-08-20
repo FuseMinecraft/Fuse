@@ -11,7 +11,7 @@ import org.bukkit.entity.Player
 // Credit to TF
 
 object CMD_Handler {
-    val COMMAND_PATH = BaseCommand::class.java.`package`.name // "com.packsnetwork.packscore.commands"
+    val COMMAND_PATH = BaseCommand::class.java.`package`.name
     val COMMAND_PREFIX = "Command_"
 
     fun handleCommand(sender: CommandSender, cmd: Command, commandLabel: String, args: Array<String>): Boolean {
@@ -44,7 +44,7 @@ object CMD_Handler {
                     COMMAND_PATH,
                     COMMAND_PREFIX,
                     cmd.name.toLowerCase())).newInstance() as BaseCommand
-            dispatcher.setup(Fuse.plugin, sender, dispatcher.javaClass)
+            dispatcher.setup(Fuse(), sender, dispatcher.javaClass)
         } catch (ex: ClassNotFoundException) {
             NLog.severe("Could not load command: " + cmd.name)
             NLog.severe(ex)
