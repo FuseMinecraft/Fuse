@@ -17,7 +17,7 @@ import org.bukkit.entity.*;
 public class NUtil
 {
     public static String DATE_STORAGE_FORMAT = "EEE, MMM d, yyyy HH:mm:ss";
-    String location = plugin.getConfig().getString("server.location");
+    String location = Companion.getPlugin().getConfig().getString("server.location");
     public static void bcastMsg(String message, ChatColor color)
     {
         NLog.info(message, true);

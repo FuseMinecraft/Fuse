@@ -2,12 +2,170 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbe4489f-b154-404b-84b7-a502d43a6a80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Fuse_jar/Fuse.jar" afterPath="$PROJECT_DIR$/out/artifacts/Fuse_jar/Fuse.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/CMD_Loader$PC_CommandInfo.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/CMD_Loader$PC_CommandInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/CMD_Loader$PC_DynamicCommand.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/CMD_Loader$PC_DynamicCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/CMD_Loader.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/CMD_Loader.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/Config.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/Updater.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/BaseCommand.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CMD_Handler.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CMD_Loader.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CommandParameters.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CommandPermissions.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_adminchat.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_admininfo.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_clearlag.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_commandspy.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_consolesay.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_contributors.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_developer.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_discord.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_expel.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_forums.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_fuse.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_fw.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_gcmd.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_glassmode.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_launchpads.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_namehistory.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_pluginmanage.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_rename.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_ship.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_terminal.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_tprandom.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_unloadchunks.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_website.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Messages.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/SourceType.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/AutoUpdate.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/CommandBlocker.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/Commandspy.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/ConfigListener.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/Developer.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/Launchpads.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/LoginMessages.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/NoFall.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/NoHunger.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/PotionListener.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/SignPatch.kt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/Config$ConfigFile.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/Config.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/Fuse$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/Fuse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/Updater.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/BaseCommand.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/CMD_Handler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/CMD_Loader$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/CMD_Loader$PC_CommandInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/CMD_Loader$PC_DynamicCommand.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/CMD_Loader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/CommandParameters.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/CommandPermissions.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_adminchat.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_admininfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_clearlag.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_commandspy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_consolesay.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_contributors.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_developer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_discord.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_expel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_forums.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_fuse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_fw.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_gcmd.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_glassmode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_launchpads.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_namehistory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_pluginmanage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_rename.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_ship.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_terminal.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_tprandom.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_unloadchunks.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_website.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Messages.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/SourceType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/AutoUpdate.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/CommandBlocker.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/Commandspy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/ConfigListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/Developer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/Launchpads.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/LoginMessages.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/NoFall.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/NoHunger.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/PotionListener$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/PotionListener$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/PotionListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/SignPatch$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/SignPatch.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/util/FSync$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/util/FSync$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/util/FSync.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/util/History$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/util/History$FName.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/util/History.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/util/NLog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/util/NUtil$NEntityWiper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/util/NUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/util/PlayerData.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/util/Terminal$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/util/Terminal.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/util/UUIDFetcher$FetchedUuid.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/util/UUIDFetcher.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/org/mcstats/Metrics$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/org/mcstats/Metrics$Graph.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/org/mcstats/Metrics$Plotter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/org/mcstats/Metrics.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/Config.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/Updater.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/BaseCommand.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CMD_Handler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CMD_Loader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CommandParameters.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CommandPermissions.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_adminchat.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_admininfo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_clearlag.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_commandspy.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_consolesay.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_contributors.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_developer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_discord.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_expel.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_forums.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_fuse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_fw.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_gcmd.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_glassmode.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_launchpads.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_namehistory.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_pluginmanage.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_rename.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_ship.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_terminal.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_tprandom.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_unloadchunks.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_website.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Messages.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/SourceType.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/AutoUpdate.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/CommandBlocker.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/Commandspy.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/ConfigListener.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/Developer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/Launchpads.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/LoginMessages.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/NoFall.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/NoHunger.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/PotionListener.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/SignPatch.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CMD_Loader.java" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CMD_Loader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Fuse.iml" afterPath="$PROJECT_DIR$/Fuse.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/FSync.java" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/FSync.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/History.java" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/History.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/NUtil.java" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/NUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/Terminal.java" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/Terminal.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,12 +179,24 @@
     <favorites_list name="Fuse" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="CMD_Loader.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CMD_Loader.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Config.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/Config.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="47" column="9" lean-forward="false" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+            <state relative-caret-position="195">
+              <caret line="19" column="46" lean-forward="false" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+              <folding>
+                <element signature="e#31#340#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseCommand.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/BaseCommand.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -77,6 +247,9 @@
         <option value="$PROJECT_DIR$/CHANGELOG.md" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/AutoUpdate.java" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CMD_Loader.java" />
+        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt" />
+        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/Config.kt" />
+        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/BaseCommand.kt" />
       </list>
     </option>
   </component>
@@ -101,9 +274,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -111,29 +282,13 @@
               <item name="Fuse" type="b2602c69:ProjectViewProjectNode" />
               <item name="Fuse" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Fuse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fuse" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Fuse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fuse" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="fuse" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Fuse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fuse" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="fuse" type="462c0819:PsiDirectoryNode" />
-              <item name="commands" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -387,11 +542,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.4875" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32873806" sideWeight="0.4875" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -440,6 +594,24 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/Config.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#31#340#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/help.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -447,7 +619,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_website.java">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_website.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
@@ -468,35 +640,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_ship.java">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_ship.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="22" column="24" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_consolesay.java">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_consolesay.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_unloadchunks.java">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_unloadchunks.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/CommandBlocker.java">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/CommandBlocker.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/Commandspy.java">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/Commandspy.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
@@ -510,21 +682,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/SourceType.java">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/SourceType.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_launchpads.java">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_launchpads.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_rename.java">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_rename.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
@@ -545,14 +717,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/NoFall.java">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/NoFall.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_adminchat.java">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_adminchat.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="14" column="173" lean-forward="false" selection-start-line="14" selection-start-column="173" selection-end-line="14" selection-end-column="173" />
@@ -566,35 +738,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_glassmode.java">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_glassmode.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_discord.java">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_discord.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_clearlag.java">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_clearlag.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_terminal.java">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_terminal.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CMD_Handler.java">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CMD_Handler.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="25" column="43" lean-forward="true" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
@@ -616,7 +788,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/Developer.java">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/Developer.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="13" column="13" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="1" />
@@ -630,33 +802,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/PotionListener.java">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/PotionListener.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/ConfigListener.java">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/ConfigListener.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/BaseCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-329">
-          <caret line="47" column="48" lean-forward="true" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -681,16 +838,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="24" column="42" lean-forward="false" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -698,7 +845,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/Updater.java">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/Updater.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="72" column="16" lean-forward="false" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
@@ -706,7 +853,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_fuse.java">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_fuse.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="31" selection-end-column="42" />
@@ -714,17 +861,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/AutoUpdate.java">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/AutoUpdate.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="49" column="137" lean-forward="false" selection-start-line="49" selection-start-column="137" selection-end-line="49" selection-end-column="137" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CMD_Loader.java">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CMD_Loader.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="47" column="9" lean-forward="false" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+        <state relative-caret-position="544">
+          <caret line="56" column="6" lean-forward="false" selection-start-line="56" selection-start-column="6" selection-end-line="56" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/Config.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" column="46" lean-forward="false" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+          <folding>
+            <element signature="e#31#340#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/BaseCommand.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
           <folding />
         </state>
       </provider>

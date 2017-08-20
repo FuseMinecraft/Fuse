@@ -10,7 +10,7 @@ public class FSync
 
     public static void playerMsg(final Player player, final String message)
     {
-        final Fuse plugin = Fuse.plugin;
+        final Fuse plugin = Fuse.Companion.getPlugin();
         new BukkitRunnable()
         {
 
@@ -24,7 +24,7 @@ public class FSync
     }
     public static void playerMsg(final CommandSender sender, final String message)
     {
-        final Fuse plugin = Fuse.plugin;
+        final Fuse plugin = Fuse.Companion.getPlugin();
         new BukkitRunnable()
         {
 

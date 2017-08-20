@@ -60,7 +60,7 @@ public class History
                     FSync.playerMsg(sender, ChatColor.RED + "Player not found!");
                 }
             }
-        }.runTaskAsynchronously(Fuse.plugin);
+        }.runTaskAsynchronously(Fuse.Companion.getPlugin());
     }
 
     private static void printHistory(CommandSender sender, FName[] oldNames)

@@ -33,7 +33,7 @@ public class Terminal {
                 NLog.severe(ex);
                 }
             }
-        }.runTaskAsynchronously(Fuse.plugin);
+        }.runTaskAsynchronously(Fuse.Companion.getPlugin());
      
     }
  
