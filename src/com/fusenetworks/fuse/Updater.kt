@@ -51,7 +51,7 @@ class Updater(private val plugin: Plugin) {
                 val out = FileOutputStream(path)
                 val buffer = ByteArray(1024)
                 var size = 0
-                while ((size = `in`.read(buffer)) != -1) {
+                while (`in`.read(buffer).let { size = it; it != -1 }) {
                     out.write(buffer, 0, size)
                 }
 
