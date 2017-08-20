@@ -46,7 +46,6 @@ public class CMD_Loader
         CommandMap commandMap = getCommandMap();
         if (commandMap == null)
         {
-            NLog.severe("[" + plugin.getName() + "] Error loading commands");
             return;
         }
         COMMAND_LIST.clear();
