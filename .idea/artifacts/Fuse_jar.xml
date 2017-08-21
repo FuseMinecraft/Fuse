@@ -2,8 +2,9 @@
   <artifact type="jar" build-on-make="true" name="Fuse:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/Fuse_jar</output-path>
     <root id="archive" name="Fuse.jar">
+      <element id="library" level="project" name="KotlinJavaRuntime" />
+      <element id="file-copy" path="$USER_HOME$/Documents/1.12/spigot-1.12.1.jar" />
       <element id="module-output" name="Fuse" />
-      <element id="file-copy" path="$USER_HOME$/Documents/1.12/spigot-1.12.jar" />
     </root>
   </artifact>
 </component>

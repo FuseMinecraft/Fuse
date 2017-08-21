@@ -1,15 +1,14 @@
 package com.fusenetworks.fuse.listener
 
-import com.fusenetworks.fuse.Fuse.Companion.server
-import org.bukkit.plugin.PluginManager
+import org.bukkit.Bukkit
 import org.bukkit.ChatColor
+import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.player.PlayerCommandPreprocessEvent
-import org.bukkit.event.EventHandler
-import org.bukkit.Bukkit
 
 class CommandBlocker : Listener {
-    internal val pm = Bukkit.getServer().getPluginManager()
+
+    val pm = Bukkit.getServer().getPluginManager()
 
     @EventHandler
     fun PlayerCommandPreprocessEvent(event: PlayerCommandPreprocessEvent): Boolean {

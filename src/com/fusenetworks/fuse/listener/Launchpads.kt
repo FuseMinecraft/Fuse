@@ -1,6 +1,5 @@
 package com.fusenetworks.fuse.listener
 
-import com.fusenetworks.fuse.Fuse.Companion.plugin
 import org.bukkit.Bukkit
 import org.bukkit.Material
 import org.bukkit.block.BlockFace

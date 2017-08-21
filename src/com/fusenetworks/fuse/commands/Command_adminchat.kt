@@ -11,6 +11,7 @@ import org.bukkit.entity.Player
 abstract class Command_adminchat : CommandExecutor {
 
     fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
+
         if (sender.hasPermission("fuse.adminchat")) {
             if (sender is Player)
             // needs cleanup

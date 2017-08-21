@@ -1,13 +1,13 @@
 package com.fusenetworks.fuse.commands
 
-import com.fusenetworks.fuse.Fuse
-import com.fusenetworks.fuse.Updater
+import com.fusenetworks.fuse.util.Updater
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
+import com.fusenetworks.fuse.Fuse
 
 abstract class Command_fuse : CommandExecutor {
     fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {

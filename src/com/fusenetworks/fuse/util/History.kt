@@ -1,6 +1,5 @@
 package com.fusenetworks.fuse.util
 
-import com.fusenetworks.fuse.Fuse
 import com.google.gson.GsonBuilder
 import org.bukkit.ChatColor
 import org.bukkit.command.CommandSender
@@ -12,6 +11,7 @@ import java.net.URL
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
+import com.fusenetworks.fuse.Fuse
 
 object History {
 

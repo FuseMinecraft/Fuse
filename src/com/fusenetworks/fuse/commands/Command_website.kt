@@ -5,10 +5,9 @@ import org.bukkit.ChatColor
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
-import org.bukkit.entity.Player
 
 abstract class Command_website : CommandExecutor {
-    fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
+    override fun onCommand(sender: CommandSender, cmd: Command, label: String, args: Array<String>): Boolean {
         val website = Bukkit.getPluginManager().getPlugin("Fuse").config.getString("server.website")
         if (!website.equals("none", ignoreCase = true)) {
             sender.sendMessage(ChatColor.AQUA.toString() + "Website: " + website)

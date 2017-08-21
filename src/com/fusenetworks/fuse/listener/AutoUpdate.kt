@@ -1,6 +1,6 @@
 package com.fusenetworks.fuse.listener
 
-import com.fusenetworks.fuse.Fuse
+import com.fusenetworks.fuse.util.Updater
 import org.bukkit.Bukkit
 import org.bukkit.Bukkit.getServer
 import org.bukkit.ChatColor
@@ -12,6 +12,7 @@ import java.io.IOException
 import java.io.InputStreamReader
 import java.net.URL
 import java.util.logging.Level
+import com.fusenetworks.fuse.Fuse
 
 class AutoUpdate : Listener {
     internal val versionLink = "https://vps76574.vps.ovh.ca/version.txt"
@@ -23,7 +24,7 @@ class AutoUpdate : Listener {
     @EventHandler
     fun onPlayerJoin(event: PlayerJoinEvent): Boolean {
         if (event.player.hasPermission("fuse.update") || event.player.isOp) {
-            val updater = com.fusenetworks.fuse.Updater(Fuse())
+            val updater = Updater(Fuse())
             val oldVersion = updater.getVersionFromString(Bukkit.getPluginManager().getPlugin("Fuse").getDescription().getVersion())
             val path = updater.filePath
 
