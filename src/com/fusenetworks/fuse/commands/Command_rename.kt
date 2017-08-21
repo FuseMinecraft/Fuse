@@ -1,14 +1,11 @@
 package com.fusenetworks.fuse.commands
 
-import com.fusenetworks.fuse.util.NUtil
 import org.bukkit.Material
 import org.apache.commons.lang.StringUtils
 import org.bukkit.ChatColor
 import org.bukkit.command.Command
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
-import org.bukkit.inventory.ItemStack
-import org.bukkit.inventory.meta.ItemMeta
 
 @CommandPermissions(source = SourceType.BOTH)
 @CommandParameters(description = "Renames the item in your hand", usage = "/<command> <name>")

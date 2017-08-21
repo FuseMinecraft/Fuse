@@ -1,6 +1,5 @@
 package com.fusenetworks.fuse;
 
-import com.fusenetworks.fuse.util.NLog;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;

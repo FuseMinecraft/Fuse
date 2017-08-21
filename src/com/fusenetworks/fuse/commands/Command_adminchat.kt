@@ -1,18 +1,14 @@
 package com.fusenetworks.fuse.commands
 
-import com.fusenetworks.fuse.Fuse
-import com.fusenetworks.fuse.util.NLog
-import com.fusenetworks.fuse.util.NUtil
 import org.apache.commons.lang.StringUtils
 import org.bukkit.command.Command
+import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
 
-@CommandPermissions(source = SourceType.BOTH)
-@CommandParameters(description = "AdminChat - Talk privately with other admins", usage = "/<command> [message...]", aliases = "o")
-abstract class Command_adminchat(override var plugin: Fuse) : BaseCommand() {
+abstract class Command_adminchat : CommandExecutor {
 
-    override fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
+    fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
         if (sender.hasPermission("fuse.adminchat")) {
             if (sender is Player)
             // needs cleanup

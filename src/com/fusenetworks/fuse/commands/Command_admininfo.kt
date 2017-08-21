@@ -1,18 +1,18 @@
 package com.fusenetworks.fuse.commands
 
+import org.bukkit.Bukkit
+import org.bukkit.ChatColor
 import org.bukkit.command.Command
+import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
-import org.bukkit.ChatColor
 
-@CommandPermissions(source = SourceType.ONLY_IN_GAME)
-@CommandParameters(description = "Tells a person how to apply for admin", usage = "/<command>", aliases = "ai, apply")
-abstract class Command_admininfo : BaseCommand() {
-    override fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
-        val applications_enabled = plugin.config.getString("server.applications_enabled")
-        val forums = plugin.config.getString("server.forums")
-        val admin_app_template = plugin.config.getString("server.admin_application_template")
-        val new_thread_link = plugin.config.getString("server.admin_app_new_thread_link")
+abstract class Command_admininfo : CommandExecutor {
+    fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
+        val applications_enabled = Bukkit.getPluginManager().getPlugin("Fuse").config.getString("server.applications_enabled")
+        val forums = Bukkit.getPluginManager().getPlugin("Fuse").config.getString("server.forums")
+        val admin_app_template = Bukkit.getPluginManager().getPlugin("Fuse").config.getString("server.admin_application_template")
+        val new_thread_link = Bukkit.getPluginManager().getPlugin("Fuse").config.getString("server.admin_app_new_thread_link")
         if (senderIsConsole) {
             sender.sendMessage(Messages.PLAYER_ONLY)
             return true

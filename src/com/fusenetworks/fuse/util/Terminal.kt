@@ -1,11 +1,11 @@
 package com.fusenetworks.fuse.util
 
 import com.fusenetworks.fuse.Fuse
+import org.bukkit.command.CommandSender
+import org.bukkit.scheduler.BukkitRunnable
 import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStreamReader
-import org.bukkit.command.CommandSender
-import org.bukkit.scheduler.BukkitRunnable
 
 object Terminal {
 
@@ -39,11 +39,11 @@ object Terminal {
         val reader = BufferedReader(InputStreamReader(proc.inputStream))
 
         var line = ""
-        while ((line = reader.readLine()) != null) {
-            sender.sendMessage("root@minecraft_server: " + line)
-        }
+        line = reader.readLine()
+            while (reader.readLine() != null) {
+                sender.sendMessage("root@minecraft_server: " + line)
+            }
 
         proc.waitFor()
     }
-
 }

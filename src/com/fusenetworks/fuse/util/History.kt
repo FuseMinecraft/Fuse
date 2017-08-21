@@ -1,20 +1,17 @@
 package com.fusenetworks.fuse.util
 
 import com.fusenetworks.fuse.Fuse
-import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import org.bukkit.ChatColor
+import org.bukkit.command.CommandSender
+import org.bukkit.scheduler.BukkitRunnable
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.net.HttpURLConnection
 import java.net.URL
 import java.text.DateFormat
 import java.text.SimpleDateFormat
-import java.util.Arrays
-import java.util.Date
-import java.util.UUID
-import org.bukkit.scheduler.BukkitRunnable
-import org.bukkit.ChatColor
-import org.bukkit.command.CommandSender
+import java.util.*
 
 object History {
 
@@ -54,11 +51,11 @@ object History {
 
     private fun printHistory(sender: CommandSender, oldNames: Array<FName>?) {
         if (oldNames!!.size == 1) {
-            FSync.playerMsg(sender, ChatColor.GREEN + oldNames[0].name + ChatColor.GOLD + " has never changed their name.")
+            FSync.playerMsg(sender, oldNames[0].name + ChatColor.GOLD + " has never changed their name.")
             return
         }
         FSync.playerMsg(sender, ChatColor.GOLD.toString() + "Original name: " + ChatColor.GREEN + oldNames[0].name)
-        for (i in 1..oldNames.size - 1) {
+        for (i in 1 until oldNames.size) {
             val date = Date(oldNames[i].changedToAt)
             val formattedDate = df.format(date)
             FSync.playerMsg(sender, ChatColor.BLUE.toString() + formattedDate + ChatColor.GOLD + " changed to " + ChatColor.GREEN + oldNames[i].name)

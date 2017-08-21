@@ -1,6 +1,5 @@
 package com.fusenetworks.fuse.commands
 
-import com.fusenetworks.fuse.util.NUtil
 import org.bukkit.ChatColor
 import org.bukkit.command.Command
 import org.bukkit.command.CommandSender

@@ -2,11 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbe4489f-b154-404b-84b7-a502d43a6a80" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/SomeLegacyCodeMyShittyPotionListenerNeeds.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/FSync.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/NLog.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/NUtil.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/BaseCommand.kt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CMD_Handler.kt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CMD_Loader.kt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CommandParameters.kt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CommandPermissions.kt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/SourceType.kt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/FSync.kt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/NLog.kt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/NUtil.kt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/Config.java" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/Config.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/PotionListener.java" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/PotionListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/SignPatch.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/SignPatch.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/Updater.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/Updater.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_adminchat.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_adminchat.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_admininfo.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_admininfo.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_clearlag.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_clearlag.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_expel.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_expel.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_launchpads.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_launchpads.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_rename.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_rename.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_unloadchunks.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_unloadchunks.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Messages.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Messages.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/History.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/History.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/Terminal.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/Terminal.kt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,41 +45,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Fuse.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt">
+      <file leaf-file-name="History.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/util/History.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-11">
-              <caret line="37" column="24" lean-forward="false" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
-              <folding>
-                <element signature="e#31#456#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="714">
+              <caret line="53" column="35" lean-forward="false" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SomeLegacyCodeMyShittyPotionListenerNeeds.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/SomeLegacyCodeMyShittyPotionListenerNeeds.java">
+      <file leaf-file-name="Command_adminchat.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_adminchat.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="32" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="54" />
-              <folding>
-                <element signature="e#159#160#0" expanded="true" />
-                <element signature="e#190#191#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PotionListener.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/PotionListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="37" column="72" lean-forward="false" selection-start-line="37" selection-start-column="72" selection-end-line="37" selection-end-column="72" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1193#1745#0" expanded="true" />
-                <element signature="e#1744#1745#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="202">
+              <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -83,12 +85,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_ship.java" />
-        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_glassmode.java" />
-        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_unloadchunks.java" />
-        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/ConfigListener.java" />
-        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/Terminal.java" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_adminchat.java" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/BaseCommand.java" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CMD_Handler.java" />
@@ -105,14 +101,10 @@
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_unloadchunks.kt" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/BaseCommand.kt" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/SourceType.kt" />
-        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/Updater.kt" />
-        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_adminchat.kt" />
-        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_admininfo.kt" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_clearlag.kt" />
         <option value="$PROJECT_DIR$/src/help.yml" />
         <option value="$PROJECT_DIR$/src/plugin.yml" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CMD_Handler.kt" />
-        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CMD_Loader.kt" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/Config.kt" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/Config.java" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/Config.java" />
@@ -131,9 +123,19 @@
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/NoHunger.kt" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/PotionListener.kt" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/SignPatch.kt" />
-        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt" />
-        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/SomeLegacyCodeMyShittyPotionListenerNeeds.java" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/PotionListener.java" />
+        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/SomeLegacyCodeMyShittyPotionListenerNeeds.java" />
+        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CMD_Loader.kt" />
+        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_adminchat.kt" />
+        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_admininfo.kt" />
+        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Messages.kt" />
+        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/NLog.java" />
+        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt" />
+        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/NUtil.java" />
+        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/FSync.java" />
+        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/Updater.kt" />
+        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/History.kt" />
+        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/Terminal.kt" />
       </list>
     </option>
   </component>
@@ -183,7 +185,14 @@
               <item name="Fuse-Java" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="fuse" type="462c0819:PsiDirectoryNode" />
-              <item name="listener" type="462c0819:PsiDirectoryNode" />
+              <item name="commands" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fuse-Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fuse-Java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="fuse" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Fuse-Java" type="b2602c69:ProjectViewProjectNode" />
@@ -419,6 +428,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="bbe4489f-b154-404b-84b7-a502d43a6a80" name="Default" comment="" />
@@ -452,11 +464,11 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.48125" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.47083333" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.51875" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.52916664" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
@@ -531,49 +543,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/out/production/Fuse/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="38" lean-forward="true" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_ship.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="22" column="24" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/util/Terminal.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_launchpads.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_rename.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BUGS.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -661,29 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/Documents/1.12/spigot-1.12.jar!/org/bukkit/plugin/java/JavaPlugin.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="209" column="5" lean-forward="true" selection-start-line="209" selection-start-column="5" selection-end-line="209" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_adminchat.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_admininfo.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_clearlag.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -696,14 +642,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/Updater.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="54" column="17" lean-forward="false" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -721,40 +659,22 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#511#542#0" expanded="false" />
-            <element signature="e#627#645#0" expanded="false" />
-            <element signature="e#729#750#0" expanded="false" />
-            <element signature="e#1067#1068#0" expanded="false" />
-            <element signature="e#1116#1117#0" expanded="false" />
-            <element signature="e#1178#1179#0" expanded="false" />
-            <element signature="e#1223#1224#0" expanded="false" />
+            <element signature="e#471#502#0" expanded="false" />
+            <element signature="e#587#605#0" expanded="false" />
+            <element signature="e#689#710#0" expanded="false" />
+            <element signature="e#1027#1028#0" expanded="false" />
+            <element signature="e#1076#1077#0" expanded="false" />
+            <element signature="e#1138#1139#0" expanded="false" />
+            <element signature="e#1183#1184#0" expanded="false" />
+            <element signature="e#3484#3485#0" expanded="false" />
             <element signature="e#3524#3525#0" expanded="false" />
-            <element signature="e#3564#3565#0" expanded="false" />
+            <element signature="e#3694#3695#0" expanded="false" />
             <element signature="e#3734#3735#0" expanded="false" />
-            <element signature="e#3774#3775#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/mcstats/Metrics.kt" />
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/util/Terminal.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="41" column="16" lean-forward="false" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/util/NUtil.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2907">
-          <caret line="171" column="76" lean-forward="false" selection-start-line="171" selection-start-column="76" selection-end-line="171" selection-end-column="76" />
-          <folding>
-            <element signature="e#36#383#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/Commandspy.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -872,14 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CMD_Loader.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-869">
-          <caret line="105" column="47" lean-forward="false" selection-start-line="105" selection-start-column="47" selection-end-line="105" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/SignPatch.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -890,20 +802,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/PotionListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="37" column="24" lean-forward="false" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+        <state relative-caret-position="414">
+          <caret line="37" column="72" lean-forward="false" selection-start-line="37" selection-start-column="72" selection-end-line="37" selection-end-column="72" />
           <folding>
-            <element signature="e#31#456#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1193#1745#0" expanded="false" />
+            <element signature="e#1744#1745#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/SomeLegacyCodeMyShittyPotionListenerNeeds.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="32" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="54" />
+        <state relative-caret-position="85">
+          <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
           <folding>
             <element signature="e#159#160#0" expanded="true" />
             <element signature="e#190#191#0" expanded="true" />
@@ -911,15 +825,175 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/PotionListener.java">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CMD_Loader.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="37" column="72" lean-forward="false" selection-start-line="37" selection-start-column="72" selection-end-line="37" selection-end-column="72" />
+        <state relative-caret-position="500">
+          <caret line="105" column="47" lean-forward="false" selection-start-line="105" selection-start-column="47" selection-end-line="105" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_admininfo.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="73" lean-forward="false" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="73" />
+          <folding>
+            <element signature="e#40#240#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Messages.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="27" lean-forward="true" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/util/FSync.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/util/NLog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1193#1745#0" expanded="true" />
-            <element signature="e#1744#1745#0" expanded="true" />
+            <element signature="e#328#329#0" expanded="true" />
+            <element signature="e#370#371#0" expanded="true" />
+            <element signature="e#439#440#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+            <element signature="e#538#539#0" expanded="true" />
+            <element signature="e#583#584#0" expanded="true" />
+            <element signature="e#631#632#0" expanded="true" />
+            <element signature="e#666#667#0" expanded="true" />
+            <element signature="e#741#742#0" expanded="true" />
+            <element signature="e#780#781#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
+            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#945#946#0" expanded="true" />
+            <element signature="e#983#984#0" expanded="true" />
+            <element signature="e#1056#1057#0" expanded="true" />
+            <element signature="e#1094#1095#0" expanded="true" />
+            <element signature="e#1159#1160#0" expanded="true" />
+            <element signature="e#1206#1207#0" expanded="true" />
+            <element signature="e#1256#1257#0" expanded="true" />
+            <element signature="e#1293#1294#0" expanded="true" />
+            <element signature="e#1384#1385#0" expanded="true" />
+            <element signature="e#1434#1435#0" expanded="true" />
+            <element signature="e#1502#1503#0" expanded="true" />
+            <element signature="e#1562#1563#0" expanded="true" />
+            <element signature="e#1622#1623#0" expanded="true" />
+            <element signature="e#1659#1660#0" expanded="true" />
+            <element signature="e#1719#1720#0" expanded="true" />
+            <element signature="e#1756#1757#0" expanded="true" />
+            <element signature="e#2069#2070#0" expanded="true" />
+            <element signature="e#2147#2148#0" expanded="true" />
+            <element signature="e#2196#2197#0" expanded="true" />
+            <element signature="e#2274#2275#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/util/NLog.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/util/NUtil.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1763">
+          <caret line="151" column="14" lean-forward="false" selection-start-line="151" selection-start-column="14" selection-end-line="151" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Documents/1.12/spigot-1.12.jar!/org/bukkit/plugin/java/JavaPlugin.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#10055#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/util/NUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#871#872#0" expanded="true" />
+            <element signature="e#4424#4425#0" expanded="true" />
+            <element signature="e#4498#4499#0" expanded="true" />
+            <element signature="e#4864#4894#0" expanded="true" />
+            <element signature="e#6012#6013#0" expanded="true" />
+            <element signature="e#6062#6063#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/util/FSync.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="54" lean-forward="false" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/Updater.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-793">
+          <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+          <folding>
+            <element signature="e#31#456#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/util/Terminal.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="43" column="16" lean-forward="false" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/util/History.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="53" column="35" lean-forward="false" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_adminchat.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
