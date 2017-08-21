@@ -6,9 +6,11 @@ import org.bukkit.ChatColor
 import org.bukkit.event.Listener
 import org.bukkit.event.player.PlayerCommandPreprocessEvent
 import org.bukkit.event.EventHandler
+import org.bukkit.Bukkit
 
 class CommandBlocker : Listener {
-    internal val pm = Companion.getServer().getPluginManager()
+    internal val pm = Bukkit.getServer().getPluginManager()
+
     @EventHandler
     fun PlayerCommandPreprocessEvent(event: PlayerCommandPreprocessEvent): Boolean {
         val command = event.message

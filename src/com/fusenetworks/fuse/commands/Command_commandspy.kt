@@ -10,7 +10,7 @@ import com.fusenetworks.fuse.util.PlayerData
 
 @CommandPermissions(source = SourceType.ONLY_IN_GAME)
 @CommandParameters(description = "Spy on commands", usage = "/<command>", aliases = "cmdspy")
-class Command_commandspy : BaseCommand() {
+abstract class Command_commandspy : BaseCommand() {
     override fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
         if (senderIsConsole) {
             sender.sendMessage(Messages.PLAYER_ONLY)

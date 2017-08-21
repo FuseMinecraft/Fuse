@@ -1,19 +1,16 @@
 package com.fusenetworks.fuse
 
-import com.fusenetworks.fuse.listener.*
 import com.fusenetworks.fuse.commands.CMD_Handler
 import com.fusenetworks.fuse.commands.CMD_Loader
+import com.fusenetworks.fuse.listener.*
 import com.fusenetworks.fuse.util.NLog
 import com.fusenetworks.fuse.util.NUtil
-import java.io.File
-import java.io.IOException
 import org.bukkit.Bukkit
 import org.bukkit.Server
 import org.bukkit.command.Command
 import org.bukkit.command.CommandSender
 import org.bukkit.plugin.java.JavaPlugin
 import org.bukkit.scheduler.BukkitRunnable
-import org.mcstats.Metrics
 
 class Fuse : JavaPlugin() {
     internal var jarFile = this.file
@@ -49,20 +46,18 @@ class Fuse : JavaPlugin() {
                 NLog.info(NUtil.NEntityWiper.wipeEntities(true, true).toString() + " entities removed")
             }
         }, 1L, 300.toLong() * 20)
-
-        try {
-            val metrics = Metrics(this)
-            metrics.start()
-        } catch (e: IOException) {
-            // Failed to submit the stats :-(
-        }
-
     }
 
     override fun onDisable() {}
 
     override fun onCommand(sender: CommandSender, cmd: Command, commandLabel: String, args: Array<String>): Boolean {
         return CMD_Handler.handleCommand(sender, cmd, commandLabel, args)
+    }
+
+    class JavaClient {
+        public static getInstance(): Fuse? {
+            return instance
+        }
     }
 
     companion object {
@@ -75,4 +70,5 @@ class Fuse : JavaPlugin() {
         var buildDate = "8/19/17"
         var buildCreator = "Telesphoreo"
     }
+}
 }

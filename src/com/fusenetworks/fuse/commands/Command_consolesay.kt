@@ -8,7 +8,7 @@ import org.bukkit.entity.Player
 
 @CommandPermissions(source = SourceType.ONLY_CONSOLE)
 @CommandParameters(description = "Chat from the console", usage = "/<command>", aliases = "csay")
-class Command_consolesay : BaseCommand() {
+abstract class Command_consolesay : BaseCommand() {
     override fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
         if (args.size == 0) {
             if (senderIsConsole) {

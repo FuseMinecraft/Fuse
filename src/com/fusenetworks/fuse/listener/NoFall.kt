@@ -1,6 +1,6 @@
 package com.fusenetworks.fuse.listener
 
-import com.fusenetworks.fuse.Fuse.Companion.plugin
+import org.bukkit.Bukkit
 import org.bukkit.event.EventHandler
 import org.bukkit.event.EventPriority
 import org.bukkit.event.Listener
@@ -8,7 +8,7 @@ import org.bukkit.event.entity.EntityDamageEvent
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause
 
 class NoFall : Listener {
-    internal var falldamage = Companion.getPlugin().getConfig().getString("server.fall_damage_enabled")
+    internal var falldamage =  Bukkit.getPluginManager().getPlugin("Fuse").getConfig().getString("server.fall_damage_enabled")
     @EventHandler(priority = EventPriority.MONITOR)
     fun onPlayerFall(event: EntityDamageEvent) {
         if (!falldamage.equals("true", ignoreCase = true)) {

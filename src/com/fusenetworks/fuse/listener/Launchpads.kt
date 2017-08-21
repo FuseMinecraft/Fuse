@@ -1,6 +1,7 @@
 package com.fusenetworks.fuse.listener
 
 import com.fusenetworks.fuse.Fuse.Companion.plugin
+import org.bukkit.Bukkit
 import org.bukkit.Material
 import org.bukkit.block.BlockFace
 import org.bukkit.entity.Player
@@ -10,7 +11,7 @@ import org.bukkit.event.player.PlayerMoveEvent
 import org.bukkit.util.Vector
 
 class Launchpads : Listener {
-    internal var enabled = Companion.getPlugin().getConfig().getString("launchpads.enabled")
+    internal var enabled =  Bukkit.getPluginManager().getPlugin("Fuse").getConfig().getString("launchpads.enabled")
     @EventHandler
     fun onPlayerMove(event: PlayerMoveEvent) {
         if (enabled.equals("true", ignoreCase = true)) {

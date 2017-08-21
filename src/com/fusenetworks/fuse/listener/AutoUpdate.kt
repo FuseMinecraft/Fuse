@@ -1,25 +1,16 @@
 package com.fusenetworks.fuse.listener
 
-import com.fusenetworks.fuse.Fuse.Companion.plugin
-import org.bukkit.Bukkit.getServer
-
 import com.fusenetworks.fuse.Fuse
-import com.oracle.deploy.update.Updater
 import org.bukkit.Bukkit
+import org.bukkit.Bukkit.getServer
 import org.bukkit.ChatColor
-import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.player.PlayerJoinEvent
-import org.bukkit.plugin.Plugin
-import org.bukkit.plugin.PluginDescriptionFile
-import org.bukkit.plugin.PluginManager
-
 import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStreamReader
 import java.net.URL
-import java.net.URLConnection
 import java.util.logging.Level
 
 class AutoUpdate : Listener {
@@ -32,8 +23,8 @@ class AutoUpdate : Listener {
     @EventHandler
     fun onPlayerJoin(event: PlayerJoinEvent): Boolean {
         if (event.player.hasPermission("fuse.update") || event.player.isOp) {
-            val updater = com.fusenetworks.fuse.Updater(Fuse.plugin)
-            val oldVersion = updater.getVersionFromString(Companion.getPlugin().getDescription().getVersion())
+            val updater = com.fusenetworks.fuse.Updater(Fuse())
+            val oldVersion = updater.getVersionFromString(Bukkit.getPluginManager().getPlugin("Fuse").getDescription().getVersion())
             val path = updater.filePath
 
             try {
@@ -50,7 +41,7 @@ class AutoUpdate : Listener {
                     event.player.sendMessage(ChatColor.RED.toString() + "There is an update available for Fuse (" + pdf.version + " -> " + newVersion + "). To update Fuse, type /fuse update")
                 }
             } catch (e: IOException) {
-                Companion.getPlugin().getLogger().log(Level.SEVERE, "Failed to automatically check for updates", e)
+                Bukkit.getPluginManager().getPlugin("Fuse").getLogger().log(Level.SEVERE, "Failed to automatically check for updates", e)
             }
 
         }

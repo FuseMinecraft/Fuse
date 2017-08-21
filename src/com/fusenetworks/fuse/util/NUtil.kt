@@ -1,6 +1,6 @@
 package com.fusenetworks.fuse.util
 
-import com.fusenetworks.fuse.Fuse.plugin
+import com.fusenetworks.fuse.Fuse
 import java.lang.reflect.Field
 import java.text.ParseException
 import java.text.SimpleDateFormat
@@ -14,7 +14,6 @@ import org.bukkit.command.CommandSender
 import org.bukkit.entity.*
 
 class NUtil {
-    internal var location = plugin.config.getString("server.location")
 
     class NEntityWiper private constructor() {
         init {

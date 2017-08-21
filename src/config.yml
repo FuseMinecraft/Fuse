@@ -3,6 +3,8 @@
 #
 
 server:
+  # Who is the server owner?
+  owner: Telesphoreo
   # Should players be teleported to spawn when they join?
   spawn_on_join: 'false'
   # Should items be dropped when a person dies?
