@@ -1,14 +1,13 @@
 package com.fusenetworks.fuse.listener;
 
-import com.fusenetworks.fuse.Fuse;
-import static com.fusenetworks.fuse.Fuse.plugin;
+import com.fusenetworks.fuse.SomeLegacyCodeMyShittyPotionListenerNeeds;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Entity;
-import org.bukkit.event.Listener;
-import org.bukkit.event.EventHandler;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PotionSplashEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -36,7 +35,7 @@ public class PotionListener implements Listener {
                             });
                         });
                     }
-                }.runTaskLater(Fuse.getInstance(), 1);
+                }.runTaskLater(SomeLegacyCodeMyShittyPotionListenerNeeds.getInstance(), 1);
                 break;
         }
     }

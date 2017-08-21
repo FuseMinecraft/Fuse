@@ -12,7 +12,7 @@ import org.bukkit.command.CommandSender
 import org.bukkit.plugin.java.JavaPlugin
 import org.bukkit.scheduler.BukkitRunnable
 
-class Fuse : JavaPlugin() {
+open class Fuse : JavaPlugin() {
     internal var jarFile = this.file
 
     override fun onLoad() {
@@ -54,12 +54,6 @@ class Fuse : JavaPlugin() {
         return CMD_Handler.handleCommand(sender, cmd, commandLabel, args)
     }
 
-    class JavaClient {
-        public static getInstance(): Fuse? {
-            return instance
-        }
-    }
-
     companion object {
 
         var plugin: Fuse? = null
@@ -70,5 +64,4 @@ class Fuse : JavaPlugin() {
         var buildDate = "8/19/17"
         var buildCreator = "Telesphoreo"
     }
-}
 }
