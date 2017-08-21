@@ -1,7 +1,8 @@
 package com.fusenetworks.fuse
 
 import com.fusenetworks.fuse.listener.*
-import com.fusenetworks.fuse.util.*
+import com.fusenetworks.fuse.util.NLog
+import com.fusenetworks.fuse.util.NUtil
 import org.bukkit.Bukkit
 import org.bukkit.Server
 import org.bukkit.plugin.java.JavaPlugin

@@ -1,15 +1,14 @@
 package com.fusenetworks.fuse.commands
 
 import org.bukkit.Bukkit
+import org.bukkit.ChatColor
 import org.bukkit.command.Command
+import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
-import org.bukkit.ChatColor
 
-@CommandPermissions(source = SourceType.BOTH)
-@CommandParameters(description = "Ships a player with another player", usage = "/<command> <player1> <player2>")
-class Command_ship : BaseCommand() {
-    override fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
+abstract class Command_ship : CommandExecutor {
+    fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
         if (!sender.hasPermission("fuse.ship")) {
             sender.sendMessage(Messages.MSG_NO_PERMS)
             return true

@@ -1,15 +1,15 @@
 package com.fusenetworks.fuse.commands
 
+import org.bukkit.Bukkit
+import org.bukkit.ChatColor
 import org.bukkit.command.Command
+import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
-import org.bukkit.ChatColor
 
-@CommandPermissions(source = SourceType.BOTH)
-@CommandParameters(description = "Gives a link to the Discord server", usage = "/<command>")
-class Command_discord : BaseCommand() {
-    override fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
-        val discord = plugin.config.getString("server.discord")
+abstract class Command_discord : CommandExecutor {
+    fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
+        val discord = Bukkit.getPluginManager().getPlugin("Fuse").config.getString("server.discord")
         if (!discord.equals("none", ignoreCase = true)) {
             sender.sendMessage(ChatColor.AQUA.toString() + "Discord: " + discord)
         } else {

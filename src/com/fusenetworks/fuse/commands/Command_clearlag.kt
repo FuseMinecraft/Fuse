@@ -1,14 +1,14 @@
 package com.fusenetworks.fuse.commands
 
+import com.fusenetworks.fuse.util.NUtil
 import org.bukkit.ChatColor
 import org.bukkit.command.Command
+import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
 
-@CommandPermissions(source = SourceType.BOTH)
-@CommandParameters(description = "Clears lag", usage = "/<command> [-s]", aliases = "entitywipe,ew,rd")
-abstract class Command_clearlag : BaseCommand() {
-    override fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
+abstract class Command_clearlag : CommandExecutor {
+    fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
         if (!sender.hasPermission("fuse.clearlag")) {
             sender.sendMessage(Messages.MSG_NO_PERMS)
             return true

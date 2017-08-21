@@ -1,16 +1,15 @@
 package com.fusenetworks.fuse.commands
 
+import org.bukkit.ChatColor
 import org.bukkit.command.Command
+import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
-import org.bukkit.ChatColor
 import org.bukkit.potion.PotionEffect
 import org.bukkit.potion.PotionEffectType
 
-@CommandPermissions(source = SourceType.BOTH)
-@CommandParameters(description = "Enables glass mode", usage = "/<command> <enable | disable>")
-class Command_glassmode : BaseCommand() {
-    override fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
+abstract class Command_glassmode : CommandExecutor {
+    fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
         if (!sender.hasPermission("fuse.glassmode")) {
             sender.sendMessage(Messages.MSG_NO_PERMS)
             return true

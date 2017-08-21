@@ -1,29 +1,28 @@
 package com.fusenetworks.fuse.commands
 
 import org.apache.commons.lang3.StringUtils
+import org.bukkit.Bukkit
 import org.bukkit.ChatColor
 import org.bukkit.command.Command
+import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
 import org.bukkit.plugin.Plugin
-import org.bukkit.plugin.PluginManager
 
 // Credit to TF
 
-@CommandPermissions(source = SourceType.BOTH)
-@CommandParameters(description = "Manage plugins", usage = "/<command> <<enable | disable | reload> <pluginname>> | list>", aliases = "plc,pm")
-class Command_pluginmanage : BaseCommand() {
-    override fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
+abstract class Command_pluginmanage : CommandExecutor {
+    fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
         run {
             if (!sender.hasPermission("fuse.pluginmanage")) {
                 sender.sendMessage(Messages.MSG_NO_PERMS)
                 return true
             }
-            if (args.size == 0 || args.size > 2) {
+            if (args.isEmpty() || args.size > 2) {
                 return false
             }
 
-            val pm = server.pluginManager
+            val pm = Bukkit.getServer().pluginManager
 
             if (args.size == 1) {
                 if (args[0].equals("list", ignoreCase = true)) {
@@ -75,13 +74,13 @@ class Command_pluginmanage : BaseCommand() {
                     return true
                 }
 
-                if (target.name == plugin.name) {
-                    sender.sendMessage(ChatColor.GRAY.toString() + "You cannot disable " + plugin.name)
+                if (target.name == Bukkit.getPluginManager().getPlugin("Fuse").name) {
+                    sender.sendMessage(ChatColor.GRAY.toString() + "You cannot disable " + Bukkit.getPluginManager().getPlugin("Fuse").name)
                     return true
                 }
 
-                if (target.name == "ViaVersion") {
-                    sender.sendMessage(ChatColor.RED.toString() + "You cannot disable ViaVersion")
+                if (target.name == "ViaVersion" || target.name == "ViaBackwards") {
+                    sender.sendMessage(ChatColor.RED.toString() + "You cannot disable " + args[1])
                     return true
                 }
 
@@ -119,20 +118,15 @@ class Command_pluginmanage : BaseCommand() {
     }
 
     fun getPlugin(name: String): Plugin? {
-        for (serverPlugin in server.pluginManager.plugins) {
-            if (serverPlugin.name.equals(name, ignoreCase = true)) {
-                return serverPlugin
-            }
-        }
+        Bukkit.getServer().pluginManager.plugins
+                .filter { it.name.equals(name, ignoreCase = true) }
+                .forEach { return it }
 
         if (name.length >= 3) {
-            for (serverPlugin in server.pluginManager.plugins) {
-                if (serverPlugin.name.toLowerCase().contains(name.toLowerCase())) {
-                    return serverPlugin
-                }
-            }
+            Bukkit.getServer().pluginManager.plugins
+                    .filter { it.name.toLowerCase().contains(name.toLowerCase()) }
+                    .forEach { return it }
         }
-
         return null
     }
 }

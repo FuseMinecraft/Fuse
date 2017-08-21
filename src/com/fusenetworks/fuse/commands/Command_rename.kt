@@ -1,16 +1,16 @@
 package com.fusenetworks.fuse.commands
 
-import org.bukkit.Material
+import com.fusenetworks.fuse.util.NUtil
 import org.apache.commons.lang.StringUtils
 import org.bukkit.ChatColor
+import org.bukkit.Material
 import org.bukkit.command.Command
+import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
 
-@CommandPermissions(source = SourceType.BOTH)
-@CommandParameters(description = "Renames the item in your hand", usage = "/<command> <name>")
-class Command_rename : BaseCommand() {
-    override fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
+abstract class Command_rename : CommandExecutor {
+    fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
         if (senderIsConsole) {
             sender.sendMessage(Messages.PLAYER_ONLY)
             return true

@@ -1,15 +1,15 @@
 package com.fusenetworks.fuse.commands
 
+import org.bukkit.Bukkit
+import org.bukkit.ChatColor
 import org.bukkit.command.Command
+import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
-import org.bukkit.ChatColor
 
-@CommandPermissions(source = SourceType.BOTH)
-@CommandParameters(description = "Gives a link to the website", usage = "/<command>")
-class Command_website : BaseCommand() {
-    override fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
-        val website = plugin.config.getString("server.website")
+abstract class Command_website : CommandExecutor {
+    fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
+        val website = Bukkit.getPluginManager().getPlugin("Fuse").config.getString("server.website")
         if (!website.equals("none", ignoreCase = true)) {
             sender.sendMessage(ChatColor.AQUA.toString() + "Website: " + website)
         } else {

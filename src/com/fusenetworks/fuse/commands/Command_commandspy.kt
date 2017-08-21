@@ -1,17 +1,16 @@
 package com.fusenetworks.fuse.commands
 
+import com.fusenetworks.fuse.util.PlayerData
+import org.bukkit.ChatColor
 import org.bukkit.command.Command
+import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
-import org.bukkit.ChatColor
-import com.fusenetworks.fuse.util.PlayerData
 
 // Credit to TFM devs
 
-@CommandPermissions(source = SourceType.ONLY_IN_GAME)
-@CommandParameters(description = "Spy on commands", usage = "/<command>", aliases = "cmdspy")
-abstract class Command_commandspy : BaseCommand() {
-    override fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
+abstract class Command_commandspy : CommandExecutor {
+    fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
         if (senderIsConsole) {
             sender.sendMessage(Messages.PLAYER_ONLY)
             return true

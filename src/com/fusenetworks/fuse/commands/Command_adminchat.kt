@@ -1,5 +1,7 @@
 package com.fusenetworks.fuse.commands
 
+import com.fusenetworks.fuse.util.NLog
+import com.fusenetworks.fuse.util.NUtil
 import org.apache.commons.lang.StringUtils
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor

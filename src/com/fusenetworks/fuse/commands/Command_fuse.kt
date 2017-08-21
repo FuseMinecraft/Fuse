@@ -2,35 +2,31 @@ package com.fusenetworks.fuse.commands
 
 import com.fusenetworks.fuse.Fuse
 import com.fusenetworks.fuse.Updater
-import org.bukkit.Bukkit.getServer
+import org.bukkit.Bukkit
+import org.bukkit.ChatColor
 import org.bukkit.command.Command
+import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
-import org.bukkit.ChatColor
-import org.bukkit.plugin.Plugin
-import org.bukkit.plugin.PluginDescriptionFile
-import org.bukkit.plugin.PluginManager
 
-@CommandPermissions(source = SourceType.BOTH)
-@CommandParameters(description = "Shows information about Fuse", usage = "/<command> [reload | debug | help | update]", aliases = "packscore,oxygen,sky,nitrogen,trident")
-class Command_fuse : BaseCommand() {
-    override fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
-        val spawn_on_join = plugin.config.getString("server.spawn_on_join")
-        val applications_enabled = plugin.config.getString("server.applications_enabled")
-        val op_kits = plugin.config.getString("server.op_kits")
-        val drop_items_on_death = plugin.config.getString("server.drop_items_on_death")
-        val clear_inventory_on_join = plugin.config.getString("server.clear_inventory_on_join")
-        val server_hunger = plugin.config.getString("server.hunger_enabled")
-        val fall_damage_enabled = plugin.config.getString("server.fall_damage_enabled")
-        val dev = plugin.config.getString("server.dev")
-        val superusers = plugin.config.getString("players.superusers")
-        val pm = server.pluginManager
+abstract class Command_fuse : CommandExecutor {
+    fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
+        val spawn_on_join = Bukkit.getPluginManager().getPlugin("Fuse").config.getString("server.spawn_on_join")
+        val applications_enabled = Bukkit.getPluginManager().getPlugin("Fuse").config.getString("server.applications_enabled")
+        val op_kits = Bukkit.getPluginManager().getPlugin("Fuse").config.getString("server.op_kits")
+        val drop_items_on_death = Bukkit.getPluginManager().getPlugin("Fuse").config.getString("server.drop_items_on_death")
+        val clear_inventory_on_join = Bukkit.getPluginManager().getPlugin("Fuse").config.getString("server.clear_inventory_on_join")
+        val server_hunger = Bukkit.getPluginManager().getPlugin("Fuse").config.getString("server.hunger_enabled")
+        val fall_damage_enabled = Bukkit.getPluginManager().getPlugin("Fuse").config.getString("server.fall_damage_enabled")
+        val dev = Bukkit.getPluginManager().getPlugin("Fuse").config.getString("server.dev")
+        val superusers = Bukkit.getPluginManager().getPlugin("Fuse").config.getString("players.superusers")
+        val pm = Bukkit.getServer().pluginManager
         val p = pm.getPlugin("Fuse")
         val pdf = p.description
         val version = pdf.version
-        if (args.size == 0) {
-            sender.sendMessage(ChatColor.GOLD.toString() + plugin.name)
-            sender.sendMessage(ChatColor.GOLD.toString() + "Base Version: 1.3.1.1")
+        if (args.isEmpty()) {
+            sender.sendMessage(ChatColor.GOLD.toString() + "Fuse")
+            sender.sendMessage(ChatColor.GOLD.toString() + "Base Version: 2.0")
             sender.sendMessage(ChatColor.RED.toString() + "Compiled on " + Fuse.buildDate + " by " + Fuse.buildCreator)
             sender.sendMessage(ChatColor.RED.toString() + "Fuse is an advanced plugin designed to provide useful utilities for a Minecraft server")
             sender.sendMessage(ChatColor.GREEN.toString() + "Type /fuse help for command usage")
@@ -48,7 +44,7 @@ class Command_fuse : BaseCommand() {
                     sender.sendMessage(Messages.MSG_NO_PERMS)
                     return true
                 }
-                plugin.reloadConfig()
+                Bukkit.getPluginManager().getPlugin("Fuse").reloadConfig()
                 sender.sendMessage(ChatColor.GRAY.toString() + "Configuration file has been successfully reloaded!")
                 return true
             }
@@ -109,7 +105,7 @@ class Command_fuse : BaseCommand() {
                     sender.sendMessage(Messages.MSG_NO_PERMS)
                     return true
                 }
-                val updater = Updater(Fuse.plugin)
+                val updater = Updater(Fuse())
                 updater.update(sender)
                 return true
             }

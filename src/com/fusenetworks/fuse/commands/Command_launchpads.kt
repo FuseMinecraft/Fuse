@@ -1,15 +1,16 @@
 package com.fusenetworks.fuse.commands
 
+import com.fusenetworks.fuse.util.NUtil
+import org.bukkit.Bukkit
+import org.bukkit.ChatColor
 import org.bukkit.command.Command
+import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
-import org.bukkit.ChatColor
 
-@CommandPermissions(source = SourceType.BOTH)
-@CommandParameters(description = "Enable or disable launchpads", usage = "/<command> [on | off | status]")
-class Command_launchpads : BaseCommand() {
-    override fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
-        val enabled = plugin.config.getString("launchpads.enabled")
+abstract class Command_launchpads : CommandExecutor {
+    fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
+        val enabled = Bukkit.getPluginManager().getPlugin("Fuse").config.getString("launchpads.enabled")
 
         if (!sender.hasPermission("fuse.launchpads")) {
             sender.sendMessage(Messages.MSG_NO_PERMS)
@@ -22,16 +23,16 @@ class Command_launchpads : BaseCommand() {
 
         if (args[0].equals("enable", ignoreCase = true) || args[0].equals("on", ignoreCase = true)) {
             NUtil.adminAction(sender.name, "Enabling launchpads", false)
-            plugin.config.set("launchpads.enabled", "true")
-            plugin.saveConfig()
-            plugin.reloadConfig()
+            Bukkit.getPluginManager().getPlugin("Fuse").config.set("launchpads.enabled", "true")
+            Bukkit.getPluginManager().getPlugin("Fuse").saveConfig()
+            Bukkit.getPluginManager().getPlugin("Fuse").reloadConfig()
             return true
         }
         if (args[0].equals("disable", ignoreCase = true) || args[0].equals("off", ignoreCase = true)) {
             NUtil.adminAction(sender.name, "Disabling launchpads", false)
-            plugin.config.set("launchpads.enabled", "false")
-            plugin.saveConfig()
-            plugin.reloadConfig()
+            Bukkit.getPluginManager().getPlugin("Fuse").config.set("launchpads.enabled", "false")
+            Bukkit.getPluginManager().getPlugin("Fuse").saveConfig()
+            Bukkit.getPluginManager().getPlugin("Fuse").reloadConfig()
             return true
         }
         if (args[0].equals("status", ignoreCase = true)) {

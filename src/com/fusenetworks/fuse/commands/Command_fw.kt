@@ -1,26 +1,22 @@
 package com.fusenetworks.fuse.commands
 
-import java.util.Random
 import org.bukkit.ChatColor
 import org.bukkit.Color
 import org.bukkit.FireworkEffect
-import org.bukkit.Location
-import org.bukkit.World
 import org.bukkit.command.Command
+import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.EntityType
 import org.bukkit.entity.Firework
 import org.bukkit.entity.Player
-import org.bukkit.inventory.meta.FireworkMeta
+import java.util.*
 
-@CommandPermissions(source = SourceType.ONLY_IN_GAME)
-@CommandParameters(description = "Shoots a firework into the sky", usage = "/<command>")
-class Command_fw : BaseCommand() {
+abstract class Command_fw : CommandExecutor {
 
     private val rnd = Random()
     private val colors = arrayOf(Color.AQUA, Color.BLACK, Color.BLUE, Color.FUCHSIA, Color.GREEN, Color.LIME, Color.MAROON, Color.OLIVE, Color.ORANGE, Color.PURPLE, Color.RED, Color.TEAL, Color.WHITE, Color.YELLOW)
 
-    override fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
+    fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
 
         if (senderIsConsole) {
             sender.sendMessage(Messages.PLAYER_ONLY)

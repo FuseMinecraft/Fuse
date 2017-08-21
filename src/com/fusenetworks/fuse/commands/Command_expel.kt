@@ -1,16 +1,16 @@
 package com.fusenetworks.fuse.commands
 
-import java.util.ArrayList
+import com.fusenetworks.fuse.util.NUtil
 import org.apache.commons.lang3.StringUtils
+import org.bukkit.ChatColor
 import org.bukkit.command.Command
+import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
-import org.bukkit.ChatColor
+import java.util.*
 
-@CommandPermissions(source = SourceType.BOTH)
-@CommandParameters(description = "Pushes players away from you", usage = "/<command>")
-class Command_expel : BaseCommand() {
-    override fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
+abstract class Command_expel : CommandExecutor {
+    fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
         if (!sender.hasPermission("fuse.expel")) {
             sender.sendMessage(Messages.MSG_NO_PERMS)
             return true

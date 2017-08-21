@@ -2,13 +2,12 @@ package com.fusenetworks.fuse.commands
 
 import com.fusenetworks.fuse.util.History
 import org.bukkit.command.Command
+import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
 
-@CommandPermissions(source = SourceType.BOTH)
-@CommandParameters(description = "Shows the name history of a player", usage = "/<command> <player>")
-class Command_namehistory : BaseCommand() {
-    override fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
+abstract class Command_namehistory : CommandExecutor {
+    fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
         if (!sender.hasPermission("fuse.namehistory")) {
             sender.sendMessage(Messages.MSG_NO_PERMS)
             return true

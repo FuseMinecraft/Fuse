@@ -1,16 +1,16 @@
 package com.fusenetworks.fuse.commands
 
+import org.bukkit.Bukkit
+import org.bukkit.ChatColor
 import org.bukkit.command.Command
+import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
-import org.bukkit.ChatColor
 
-@CommandPermissions(source = SourceType.BOTH)
-@CommandParameters(description = "Developer command", usage = "/<command> [on | off | status]", aliases = "dev")
-class Command_developer : BaseCommand() {
-    override fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
-        val dev = plugin.config.getString("server.dev")
-        val superusers = plugin.config.getString("players.superusers")
+abstract class Command_developer : CommandExecutor {
+    fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
+        val dev = Bukkit.getPluginManager().getPlugin("Fuse").config.getString("server.dev")
+        val superusers = Bukkit.getPluginManager().getPlugin("Fuse").config.getString("players.superusers")
 
         if (args.size != 1) {
             return false
@@ -19,16 +19,16 @@ class Command_developer : BaseCommand() {
         if (superusers.contains(sender.name)) {
             if (args[0].equals("enable", ignoreCase = true) || args[0].equals("on", ignoreCase = true)) {
                 sender.sendMessage(ChatColor.BLUE.toString() + "Enabled dev mode")
-                plugin.config.set("server.dev", "true")
-                plugin.saveConfig()
-                plugin.reloadConfig()
+                Bukkit.getPluginManager().getPlugin("Fuse").config.set("server.dev", "true")
+                Bukkit.getPluginManager().getPlugin("Fuse").saveConfig()
+                Bukkit.getPluginManager().getPlugin("Fuse").reloadConfig()
                 return true
             }
             if (args[0].equals("disable", ignoreCase = true) || args[0].equals("off", ignoreCase = true)) {
                 sender.sendMessage(ChatColor.BLUE.toString() + "Disabled dev mode")
-                plugin.config.set("server.dev", "false")
-                plugin.saveConfig()
-                plugin.reloadConfig()
+                Bukkit.getPluginManager().getPlugin("Fuse").config.set("server.dev", "false")
+                Bukkit.getPluginManager().getPlugin("Fuse").saveConfig()
+                Bukkit.getPluginManager().getPlugin("Fuse").reloadConfig()
                 return true
             }
             if (args[0].equals("status", ignoreCase = true)) {

@@ -1,17 +1,17 @@
 package com.fusenetworks.fuse.commands
 
 import org.apache.commons.lang3.StringUtils
+import org.bukkit.Bukkit
 import org.bukkit.ChatColor
 import org.bukkit.command.Command
+import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
 
 // Credit to TF
 
-@CommandPermissions(source = SourceType.ONLY_IN_GAME)
-@CommandParameters(description = "Makes a player execute a command", usage = "/<command>")
-class Command_gcmd : BaseCommand() {
-    override fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
+abstract class Command_gcmd : CommandExecutor {
+    fun run(sender: CommandSender, sender_p: Player, cmd: Command, commandLabel: String, args: Array<String>, senderIsConsole: Boolean): Boolean {
         if (!sender.hasPermission("fuse.gcmd")) {
             sender.sendMessage(Messages.MSG_NO_PERMS)
             return true
@@ -21,7 +21,7 @@ class Command_gcmd : BaseCommand() {
             return true
         }
 
-        val player = getPlayer(args[0])
+        val player = Bukkit.getPlayer(args[0])
 
         if (player == null) {
             sender.sendMessage(Messages.PLAYER_NOT_FOUND)
@@ -32,7 +32,7 @@ class Command_gcmd : BaseCommand() {
 
         try {
             sender.sendMessage(ChatColor.GRAY.toString() + "Sending command as " + player.name + ": " + outCommand)
-            if (server.dispatchCommand(player, outCommand)) {
+            if (Bukkit.getServer().dispatchCommand(player, outCommand)) {
                 sender.sendMessage(ChatColor.GRAY.toString() + "Command sent.")
             } else {
                 sender.sendMessage(ChatColor.GRAY.toString() + "Unknown error sending command.")

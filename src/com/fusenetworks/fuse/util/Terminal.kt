@@ -40,9 +40,9 @@ object Terminal {
 
         var line = ""
         line = reader.readLine()
-            while (reader.readLine() != null) {
-                sender.sendMessage("root@minecraft_server: " + line)
-            }
+        while (reader.readLine() != null) {
+            sender.sendMessage("root@minecraft_server: " + line)
+        }
 
         proc.waitFor()
     }
