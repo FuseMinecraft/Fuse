@@ -2,41 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbe4489f-b154-404b-84b7-a502d43a6a80" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/spigot_1_12_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/spigot_1_12.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/Fuse$Companion.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/Fuse$onEnable$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/Updater.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CommandListener.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/PlayerCmd.kt" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_adminchat.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_website.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/Updater.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/Updater.kt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_adminchat.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Adminchat.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Fuse_jar/Fuse.jar" afterPath="$PROJECT_DIR$/out/artifacts/Fuse_jar/Fuse.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/Fuse.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/Fuse.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_fuse.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_fuse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/AutoUpdate.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/AutoUpdate.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/CommandBlocker.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/CommandBlocker.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/ConfigListener.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/ConfigListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/Developer.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/Developer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/Launchpads.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/Launchpads.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/util/FSync.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/util/FSync.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/util/History.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/util/History.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/util/Terminal.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/util/Terminal.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Fuse_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Fuse_jar.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Fuse.iml" afterPath="$PROJECT_DIR$/Fuse.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_adminchat.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_adminchat.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_fuse.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_fuse.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_website.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_website.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/AutoUpdate.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/AutoUpdate.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/CommandBlocker.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/CommandBlocker.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/ConfigListener.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/ConfigListener.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/Developer.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/Developer.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/Launchpads.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/Launchpads.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/FSync.java" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/FSync.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/History.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/History.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/Terminal.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/Terminal.kt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,12 +32,38 @@
     <favorites_list name="Fuse" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="Fuse.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="419">
+              <caret line="33" column="55" lean-forward="false" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
+              <folding>
+                <element signature="e#31#296#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommandListener.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CommandListener.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+              <folding>
+                <element signature="e#40#113#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -73,9 +78,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/Config.java" />
-        <option value="$PROJECT_DIR$/src/org/mcstats/Metrics.kt" />
-        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/NUtil.kt" />
         <option value="$PROJECT_DIR$/src/config.yml" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/LoginMessages.kt" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/NoFall.kt" />
@@ -111,7 +113,6 @@
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_unloadchunks.java" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/Updater.kt" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/CommandBlocker.kt" />
-        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt" />
         <option value="$PROJECT_DIR$/src/Fuse.java" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_fuse.kt" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/AutoUpdate.kt" />
@@ -124,6 +125,10 @@
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_website.kt" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_adminchat.kt" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.java" />
+        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/KotlinTestCommand.kt" />
+        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Adminchat.kt" />
+        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt" />
+        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CommandListener.kt" />
       </list>
     </option>
   </component>
@@ -132,6 +137,9 @@
     <option name="y" value="-8" />
     <option name="width" value="1932" />
     <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -148,7 +156,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -159,14 +167,32 @@
             </path>
             <path>
               <item name="Fuse-Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fuse-Java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fuse-Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fuse-Java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="fuse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fuse-Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fuse-Java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="fuse" type="462c0819:PsiDirectoryNode" />
+              <item name="commands" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fuse-Java" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -428,6 +454,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -442,7 +469,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1796875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1796875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -510,22 +537,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/PotionListener.kt" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/function/Predicate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="48" column="12" lean-forward="false" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/SignPatch.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-          <folding>
-            <element signature="e#40#262#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -541,88 +556,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CMD_Loader.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="105" column="47" lean-forward="false" selection-start-line="105" selection-start-column="47" selection-end-line="105" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/util/FSync.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CMD_Loader.kt" />
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/util/FSync.kt" />
     <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/util/NLog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#328#329#0" expanded="true" />
-            <element signature="e#370#371#0" expanded="true" />
-            <element signature="e#439#440#0" expanded="true" />
-            <element signature="e#475#476#0" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
-            <element signature="e#583#584#0" expanded="true" />
-            <element signature="e#631#632#0" expanded="true" />
-            <element signature="e#666#667#0" expanded="true" />
-            <element signature="e#741#742#0" expanded="true" />
-            <element signature="e#780#781#0" expanded="true" />
-            <element signature="e#846#847#0" expanded="true" />
-            <element signature="e#894#895#0" expanded="true" />
-            <element signature="e#945#946#0" expanded="true" />
-            <element signature="e#983#984#0" expanded="true" />
-            <element signature="e#1056#1057#0" expanded="true" />
-            <element signature="e#1094#1095#0" expanded="true" />
-            <element signature="e#1159#1160#0" expanded="true" />
-            <element signature="e#1206#1207#0" expanded="true" />
-            <element signature="e#1256#1257#0" expanded="true" />
-            <element signature="e#1293#1294#0" expanded="true" />
-            <element signature="e#1384#1385#0" expanded="true" />
-            <element signature="e#1434#1435#0" expanded="true" />
-            <element signature="e#1502#1503#0" expanded="true" />
-            <element signature="e#1562#1563#0" expanded="true" />
-            <element signature="e#1622#1623#0" expanded="true" />
-            <element signature="e#1659#1660#0" expanded="true" />
-            <element signature="e#1719#1720#0" expanded="true" />
-            <element signature="e#1756#1757#0" expanded="true" />
-            <element signature="e#2069#2070#0" expanded="true" />
-            <element signature="e#2147#2148#0" expanded="true" />
-            <element signature="e#2196#2197#0" expanded="true" />
-            <element signature="e#2274#2275#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/util/NLog.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/util/NUtil.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1763">
-          <caret line="151" column="14" lean-forward="false" selection-start-line="151" selection-start-column="14" selection-end-line="151" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/util/NLog.kt" />
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/util/NUtil.kt" />
     <entry file="jar://$USER_HOME$/Documents/1.12/spigot-1.12.jar!/org/bukkit/plugin/java/JavaPlugin.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#10055#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -630,16 +578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#826#827#0" expanded="false" />
-            <element signature="e#871#872#0" expanded="false" />
-            <element signature="e#4424#4425#0" expanded="false" />
-            <element signature="e#4498#4499#0" expanded="false" />
-            <element signature="e#4864#4894#0" expanded="false" />
-            <element signature="e#6012#6013#0" expanded="false" />
-            <element signature="e#6062#6063#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -647,9 +585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="73" lean-forward="false" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="73" />
-          <folding>
-            <element signature="e#40#240#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -657,9 +592,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding>
-            <element signature="e#40#255#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -667,9 +599,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#260#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -677,9 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-          <folding>
-            <element signature="e#40#256#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -687,9 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="52" />
-          <folding>
-            <element signature="e#40#240#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -697,9 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-          <folding>
-            <element signature="e#40#240#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -707,9 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-          <folding>
-            <element signature="e#40#318#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -717,9 +634,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="58" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="64" />
-          <folding>
-            <element signature="e#40#240#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -727,7 +641,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="13" column="43" lean-forward="false" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -735,7 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -743,7 +655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -751,9 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-          <folding>
-            <element signature="e#40#215#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -761,9 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="34" column="55" lean-forward="false" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
-          <folding>
-            <element signature="e#40#280#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -771,7 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -779,7 +683,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -787,9 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-          <folding>
-            <element signature="e#40#325#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -797,9 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="91">
           <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding>
-            <element signature="e#40#240#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -807,7 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -815,25 +711,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="9" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-          <folding>
-            <element signature="e#40#261#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_unloadchunks.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="38" column="71" lean-forward="false" selection-start-line="38" selection-start-column="71" selection-end-line="38" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_unloadchunks.kt" />
     <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Messages.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="55" lean-forward="false" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="97" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -841,9 +726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="95" lean-forward="false" selection-start-line="20" selection-start-column="95" selection-end-line="20" selection-end-column="95" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -862,9 +744,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
           <caret line="90" column="1" lean-forward="false" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
-          <folding>
-            <element signature="e#36#425#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -872,7 +751,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -880,7 +758,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -888,9 +765,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-          <folding>
-            <element signature="e#40#337#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -898,20 +772,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="e#40#222#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="5" lean-forward="false" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt" />
     <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_fuse.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -926,9 +790,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding>
-            <element signature="e#40#461#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -936,9 +797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
-          <folding>
-            <element signature="e#40#209#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -946,9 +804,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-          <folding>
-            <element signature="e#36#413#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -956,9 +811,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-          <folding>
-            <element signature="e#36#242#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -976,9 +828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#308#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -986,29 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#304#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_adminchat.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="12" column="146" lean-forward="false" selection-start-line="12" selection-start-column="146" selection-end-line="12" selection-end-column="146" />
-          <folding>
-            <element signature="e#40#309#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="41" column="81" lean-forward="false" selection-start-line="41" selection-start-column="81" selection-end-line="41" selection-end-column="81" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1016,7 +842,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="9" column="99" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="110" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/PlayerCmd.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding>
+            <element signature="e#40#187#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Adminchat.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+          <folding>
+            <element signature="e#40#309#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="33" column="55" lean-forward="false" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
+          <folding>
+            <element signature="e#31#296#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CommandListener.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding>
+            <element signature="e#40#113#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
