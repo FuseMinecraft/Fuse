@@ -31,7 +31,6 @@ class Fuse : JavaPlugin() {
         server.getPluginManager().registerEvents(new PotionListener(), Fuse.plugin);
         server.getPluginManager().registerEvents(new SignPatch(), Fuse.plugin);*/
         getCommand("player").executor = PlayerCmd
-        getCommand("player").executor = CommandListener(this)
         getCommand("adminchat").executor = Adminchat
         Config.loadConfigs()
         Bukkit.getScheduler().scheduleSyncRepeatingTask(Bukkit.getPluginManager().getPlugin("Fuse"), {
