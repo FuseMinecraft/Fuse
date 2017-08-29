@@ -1,7 +1,6 @@
 package com.fusenetworks.fuse
 
 import com.fusenetworks.fuse.commands.Adminchat
-import com.fusenetworks.fuse.commands.PlayerCmd
 import com.fusenetworks.fuse.util.NLog
 import com.fusenetworks.fuse.util.NUtil
 import org.bukkit.Bukkit
@@ -30,7 +29,6 @@ class Fuse : JavaPlugin() {
         server.getPluginManager().registerEvents(new NoHunger(), Fuse.plugin);
         server.getPluginManager().registerEvents(new PotionListener(), Fuse.plugin);
         server.getPluginManager().registerEvents(new SignPatch(), Fuse.plugin);*/
-        getCommand("player").executor = PlayerCmd
         getCommand("adminchat").executor = Adminchat
         Config.loadConfigs()
         Bukkit.getScheduler().scheduleSyncRepeatingTask(Bukkit.getPluginManager().getPlugin("Fuse"), {
