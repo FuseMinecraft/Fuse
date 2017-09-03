@@ -30,6 +30,13 @@ commands:
       usage: /<command>
       description: Shows the contributors to Fuse
       aliases: contributers
+    developer:
+      usage: /<command [on | off | status]
+      description: Developer command (requires superuser)
+      aliases: dev
+    discord:
+      usage: /<command>
+      description: Shows a link to the Discord server
     player:
       usage: /<command>
       description: Tells you if your a player or not

@@ -1,6 +1,6 @@
 package com.fusenetworks.fuse.listener;
 
-import com.fusenetworks.fuse.SomeLegacyCodeMyShittyPotionListenerNeeds;
+import com.fusenetworks.fuse.util.LegacyCode;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -35,7 +35,7 @@ public class PotionListener implements Listener {
                             });
                         });
                     }
-                }.runTaskLater(SomeLegacyCodeMyShittyPotionListenerNeeds.getInstance(), 1);
+                }.runTaskLater(LegacyCode.getInstance(), 1);
                 break;
         }
     }
