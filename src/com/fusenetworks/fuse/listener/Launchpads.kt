@@ -9,7 +9,7 @@ import org.bukkit.event.Listener
 import org.bukkit.event.player.PlayerMoveEvent
 import org.bukkit.util.Vector
 
-class Launchpads : Listener {
+object Launchpads : Listener {
     internal var enabled =  Bukkit.getPluginManager().getPlugin("Fuse").getConfig().getString("launchpads.enabled")
     @EventHandler
     fun onPlayerMove(event: PlayerMoveEvent) {

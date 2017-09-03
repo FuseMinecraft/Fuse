@@ -1,8 +1,8 @@
 package com.fusenetworks.fuse
 
-import com.fusenetworks.fuse.commands.Adminchat
-import com.fusenetworks.fuse.commands.Clearlag
-import com.fusenetworks.fuse.commands.Command_admininfo
+import com.fusenetworks.fuse.commands.*
+import com.fusenetworks.fuse.commands.Commandspy
+import com.fusenetworks.fuse.listener.*
 import com.fusenetworks.fuse.util.NLog
 import com.fusenetworks.fuse.util.NUtil
 import org.bukkit.Bukkit
@@ -20,20 +20,23 @@ class Fuse : JavaPlugin() {
     }
 
     override fun onEnable() {
-        /*server.getPluginManager().registerEvents(new AutoUpdate(), Fuse.plugin);
-        server.getPluginManager().registerEvents(new CommandBlocker(), Fuse.plugin);
-        server.getPluginManager().registerEvents(new Commandspy(), Fuse.plugin);
-        server.getPluginManager().registerEvents(new ConfigListener(), Fuse.plugin);
-        server.getPluginManager().registerEvents(new Developer(), Fuse.plugin);
-        server.getPluginManager().registerEvents(new Launchpads(), Fuse.plugin);
-        server.getPluginManager().registerEvents(new LoginMessages(), Fuse.plugin);
-        server.getPluginManager().registerEvents(new NoFall(), Fuse.plugin);
-        server.getPluginManager().registerEvents(new NoHunger(), Fuse.plugin);
-        server.getPluginManager().registerEvents(new PotionListener(), Fuse.plugin);
-        server.getPluginManager().registerEvents(new SignPatch(), Fuse.plugin);*/
+        Bukkit.getPluginManager().registerEvents(AutoUpdate, this);
+        Bukkit.getPluginManager().registerEvents(CommandBlocker, this);
+        Bukkit.getPluginManager().registerEvents(Commandspy, this);
+        Bukkit.getPluginManager().registerEvents(ConfigListener, this);
+        Bukkit.getPluginManager().registerEvents(Developer, this);
+        Bukkit.getPluginManager().registerEvents(Launchpads, this);
+        Bukkit.getPluginManager().registerEvents(LoginMessages, this);
+        Bukkit.getPluginManager().registerEvents(NoFall, this);
+        Bukkit.getPluginManager().registerEvents(NoHunger, this);
+        Bukkit.getPluginManager().registerEvents(PotionListener(), this);
+        Bukkit.getPluginManager().registerEvents(SignPatch, this);
         getCommand("adminchat").executor = Adminchat
         getCommand("admininfo").executor = Command_admininfo
         getCommand("clearlag").executor = Clearlag
+        getCommand("commandspy").executor = Commandspy
+        getCommand("consolesay").executor = Consolesay
+        getCommand("contributors").executor = Contributors
         Config.loadConfigs()
         Bukkit.getScheduler().scheduleSyncRepeatingTask(Bukkit.getPluginManager().getPlugin("Fuse"), {
             if (NUtil.NEntityWiper.wipeEntities(true, true) == 1) {

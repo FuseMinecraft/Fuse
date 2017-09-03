@@ -17,6 +17,19 @@ commands:
       usage: /<command> [-s]
       description: Clear entities
       aliases: ew
+    commandspy:
+      usage: /<command>
+      description: Spy on other players comamnds
+      permission: fuse.commandspy
+      aliases: cmdspy
+    consolesay:
+      usage: /<command> <message>
+      description: Talk from the console
+      aliases: csay
+    contributors:
+      usage: /<command>
+      description: Shows the contributors to Fuse
+      aliases: contributers
     player:
       usage: /<command>
       description: Tells you if your a player or not

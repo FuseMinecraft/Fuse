@@ -6,7 +6,7 @@ import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.player.PlayerJoinEvent
 
-class LoginMessages : Listener {
+object LoginMessages : Listener {
     @EventHandler
     fun onPlayerJoin(event: PlayerJoinEvent): Boolean {
         val owner =  Bukkit.getPluginManager().getPlugin("Fuse").getConfig().getString("server.owner")

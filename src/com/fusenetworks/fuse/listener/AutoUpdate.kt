@@ -14,7 +14,7 @@ import java.net.URL
 import java.util.logging.Level
 import com.fusenetworks.fuse.Fuse
 
-class AutoUpdate : Listener {
+object AutoUpdate : Listener {
     internal val versionLink = "https://vps76574.vps.ovh.ca/version.txt"
     internal var pm = getServer().pluginManager
     internal var p = pm.getPlugin("Fuse")

@@ -6,7 +6,7 @@ import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.player.PlayerCommandPreprocessEvent
 
-class CommandBlocker : Listener {
+object CommandBlocker : Listener {
 
     val pm = Bukkit.getServer().getPluginManager()
 

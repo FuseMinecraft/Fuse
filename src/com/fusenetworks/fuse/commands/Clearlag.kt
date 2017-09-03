@@ -22,7 +22,7 @@ object Clearlag : CommandExecutor {
                 NUtil.playerMsg(sender, NUtil.NEntityWiper.wipeEntities(true, true).toString() + " entities removed", ChatColor.GRAY)
             }
             return true
-        } else if (args!![0].equals("-s", ignoreCase = true)) {
+        } else if (args[0].equals("-s", ignoreCase = true)) {
             if (NUtil.NEntityWiper.wipeEntities(true, true) == 1) {
                 NUtil.playerMsg(sender, NUtil.NEntityWiper.wipeEntities(true, true).toString() + " entity removed", ChatColor.GRAY)
                 return true

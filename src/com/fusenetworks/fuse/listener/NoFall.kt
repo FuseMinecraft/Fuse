@@ -7,7 +7,7 @@ import org.bukkit.event.Listener
 import org.bukkit.event.entity.EntityDamageEvent
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause
 
-class NoFall : Listener {
+object NoFall : Listener {
     internal var falldamage =  Bukkit.getPluginManager().getPlugin("Fuse").getConfig().getString("server.fall_damage_enabled")
     @EventHandler(priority = EventPriority.MONITOR)
     fun onPlayerFall(event: EntityDamageEvent) {

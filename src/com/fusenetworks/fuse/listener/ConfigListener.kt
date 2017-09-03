@@ -8,7 +8,7 @@ import org.bukkit.event.entity.PlayerDeathEvent
 import org.bukkit.event.player.PlayerDropItemEvent
 import org.bukkit.event.player.PlayerJoinEvent
 
-class ConfigListener : Listener {
+object ConfigListener : Listener {
 
     @EventHandler
     fun onPlayerDeath(e: PlayerDeathEvent) {

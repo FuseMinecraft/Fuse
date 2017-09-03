@@ -6,7 +6,7 @@ import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.player.PlayerJoinEvent
 
-class Developer : Listener {
+object Developer : Listener {
     @EventHandler
     fun onPlayerJoin(event: PlayerJoinEvent): Boolean {
         val dev =  Bukkit.getPluginManager().getPlugin("Fuse").getConfig().getString("server.dev")

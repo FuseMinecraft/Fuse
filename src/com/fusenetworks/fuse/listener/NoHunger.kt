@@ -6,7 +6,7 @@ import org.bukkit.event.EventPriority
 import org.bukkit.event.Listener
 import org.bukkit.event.entity.FoodLevelChangeEvent
 
-class NoHunger : Listener {
+object NoHunger : Listener {
     internal var hungerenabled =  Bukkit.getPluginManager().getPlugin("Fuse").getConfig().getString("server.hunger_enabled")
     @EventHandler(priority = EventPriority.MONITOR)
     fun onFoodLevelChange(event: FoodLevelChangeEvent) {

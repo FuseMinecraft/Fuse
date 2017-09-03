@@ -1,13 +1,13 @@
 package com.fusenetworks.fuse.listener
 
+import org.bukkit.Material
 import org.bukkit.event.EventHandler
 import org.bukkit.event.EventPriority
 import org.bukkit.event.Listener
 import org.bukkit.event.block.Action
 import org.bukkit.event.player.PlayerInteractEvent
-import org.bukkit.Material
 
-class SignPatch : Listener {
+object SignPatch : Listener {
 
     @EventHandler(priority = EventPriority.HIGH)
     fun onPlayerInteract(e: PlayerInteractEvent) {
