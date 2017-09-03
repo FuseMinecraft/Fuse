@@ -4,6 +4,19 @@ description: Utility plugin for Minecraft servers
 authors: [Telesphoreo, OxLemonxO, Madgeek1450, Prozza, TheMinecraft]
 main: com.fusenetworks.fuse.Fuse
 commands:
+    adminchat:
+      usage: /<command> <message>
+      description: Talk with other admins
+      permission: fuse.adminchat
+      aliases: o
+    admininfo:
+      usage: /<command>
+      description: Learn how to apply for moderator
+      aliases: ai
     player:
       usage: /<command>
-      description: Get the location of a player
+      description: Tells you if your a player or not
+      aliases: testcmd
+    unloadchunks:
+      usage: /<command> [-s]
+      description: Clear unused chunks

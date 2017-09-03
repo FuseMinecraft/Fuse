@@ -1,6 +1,7 @@
 package com.fusenetworks.fuse
 
 import com.fusenetworks.fuse.commands.Adminchat
+import com.fusenetworks.fuse.commands.Command_admininfo
 import com.fusenetworks.fuse.util.NLog
 import com.fusenetworks.fuse.util.NUtil
 import org.bukkit.Bukkit
@@ -30,6 +31,7 @@ class Fuse : JavaPlugin() {
         server.getPluginManager().registerEvents(new PotionListener(), Fuse.plugin);
         server.getPluginManager().registerEvents(new SignPatch(), Fuse.plugin);*/
         getCommand("adminchat").executor = Adminchat
+        getCommand("admininfo").executor = Command_admininfo
         Config.loadConfigs()
         Bukkit.getScheduler().scheduleSyncRepeatingTask(Bukkit.getPluginManager().getPlugin("Fuse"), {
             if (NUtil.NEntityWiper.wipeEntities(true, true) == 1) {
@@ -49,7 +51,7 @@ class Fuse : JavaPlugin() {
         var instance: Fuse? = null
 
 
-        var buildDate = "8/28/17"
+        var buildDate = "9/2/17"
         var buildCreator = "Telesphoreo"
     }
 }
