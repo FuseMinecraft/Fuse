@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbe4489f-b154-404b-84b7-a502d43a6a80" name="Default" comment="" />
+    <list default="true" id="bbe4489f-b154-404b-84b7-a502d43a6a80" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_clearlag.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_clearlag.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Clearlag.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Fuse_jar/Fuse.jar" afterPath="$PROJECT_DIR$/out/artifacts/Fuse_jar/Fuse.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/Fuse$Companion.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/Fuse$Companion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/Fuse$onEnable$1.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/Fuse$onEnable$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/Fuse.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/Fuse.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/plugin.yml" afterPath="$PROJECT_DIR$/out/production/Fuse/plugin.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/plugin.yml" afterPath="$PROJECT_DIR$/src/plugin.yml" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,28 +32,18 @@
       <file leaf-file-name="Fuse.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="33" column="60" lean-forward="false" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
+            <state relative-caret-position="476">
+              <caret line="35" column="50" lean-forward="true" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Admininfo.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Admininfo.kt">
+      <file leaf-file-name="plugin.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/plugin.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="32" column="19" lean-forward="false" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Adminchat.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Adminchat.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+            <state relative-caret-position="306">
+              <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -69,14 +70,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/SignPatch.kt" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/PotionListener.java" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/SomeLegacyCodeMyShittyPotionListenerNeeds.java" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CMD_Loader.kt" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Messages.kt" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/NLog.java" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/NUtil.java" />
-        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_clearlag.kt" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_commandspy.kt" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_consolesay.kt" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_contributors.kt" />
@@ -117,9 +116,11 @@
         <option value="$PROJECT_DIR$/src/okkero/spigotutils/genericcommandsystem/CommandSystemConvenience.kt" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/PlayerCmd.kt" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_admininfo.kt" />
+        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Adminchat.kt" />
+        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Admininfo.kt" />
+        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_clearlag.kt" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt" />
         <option value="$PROJECT_DIR$/src/plugin.yml" />
-        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Adminchat.kt" />
       </list>
     </option>
   </component>
@@ -445,11 +446,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.47083333" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.47083333" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -548,13 +548,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_clearlag.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -802,6 +795,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Adminchat.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="106" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="116" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/PlayerCmd.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -810,34 +811,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/plugin.yml">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Admininfo.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        <state relative-caret-position="221">
+          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Clearlag.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="33" column="60" lean-forward="false" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
+        <state relative-caret-position="476">
+          <caret line="35" column="50" lean-forward="true" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Admininfo.kt">
+    <entry file="file://$PROJECT_DIR$/src/plugin.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="32" column="19" lean-forward="false" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Adminchat.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        <state relative-caret-position="306">
+          <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
           <folding />
         </state>
       </provider>

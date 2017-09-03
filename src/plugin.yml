@@ -13,6 +13,10 @@ commands:
       usage: /<command>
       description: Learn how to apply for moderator
       aliases: ai
+    clearlag:
+      usage: /<command> [-s]
+      description: Clear entities
+      aliases: ew
     player:
       usage: /<command>
       description: Tells you if your a player or not

@@ -1,6 +1,7 @@
 package com.fusenetworks.fuse
 
 import com.fusenetworks.fuse.commands.Adminchat
+import com.fusenetworks.fuse.commands.Clearlag
 import com.fusenetworks.fuse.commands.Command_admininfo
 import com.fusenetworks.fuse.util.NLog
 import com.fusenetworks.fuse.util.NUtil
@@ -32,6 +33,7 @@ class Fuse : JavaPlugin() {
         server.getPluginManager().registerEvents(new SignPatch(), Fuse.plugin);*/
         getCommand("adminchat").executor = Adminchat
         getCommand("admininfo").executor = Command_admininfo
+        getCommand("clearlag").executor = Clearlag
         Config.loadConfigs()
         Bukkit.getScheduler().scheduleSyncRepeatingTask(Bukkit.getPluginManager().getPlugin("Fuse"), {
             if (NUtil.NEntityWiper.wipeEntities(true, true) == 1) {
