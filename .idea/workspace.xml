@@ -1,48 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbe4489f-b154-404b-84b7-a502d43a6a80" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/CommandBlocker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/Commandspy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/ConfigListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/Launchpads.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/LoginMessages.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/PlayerData.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/SomeLegacyCodeMyShittyPotionListenerNeeds.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_admininfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_developer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_discord.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/Commandspy$onPlayerCommandPreprocess$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/Commandspy$onPlayerCommandPreprocess$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/util/PlayerData$Companion.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/CommandBlocker.kt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/Commandspy.kt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/ConfigListener.kt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/Launchpads.kt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/LoginMessages.kt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/PlayerData.kt" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/SomeLegacyCodeMyShittyPotionListenerNeeds.java" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/util/LegacyCode.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_developer.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Developer.kt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_discord.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Discord.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Fuse_jar/Fuse.jar" afterPath="$PROJECT_DIR$/out/artifacts/Fuse_jar/Fuse.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/Fuse$Companion.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/Fuse$Companion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/Fuse$onEnable$1.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/Fuse$onEnable$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/Fuse.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/Fuse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Commandspy.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Commandspy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/CommandBlocker.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/CommandBlocker.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/Commandspy.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/Commandspy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/ConfigListener.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/ConfigListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/Launchpads.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/Launchpads.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/LoginMessages.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/LoginMessages.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/PotionListener.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/listener/PotionListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/util/PlayerData.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/util/PlayerData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/plugin.yml" afterPath="$PROJECT_DIR$/out/production/Fuse/plugin.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Admininfo.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Admininfo.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/PotionListener.java" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/listener/PotionListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/plugin.yml" afterPath="$PROJECT_DIR$/src/plugin.yml" />
-    </list>
+    <list default="true" id="bbe4489f-b154-404b-84b7-a502d43a6a80" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,20 +17,7 @@
     <favorites_list name="Fuse" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Fuse.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-              <folding>
-                <element signature="e#31#377#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -468,7 +414,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -483,7 +428,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1796875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1796875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -912,7 +857,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
+        <state relative-caret-position="391">
           <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
           <folding>
             <element signature="e#31#377#0" expanded="true" />
