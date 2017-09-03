@@ -1,51 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbe4489f-b154-404b-84b7-a502d43a6a80" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/META-INF/Fuse.kotlin_module" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/commands/Command_unloadchunks.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/okkero/spigotutils/genericcommandsystem/ArgsSize$equal$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/okkero/spigotutils/genericcommandsystem/ArgsSize.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/okkero/spigotutils/genericcommandsystem/ArgumentList$ImmutableDepth.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/okkero/spigotutils/genericcommandsystem/ArgumentList$MutableDepth.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/okkero/spigotutils/genericcommandsystem/ArgumentList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/okkero/spigotutils/genericcommandsystem/BadCommandException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/okkero/spigotutils/genericcommandsystem/Command$WhenMappings.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/okkero/spigotutils/genericcommandsystem/Command.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/okkero/spigotutils/genericcommandsystem/CommandData$args$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/okkero/spigotutils/genericcommandsystem/CommandData.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/okkero/spigotutils/genericcommandsystem/CommandResult.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/okkero/spigotutils/genericcommandsystem/CommandSystemConvenienceKt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/okkero/spigotutils/genericcommandsystem/CommandSystemKt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/okkero/spigotutils/genericcommandsystem/IllegalCommandSyntaxException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/okkero/spigotutils/genericcommandsystem/SimpleCommand.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/okkero/spigotutils/genericcommandsystem/SingleTargetCommand.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/okkero/spigotutils/genericcommandsystem/SingleTargetCommandData$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/okkero/spigotutils/genericcommandsystem/SingleTargetCommandData.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/okkero/spigotutils/genericcommandsystem/TargetCommand$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/okkero/spigotutils/genericcommandsystem/TargetCommand.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/okkero/spigotutils/genericcommandsystem/TypeCommand.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Fuse/okkero/spigotutils/genericcommandsystem/TypeCommandData.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/okkero/spigotutils/genericcommandsystem/CommandRules.kt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/okkero/spigotutils/genericcommandsystem/CommandSystem.kt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/okkero/spigotutils/genericcommandsystem/CommandSystemConvenience.kt" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_admininfo.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Admininfo.kt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_unloadchunks.java" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Unloadchunks.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/kotlin-reflect.jar" afterPath="$PROJECT_DIR$/lib/kotlin-reflect.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/kotlin-stdlib-jre7-sources.jar" afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-jre7-sources.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/kotlin-stdlib-jre7.jar" afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-jre7.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/kotlin-stdlib-jre8-sources.jar" afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-jre8-sources.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/kotlin-stdlib-jre8.jar" afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-jre8.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/kotlin-stdlib-sources.jar" afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-sources.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/kotlin-stdlib.jar" afterPath="$PROJECT_DIR$/lib/kotlin-stdlib.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/kotlin-test.jar" afterPath="$PROJECT_DIR$/lib/kotlin-test.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Fuse_jar/Fuse.jar" afterPath="$PROJECT_DIR$/out/artifacts/Fuse_jar/Fuse.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/Fuse.class" afterPath="$PROJECT_DIR$/out/production/Fuse/com/fusenetworks/fuse/Fuse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fuse/plugin.yml" afterPath="$PROJECT_DIR$/out/production/Fuse/plugin.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt" afterPath="$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/plugin.yml" afterPath="$PROJECT_DIR$/src/plugin.yml" />
-    </list>
+    <list default="true" id="bbe4489f-b154-404b-84b7-a502d43a6a80" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -72,11 +28,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plugin.yml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/plugin.yml">
+      <file leaf-file-name="Admininfo.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Admininfo.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+            <state relative-caret-position="459">
+              <caret line="32" column="19" lean-forward="false" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Adminchat.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Adminchat.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -145,7 +111,6 @@
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_adminchat.kt" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.java" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/KotlinTestCommand.kt" />
-        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Adminchat.kt" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/CommandListener.kt" />
         <option value="$PROJECT_DIR$/src/okkero/spigotutils/genericcommandsystem/CommandSystem.kt" />
         <option value="$PROJECT_DIR$/src/okkero/spigotutils/genericcommandsystem/CommandRules.kt" />
@@ -154,6 +119,7 @@
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Command_admininfo.kt" />
         <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/Fuse.kt" />
         <option value="$PROJECT_DIR$/src/plugin.yml" />
+        <option value="$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Adminchat.kt" />
       </list>
     </option>
   </component>
@@ -836,14 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Admininfo.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="32" column="19" lean-forward="false" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/PlayerCmd.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -852,10 +810,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Adminchat.kt">
+    <entry file="file://$PROJECT_DIR$/src/plugin.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+        <state relative-caret-position="306">
+          <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -868,10 +826,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/plugin.yml">
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Admininfo.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        <state relative-caret-position="459">
+          <caret line="32" column="19" lean-forward="false" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fusenetworks/fuse/commands/Adminchat.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
           <folding />
         </state>
       </provider>
