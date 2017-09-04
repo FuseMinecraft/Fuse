@@ -9,12 +9,12 @@ import org.bukkit.command.CommandSender
 object Clearlag : CommandExecutor {
     override fun onCommand(sender: CommandSender?, cmd: Command?, lbl: String?, args: Array<out String>?): Boolean {
         if (!sender?.hasPermission("fuse.clearlag")!!) {
-            sender?.sendMessage(Messages.MSG_NO_PERMS)
+            sender.sendMessage(Messages.MSG_NO_PERMS)
             return true
         }
 
         if (args!!.isEmpty()) {
-            NUtil.adminAction(sender?.name, "Removing all server entities", false)
+            NUtil.adminAction(sender.name, "Removing all server entities", false)
             if (NUtil.NEntityWiper.wipeEntities(true, true) == 1) {
                 NUtil.playerMsg(sender, NUtil.NEntityWiper.wipeEntities(true, true).toString() + " entity removed", ChatColor.GRAY)
                 return true
@@ -22,7 +22,7 @@ object Clearlag : CommandExecutor {
                 NUtil.playerMsg(sender, NUtil.NEntityWiper.wipeEntities(true, true).toString() + " entities removed", ChatColor.GRAY)
             }
             return true
-        } else if (args[0].equals("-s", ignoreCase = true)) {
+        } else if (args[0].equals(other = "-s", ignoreCase = true)) {
             if (NUtil.NEntityWiper.wipeEntities(true, true) == 1) {
                 NUtil.playerMsg(sender, NUtil.NEntityWiper.wipeEntities(true, true).toString() + " entity removed", ChatColor.GRAY)
                 return true

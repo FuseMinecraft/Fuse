@@ -4,43 +4,58 @@ description: Utility plugin for Minecraft servers
 authors: [Telesphoreo, OxLemonxO, Madgeek1450, Prozza, TheMinecraft]
 main: com.fusenetworks.fuse.Fuse
 commands:
-    adminchat:
-      usage: /<command> <message>
-      description: Talk with other admins
-      permission: fuse.adminchat
-      aliases: o
-    admininfo:
-      usage: /<command>
-      description: Learn how to apply for moderator
-      aliases: ai
-    clearlag:
-      usage: /<command> [-s]
-      description: Clear entities
-      aliases: ew
-    commandspy:
-      usage: /<command>
-      description: Spy on other players comamnds
-      permission: fuse.commandspy
-      aliases: cmdspy
-    consolesay:
-      usage: /<command> <message>
-      description: Talk from the console
-      aliases: csay
-    contributors:
-      usage: /<command>
-      description: Shows the contributors to Fuse
-      aliases: contributers
-    developer:
-      usage: /<command [on | off | status]
-      description: Developer command (requires superuser)
-      aliases: dev
-    discord:
-      usage: /<command>
-      description: Shows a link to the Discord server
-    player:
-      usage: /<command>
-      description: Tells you if your a player or not
-      aliases: testcmd
-    unloadchunks:
-      usage: /<command> [-s]
-      description: Clear unused chunks
+      adminchat:
+        description: Talk with other admins
+        aliases: o
+        permissions:
+        - fuse.adminchat (Required to use it)
+        - fuse.moderator (For moderator)
+        - fuse.admin (For admins)
+        - fuse.developer (For developers)
+        - fuse.builder (For builders)
+        - fuse.owner (For owner)
+        usage: /<command> <message>
+      admininfo:
+        description: Tells a person how to apply for moderator
+        aliases: [ai, apply]
+        usage: /<command>
+      clearlag:
+        description: Removes server entities
+        permission: fuse.clearlag
+        aliases: [ew, rd]
+        usage: /<command> [-s]
+      commandspy:
+        description: Spy on other players commands
+        aliases: cmdspy
+        permission: fuse.commandspy
+        usage: /<command>
+      consolesay:
+        description: Chat from the console
+        aliases: csay
+        usage: /<command> <message>
+      contributors:
+        description: Shows contributors to Fuse
+        aliases: contributers
+        usage: /<command>
+      developer:
+        description: Developer command (Requires superuser)
+        aliases: dev
+        usage: /<command> <on | off | status>
+      discord:
+        description: Gives a link to the Discord server
+        usage: /<command>
+      fuse:
+        description: Shows information about Fuse
+        aliases: [packscore, oxygen, sky, nitrogen, trident]
+        permissions:
+        - fuse.update=
+        - fuse.extendedhelp
+        usage: /<command> [reload | debug | help | update]
+      unloadchunks:
+        description: Unloads unused chunks
+        aliases: [uc, rc]
+        permission: fuse.unloadchunks
+        usage: /<command> [-s]
+      website:
+        description: Gives a link to the website
+        usage: /<command>
