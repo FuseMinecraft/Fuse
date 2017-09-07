@@ -1,8 +1,8 @@
 package com.fusenetworks.fuse.util;
 
-
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 public class NLog
 {
     private static final Logger FALLBACK_LOGGER = Logger.getLogger("Minecraft-Server");

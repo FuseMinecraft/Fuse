@@ -16,20 +16,12 @@ import java.util.regex.Pattern;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.Plugin;
-import org.bukkit.plugin.PluginDescriptionFile;
-import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import static org.bukkit.Bukkit.getPlayer;
-import static org.bukkit.Bukkit.getServer;
-
 public class Updater {
-	final String dlLink = "https://vps76574.vps.ovh.ca/Fuse.jar";
-	final String versionLink = "https://vps76574.vps.ovh.ca/version.txt";
+	final String dlLink = "http://flowdesigns.us/Fuse.jar";
+	final String versionLink = "http://flowdesigns.us/version.txt";
 	private Plugin plugin;
 	
 	public Updater (Plugin plugin) {
@@ -77,6 +69,7 @@ public class Updater {
 				}
 		} catch (IOException e)
 		{
+			sender.sendMessage(ChatColor.GRAY + "There are no over the air updates available for Fuse. Please go to https://github.com/FuseMinecraft/Fuse/releases and download the latest release from there.");
 			plugin.getLogger().log(Level.SEVERE, "Failed to auto-update", e);
 		}
 	}

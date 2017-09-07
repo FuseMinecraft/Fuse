@@ -33,7 +33,7 @@ public class Command_fuse extends BaseCommand {
         if (args.length == 0)
         {
         sender.sendMessage(ChatColor.GOLD + plugin.getName());
-        sender.sendMessage(ChatColor.GOLD + "Base Version: 1.3.1.1");
+        sender.sendMessage(ChatColor.GOLD + "Base Version: 1.4");
         sender.sendMessage(ChatColor.RED + "Compiled on " + Fuse.buildDate + " by " + Fuse.buildCreator);
         sender.sendMessage(ChatColor.RED + "Fuse is an advanced plugin designed to provide useful utilities for a Minecraft server");
         sender.sendMessage(ChatColor.GREEN + "Type /fuse help for command usage");
@@ -68,7 +68,6 @@ public class Command_fuse extends BaseCommand {
                 sender.sendMessage(ChatColor.GRAY + "Config Options");
                 sender.sendMessage(ChatColor.GRAY + "server.spawn_on_join: " + spawn_on_join);
                 sender.sendMessage(ChatColor.GRAY + "server.applications_enabled: " + applications_enabled);
-                sender.sendMessage(ChatColor.GRAY + "server.op_kits: " + op_kits);
                 sender.sendMessage(ChatColor.GRAY + "server.dev: " + dev);
                 sender.sendMessage(ChatColor.GRAY + "server.drop_items_on_death: " + drop_items_on_death);
                 sender.sendMessage(ChatColor.GRAY + "server.clear_inventory_on_join: " + clear_inventory_on_join);

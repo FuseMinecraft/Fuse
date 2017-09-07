@@ -1,5 +1,5 @@
 name: Fuse
-version: 1.3.1.1
+version: 1.4
 description: Utility plugin for Minecraft servers
 authors: [Telesphoreo, OxLemonxO, Madgeek1450, Prozza, TheMinecraft]
 main: com.fusenetworks.fuse.Fuse
@@ -27,6 +27,10 @@ commands:
     description: Chat from the console
     aliases: csay
     usage: /<command> <message>
+  contributors:
+    description: Shows people who contributed to Fuse
+    aliases: contributers
+    usage: /<command>
   developer:
     description: Developer command (Requires superuser)
     aliases: dev

@@ -1,3 +1,8 @@
+Fuse 1.4
+--------
+- Update dependencies
+- Bug fixes
+
 Fuse 1.3.1.1
 ------------
 - Update AutoUpdate links for HTTPS

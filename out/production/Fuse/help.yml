@@ -1,4 +1,4 @@
-# Fuse v1.3.1.1 Command and Permission Help
+# Fuse v1.4 Command and Permission Help
 # To block people from dropping items, use the permission node: fuse.nodrop
 # When a command has a -s option, it allows you to use it silently
 
@@ -31,6 +31,10 @@
     description: Chat from the console
     aliases: csay
     usage: /<command> <message>
+  contributors:
+    description: Shows people who contributed to Fuse
+    aliases: contributers
+    usage: /<command>
   developer:
     description: Developer command (Requires superuser)
     aliases: dev

@@ -1,9 +1,6 @@
 package com.fusenetworks.fuse.listener;
  
 import static com.fusenetworks.fuse.Fuse.plugin;
-
-import com.fusenetworks.fuse.Fuse;
-import com.oracle.deploy.update.Updater;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

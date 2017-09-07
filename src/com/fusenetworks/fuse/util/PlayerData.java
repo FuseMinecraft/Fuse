@@ -1,11 +1,11 @@
 package com.fusenetworks.fuse.util;
 
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+
 public class PlayerData {
     public static final Map<String, PlayerData> PLAYER_DATA = new HashMap<>();
     public static final long AUTO_PURGE = 20L * 60L * 5L;

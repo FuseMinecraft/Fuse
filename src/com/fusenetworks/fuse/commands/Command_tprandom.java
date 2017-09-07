@@ -18,9 +18,6 @@ public class Command_tprandom extends BaseCommand {
             sender.sendMessage(Messages.MSG_NO_PERMS);
             return true;
         }
-        String location = plugin.getConfig().getString("server.location");
-        if (location.equalsIgnoreCase("factions"))
-        {
         if (sender instanceof Player)
         {
         Random r = new Random();
@@ -30,10 +27,7 @@ public class Command_tprandom extends BaseCommand {
         sender_p.teleport(l);
         sender.sendMessage(ChatColor.LIGHT_PURPLE + "Poof!");
         } else {
-            sender.sendMessage("That command is for players only!");
-        }
-        } else {
-            sender.sendMessage(Messages.INVALID_SERVER);
+            sender.sendMessage(Messages.PLAYER_ONLY);
         }
         return true;
     }

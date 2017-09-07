@@ -1,8 +1,9 @@
 #
-# Fuse v1.3.1.1 Configuration File
+# Fuse v1.4 Configuration File
 #
 
 server:
+  owner: Telesphoreo
   # Should players be teleported to spawn when they join?
   spawn_on_join: 'false'
   # Should items be dropped when a person dies?

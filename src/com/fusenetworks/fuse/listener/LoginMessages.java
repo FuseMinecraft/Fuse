@@ -23,7 +23,7 @@ import java.util.regex.Pattern;
 public class LoginMessages implements Listener {
     @EventHandler
     public boolean onPlayerJoin(PlayerJoinEvent event) {
-        String owner = plugin.getConfig().getString("staff.owner");
+        String owner = plugin.getConfig().getString("server.owner");
         Player player = event.getPlayer();
         if (player.getName().equals(owner)) {
             Bukkit.broadcastMessage("§b" + owner + " is the §4Owner§b!");
