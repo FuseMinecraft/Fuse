@@ -7,7 +7,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 @CommandPermissions(source = SourceType.BOTH)
-@CommandParameters(description = "Clears lag", usage = "/<command> [-s]", aliases = "entitywipe,ew,rd")
+@CommandParameters(description = "Removes server entities", usage = "/<command> [-s]", aliases = "entitywipe,ew,rd")
 public class Command_clearlag extends BaseCommand {
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole) 

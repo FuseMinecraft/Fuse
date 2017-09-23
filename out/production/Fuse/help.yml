@@ -1,9 +1,9 @@
-# Fuse v1.4 Command and Permission Help
+# Fuse v1.5 Command and Permission Help
 # To block people from dropping items, use the permission node: fuse.nodrop
 # When a command has a -s option, it allows you to use it silently
 
   adminchat:
-    description: Talk with other admins
+    description: Talk privately with other admins
     aliases: o
     permissions:
     - fuse.adminchat (Required to use it)
@@ -14,13 +14,13 @@
     - fuse.owner (For owner)
     usage: /<command> <message>
   admininfo:
-    description: Tells a person how to apply for moderator
+    description: Tells a person how to apply for admin
     aliases: [ai, apply]
     usage: /<command>
   clearlag:
     description: Removes server entities
     permission: fuse.clearlag
-    aliases: [ew, rd]
+    aliases: [entitywipe, ew, rd]
     usage: /<command> [-s]
   commandspy:
     description: Spy on other players commands
@@ -32,7 +32,7 @@
     aliases: csay
     usage: /<command> <message>
   contributors:
-    description: Shows people who contributed to Fuse
+    description: Shows the people who contributed to Fuse
     aliases: contributers
     usage: /<command>
   developer:
@@ -58,18 +58,22 @@
     - fuse.extendedhelp (Admin commands in Fuse)
     usage: /<command> [reload | debug | help | update]
   fw:
-    description: Shoots a firework in the sky
+    description: Shoots a firework into the sky
     usage: /<command>
   gcmd:
-    description: Makes another player do a command
+    description: Makes a player execute a command
     permission: fuse.gcmd
     usage: /<command> [player] [command]
   glassmode:
     description: Makes yourself invisible and glow
     permission: fuse.glassmode
     usage: /<command> <enable | disable>
+  launchpads:
+    description: Enable or disable launchpads
+    permission: fuse.launchpads
+    usage: /<command> <enable | disable | status>
   namehistory:
-    description: Checks a players name history
+    description: Shows the name history of a player
     permission: fuse.namehistory
     usage: /<command> <player>
   pluginmanage:
@@ -78,16 +82,16 @@
     permission: fuse.pluginmanage
     usage: /<command> <<enable | disable | reload> <pluginname>> | list>
   rename:
-    description: Rename an item
+    description: Renames the item in your hand
     usage: /<command> <name>
   ship:
     description: Ships a player with another player
     usage: /<command> <player1> <player2>
   terminal:
-    description: Send terminal commands (Requires superuser)
+    description: Send commands from the terminal (Requires superuser)
     usage: /<command>
   tprandom:
-    description: Teleports to a random place
+    description: Teleports a player to a random location
     aliases: tpr
     permission: fuse.tprandom
     usage: /<command>

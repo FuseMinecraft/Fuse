@@ -8,7 +8,7 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
 @CommandPermissions(source = SourceType.BOTH)
-@CommandParameters(description = "Enables glass mode", usage = "/<command> <enable | disable>")
+@CommandParameters(description = "Makes yourself invisible and glow", usage = "/<command> <enable | disable>")
 public class Command_glassmode extends BaseCommand {
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole) 

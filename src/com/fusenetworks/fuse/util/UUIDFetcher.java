@@ -1,5 +1,6 @@
 package com.fusenetworks.fuse.util;
 
+import com.fusenetworks.fuse.util.NLog;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.io.IOException;
@@ -9,6 +10,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.UUID;
 
+// UUIDFetcher retrieves UUIDs from usernames via web requests to Mojang.
 public class UUIDFetcher
 {
 

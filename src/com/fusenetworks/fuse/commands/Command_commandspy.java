@@ -9,7 +9,7 @@ import com.fusenetworks.fuse.util.PlayerData;
 // Credit to TFM devs
 
 @CommandPermissions(source = SourceType.ONLY_IN_GAME)
-@CommandParameters(description = "Spy on commands", usage = "/<command>", aliases = "cmdspy")
+@CommandParameters(description = "Spy on other players commands", usage = "/<command>", aliases = "cmdspy")
 public class Command_commandspy extends BaseCommand {
     @Override
     public boolean run(CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)

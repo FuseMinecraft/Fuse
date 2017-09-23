@@ -1,3 +1,8 @@
+Fuse 1.5
+--------
+- Update dependencies
+- Bug fixes
+
 Fuse 1.4
 --------
 - Update dependencies

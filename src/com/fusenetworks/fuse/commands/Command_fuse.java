@@ -33,10 +33,9 @@ public class Command_fuse extends BaseCommand {
         if (args.length == 0)
         {
         sender.sendMessage(ChatColor.GOLD + plugin.getName());
-        sender.sendMessage(ChatColor.GOLD + "Base Version: 1.4");
+        sender.sendMessage(ChatColor.GOLD + "Base Version: 1.5 (Spigot 1.12.2)");
         sender.sendMessage(ChatColor.RED + "Compiled on " + Fuse.buildDate + " by " + Fuse.buildCreator);
         sender.sendMessage(ChatColor.RED + "Fuse is an advanced plugin designed to provide useful utilities for a Minecraft server");
-        sender.sendMessage(ChatColor.GREEN + "Type /fuse help for command usage");
         sender.sendMessage(ChatColor.GREEN + "Type /contributors to see who contributed to Fuse");
         sender.sendMessage(ChatColor.GREEN + "Type /fuse update to check for and install updates.");
         if (dev.equals("true"))
@@ -78,40 +77,8 @@ public class Command_fuse extends BaseCommand {
         } // debug end
             case "help":
             {
-                if (!sender.hasPermission("fuse.extendedhelp"))
-                {
-                    sender.sendMessage(ChatColor.GOLD + "Fuse Help");
-                    sender.sendMessage(ChatColor.GOLD + "/admininfo - Tells you how to apply for admin");
-                    sender.sendMessage(ChatColor.GOLD + "/contributors - Lists Fuse Networks's contributors");
-                    sender.sendMessage(ChatColor.GOLD + "/discord - Gives a link to the Discord server");
-                    sender.sendMessage(ChatColor.GOLD + "/forums - Gives a link to the forums");
-                    sender.sendMessage(ChatColor.GOLD + "/fw - Shoots a firework into the sky");
-                    sender.sendMessage(ChatColor.GOLD + "/glassmode - Makes you invisible and adds a glow effect");
-                    sender.sendMessage(ChatColor.GOLD + "/rename - Renames the item in your hand");
-                    sender.sendMessage(ChatColor.GOLD + "/fuse - Shows information about Fuse");
-                    sender.sendMessage(ChatColor.GOLD + "/website - Gives you a link to the website");
-                    return true;
-                } else {
-                    sender.sendMessage(ChatColor.GOLD + "Fuse Help");
-                    sender.sendMessage(ChatColor.RED + "/adminchat - Talk privatley with other admins");
-                    sender.sendMessage(ChatColor.GOLD + "/admininfo - Tells you how to apply for admin");
-                    sender.sendMessage(ChatColor.RED + "/clearlag [-s] - Clears lag");
-                    sender.sendMessage(ChatColor.RED + "/commandspy - Toggles commandspy");
-                    sender.sendMessage(ChatColor.GOLD + "/contributors - Lists Fuse Networks's contributors");
-                    sender.sendMessage(ChatColor.GOLD + "/discord - Gives a link to the Discord server");
-                    sender.sendMessage(ChatColor.RED + "/expel - Push players away from you");
-                    sender.sendMessage(ChatColor.GOLD + "/forums - Gives a link to the forums");
-                    sender.sendMessage(ChatColor.GOLD + "/fw - Shoots a firework into the sky");
-                    sender.sendMessage(ChatColor.RED + "/gcmd - Makes another player execute a command");
-                    sender.sendMessage(ChatColor.GOLD + "/glassmode - Makes you invisible and glowing");
-                    sender.sendMessage(ChatColor.GOLD + "/information - Gives you information about the server you're currently on");
-                    sender.sendMessage(ChatColor.GOLD + "/rename - Renames the item in your hand");
-                    sender.sendMessage(ChatColor.RED + "/ship - Ship a player with another player");
-                    sender.sendMessage(ChatColor.GOLD + "/fuse - Shows information about Fuse");
-                    sender.sendMessage(ChatColor.RED + "/unloadchunks [-s] - Unloads all unused chunks");
-                    sender.sendMessage(ChatColor.GOLD + "/website - Gives you a link to the website");
-                    return true;
-                }
+                sender.sendMessage(ChatColor.GRAY + "To see Fuse's help, type /help Fuse or /? Fuse. If you are the server administrator, you may to into the Fuse folder and read the help.yml file for additional information.");
+                return true;
             }
             case "update":
             {

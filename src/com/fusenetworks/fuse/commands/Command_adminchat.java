@@ -8,7 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 @CommandPermissions(source = SourceType.BOTH)
-@CommandParameters(description = "AdminChat - Talk privately with other admins", usage = "/<command> [message...]", aliases = "o")
+@CommandParameters(description = "Talk privately with other admins", usage = "/<command> [message...]", aliases = "o")
 public class Command_adminchat extends BaseCommand {
 
     @Override
