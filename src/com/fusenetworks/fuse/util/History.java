@@ -35,7 +35,7 @@ public class History
                     String compactUuid = uuid.toString().replace("-", "");
                     try
                     {
-                        URL url = new URL("https://api.mojang.com/user/profiles/" + compactUuid + "/names");
+                        URL url = new URL("https://api.mojang.com/profiles/minecraft/" + compactUuid);
                         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                         BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                         FName[] oldNames = gson.fromJson(reader, FName[].class);

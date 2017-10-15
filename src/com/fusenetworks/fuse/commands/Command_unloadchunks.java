@@ -31,10 +31,9 @@ public class Command_unloadchunks extends BaseCommand {
         } // end senderIsConsole
         
         if (args.length == 0) {
-
         numChunks = server.getWorlds().stream().map((world) -> unloadUnusedChunks(world)).reduce(numChunks, Integer::sum);
-            NUtil.playerMsg(sender, numChunks + " chunks unloaded");
             NUtil.adminAction(sender.getName(), "Unloading all unused chunks", false);
+            NUtil.playerMsg(sender, numChunks + " chunks unloaded");
             NLog.info(numChunks + " chunks unloaded");
             return true;
         } // end if args are 0
