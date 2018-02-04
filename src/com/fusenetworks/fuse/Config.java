@@ -1,15 +1,12 @@
 package com.fusenetworks.fuse;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.EnumMap;
-import java.util.Map;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
+
+import java.io.*;
+import java.util.EnumMap;
+import java.util.Map;
 
 public class Config {
 

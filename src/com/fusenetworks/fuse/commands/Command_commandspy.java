@@ -1,10 +1,10 @@
 package com.fusenetworks.fuse.commands;
 
+import com.fusenetworks.fuse.util.PlayerData;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.ChatColor;
-import com.fusenetworks.fuse.util.PlayerData;
 
 // Credit to TFM devs
 

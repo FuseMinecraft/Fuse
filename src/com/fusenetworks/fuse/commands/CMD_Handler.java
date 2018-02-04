@@ -1,7 +1,7 @@
 package com.fusenetworks.fuse.commands;
 
-import com.fusenetworks.fuse.util.NLog;
 import com.fusenetworks.fuse.Fuse;
+import com.fusenetworks.fuse.util.NLog;
 import org.apache.commons.lang3.StringUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;

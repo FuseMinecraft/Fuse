@@ -1,27 +1,23 @@
 package com.fusenetworks.fuse;
 
 import com.fusenetworks.fuse.util.NUtil;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.lang.reflect.Method;
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.logging.Level;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.io.*;
+import java.lang.reflect.Method;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.logging.Level;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Updater {
-	final String dlLink = "http://flowdesigns.us/Fuse.jar";
-	final String versionLink = "http://flowdesigns.us/version.txt";
+	final String dlLink = "https://flowdesigns.us/Fuse.jar";
+	final String versionLink = "https://flowdesigns.us/version.txt";
 	private Plugin plugin;
 	
 	public Updater (Plugin plugin) {

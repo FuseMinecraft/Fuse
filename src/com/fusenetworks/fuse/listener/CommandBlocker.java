@@ -1,11 +1,12 @@
 package com.fusenetworks.fuse.listener;
- 
-import static com.fusenetworks.fuse.Fuse.server;
-import org.bukkit.plugin.PluginManager;
+
 import org.bukkit.ChatColor;
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
-import org.bukkit.event.EventHandler;
+import org.bukkit.plugin.PluginManager;
+
+import static com.fusenetworks.fuse.Fuse.server;
 
 public class CommandBlocker implements Listener {
     final PluginManager pm = server.getPluginManager();

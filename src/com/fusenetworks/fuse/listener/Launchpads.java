@@ -1,6 +1,5 @@
 package com.fusenetworks.fuse.listener;
 
-import static com.fusenetworks.fuse.Fuse.plugin;
 import org.bukkit.Material;
 import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Player;
@@ -8,6 +7,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.util.Vector;
+
+import static com.fusenetworks.fuse.Fuse.plugin;
 
 public class Launchpads implements Listener {
     String enabled = plugin.getConfig().getString("launchpads.enabled");

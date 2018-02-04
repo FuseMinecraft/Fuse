@@ -3,11 +3,11 @@ package com.fusenetworks.fuse.commands;
 import com.fusenetworks.fuse.util.NLog;
 import com.fusenetworks.fuse.util.NUtil;
 import org.bukkit.ChatColor;
+import org.bukkit.Chunk;
+import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.Chunk;
-import org.bukkit.World;
 
 // Credit to TheMinecraft
 
@@ -31,10 +31,9 @@ public class Command_unloadchunks extends BaseCommand {
         } // end senderIsConsole
         
         if (args.length == 0) {
-
         numChunks = server.getWorlds().stream().map((world) -> unloadUnusedChunks(world)).reduce(numChunks, Integer::sum);
-            NUtil.playerMsg(sender, numChunks + " chunks unloaded");
             NUtil.adminAction(sender.getName(), "Unloading all unused chunks", false);
+            NUtil.playerMsg(sender, numChunks + " chunks unloaded");
             NLog.info(numChunks + " chunks unloaded");
             return true;
         } // end if args are 0

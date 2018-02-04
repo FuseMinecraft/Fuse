@@ -1,10 +1,11 @@
 package com.fusenetworks.fuse.util;
 
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
-import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
 
 public class PlayerData {
     public static final Map<String, PlayerData> PLAYER_DATA = new HashMap<>();

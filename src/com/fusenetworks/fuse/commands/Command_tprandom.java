@@ -1,11 +1,12 @@
 package com.fusenetworks.fuse.commands;
 
-import java.util.Random;
+import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.ChatColor;
-import org.bukkit.Location;
+
+import java.util.Random;
 
 @CommandPermissions(source = SourceType.BOTH)
 @CommandParameters(description = "Teleports a player to a random location", usage = "/<command>", aliases = "tpr")

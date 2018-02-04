@@ -1,10 +1,11 @@
 package com.fusenetworks.fuse.commands;
 
-import static com.fusenetworks.fuse.util.Terminal.runShellCommandAsync;
 import org.apache.commons.lang3.StringUtils;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+
+import static com.fusenetworks.fuse.util.Terminal.runShellCommandAsync;
 
 @CommandPermissions(source = SourceType.ONLY_IN_GAME)
 @CommandParameters(description = "Send commands from the terminal", usage = "/<command>")

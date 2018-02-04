@@ -1,11 +1,12 @@
 package com.fusenetworks.fuse.commands;
 
-import java.util.Collection;
 import com.fusenetworks.fuse.Fuse;
 import org.bukkit.Server;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+
+import java.util.Collection;
 
 // Credit to TF
 

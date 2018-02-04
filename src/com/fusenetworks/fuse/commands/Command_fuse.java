@@ -2,14 +2,15 @@ package com.fusenetworks.fuse.commands;
 
 import com.fusenetworks.fuse.Fuse;
 import com.fusenetworks.fuse.Updater;
-import static org.bukkit.Bukkit.getServer;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.ChatColor;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
+
+import static org.bukkit.Bukkit.getServer;
 
 @CommandPermissions(source = SourceType.BOTH)
 @CommandParameters(description = "Shows information about Fuse", usage = "/<command> [reload | debug | help | update]", aliases = "packscore,oxygen,sky,nitrogen,trident")
@@ -33,7 +34,7 @@ public class Command_fuse extends BaseCommand {
         if (args.length == 0)
         {
         sender.sendMessage(ChatColor.GOLD + plugin.getName());
-        sender.sendMessage(ChatColor.GOLD + "Base Version: 1.5 (Spigot 1.12.2)");
+        sender.sendMessage(ChatColor.GOLD + "Base Version: 1.5.1 (Spigot 1.12.2)");
         sender.sendMessage(ChatColor.RED + "Compiled on " + Fuse.buildDate + " by " + Fuse.buildCreator);
         sender.sendMessage(ChatColor.RED + "Fuse is an advanced plugin designed to provide useful utilities for a Minecraft server");
         sender.sendMessage(ChatColor.GREEN + "Type /contributors to see who contributed to Fuse");

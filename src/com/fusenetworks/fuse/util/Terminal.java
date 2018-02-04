@@ -1,11 +1,12 @@
 package com.fusenetworks.fuse.util;
 
 import com.fusenetworks.fuse.Fuse;
+import org.bukkit.command.CommandSender;
+import org.bukkit.scheduler.BukkitRunnable;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import org.bukkit.command.CommandSender;
-import org.bukkit.scheduler.BukkitRunnable;
 
 public class Terminal {
     
