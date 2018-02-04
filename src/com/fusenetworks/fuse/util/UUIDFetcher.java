@@ -2,6 +2,7 @@ package com.fusenetworks.fuse.util;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -55,12 +56,12 @@ public class UUIDFetcher
         return null;
     }
 
-    private static class FetchedUuid
+    private class FetchedUuid
     {
 
-        private static String id;
+        private String id;
 
-        public static String getID()
+        public String getID()
         {
             return id;
         }

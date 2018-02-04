@@ -1,9 +1,9 @@
 package com.fusenetworks.fuse.commands;
 
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.ChatColor;
 
 @CommandPermissions(source = SourceType.ONLY_IN_GAME)
 @CommandParameters(description = "Tells a person how to apply for admin", usage = "/<command>", aliases = "ai, apply")

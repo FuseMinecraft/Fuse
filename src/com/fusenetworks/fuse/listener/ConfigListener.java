@@ -1,6 +1,5 @@
 package com.fusenetworks.fuse.listener;
- 
-import static com.fusenetworks.fuse.Fuse.plugin;
+
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -8,6 +7,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
+
+import static com.fusenetworks.fuse.Fuse.plugin;
  
 public class ConfigListener implements Listener {
 

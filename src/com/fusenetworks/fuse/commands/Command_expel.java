@@ -1,15 +1,16 @@
 package com.fusenetworks.fuse.commands;
 
 import com.fusenetworks.fuse.util.NUtil;
-import java.util.ArrayList;
-import java.util.List;
 import org.apache.commons.lang3.StringUtils;
+import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.ChatColor;
-import org.bukkit.Location;
 import org.bukkit.util.Vector;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @CommandPermissions(source = SourceType.BOTH)
 @CommandParameters(description = "Pushes players away from you", usage = "/<command>")

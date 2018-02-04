@@ -3,11 +3,11 @@ package com.fusenetworks.fuse.commands;
 import com.fusenetworks.fuse.util.NLog;
 import com.fusenetworks.fuse.util.NUtil;
 import org.bukkit.ChatColor;
+import org.bukkit.Chunk;
+import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.Chunk;
-import org.bukkit.World;
 
 // Credit to TheMinecraft
 

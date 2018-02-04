@@ -1,10 +1,11 @@
 package com.fusenetworks.fuse.listener;
- 
-import static com.fusenetworks.fuse.Fuse.plugin;
+
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.FoodLevelChangeEvent;
+
+import static com.fusenetworks.fuse.Fuse.plugin;
 
 public class NoHunger implements Listener
 {

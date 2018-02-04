@@ -1,24 +1,13 @@
 package com.fusenetworks.fuse.listener;
 
-import static com.fusenetworks.fuse.Fuse.plugin;
-
-import com.fusenetworks.fuse.util.NUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.plugin.java.JavaPlugin;
 
-import java.io.*;
-import java.lang.reflect.Method;
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.logging.Level;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import static com.fusenetworks.fuse.Fuse.plugin;
 
 public class LoginMessages implements Listener {
     @EventHandler

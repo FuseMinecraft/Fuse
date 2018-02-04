@@ -1,10 +1,10 @@
 package com.fusenetworks.fuse.commands;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.ChatColor;
 
 @CommandPermissions(source = SourceType.BOTH)
 @CommandParameters(description = "Ships a player with another player", usage = "/<command> <player1> <player2>")

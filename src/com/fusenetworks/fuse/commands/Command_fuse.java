@@ -2,14 +2,15 @@ package com.fusenetworks.fuse.commands;
 
 import com.fusenetworks.fuse.Fuse;
 import com.fusenetworks.fuse.Updater;
-import static org.bukkit.Bukkit.getServer;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.ChatColor;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
+
+import static org.bukkit.Bukkit.getServer;
 
 @CommandPermissions(source = SourceType.BOTH)
 @CommandParameters(description = "Shows information about Fuse", usage = "/<command> [reload | debug | help | update]", aliases = "packscore,oxygen,sky,nitrogen,trident")
