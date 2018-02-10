@@ -6,7 +6,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 @CommandPermissions(source = SourceType.BOTH)
-@CommandParameters(description = "Shows the name history of a player", usage = "/<command> <player>")
+@CommandParameters(description = "Shows the name history of a player", usage = "/<command> <player>", aliases = "nh")
 public class Command_namehistory extends BaseCommand {
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole) 

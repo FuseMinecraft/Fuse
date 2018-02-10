@@ -13,4 +13,4 @@ Fuse License
 
 You are allowed to use Fuse on your Minecraft server as long as you follow this license. 
 
-Copyright (c) Telesphoreo 2017
+Copyright (c) Telesphoreo 2018

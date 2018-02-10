@@ -19,7 +19,7 @@ import org.bukkit.command.CommandSender;
 public class History
 {
 
-    public static final DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    public static final DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     public static void reportHistory(final CommandSender sender, final String username)
     {
@@ -35,7 +35,7 @@ public class History
                     String compactUuid = uuid.toString().replace("-", "");
                     try
                     {
-                        URL url = new URL("https://api.mojang.com/profiles/minecraft" + compactUuid);
+                        URL url = new URL("https://api.mojang.com/user/profiles/" + compactUuid + "/names");
                         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                         BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                         FName[] oldNames = gson.fromJson(reader, FName[].class);
@@ -74,7 +74,7 @@ public class History
         for (int i = 1; i < oldNames.length; i++)
         {
             Date date = new Date(oldNames[i].getChangedToAt());
-            String formattedDate = df.format(date);
+            String formattedDate = dateFormat.format(date);
             FSync.playerMsg(sender, ChatColor.BLUE + formattedDate + ChatColor.GOLD + " changed to " + ChatColor.GREEN + oldNames[i].getName());
         }
     }

@@ -1,5 +1,5 @@
 name: Fuse
-version: 1.5.1
+version: 1.6
 description: Utility plugin for Minecraft servers
 authors: [Telesphoreo, OxLemonxO, Madgeek1450, Prozza, TheMinecraft]
 main: com.fusenetworks.fuse.Fuse
@@ -65,11 +65,11 @@ commands:
     description: Enable or disable launchpads
     permission: fuse.launchpads
     usage: /<command> <enable | disable | status>
-# Removed namehistory until fix is available
-  #namehistory:
-    #description: Shows the name history of a player
-    #permission: fuse.namehistory
-    #usage: /<command> <player>
+  namehistory:
+    description: Shows the name history of a player
+    aliases: nh
+    permission: fuse.namehistory
+    usage: /<command> <player>
   pluginmanage:
     description: Manage plugins
     aliases: [plc, pm]

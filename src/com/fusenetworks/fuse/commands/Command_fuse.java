@@ -34,12 +34,12 @@ public class Command_fuse extends BaseCommand {
         if (args.length == 0)
         {
         sender.sendMessage(ChatColor.GOLD + plugin.getName());
-        sender.sendMessage(ChatColor.GOLD + "Base Version: 1.5.1 (Spigot 1.12.2)");
+        sender.sendMessage(ChatColor.GOLD + "Base Version: 1.6 (Spigot 1.12.2)");
         sender.sendMessage(ChatColor.RED + "Compiled on " + Fuse.buildDate + " by " + Fuse.buildCreator);
         sender.sendMessage(ChatColor.RED + "Fuse is an advanced plugin designed to provide useful utilities for a Minecraft server");
         sender.sendMessage(ChatColor.GREEN + "Type /contributors to see who contributed to Fuse");
         sender.sendMessage(ChatColor.GREEN + "Type /fuse update to check for and install updates.");
-        if (dev.equals("true"))
+        if (dev.equalsIgnoreCase("true"))
         {
         sender.sendMessage(ChatColor.DARK_AQUA + "The server is currently in development mode. "
         + "This means there may be unstable plugin builds on this server, and the server could crash more than normal!");
@@ -78,7 +78,7 @@ public class Command_fuse extends BaseCommand {
         } // debug end
             case "help":
             {
-                sender.sendMessage(ChatColor.GRAY + "To see Fuse's help, type /help Fuse or /? Fuse. If you are the server administrator, you may to into the Fuse folder and read the help.yml file for additional information.");
+                sender.sendMessage(ChatColor.GRAY + "To see Fuse's help, type /help Fuse or /? Fuse. If you are the owner, for additional inforrmation, please read the help.yml file inside of the Fuse folder.");
                 return true;
             }
             case "update":

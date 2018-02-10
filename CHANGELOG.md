@@ -1,3 +1,17 @@
+Fuse 1.6
+--------
+- Fix /namehistory
+- Add /nh as an alias to /namehistory
+- Add exploit patches
+- Fix autoupdater
+- Update internal version of Spigot
+- Revised grammar
+
+Fuse 1.5.1
+----------
+- Temporarily remove /namehistory
+- Import cleanup
+
 Fuse 1.5
 --------
 - Update dependencies

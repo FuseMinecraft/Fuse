@@ -1,8 +1,8 @@
 package com.fusenetworks.fuse.util;
 
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -37,13 +37,13 @@ public class UUIDFetcher
             FetchedUuid[] id = gson.fromJson(
                     new InputStreamReader(connection.getInputStream()),
                     FetchedUuid[].class);
-            if (id.length == 0)
+
+            if (id.length == 0 || id[0].getID() == null)
             {
                 return null;
             }
 
             String idd = id[0].getID();
-
             uuid = UUID.fromString(idd.substring(0, 8) + "-" + idd.substring(8, 12)
                     + "-" + idd.substring(12, 16) + "-" + idd.substring(16, 20) + "-"
                     + idd.substring(20, 32));
