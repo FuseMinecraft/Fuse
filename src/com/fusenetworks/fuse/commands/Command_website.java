@@ -12,11 +12,17 @@ public class Command_website extends BaseCommand {
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole) 
     {
         String website = plugin.getConfig().getString("server.website");
+        String dev = plugin.getConfig().getString("server.website");
         if (!website.equalsIgnoreCase("none"))
         {
         sender.sendMessage(ChatColor.AQUA + "Website: " + website);
         } else {
             sender.sendMessage(ChatColor.RED + "There is not a website for this server");
+            if (dev.equalsIgnoreCase("true"))
+            {
+                sender.sendMessage("Debug Information:");
+                sender.sendMessage("Configuration Option: " + website);
+            }
         }
         return true;
     }

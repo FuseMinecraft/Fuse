@@ -1,3 +1,14 @@
+Fuse 1.7.0
+-----------
+- Grammar fixes
+- Fix Potion exploit listener not registering
+- Add Telesphoreo as a developer if not as owner
+- Tweak /developer permissions
+- Add more debug information inside of commands
+- Add version numbers in AutoUpdate
+- Add NoWeather
+- Temporarily disable AutoUpdate due to issues
+
 Fuse 1.6
 --------
 - Fix /namehistory

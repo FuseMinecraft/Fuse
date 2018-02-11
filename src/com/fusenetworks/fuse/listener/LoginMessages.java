@@ -18,12 +18,13 @@ public class LoginMessages implements Listener {
             Bukkit.broadcastMessage("§b" + owner + " is the §4Owner§b!");
             return true;
         }
-        if (player.getName().equals("OxLemonxO")) {
-            Bukkit.broadcastMessage("§bOxLemonxO is a §5Developer§b and the §4Ki§5ng §6Of §5Le§6mo§7ns§b!");
+        if (player.getName().equals("Telesphoreo") && !owner.equalsIgnoreCase("Telesphoreo"))
+        {
+            Bukkit.broadcastMessage("§bTelesphoreo is a §5Developer");
             return true;
         }
-        if (player.getName().equals("xShotzfired_")) {
-            Bukkit.broadcastMessage("§bxShotzfired_ is an §9Admin §band §7The Glock King§b!");
+        if (player.getName().equals("OxLemonxO")) {
+            Bukkit.broadcastMessage("§bOxLemonxO is a §5Developer§b and the §4Ki§5ng §6Of §5Le§6mo§7ns§b!");
             return true;
         }
         if (player.getPlayer().hasPermission("fuse.moderator")) {

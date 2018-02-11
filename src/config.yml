@@ -1,8 +1,9 @@
 #
-# Fuse v1.6 Configuration File
+# Fuse v1.6.1 Configuration File
 #
 
 server:
+  # Who is the owner?
   owner: Telesphoreo
   # Should players be teleported to spawn when they join?
   spawn_on_join: 'false'
@@ -12,6 +13,8 @@ server:
   clear_inventory_on_join: 'false'
   # Should players lose hunger
   hunger_enabled: 'true'
+  # Should weather be enabled?
+  weather_enabled: 'true'
   # Should fall damage be enabled?
   fall_damage_enabled: 'true'
   # Is developer mode enabled?

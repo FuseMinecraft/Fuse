@@ -12,11 +12,17 @@ public class Command_discord extends BaseCommand {
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole) 
     {
         String discord = plugin.getConfig().getString("server.discord");
+        String dev = plugin.getConfig().getString("server.dev");
         if (!discord.equalsIgnoreCase("none"))
         {
         sender.sendMessage(ChatColor.AQUA + "Discord: " + discord);
         } else {
             sender.sendMessage(ChatColor.RED + "There is no Discord setup for this server");
+            if (dev.equalsIgnoreCase("true"))
+            {
+                sender.sendMessage("Debug Information:");
+                sender.sendMessage("Configuration Option: " + discord);
+            }
         }
         return true;
     }

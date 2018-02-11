@@ -14,13 +14,18 @@ public class Command_developer extends BaseCommand {
         String dev = plugin.getConfig().getString("server.dev");
         String superusers = plugin.getConfig().getString("players.superusers");
 
-        if (args.length != 1)
+        if (!superusers.contains(sender.getName()))
         {
-            return false;
+            sender.sendMessage(ChatColor.RED + "This command is restricted to superusers.");
+            return true;
         }
 
         if (superusers.contains(sender.getName()))
         {
+            if (args.length != 1)
+            {
+                return false;
+            }
             if (args[0].equalsIgnoreCase("enable") || args[0].equalsIgnoreCase("on"))
             {
                 sender.sendMessage(ChatColor.BLUE + "Enabled dev mode");

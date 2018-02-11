@@ -2,6 +2,7 @@ package com.fusenetworks.fuse;
 
 import com.fusenetworks.fuse.commands.CMD_Handler;
 import com.fusenetworks.fuse.commands.CMD_Loader;
+import com.fusenetworks.fuse.exploits.Potion;
 import com.fusenetworks.fuse.exploits.Sign;
 import com.fusenetworks.fuse.listener.*;
 import com.fusenetworks.fuse.util.NLog;
@@ -24,7 +25,7 @@ public class Fuse extends JavaPlugin {
     public static Fuse instance;
 
 
-    public static String buildDate = "2/9/18";
+    public static String buildDate = "2/10/18";
     public static String buildCreator = "Telesphoreo";
     File jarFile = this.getFile();
     
@@ -38,7 +39,7 @@ public class Fuse extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        server.getPluginManager().registerEvents(new AutoUpdate(), Fuse.plugin);
+        //server.getPluginManager().registerEvents(new AutoUpdate(), Fuse.plugin);
         server.getPluginManager().registerEvents(new CommandBlocker(), Fuse.plugin);
         server.getPluginManager().registerEvents(new Commandspy(), Fuse.plugin);
         server.getPluginManager().registerEvents(new ConfigListener(), Fuse.plugin);
@@ -47,7 +48,7 @@ public class Fuse extends JavaPlugin {
         server.getPluginManager().registerEvents(new LoginMessages(), Fuse.plugin);
         server.getPluginManager().registerEvents(new NoFall(), Fuse.plugin);
         server.getPluginManager().registerEvents(new NoHunger(), Fuse.plugin);
-        server.getPluginManager().registerEvents(new Sign(), Fuse.plugin);
+        server.getPluginManager().registerEvents(new Potion(), Fuse.plugin);
         server.getPluginManager().registerEvents(new PotionListener(), Fuse.plugin);
         server.getPluginManager().registerEvents(new Sign(), Fuse.plugin);
         Config.loadConfigs();
