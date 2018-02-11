@@ -17,6 +17,8 @@ import org.mcstats.Metrics;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Fuse extends JavaPlugin {
 
@@ -25,7 +27,7 @@ public class Fuse extends JavaPlugin {
     public static Fuse instance;
 
 
-    public static String buildDate = "2/10/18";
+    public static String buildDate = "2/11/18";
     public static String buildCreator = "Telesphoreo";
     File jarFile = this.getFile();
     
@@ -39,7 +41,7 @@ public class Fuse extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        //server.getPluginManager().registerEvents(new AutoUpdate(), Fuse.plugin);
+        server.getPluginManager().registerEvents(new AutoUpdate(), Fuse.plugin);
         server.getPluginManager().registerEvents(new CommandBlocker(), Fuse.plugin);
         server.getPluginManager().registerEvents(new Commandspy(), Fuse.plugin);
         server.getPluginManager().registerEvents(new ConfigListener(), Fuse.plugin);

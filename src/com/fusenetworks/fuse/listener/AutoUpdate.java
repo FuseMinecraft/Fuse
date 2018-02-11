@@ -8,10 +8,14 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
+import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.reflect.Method;
+import java.math.BigDecimal;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.logging.Level;
@@ -21,38 +25,28 @@ import java.util.regex.Pattern;
 import static org.bukkit.Bukkit.getServer;
 
 public class AutoUpdate implements Listener {
-
+    PluginManager pm = getServer().getPluginManager();
+    Plugin p = pm.getPlugin("Fuse");
+    PluginDescriptionFile pdf = p.getDescription();
+    int version = this.getVersionFromString(pdf.getVersion());
     final String versionLink = "http://flowdesigns.us/version.txt";
     private Plugin plugin;
-
     @EventHandler
-    public boolean onPlayerJoin(PlayerJoinEvent event) {
+    public boolean onPlayerJoin(PlayerJoinEvent event) throws IOException {
         if (event.getPlayer().hasPermission("fuse.update") || event.getPlayer().isOp()) {
-            com.fusenetworks.fuse.Updater updater = new com.fusenetworks.fuse.Updater(Fuse.plugin);
-            int oldVersion = this.getVersionFromString(plugin.getDescription().getVersion());
-            String path = updater.getFilePath();
-            try {
-                URL url = new URL(versionLink);
-                URLConnection con = url.openConnection();
-                InputStreamReader isr = new InputStreamReader(con.getInputStream());
-                BufferedReader reader = new BufferedReader(isr);
-                reader.ready();
-                int newVersion = this.getVersionFromString(reader.readLine());
-                reader.close();
-
-
-                event.getPlayer().sendMessage(ChatColor.RED + "There is an update available for Fuse (" + newVersion + " from " + oldVersion + "_To update Fuse, type /fuse update");
-                event.getPlayer().sendMessage(ChatColor.RED + "There is an update available for Fuse (" + newVersion + " from " + oldVersion + "_To update Fuse, type /fuse update");
-
-                if (newVersion > oldVersion) {
-                    event.getPlayer().sendMessage(ChatColor.RED + "There is an update available for Fuse (" + newVersion + " from " + oldVersion + "_To update Fuse, type /fuse update");
-                }
-            } catch (IOException e) {
-                plugin.getLogger().log(Level.SEVERE, "Failed to automatically check for updates", e);
+            URL url = new URL(versionLink);
+            URLConnection con = url.openConnection();
+            InputStreamReader isr = new InputStreamReader(con.getInputStream());
+            BufferedReader reader = new BufferedReader(isr);
+            reader.ready();
+            int newVersion = this.getVersionFromString(reader.readLine());
+            if (newVersion > version) {
+                event.getPlayer().sendMessage(ChatColor.RED + "There is an update available for Fuse. To update Fuse, type /fuse update");
             }
         }
         return true;
     }
+
     public int getVersionFromString(String from)
     {
         String result = "";
