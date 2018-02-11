@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Fuse.iml" filepath="$PROJECT_DIR$/Fuse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fuse-maven.iml" filepath="$PROJECT_DIR$/Fuse-maven.iml" />
     </modules>
   </component>
 </project>

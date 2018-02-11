@@ -1,0 +1,43 @@
+#
+# Fuse v2.0 Configuration File
+#
+
+server:
+  # Who is the owner?
+  owner: Telesphoreo
+  # Should players be teleported to spawn when they join?
+  spawn_on_join: 'false'
+  # Should items be dropped when a person dies?
+  drop_items_on_death: 'true'
+  # Should a person's inventory be cleared when they join the game?
+  clear_inventory_on_join: 'false'
+  # Should players lose hunger
+  hunger_enabled: 'true'
+  # Should weather be enabled?
+  weather_enabled: 'true'
+  # Should fall damage be enabled?
+  fall_damage_enabled: 'true'
+  # Is developer mode enabled?
+  dev: 'false'
+  # Are splash potions enabled?
+  splash_potions_enabled: 'true'
+  # Should admin applications be enabled?
+  applications_enabled: 'false'
+  # What is the link to the admin application template?
+  admin_application_template: none
+  # What is the link to create a new thread
+  admin_app_new_thread_link: none
+  # What is the link to the website?
+  website: none
+  # What is the link to your forums?
+  forums: none
+  # What is the link to your servers Discord
+  discord: none
+players:
+  # Who should be allowed to use some high level commands
+  superusers: Telesphoreo, OxLemonxO
+launchpads:
+  # Should launchpads be enabled?
+  enabled: 'false'
+  # What is the block ID that pushes players?
+bottom-block-id: '152'

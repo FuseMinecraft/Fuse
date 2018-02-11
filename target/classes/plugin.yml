@@ -1,0 +1,99 @@
+name: Fuse
+version: 2.0.0
+description: Utility plugin for Minecraft servers
+authors: [Telesphoreo, OxLemonxO, Madgeek1450, Prozza, TheMinecraft]
+main: us.flowdesigns.fuse.Fuse
+commands:
+  adminchat:
+    description: Talk privately with other admins
+    aliases: o
+    permission: fuse.adminchat
+    usage: /<command> <message>
+  admininfo:
+    description: Tells a person how to apply for admin
+    aliases: [ai, apply]
+    usage: /<command>
+  clearlag:
+    description: Removes server entities
+    permission: fuse.clearlag
+    aliases: [entitywipe, ew, rd]
+    usage: /<command> [-s]
+  commandspy:
+    description: Spy on other players commands
+    aliases: cmdspy
+    permission: fuse.cmdspy
+    usage: /<command>
+  consolesay:
+    description: Chat from the console
+    aliases: csay
+    usage: /<command> <message>
+  contributors:
+    description: Shows the people who contributed to Fuse
+    aliases: contributers
+    usage: /<command>
+  developer:
+    description: Developer command (Requires superuser)
+    aliases: dev
+    usage: /<command> <on | off | status>
+  discord:
+    description: Gives a link to the Discord server
+    usage: /<command>
+  expel:
+    description: Pushes players away from you
+    permission: fuse.expel
+    usage: /<command>
+  forums:
+    description: Gives a link to the forums
+    aliases: [forum, fourms, fourm]
+    usage: /<command>
+  fuse:
+    description: Shows information about Fuse
+    aliases: [packscore, oxygen, sky, nitrogen, trident]
+    usage: /<command> [reload | debug | help | update]
+  fw:
+    description: Shoots a firework into the sky
+    usage: /<command>
+  gcmd:
+    description: Makes a player execute a command
+    permission: fuse.gcmd
+    usage: /<command> [player] [command]
+  glassmode:
+    description: Makes yourself invisible and glow
+    permission: fuse.glassmode
+    usage: /<command> <enable | disable>
+  launchpads:
+    description: Enable or disable launchpads
+    permission: fuse.launchpads
+    usage: /<command> <enable | disable | status>
+  namehistory:
+    description: Shows the name history of a player
+    aliases: nh
+    permission: fuse.namehistory
+    usage: /<command> <player>
+  pluginmanage:
+    description: Manage plugins
+    aliases: [plc, pm]
+    permission: fuse.pluginmanage
+    usage: /<command> <<enable | disable | reload> <pluginname>> | list>
+  rename:
+    description: Renames the item in your hand
+    usage: /<command> <name>
+  ship:
+    description: Ships a player with another player
+    usage: /<command> <player1> <player2>
+  terminal:
+    description: Send commands from the terminal (Requires superuser)
+    usage: /<command>
+  tprandom:
+    description: Teleports a player to a random location
+    aliases: tpr
+    permission: fuse.tprandom
+    usage: /<command>
+  unloadchunks:
+    description: Unloads unused chunks
+    aliases: [uc, rc]
+    permission: fuse.unloadchunks
+    usage: /<command> [-s]
+  website:
+    description: Gives a link to the website
+usage: /<command>
