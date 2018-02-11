@@ -41,7 +41,7 @@ public class AutoUpdate implements Listener {
             reader.ready();
             int newVersion = this.getVersionFromString(reader.readLine());
             if (newVersion > version) {
-                event.getPlayer().sendMessage(ChatColor.RED + "There is an update available for Fuse (" + newVersion + " from " + pdf.getVersion() + "). To update Fuse, type /fuse update");
+                event.getPlayer().sendMessage(ChatColor.RED + "There is an update available for Fuse. To update Fuse, type /fuse update");
             }
         }
         return true;
