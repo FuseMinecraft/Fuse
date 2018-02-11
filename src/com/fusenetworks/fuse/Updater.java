@@ -16,8 +16,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Updater {
-	final String dlLink = "http://flowdesigns.us/Fuse.jar";
-	final String versionLink = "http://flowdesigns.us/version.txt";
+	final String dlLink = "https://flowdesigns.us/Fuse.jar";
+	final String versionLink = "https://flowdesigns.us/version.txt";
 	String dev = Fuse.plugin.getConfig().getString("server.dev");
 	private Plugin plugin;
 
@@ -67,7 +67,7 @@ public class Updater {
 					sender.sendMessage("Debug Information:");
 					sender.sendMessage(versionLink);
 					sender.sendMessage(dlLink);
-					sender.sendMessage("newVersion: " + String.valueOf(newVersion) + " should be >= to oldVersion:" + String.valueOf(oldVersion));
+					sender.sendMessage("newVersion: " + String.valueOf(newVersion) + " should be >= to oldVersion: " + String.valueOf(oldVersion));
 				}
 				sender.sendMessage(ChatColor.GRAY + "There are no updates available for Fuse.");
 			}

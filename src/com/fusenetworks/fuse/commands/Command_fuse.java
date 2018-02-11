@@ -2,6 +2,7 @@ package com.fusenetworks.fuse.commands;
 
 import com.fusenetworks.fuse.Fuse;
 import com.fusenetworks.fuse.Updater;
+import com.fusenetworks.fuse.listener.AutoUpdate;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -20,21 +21,16 @@ public class Command_fuse extends BaseCommand {
     {
         String spawn_on_join = plugin.getConfig().getString("server.spawn_on_join");
         String applications_enabled = plugin.getConfig().getString("server.applications_enabled");
-        String op_kits = plugin.getConfig().getString("server.op_kits");
         String drop_items_on_death = plugin.getConfig().getString("server.drop_items_on_death");
         String clear_inventory_on_join = plugin.getConfig().getString("server.clear_inventory_on_join");
         String server_hunger = plugin.getConfig().getString("server.hunger_enabled");
         String fall_damage_enabled = plugin.getConfig().getString("server.fall_damage_enabled");
         String dev = plugin.getConfig().getString("server.dev");
         String superusers = plugin.getConfig().getString("players.superusers");
-        PluginManager pm = getServer().getPluginManager();
-        Plugin p = pm.getPlugin("Fuse");
-        PluginDescriptionFile pdf = p.getDescription();
-        String version = pdf.getVersion();
         if (args.length == 0)
         {
         sender.sendMessage(ChatColor.GOLD + plugin.getName());
-        sender.sendMessage(ChatColor.GOLD + "Base Version: 1.6 (Spigot 1.12.2)");
+        sender.sendMessage(ChatColor.GOLD + "Base Version: 1.7.1 (Spigot 1.12.2)");
         sender.sendMessage(ChatColor.RED + "Compiled on " + Fuse.buildDate + " by " + Fuse.buildCreator);
         sender.sendMessage(ChatColor.RED + "Fuse is an advanced plugin designed to provide useful utilities for a Minecraft server");
         sender.sendMessage(ChatColor.GREEN + "Type /contributors to see who contributed to Fuse");
