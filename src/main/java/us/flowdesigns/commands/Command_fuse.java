@@ -21,13 +21,11 @@ public class Command_fuse extends BaseCommand {
         String fall_damage_enabled = plugin.getConfig().getString("server.fall_damage_enabled");
         String dev = plugin.getConfig().getString("server.dev");
         String superusers = plugin.getConfig().getString("players.superusers");
-        Fuse.BuildProperties build = Fuse.build;
         if (args.length == 0)
         {
         sender.sendMessage(ChatColor.GOLD + plugin.getName());
-        sender.sendMessage(ChatColor.GOLD + "Base Version: " + build.version);
-        sender.sendMessage(ChatColor.RED + "Compiled on " + build.date + " by " + build.author);
-        sender.sendMessage("Fuse Maven");
+        sender.sendMessage(ChatColor.GOLD + "Base Version: 2.0.1");
+        sender.sendMessage(ChatColor.RED + "Compiled on: " + Fuse.buildDate + " by " + Fuse.buildCreator);
         sender.sendMessage(ChatColor.RED + "Fuse is an advanced plugin designed to provide useful utilities for a Minecraft server");
         sender.sendMessage(ChatColor.GREEN + "Type /contributors to see who contributed to Fuse");
         sender.sendMessage(ChatColor.GREEN + "Type /fuse update to check for and install updates.");

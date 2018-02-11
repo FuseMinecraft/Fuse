@@ -25,10 +25,8 @@ public class Fuse extends JavaPlugin {
     public static Fuse instance;
 
 
-    public static String buildDate = "2/10/18";
+    public static String buildDate = "2/11/18";
     public static String buildCreator = "Telesphoreo";
-    public static String pluginVersion;
-    public static BuildProperties build;
     File jarFile = this.getFile();
 
     @Override
@@ -49,6 +47,7 @@ public class Fuse extends JavaPlugin {
         server.getPluginManager().registerEvents(new Launchpads(), Fuse.plugin);
         server.getPluginManager().registerEvents(new LoginMessages(), Fuse.plugin);
         server.getPluginManager().registerEvents(new NoFall(), Fuse.plugin);
+        server.getPluginManager().registerEvents(new NoWeather(), Fuse.plugin);
         server.getPluginManager().registerEvents(new NoHunger(), Fuse.plugin);
         server.getPluginManager().registerEvents(new Potion(), Fuse.plugin);
         server.getPluginManager().registerEvents(new PotionListener(), Fuse.plugin);
@@ -83,41 +82,5 @@ public class Fuse extends JavaPlugin {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
         return CMD_Handler.handleCommand(sender, cmd, commandLabel, args);
-    }
-
-    public static class BuildProperties
-    {
-
-        public String author;
-        public String codename;
-        public String version;
-        public String number;
-        public String date;
-        public String head;
-
-        public void load(Fuse plugin)
-        {
-            try
-            {
-                final Properties props;
-                try (InputStream in = plugin.getResource("build.properties"))
-                {
-                    props = new Properties();
-                    props.load(in);
-                }
-
-                author = props.getProperty("program.build.author", "Telesphoreo");
-                codename = props.getProperty("program.build.codename", "Fuse");
-                version = props.getProperty("program.build.version", "2.0.0");
-                number = props.getProperty("program.build.number", "1");
-                date = props.getProperty("program.build.date", "unknown");
-                head = props.getProperty("program.build.head", "unknown");
-            }
-            catch (Exception ex)
-            {
-                NLog.severe("Could not load build properties! Did you compile with Netbeans/Maven?");
-                NLog.severe(ex);
-            }
-        }
     }
 }

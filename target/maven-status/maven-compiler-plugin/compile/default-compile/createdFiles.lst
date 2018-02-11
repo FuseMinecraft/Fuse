@@ -51,7 +51,6 @@ us\flowdesigns\commands\Command_clearlag.class
 us\flowdesigns\utils\FSync$2.class
 us\flowdesigns\commands\Command_forums.class
 us\flowdesigns\listener\CommandBlocker.class
-us\flowdesigns\fuse\Fuse$BuildProperties.class
 us\flowdesigns\listener\PotionListener$2.class
 us\flowdesigns\commands\Command_namehistory.class
 us\flowdesigns\commands\Command_website.class
