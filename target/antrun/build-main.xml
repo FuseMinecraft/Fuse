@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <propertyfile file="C:\Users\Sammy Packer\IdeaProjects\Fuse-maven/src/main/resources/build.properties" comment="Build information. Edit this to your liking.">
+    <entry default="Telesphoreo" key="buildAuthor"/>
+  </propertyfile>
+</target>
+</project>
