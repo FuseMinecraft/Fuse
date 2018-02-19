@@ -5,14 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>us.flowdesigns</groupId>
     <artifactId>Fuse</artifactId>
-    <version>2.0.1</version>
+    <version>2.1.0</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <build.version>${project.version}</build.version>
         <build.number>buildNumber</build.number>
         <build.date>${maven.build.timestamp}</build.date>
-        <build.author>${buildAuthor}</build.author>
-        <build.head>${buildHead}</build.head>
         <jar.finalName>${project.name}</jar.finalName>
         <maven.build.timestamp.format>dd/MM/yyyy hh:mm aa</maven.build.timestamp.format>
     </properties>

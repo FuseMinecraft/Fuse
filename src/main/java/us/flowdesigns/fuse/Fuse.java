@@ -93,7 +93,6 @@ public class Fuse extends JavaPlugin {
     {
 
         public String author;
-        public String codename;
         public String version;
         public String number;
         public String date;
