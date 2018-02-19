@@ -43,7 +43,6 @@ public class Fuse extends JavaPlugin {
     @Override
     public void onEnable() {
         build.load(Fuse.plugin);
-        NLog.info(build.formattedVersion());
         server.getPluginManager().registerEvents(new AutoUpdate(), Fuse.plugin);
         server.getPluginManager().registerEvents(new CommandBlocker(), Fuse.plugin);
         server.getPluginManager().registerEvents(new Commandspy(), Fuse.plugin);
