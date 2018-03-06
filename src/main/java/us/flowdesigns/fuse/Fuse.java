@@ -116,7 +116,7 @@ public class Fuse extends JavaPlugin {
             }
             catch (Exception ex)
             {
-                NLog.severe("Could not load build properties! Did you compile with Netbeans/Maven?");
+                NLog.severe("Could not load build properties! Did you compile with NetBeans/Maven?");
                 NLog.severe(ex);
             }
         }

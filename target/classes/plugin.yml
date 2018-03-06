@@ -1,5 +1,5 @@
 name: Fuse
-version: 2.1.0
+version: 2.2.0
 description: Utility plugin for Minecraft servers
 authors: [Telesphoreo, OxLemonxO, Madgeek1450, Prozza, TheMinecraft]
 main: us.flowdesigns.fuse.Fuse
@@ -84,6 +84,10 @@ commands:
   terminal:
     description: Send commands from the terminal (Requires superuser)
     usage: /<command>
+  toggle:
+    description: Toggles configuration options
+    usage: /<command>
+    permission: fuse.toggle
   tprandom:
     description: Teleports a player to a random location
     aliases: tpr

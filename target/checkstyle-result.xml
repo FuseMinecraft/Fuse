@@ -125,6 +125,35 @@
 <file name="C:\Users\Sammy Packer\IdeaProjects\Fuse-maven\src\main\java\us\flowdesigns\commands\Command_terminal.java">
 <error line="12" column="51" severity="warning" message="&apos;{&apos; at column 51 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
 </file>
+<file name="C:\Users\Sammy Packer\IdeaProjects\Fuse-maven\src\main\java\us\flowdesigns\commands\Command_toggle.java">
+<error line="10" column="49" severity="warning" message="&apos;{&apos; at column 49 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="12" column="173" severity="warning" message="&apos;{&apos; at column 173 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="26" column="31" severity="warning" message="&apos;{&apos; at column 31 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="39" column="56" severity="warning" message="&apos;{&apos; at column 56 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="40" column="57" severity="warning" message="&apos;{&apos; at column 57 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="47" column="58" severity="warning" message="&apos;{&apos; at column 58 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="56" column="62" severity="warning" message="&apos;{&apos; at column 62 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="57" column="63" severity="warning" message="&apos;{&apos; at column 63 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="64" column="64" severity="warning" message="&apos;{&apos; at column 64 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="73" column="70" severity="warning" message="&apos;{&apos; at column 70 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="74" column="71" severity="warning" message="&apos;{&apos; at column 71 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="81" column="72" severity="warning" message="&apos;{&apos; at column 72 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="90" column="61" severity="warning" message="&apos;{&apos; at column 61 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="91" column="62" severity="warning" message="&apos;{&apos; at column 62 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="98" column="63" severity="warning" message="&apos;{&apos; at column 63 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="107" column="58" severity="warning" message="&apos;{&apos; at column 58 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="108" column="59" severity="warning" message="&apos;{&apos; at column 59 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="115" column="60" severity="warning" message="&apos;{&apos; at column 60 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="124" column="62" severity="warning" message="&apos;{&apos; at column 62 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="125" column="63" severity="warning" message="&apos;{&apos; at column 63 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="132" column="64" severity="warning" message="&apos;{&apos; at column 64 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="141" column="65" severity="warning" message="&apos;{&apos; at column 65 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="142" column="66" severity="warning" message="&apos;{&apos; at column 66 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="149" column="67" severity="warning" message="&apos;{&apos; at column 67 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="158" column="63" severity="warning" message="&apos;{&apos; at column 63 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="159" column="64" severity="warning" message="&apos;{&apos; at column 64 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="166" column="65" severity="warning" message="&apos;{&apos; at column 65 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+</file>
 <file name="C:\Users\Sammy Packer\IdeaProjects\Fuse-maven\src\main\java\us\flowdesigns\commands\Command_tprandom.java">
 <error line="13" column="51" severity="warning" message="&apos;{&apos; at column 51 should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
 <error line="30" column="9" severity="warning" message="&apos;}&apos; at column 9 should be alone on a line." source="com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"/>

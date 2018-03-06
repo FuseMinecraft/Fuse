@@ -16,8 +16,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Updater {
-    final String dlLink = "http://flowdesigns.us/Fuse.jar";
-    final String versionLink = "http://flowdesigns.us/version.txt";
+    final String dlLink = "https://flowdesigns.us/Fuse.jar";
+    final String versionLink = "https://flowdesigns.us/version.txt";
     String dev = Fuse.plugin.getConfig().getString("server.dev");
     private Plugin plugin;
 

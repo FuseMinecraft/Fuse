@@ -1,4 +1,4 @@
-# Fuse v2.1.0 Command and Permission Help
+# Fuse v2.2.0 Command and Permission Help
 # To block people from dropping items, use the permission node: fuse.nodrop
 # When a command has a -s option, it allows you to use it silently
 
@@ -96,6 +96,10 @@
     aliases: tpr
     permission: fuse.tprandom
     usage: /<command>
+  toggle:
+    description: Toggles configuration options
+    usage: /<command>
+    permission: fuse.toggle
   unloadchunks:
     description: Unloads unused chunks
     aliases: [uc, rc]
