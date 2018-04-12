@@ -1,4 +1,4 @@
-# Fuse v2.2.1 Command and Permission Help
+# Fuse v3.0.0 Command and Permission Help
 # To block people from dropping items, use the permission node: fuse.nodrop
 # When a command has a -s option, it allows you to use it silently
 
@@ -25,7 +25,7 @@
   commandspy:
     description: Spy on other players commands
     aliases: cmdspy
-    permission: fuse.cmdspy
+    permission: fuse.commandspy
     usage: /<command>
   consolesay:
     description: Chat from the console

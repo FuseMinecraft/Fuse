@@ -15,7 +15,6 @@ import java.util.*;
 public class NUtil
 {
     public static String DATE_STORAGE_FORMAT = "EEE, MMM d, yyyy HH:mm:ss";
-    String location = Fuse.plugin.getConfig().getString("server.location");
     public static void bcastMsg(String message, ChatColor color)
     {
         NLog.info(message, true);

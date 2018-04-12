@@ -26,9 +26,9 @@ public class Command_admininfo extends BaseCommand {
                 && !new_thread_link.equalsIgnoreCase("none"))
         {
         sender.sendMessage(ChatColor.RED + "To apply for moderator, register an account at: " + forums + "\n" +
-        "When you've registered, copy and paste: " + admin_app_template + "\n" +
+        "When you've registered, copy the template: " + admin_app_template + "\n" +
         "Create a new thread by clicking here: " + new_thread_link + "\n" +
-        "Copy and paste the template into the thread\n" +
+        "Paste the template into the thread and fill out the questions. Be sure you meet the requirements.\n" +
         "Do not bug staff members to look at your application or else it will most likely get denied");
         return true;
         } else {

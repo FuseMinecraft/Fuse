@@ -22,6 +22,7 @@ public class Command_fuse extends BaseCommand {
         String dev = plugin.getConfig().getString("server.dev");
         String superusers = plugin.getConfig().getString("players.superusers");
         Fuse.BuildProperties build = Fuse.build;
+        Fuse.GitProperties git = Fuse.git;
         if (args.length == 0)
         {
             sender.sendMessage(String.format(ChatColor.GOLD + "Version "
@@ -29,11 +30,11 @@ public class Command_fuse extends BaseCommand {
                             + ChatColor.BLUE + "%s" + ChatColor.GOLD + ")",
                     build.version,
                     build.number,
-                    build.head));
+                    git.head));
             sender.sendMessage(String.format(ChatColor.GOLD + "Compiled "
                             + ChatColor.BLUE + "%s" + ChatColor.GOLD + " by "
                             + ChatColor.BLUE + "%s",
-                    build.date,
+                    git.date,
                     build.author));
         sender.sendMessage(ChatColor.RED + "Fuse is an advanced plugin designed to provide useful utilities for a Minecraft server");
         sender.sendMessage(ChatColor.GREEN + "Type /contributors to see who contributed to Fuse");

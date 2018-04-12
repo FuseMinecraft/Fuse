@@ -1,5 +1,5 @@
 name: Fuse
-version: 2.2.1
+version: 3.0.0
 description: Utility plugin for Minecraft servers
 authors: [Telesphoreo, OxLemonxO, Madgeek1450, Prozza, TheMinecraft]
 main: us.flowdesigns.fuse.Fuse
@@ -21,7 +21,7 @@ commands:
   commandspy:
     description: Spy on other players commands
     aliases: cmdspy
-    permission: fuse.cmdspy
+    permission: fuse.commandspy
     usage: /<command>
   consolesay:
     description: Chat from the console

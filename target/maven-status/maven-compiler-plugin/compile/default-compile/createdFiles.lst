@@ -25,6 +25,7 @@ us\flowdesigns\commands\SourceType.class
 us\flowdesigns\commands\Command_adminchat.class
 us\flowdesigns\utils\UUIDFetcher$FetchedUuid.class
 us\flowdesigns\commands\Command_toggle.class
+us\flowdesigns\fuse\Fuse$GitProperties.class
 us\flowdesigns\commands\Command_expel.class
 us\flowdesigns\exploits\Potion.class
 us\flowdesigns\fuse\Fuse.class

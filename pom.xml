@@ -5,14 +5,15 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>us.flowdesigns</groupId>
     <artifactId>Fuse</artifactId>
-    <version>2.2.1</version>
+    <version>3.0.0</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <build.version>${project.version}</build.version>
         <build.number>buildNumber</build.number>
         <build.date>${maven.build.timestamp}</build.date>
         <jar.finalName>${project.name}</jar.finalName>
-        <maven.build.timestamp.format>dd/MM/yyyy hh:mm aa</maven.build.timestamp.format>
+        <timestamp>${maven.build.timestamp}</timestamp>
+        <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
     </properties>
     <scm>
         <connection>scm:git:git@github.com:FuseMinecraft/Fuse.git</connection>
@@ -40,7 +41,7 @@
                         <configuration>
                             <target>
                                 <propertyfile file="${basedir}/src/main/resources/build.properties" comment="Build information. Edit this to your liking.">
-                                    <entry key="buildAuthor" default="Telesphoreo"/>
+                                    <entry key="build.author" default="Telesphoreo"/>
                                 </propertyfile>
                             </target>
                         </configuration>
@@ -71,49 +72,68 @@
                 </executions>
             </plugin>
 
-            <!-- Checkstyle -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <version>2.17</version>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <phase>process-sources</phase>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <configLocation>checkstyle.xml</configLocation>
-                    <consoleOutput>true</consoleOutput>
-                    <failsOnError>true</failsOnError>
-                    <failOnViolation>true</failOnViolation>
-                </configuration>
-            </plugin>
-
             <!-- Git describe -->
             <plugin>
-                <groupId>com.lukegb.mojo</groupId>
-                <artifactId>gitdescribe-maven-plugin</artifactId>
-                <version>3.0</version>
-                <executions>
-                    <execution>
-                        <id>git-describe</id>
-                        <phase>initialize</phase>
-                        <goals>
-                            <goal>gitdescribe</goal>
-                        </goals>
-                        <configuration>
-                            <descriptionProperty>buildHead</descriptionProperty>
-                            <extraArguments>
-                                <param>--tags</param>
-                                <param>--always</param>
-                                <param>HEAD</param>
-                            </extraArguments>
-                        </configuration>
-                    </execution>
-                </executions>
+            <groupId>pl.project13.maven</groupId>
+            <artifactId>git-commit-id-plugin</artifactId>
+            <version>2.2.4</version>
+            <executions>
+                <execution>
+                    <id>get-the-git-infos</id>
+                    <goals>
+                        <goal>revision</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>validate-the-git-infos</id>
+                    <goals>
+                        <goal>validateRevision</goal>
+                    </goals>
+                    <phase>package</phase>
+                </execution>
+            </executions>
+                <configuration>
+                    <dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
+                    <prefix>git</prefix>
+                    <dateFormat>yyyy-MM-dd'T'HH:mm:ssZ</dateFormat>
+                    <verbose>false</verbose>
+                    <generateGitPropertiesFile>true</generateGitPropertiesFile>
+                    <generateGitPropertiesFilename>${basedir}/src/main/resources/git.properties</generateGitPropertiesFilename>
+                    <format>properties</format>
+                    <failOnNoGitDirectory>true</failOnNoGitDirectory>
+                    <failOnUnableToExtractRepoInfo>false</failOnUnableToExtractRepoInfo>
+                    <excludeProperties>
+                        <excludeProperty>git.branch</excludeProperty>
+                        <excludeProperty>git.build.host</excludeProperty>
+                        <excludeProperty>git.build.user.email</excludeProperty>
+                        <excludeProperty>git.build.user.name</excludeProperty>
+                        <excludeProperty>git.closest.tag.commit.count</excludeProperty>
+                        <excludeProperty>git.closest.tag.name</excludeProperty>
+                        <excludeProperty>git.commit.id.describe</excludeProperty>
+                        <excludeProperty>git.commit.id.describe-short</excludeProperty>
+                        <excludeProperty>git.commit.message.full</excludeProperty>
+                        <excludeProperty>git.commit.message.short</excludeProperty>
+                        <excludeProperty>git.commit.time</excludeProperty>
+                        <excludeProperty>git.commit.user.email</excludeProperty>
+                        <excludeProperty>git.dirty</excludeProperty>
+                        <excludeProperty>git.remote.origin.url</excludeProperty>
+                        <excludeProperty>git.tags</excludeProperty>
+                    </excludeProperties>
+                    <includeOnlyProperties>
+                        <includeOnlyProperty>git.build.time</includeOnlyProperty>
+                        <includeOnlyProperty>git.build.version</includeOnlyProperty>
+                        <includeOnlyProperty>git.commit.id</includeOnlyProperty>
+                        <includeOnlyProperty>git.commit.id.abbrev</includeOnlyProperty>
+                        <includeOnlyProperty>git.commit.user.name</includeOnlyProperty>
+                    </includeOnlyProperties>
+                    <gitDescribe>
+                        <skip>false</skip>
+                        <always>false</always>
+                        <abbrev>7</abbrev>
+                        <dirty>-dirty</dirty>
+                        <match>*</match>
+                    </gitDescribe>
+                </configuration>
             </plugin>
 
             <!-- Buildnumber -->
@@ -129,7 +149,6 @@
                         </goals>
                     </execution>
                 </executions>
-
                 <configuration>
                     <buildNumberPropertyName>maven.buildnumber</buildNumberPropertyName>
                     <buildNumberPropertiesFileLocation>${basedir}/src/main/resources/build.properties</buildNumberPropertiesFileLocation>

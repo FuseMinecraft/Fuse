@@ -19,7 +19,7 @@ public class Command_commandspy extends BaseCommand {
         sender.sendMessage(Messages.PLAYER_ONLY);
         return true;
     }
-    if (!sender.hasPermission("fuse.cmdspy")) {
+    if (!sender.hasPermission("fuse.commandspy")) {
         sender.sendMessage(Messages.MSG_NO_PERMS);
         return true;
     } else {

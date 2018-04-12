@@ -25,6 +25,7 @@ public class Fuse extends JavaPlugin {
     public static Fuse instance;
 
     public static final BuildProperties build = new BuildProperties();
+    public static final GitProperties git = new GitProperties();
     public static String pluginName;
     public static String pluginVersion;
 
@@ -43,6 +44,7 @@ public class Fuse extends JavaPlugin {
     @Override
     public void onEnable() {
         build.load(Fuse.plugin);
+        git.load(Fuse.plugin);
         server.getPluginManager().registerEvents(new AutoUpdate(), Fuse.plugin);
         server.getPluginManager().registerEvents(new CommandBlocker(), Fuse.plugin);
         server.getPluginManager().registerEvents(new Commandspy(), Fuse.plugin);
@@ -88,42 +90,54 @@ public class Fuse extends JavaPlugin {
         return CMD_Handler.handleCommand(sender, cmd, commandLabel, args);
     }
 
-    public static class BuildProperties
-    {
+    public static class BuildProperties {
 
         public String author;
         public String version;
         public String number;
-        public String date;
-        public String head;
 
-        public void load(Fuse plugin)
-        {
-            try
-            {
+        public void load(Fuse plugin) {
+            try {
                 final Properties props;
-                try (InputStream in = plugin.getResource("build.properties"))
-                {
+                try (InputStream in = plugin.getResource("build.properties")) {
                     props = new Properties();
                     props.load(in);
                 }
-
-                author = props.getProperty("buildAuthor", build.author);
-                version = props.getProperty("build.version", build.version);
-                number = props.getProperty("buildNumber", build.number);
-                date = props.getProperty("build.date", build.date);
-                head = props.getProperty("build.head", build.head);
-            }
-            catch (Exception ex)
-            {
+                build.author = props.getProperty("build.author", build.author);
+                build.version = props.getProperty("build.version", build.version);
+                build.number = props.getProperty("buildNumber", build.number);
+            } catch (Exception ex) {
                 NLog.severe("Could not load build properties! Did you compile with NetBeans/Maven?");
                 NLog.severe(ex);
             }
         }
-
-        public String formattedVersion()
-        {
-            return pluginVersion + "." + number + " (" + head + ")";
-        }
     }
+
+        public static class GitProperties {
+
+            //public String author;
+            public String date;
+            public String head;
+
+            public void load(Fuse plugin) {
+                try {
+                    final Properties props;
+                    try (InputStream in = plugin.getResource("git.properties")) {
+                        props = new Properties();
+                        props.load(in);
+                    }
+
+                    //git.author = props.getProperty("git.commit.user.name", git.author);
+                    git.date = props.getProperty("git.build.time", git.date);
+                    git.head = props.getProperty("git.commit.id.abbrev", git.head);
+                } catch (Exception ex) {
+                    NLog.severe("Could not load Git properties! Did you compile with NetBeans/Maven?");
+                    NLog.severe(ex);
+                }
+            }
+        }
+
+        public String formattedVersion() {
+            return build.version + "." + build.number + " (" + git.head + ")";
+        }
 }

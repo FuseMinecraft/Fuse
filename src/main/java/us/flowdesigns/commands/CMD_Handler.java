@@ -25,11 +25,11 @@ public class CMD_Handler
             senderIsConsole = false;
             playerSender = (Player) sender;
 
-            NLog.info(String.format("[PLAYER_COMMAND] %s (%s): /%s %s",
+            /*NLog.info(String.format("[PLAYER_COMMAND] %s (%s): /%s %s",
                     playerSender.getName(),
                     ChatColor.stripColor(playerSender.getDisplayName()),
                     commandLabel,
-                    StringUtils.join(args, " ")), true);
+                    StringUtils.join(args, " ")), true);*/
         }
         else
         {

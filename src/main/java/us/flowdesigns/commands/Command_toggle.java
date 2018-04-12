@@ -24,7 +24,7 @@ public class Command_toggle extends BaseCommand {
             return true;
         }
         if (args.length == 0) {
-            sender.sendMessage(ChatColor.GRAY + "Config Toggles: ");
+            sender.sendMessage(ChatColor.GRAY + "Configuration Toggles: ");
             sender.sendMessage(ChatColor.GRAY + "Spawn on Join (spawn_on_join): " + spawn_on_join);
             sender.sendMessage(ChatColor.GRAY + "Drop Items on Death (drop_items_on_death): " + drop_items_on_death);
             sender.sendMessage(ChatColor.GRAY + "Clear Inventory on Join (clear_inventory_on_join): " + clear_inventory_on_join);
@@ -168,6 +168,7 @@ public class Command_toggle extends BaseCommand {
                 plugin.saveConfig();
                 plugin.reloadConfig();
                 sender.sendMessage(ChatColor.GRAY + "Players can now use the /admininfo command");
+                sender.sendMessage(ChatColor.RED + "Be sure that the configuration fields are filled out, or else the command will not work.");
                 return true;
             }
         }

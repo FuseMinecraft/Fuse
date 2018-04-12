@@ -2,7 +2,7 @@
 <project name="maven-antrun-" default="main"  >
 <target name="main">
   <propertyfile file="C:\Users\Sammy Packer\IdeaProjects\Fuse-maven/src/main/resources/build.properties" comment="Build information. Edit this to your liking.">
-    <entry default="Telesphoreo" key="buildAuthor"/>
+    <entry default="Telesphoreo" key="build.author"/>
   </propertyfile>
 </target>
 </project>
