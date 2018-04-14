@@ -26,6 +26,7 @@ public class Fuse extends JavaPlugin {
 
     public static final BuildProperties build = new BuildProperties();
     public static final GitProperties git = new GitProperties();
+    public static final String COMPILE_NMS_VERSION = "v1_12_R1";
     public static String pluginName;
     public static String pluginVersion;
 
@@ -45,6 +46,7 @@ public class Fuse extends JavaPlugin {
     public void onEnable() {
         build.load(Fuse.plugin);
         git.load(Fuse.plugin);
+        warnVersion();
         server.getPluginManager().registerEvents(new AutoUpdate(), Fuse.plugin);
         server.getPluginManager().registerEvents(new CommandBlocker(), Fuse.plugin);
         server.getPluginManager().registerEvents(new Commandspy(), Fuse.plugin);
@@ -140,4 +142,15 @@ public class Fuse extends JavaPlugin {
         public String formattedVersion() {
             return build.version + "." + build.number + " (" + git.head + ")";
         }
+
+    public static void warnVersion()
+    {
+        final String nms = NUtil.getNMSVersion();
+
+        if (!COMPILE_NMS_VERSION.equals(nms))
+        {
+            NLog.warning("Fuse is compiled for " + COMPILE_NMS_VERSION + " but the server is running version " + nms + "!");
+            NLog.warning("This might result in unexpected behavior!");
+        }
+    }
 }

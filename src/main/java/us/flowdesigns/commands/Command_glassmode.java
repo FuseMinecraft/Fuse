@@ -27,7 +27,7 @@ public class Command_glassmode extends BaseCommand {
         {
             return false;
         }
-        if (args[0].equals("enable") || args[0].equals("on"))
+        if (args[0].equalsIgnoreCase("enable") || args[0].equalsIgnoreCase("on"))
         {
         PotionEffect invisible = new PotionEffect(PotionEffectType.INVISIBILITY, 99999999 * 20, 3);
         PotionEffect glow = new PotionEffect(PotionEffectType.GLOWING, 99999999 * 20, 3);
@@ -36,7 +36,7 @@ public class Command_glassmode extends BaseCommand {
         sender.sendMessage(ChatColor.BLUE + "Enabled glass mode");
         return true;
         }
-        if (args[0].equals("disable") || args[0].equals("off"))
+        if (args[0].equalsIgnoreCase("disable") || args[0].equalsIgnoreCase("off"))
         {
         sender_p.removePotionEffect(PotionEffectType.INVISIBILITY);
         sender_p.removePotionEffect(PotionEffectType.GLOWING);

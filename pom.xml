@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>us.flowdesigns</groupId>
     <artifactId>Fuse</artifactId>
-    <version>3.0.0</version>
+    <version>3.1.0</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <build.version>${project.version}</build.version>
@@ -95,7 +95,7 @@
                 <configuration>
                     <dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
                     <prefix>git</prefix>
-                    <dateFormat>yyyy-MM-dd'T'HH:mm:ssZ</dateFormat>
+                    <dateFormat>yyyy-MM-dd HH:mm:ss</dateFormat>
                     <verbose>false</verbose>
                     <generateGitPropertiesFile>true</generateGitPropertiesFile>
                     <generateGitPropertiesFilename>${basedir}/src/main/resources/git.properties</generateGitPropertiesFilename>

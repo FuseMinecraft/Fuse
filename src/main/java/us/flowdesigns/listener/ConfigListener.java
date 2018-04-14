@@ -37,8 +37,7 @@ public class ConfigListener implements Listener {
     String teleportSpawn = plugin.getConfig().getString("server.spawn_on_join");
     String clearInventoryOnJoin = plugin.getConfig().getString("server.clear_inventory_on_join");
     if ("true".equals(teleportSpawn)) {
-        player.chat("/spawn");
-        // Fix later - teleporting to the wrong world
+        player.teleport(player.getWorld().getSpawnLocation());
         }
         if ("true".equals(clearInventoryOnJoin)) {
         player.getPlayer().getInventory().clear();
