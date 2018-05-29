@@ -1,6 +1,5 @@
 package us.flowdesigns.commands;
 
-import us.flowdesigns.utils.NUtil;
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -9,6 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import us.flowdesigns.utils.NUtil;
 
 @CommandPermissions(source = SourceType.BOTH)
 @CommandParameters(description = "Renames the item in your hand", usage = "/<command> <name>")

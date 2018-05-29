@@ -7,6 +7,8 @@ import org.bukkit.entity.Player;
 import us.flowdesigns.utils.NLog;
 import us.flowdesigns.utils.NUtil;
 
+import static us.flowdesigns.fuse.Fuse.plugin;
+
 @CommandPermissions(source = SourceType.BOTH)
 @CommandParameters(description = "Talk privately with other admins", usage = "/<command> [message...]", aliases = "o")
 public class Command_adminchat extends BaseCommand {
@@ -22,37 +24,8 @@ public class Command_adminchat extends BaseCommand {
                 sender.sendMessage(Messages.NO_MSG);
                 return true;
             }
-            //
-            if (sender.hasPermission("fuse.moderator")) {
-                NUtil.moderatorAdminChat(sender.getName(), StringUtils.join(args, " "));
-                NLog.info("[AdminChat] " + sender.getName() + " [Moderator]: " + StringUtils.join(args, " "));
-                return true;
-            }
-            //
-            if (sender.hasPermission("fuse.admin")) {
-                NUtil.adminAdminChat(sender.getName(), StringUtils.join(args, " "));
-                NLog.info("[AdminChat] " + sender.getName() + " [Admin]: " + StringUtils.join(args, " "));
-                return true;
-            }
-            //
-            if (sender.hasPermission("fuse.developer")) {
-                NUtil.devAdminChat(sender.getName(), StringUtils.join(args, " "));
-                NLog.info("[AdminChat] " + sender.getName() + " [Dev]: " + StringUtils.join(args, " "));
-                return true;
-            }
-            //
-            if (sender.hasPermission("fuse.builder")) {
-                NUtil.builderAdminChat(sender.getName(), StringUtils.join(args, " "));
-                NLog.info("[AdminChat] " + sender.getName() + " [Builder]: " + StringUtils.join(args, " "));
-                return true;
-            }
-            //
-            if (sender.hasPermission("fuse.owner")) {
-                NUtil.ownerAdminChat(sender.getName(), StringUtils.join(args, " "));
-                NLog.info("[AdminChat] " + sender.getName() + " [Owner]: " + StringUtils.join(args, " "));
-                return true;
-            } else if (sender.isOp()) {
-                NUtil.nullAdminChat(sender.getName(), StringUtils.join(args, " "));
+            if (sender.isOp()) {
+                NUtil.playerAdminChat(sender.getName(), StringUtils.join(args, " "));
                 NLog.info("[AdminChat] " + sender.getName() + ": " + StringUtils.join(args, " "));
                 return true;
             }
@@ -60,6 +33,10 @@ public class Command_adminchat extends BaseCommand {
         }
         if (!(sender instanceof Player))
         {
+            if (args.length == 0) {
+                sender.sendMessage(Messages.NO_MSG);
+                return true;
+            }
             NUtil.consoleAdminChat(sender.getName(), StringUtils.join(args, " "));
             NLog.info("[AdminChat] " + sender.getName() + " [Console]: " + StringUtils.join(args, " "));
         }

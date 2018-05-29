@@ -10,7 +10,10 @@ import us.flowdesigns.commands.CMD_Handler;
 import us.flowdesigns.commands.CMD_Loader;
 import us.flowdesigns.exploits.Potion;
 import us.flowdesigns.exploits.Sign;
-import us.flowdesigns.listener.*;
+import us.flowdesigns.listener.AutoUpdate;
+import us.flowdesigns.listener.ConfigListener;
+import us.flowdesigns.listener.LoginMessages;
+import us.flowdesigns.listener.Monitors;
 import us.flowdesigns.utils.NLog;
 import us.flowdesigns.utils.NUtil;
 
@@ -47,18 +50,13 @@ public class Fuse extends JavaPlugin {
         build.load(Fuse.plugin);
         git.load(Fuse.plugin);
         warnVersion();
+        // Listeners
         server.getPluginManager().registerEvents(new AutoUpdate(), Fuse.plugin);
-        server.getPluginManager().registerEvents(new CommandBlocker(), Fuse.plugin);
-        server.getPluginManager().registerEvents(new Commandspy(), Fuse.plugin);
         server.getPluginManager().registerEvents(new ConfigListener(), Fuse.plugin);
-        server.getPluginManager().registerEvents(new Developer(), Fuse.plugin);
-        server.getPluginManager().registerEvents(new Launchpads(), Fuse.plugin);
         server.getPluginManager().registerEvents(new LoginMessages(), Fuse.plugin);
-        server.getPluginManager().registerEvents(new NoFall(), Fuse.plugin);
-        server.getPluginManager().registerEvents(new NoWeather(), Fuse.plugin);
-        server.getPluginManager().registerEvents(new NoHunger(), Fuse.plugin);
+        server.getPluginManager().registerEvents(new Monitors(), Fuse.plugin);
+        // Exploits
         server.getPluginManager().registerEvents(new Potion(), Fuse.plugin);
-        server.getPluginManager().registerEvents(new PotionListener(), Fuse.plugin);
         server.getPluginManager().registerEvents(new Sign(), Fuse.plugin);
         Config.loadConfigs();
         new BukkitRunnable() {
@@ -117,7 +115,6 @@ public class Fuse extends JavaPlugin {
 
         public static class GitProperties {
 
-            //public String author;
             public String date;
             public String head;
 
@@ -128,8 +125,6 @@ public class Fuse extends JavaPlugin {
                         props = new Properties();
                         props.load(in);
                     }
-
-                    //git.author = props.getProperty("git.commit.user.name", git.author);
                     git.date = props.getProperty("git.build.time", git.date);
                     git.head = props.getProperty("git.commit.id.abbrev", git.head);
                 } catch (Exception ex) {

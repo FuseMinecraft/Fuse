@@ -1,11 +1,11 @@
 package us.flowdesigns.commands;
 
-import us.flowdesigns.fuse.Fuse;
-import us.flowdesigns.fuse.Updater;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import us.flowdesigns.fuse.Fuse;
+import us.flowdesigns.fuse.Updater;
 
 @CommandPermissions(source = SourceType.BOTH)
 @CommandParameters(description = "Shows information about Fuse", usage = "/<command> [reload | debug | help | update]", aliases = "packscore,oxygen,sky,nitrogen,trident")
@@ -26,7 +26,7 @@ public class Command_fuse extends BaseCommand {
         if (args.length == 0)
         {
             sender.sendMessage(String.format(ChatColor.GOLD + "Version "
-                            + ChatColor.BLUE + "%s.%s " + ChatColor.GOLD + "("
+                            + ChatColor.BLUE + "%s Build %s " + ChatColor.GOLD + "("
                             + ChatColor.BLUE + "%s" + ChatColor.GOLD + ")",
                     build.version,
                     build.number,
@@ -81,16 +81,14 @@ public class Command_fuse extends BaseCommand {
                 sender.sendMessage(ChatColor.GRAY + "To see Fuse's help, type /help Fuse or /? Fuse. If you are the owner, for additional inforrmation, please read the help.yml file inside of the Fuse folder.");
                 return true;
             }
-            case "update":
-            {
-            if (!sender.hasPermission("fuse.update"))
-            {
-            sender.sendMessage(Messages.MSG_NO_PERMS);
-            return true;
-            }
-            Updater updater = new Updater(Fuse.plugin);
-            updater.update(sender);
-            return true; 
+            case "update": {
+                if (!sender.hasPermission("fuse.update")) {
+                    sender.sendMessage(Messages.MSG_NO_PERMS);
+                    return true;
+                }
+                Updater updater = new Updater(Fuse.plugin);
+                updater.update(sender);
+                return true;
             }
             default:
             {

@@ -1,5 +1,5 @@
 name: Fuse
-version: 3.1.1
+version: 3.2.0
 description: Utility plugin for Minecraft servers
 authors: [Telesphoreo, OxLemonxO, Madgeek1450, Prozza, TheMinecraft]
 main: us.flowdesigns.fuse.Fuse
@@ -61,10 +61,6 @@ commands:
     description: Makes yourself invisible and glow
     permission: fuse.glassmode
     usage: /<command> <enable | disable>
-  launchpads:
-    description: Enable or disable launchpads
-    permission: fuse.launchpads
-    usage: /<command> <enable | disable | status>
   namehistory:
     description: Shows the name history of a player
     aliases: nh

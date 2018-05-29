@@ -5,7 +5,6 @@ import org.bukkit.ChatColor;
 import org.bukkit.World;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.*;
-import us.flowdesigns.fuse.Fuse;
 
 import java.lang.reflect.Field;
 import java.text.ParseException;
@@ -38,35 +37,9 @@ public class NUtil
     {
         NUtil.playerMsg(sender, message, ChatColor.GRAY);
     }
-    public static void moderatorAdminChat(String name, String message) {
-        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("fuse.adminchat"))).forEach((player) -> {
-            player.sendMessage("§7[AdminChat] " + ChatColor.BLUE + name + " §8[§dModerator§8]"+ "§f: " + ChatColor.AQUA + message);
-        });
-    }
-    public static void adminAdminChat(String name, String message) {
-        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("fuse.adminchat"))).forEach((player) -> {
-            player.sendMessage("§7[AdminChat] " + ChatColor.BLUE + name + " §8[§9Admin§8]" + "§f: " + ChatColor.AQUA + message);
-        });
-    }
-    public static void devAdminChat(String name, String message) {
-        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("fuse.adminchat"))).forEach((player) -> {
-            player.sendMessage("§7[AdminChat] " + ChatColor.BLUE + name + " §8[§5Dev§8]"+ "§f: " + ChatColor.AQUA + message);
-        });
-    }
-
-    public static void builderAdminChat(String name, String message) {
-        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("fuse.adminchat"))).forEach((player) -> {
-            player.sendMessage("§7[AdminChat] " + ChatColor.BLUE + name + " §8[§bBuilder§8]"+ "§f: " + ChatColor.AQUA + message);
-        });
-    }
-    public static void nullAdminChat(String name, String message) {
+    public static void playerAdminChat(String name, String message) {
         Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("fuse.adminchat"))).forEach((player) -> {
             player.sendMessage("§7[AdminChat] " + ChatColor.BLUE + name + "§f: " + ChatColor.AQUA + message);
-        });
-    }
-    public static void ownerAdminChat(String name, String message) {
-        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("fuse.adminchat"))).forEach((player) -> {
-            player.sendMessage("§7[AdminChat] " + ChatColor.BLUE + name + " §8[§4Owner§8]"+ "§f: " + ChatColor.AQUA + message);
         });
     }
     public static void consoleAdminChat(String name, String message) {

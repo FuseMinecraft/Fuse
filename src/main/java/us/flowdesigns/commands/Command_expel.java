@@ -1,6 +1,5 @@
 package us.flowdesigns.commands;
 
-import us.flowdesigns.utils.NUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -8,6 +7,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;
+import us.flowdesigns.utils.NUtil;
 
 import java.util.ArrayList;
 import java.util.List;

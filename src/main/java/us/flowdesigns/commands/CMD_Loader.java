@@ -1,9 +1,9 @@
 package us.flowdesigns.commands;
 
-import us.flowdesigns.fuse.Fuse;
 import org.bukkit.Bukkit;
 import org.bukkit.command.*;
 import org.bukkit.plugin.Plugin;
+import us.flowdesigns.fuse.Fuse;
 import us.flowdesigns.utils.NLog;
 import us.flowdesigns.utils.NUtil;
 

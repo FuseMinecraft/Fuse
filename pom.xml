@@ -5,15 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>us.flowdesigns</groupId>
     <artifactId>Fuse</artifactId>
-    <version>3.1.1</version>
+    <version>3.2.0</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <build.version>${project.version}</build.version>
         <build.number>buildNumber</build.number>
-        <build.date>${maven.build.timestamp}</build.date>
         <jar.finalName>${project.name}</jar.finalName>
-        <timestamp>${maven.build.timestamp}</timestamp>
-        <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
     </properties>
     <scm>
         <connection>scm:git:git@github.com:FuseMinecraft/Fuse.git</connection>

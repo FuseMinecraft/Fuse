@@ -1,10 +1,10 @@
 package us.flowdesigns.commands;
 
-import us.flowdesigns.utils.PlayerData;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import us.flowdesigns.utils.PlayerData;
 
 // Credit to TFM devs
 
@@ -27,6 +27,6 @@ public class Command_commandspy extends BaseCommand {
     playerdata.setCommandSpy(!playerdata.cmdspyEnabled());
     sender.sendMessage(ChatColor.GRAY + "CommandSpy " + (playerdata.cmdspyEnabled() ? "enabled" : "disabled"));
     return true;
-    }
+        }
     }
 }

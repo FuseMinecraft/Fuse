@@ -1,9 +1,9 @@
 package us.flowdesigns.commands;
 
-import us.flowdesigns.utils.History;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import us.flowdesigns.utils.History;
 
 @CommandPermissions(source = SourceType.BOTH)
 @CommandParameters(description = "Shows the name history of a player", usage = "/<command> <player>", aliases = "nh")

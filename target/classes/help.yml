@@ -1,4 +1,4 @@
-# Fuse v3.1.1 Command and Permission Help
+# Fuse v3.2.0 Command and Permission Help
 # To block people from dropping items, use the permission node: fuse.nodrop
 # When a command has a -s option, it allows you to use it silently
 
@@ -68,10 +68,6 @@
     description: Makes yourself invisible and glow
     permission: fuse.glassmode
     usage: /<command> <enable | disable>
-  launchpads:
-    description: Enable or disable launchpads
-    permission: fuse.launchpads
-    usage: /<command> <enable | disable | status>
   namehistory:
     description: Shows the name history of a player
     aliases: nh
