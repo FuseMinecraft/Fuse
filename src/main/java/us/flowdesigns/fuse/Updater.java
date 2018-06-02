@@ -5,6 +5,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+import us.flowdesigns.utils.NLog;
 import us.flowdesigns.utils.NUtil;
 
 import java.io.*;
@@ -54,11 +55,10 @@ public class Updater {
 
                 out.close();
                 in.close();
-                plugin.getLogger().log(Level.INFO, "Updating to the latest version of Fuse");
-                NUtil.bcastMsg(sender.getName() + " - Updating to the latest version of Fuse", ChatColor.BLUE);
-                NUtil.bcastMsg(ChatColor.BLUE + "Please wait.");
+                NLog.info(sender.getName() + " - Updating to the latest version of Fuse");
+                sender.sendMessage(ChatColor.GRAY + "Updating to the latest version of Fuse, please wait.");
                 Bukkit.reload();
-                NUtil.bcastMsg(ChatColor.BLUE + "Update successful.");
+                NUtil.bcastMsg(ChatColor.GRAY + "Fuse was successfully updated.");
             }
             else
             {
@@ -73,8 +73,8 @@ public class Updater {
             }
         } catch (IOException e)
         {
-            sender.sendMessage(ChatColor.GRAY + "There are no over the air updates available for Fuse. Please go to https://github.com/FuseMinecraft/Fuse/releases and download the latest release from there.");
-            plugin.getLogger().log(Level.SEVERE, "Failed to auto-update", e);
+            sender.sendMessage(ChatColor.GRAY + "There are no over the air updates available for Fuse. Try restarting your server and checking for update. If this does not work, please go to https://github.com/FuseMinecraft/Fuse/releases and download the latest release from there.");
+            NLog.severe(e);
         }
     }
 
@@ -112,4 +112,6 @@ public class Updater {
 
         return result.isEmpty() ? 0 : Integer.parseInt(result);
     }
+
+
 }

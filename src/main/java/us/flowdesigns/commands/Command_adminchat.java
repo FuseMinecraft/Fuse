@@ -24,11 +24,8 @@ public class Command_adminchat extends BaseCommand {
                 sender.sendMessage(Messages.NO_MSG);
                 return true;
             }
-            if (sender.isOp()) {
-                NUtil.playerAdminChat(sender.getName(), StringUtils.join(args, " "));
-                NLog.info("[AdminChat] " + sender.getName() + ": " + StringUtils.join(args, " "));
-                return true;
-            }
+            NUtil.playerAdminChat(sender.getName(), StringUtils.join(args, " "));
+            NLog.info("[AdminChat] " + sender.getName() + ": " + StringUtils.join(args, " "));
             return true;
         }
         if (!(sender instanceof Player))

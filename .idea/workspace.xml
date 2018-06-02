@@ -2,68 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3282ef0-1948-402a-aea5-2bcd4cbbf7de" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/Monitors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_12_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_12_SNAPSHOT.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/CMD_Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/CMD_Loader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_adminchat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_adminchat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_commandspy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_commandspy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_expel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_expel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_fuse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_fuse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_launchpads.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_namehistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_namehistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_rename.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_rename.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_unloadchunks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_unloadchunks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/us/flowdesigns/fuse/Fuse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/us/flowdesigns/fuse/Fuse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_consolesay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_consolesay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/us/flowdesigns/fuse/Updater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/us/flowdesigns/fuse/Updater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/CommandBlocker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/Commandspy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/ConfigListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/ConfigListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/Developer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/Launchpads.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/LoginMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/LoginMessages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/NoFall.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/NoHunger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/NoWeather.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/PotionListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/us/flowdesigns/utils/NUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/us/flowdesigns/utils/NUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/build.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/build.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/git.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/help.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/help.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Fuse.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Fuse.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/antrun/build-main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/antrun/build-main.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/build.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/build.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/git.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/git.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/help.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/help.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/us/flowdesigns/commands/Command_adminchat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/us/flowdesigns/commands/Command_adminchat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/us/flowdesigns/commands/Command_fuse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/us/flowdesigns/commands/Command_fuse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/us/flowdesigns/commands/Command_launchpads.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/us/flowdesigns/fuse/Fuse$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/us/flowdesigns/fuse/Fuse$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/us/flowdesigns/fuse/Fuse$BuildProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/us/flowdesigns/fuse/Fuse$BuildProperties.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/us/flowdesigns/fuse/Fuse$GitProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/us/flowdesigns/fuse/Fuse$GitProperties.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/us/flowdesigns/fuse/Fuse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/us/flowdesigns/fuse/Fuse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/us/flowdesigns/commands/Command_consolesay.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/us/flowdesigns/commands/Command_consolesay.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/us/flowdesigns/fuse/Updater.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/us/flowdesigns/fuse/Updater.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/us/flowdesigns/listener/CommandBlocker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/us/flowdesigns/listener/Commandspy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/us/flowdesigns/listener/ConfigListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/us/flowdesigns/listener/ConfigListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/us/flowdesigns/listener/Developer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/us/flowdesigns/listener/Launchpads.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/us/flowdesigns/listener/LoginMessages.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/us/flowdesigns/listener/LoginMessages.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/us/flowdesigns/listener/NoFall.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/us/flowdesigns/listener/NoHunger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/us/flowdesigns/listener/NoWeather.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/us/flowdesigns/listener/PotionListener$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/us/flowdesigns/listener/PotionListener$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/us/flowdesigns/listener/PotionListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/us/flowdesigns/utils/NUtil$NEntityWiper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/us/flowdesigns/utils/NUtil$NEntityWiper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/us/flowdesigns/utils/NUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/us/flowdesigns/utils/NUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -75,7 +36,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Command_terminal.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_terminal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -146,22 +126,23 @@
         <option value="$PROJECT_DIR$/src/main/resources/git.properties" />
         <option value="$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/Commandspy.java" />
         <option value="$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_commandspy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_fuse.java" />
         <option value="$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/NoWeather.java" />
         <option value="$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/Launchpads.java" />
         <option value="$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/ConfigListener.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/build.properties" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/us/flowdesigns/fuse/Fuse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/us/flowdesigns/fuse/Updater.java" />
         <option value="$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_launchpads.java" />
         <option value="$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/Monitors.java" />
+        <option value="$PROJECT_DIR$/src/main/java/us/flowdesigns/utils/NUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_fuse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/us/flowdesigns/fuse/Fuse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_adminchat.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config.yml" />
         <option value="$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/LoginMessages.java" />
         <option value="$PROJECT_DIR$/src/main/resources/help.yml" />
+        <option value="$PROJECT_DIR$/src/main/resources/build.properties" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/us/flowdesigns/utils/NUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_adminchat.java" />
+        <option value="$PROJECT_DIR$/src/main/java/us/flowdesigns/fuse/Updater.java" />
+        <option value="$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_consolesay.java" />
       </list>
     </option>
   </component>
@@ -200,9 +181,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -252,35 +230,27 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="flowdesigns" type="462c0819:PsiDirectoryNode" />
-              <item name="fuse" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Fuse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fuse-maven" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="flowdesigns" type="462c0819:PsiDirectoryNode" />
-              <item name="listener" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Fuse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fuse-maven" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="flowdesigns" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fuse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fuse-maven" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Sammy Packer/IdeaProjects/Fuse-maven/src/main/java/us/flowdesigns/listener/NoHunger.java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -373,6 +343,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -387,20 +358,20 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25052083" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49583334" weight="0.32979852" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection Results" order="7" weight="0.32979852" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32979852" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection Results" order="7" weight="0.32979852" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49583334" weight="0.32979852" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -412,13 +383,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_forums.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -451,13 +415,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="26" column="62" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_consolesay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -503,13 +460,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_fuse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1462">
-          <caret line="91" column="13" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -521,13 +471,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_terminal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -593,125 +536,20 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/Developer.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/CommandBlocker.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/Commandspy.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/AutoUpdate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/Launchpads.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/PotionListener.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/ConfigListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/build.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/fuse/Fuse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="57" column="19" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/fuse/Updater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="69" column="115" selection-start-line="69" selection-start-column="115" selection-end-line="69" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/Monitors.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="487">
           <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_launchpads.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="47" column="87" selection-start-line="47" selection-start-column="87" selection-end-line="47" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2400">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/git.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/help.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="69" column="40" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="62" column="40" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/LoginMessages.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_adminchat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/utils/NUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_launchpads.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_commandspy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="4" lean-forward="true" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -726,6 +564,128 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_fuse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-501">
+          <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/fuse/Fuse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="132" column="68" selection-start-line="132" selection-start-column="68" selection-end-line="132" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/utils/NUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_adminchat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="33" column="52" lean-forward="true" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/git.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/AutoUpdate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/ConfigListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="29" column="34" lean-forward="true" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/help.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/build.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/listener/LoginMessages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="28" column="87" selection-start-line="28" selection-start-column="87" selection-end-line="28" selection-end-column="87" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/fuse/Updater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="60" column="70" selection-start-line="60" selection-start-column="70" selection-end-line="60" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="49" column="89" selection-start-line="49" selection-start-column="89" selection-end-line="49" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_consolesay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/utils/Terminal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding>
+            <element signature="e#365#1195#0" expanded="true" />
+            <element signature="e#1194#1195#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/flowdesigns/commands/Command_terminal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
         </state>
       </provider>
     </entry>

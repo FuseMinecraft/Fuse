@@ -1,5 +1,5 @@
 #
-# Fuse v3.2.0 Configuration File
+# Fuse v3.4.0 Configuration File
 #
 
 server:
@@ -17,6 +17,8 @@ server:
   fall_damage_enabled: 'true'
   # Is developer mode enabled?
   dev: 'false'
+  # Should login messages be enabled?
+  login_messages_enabled: true
   # Are splash potions enabled?
   splash_potions_enabled: 'true'
   # Should admin applications be enabled?

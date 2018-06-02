@@ -25,7 +25,7 @@ public class Command_consolesay extends BaseCommand {
         }
         if (args.length > 0 && senderIsConsole)
         {
-        Bukkit.broadcastMessage(String.format("§7[CONSOLE]§f<§c%s§f> %s", sender.getName(), StringUtils.join(args, " ")));
+        Bukkit.broadcastMessage(String.format("§7[CONSOLE] §f<§c%s§f> %s", sender.getName(), StringUtils.join(args, " ")));
         return true;
         } else {
             sender.sendMessage(Messages.CONSOLE_ONLY);
