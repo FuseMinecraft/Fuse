@@ -28,7 +28,6 @@ public class Fuse extends JavaPlugin {
     public static Fuse instance;
 
     public static final BuildProperties build = new BuildProperties();
-    public static final GitProperties git = new GitProperties();
     public static final String COMPILE_NMS_VERSION = "v1_12_R1";
     public static String pluginName;
     public static String pluginVersion;
@@ -48,7 +47,6 @@ public class Fuse extends JavaPlugin {
     @Override
     public void onEnable() {
         build.load(Fuse.plugin);
-        git.load(Fuse.plugin);
         warnVersion();
         // Listeners
         server.getPluginManager().registerEvents(new AutoUpdate(), Fuse.plugin);
@@ -93,49 +91,46 @@ public class Fuse extends JavaPlugin {
     public static class BuildProperties {
 
         public String author;
+        public String codename;
         public String version;
         public String number;
+        public String date;
+        public String head;
 
-        public void load(Fuse plugin) {
-            try {
+        public void load(Fuse plugin)
+        {
+            try
+            {
                 final Properties props;
-                try (InputStream in = plugin.getResource("build.properties")) {
+                final Properties gitprops;
+                try (InputStream in = plugin.getResource("build.properties"))
+                {
                     props = new Properties();
                     props.load(in);
                 }
-                build.author = props.getProperty("build.author", build.author);
-                build.version = props.getProperty("build.version", build.version);
-                build.number = props.getProperty("buildNumber", build.number);
-            } catch (Exception ex) {
-                NLog.severe("Could not load build properties! Did you compile with NetBeans/Maven?");
+                try (InputStream in = plugin.getResource("git.properties"))
+                {
+                    gitprops = new Properties();
+                    gitprops.load(in);
+                }
+
+                author = props.getProperty("buildAuthor", "unknown");
+                codename = props.getProperty("buildCodeName", "unknown");
+                version = props.getProperty("buildVersion", pluginVersion);
+                number = props.getProperty("buildNumber", "1");
+                date = gitprops.getProperty("git.build.time", "unknown");
+                head = gitprops.getProperty("git.commit.id.abbrev", "unknown");
+            }
+            catch (Exception ex)
+            {
+                NLog.severe("Could not load build properties! Did you compile with Netbeans/Maven?");
                 NLog.severe(ex);
             }
         }
     }
 
-        public static class GitProperties {
-
-            public String date;
-            public String head;
-
-            public void load(Fuse plugin) {
-                try {
-                    final Properties props;
-                    try (InputStream in = plugin.getResource("git.properties")) {
-                        props = new Properties();
-                        props.load(in);
-                    }
-                    git.date = props.getProperty("git.build.time", git.date);
-                    git.head = props.getProperty("git.commit.id.abbrev", git.head);
-                } catch (Exception ex) {
-                    NLog.severe("Could not load Git properties! Did you compile with NetBeans/Maven?");
-                    NLog.severe(ex);
-                }
-            }
-        }
-
         public String formattedVersion() {
-            return build.version + "." + build.number + " (" + git.head + ")";
+            return build.version + "." + build.number + " (" + build.head + ")";
         }
 
     public static void warnVersion()

@@ -5,12 +5,17 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>us.flowdesigns</groupId>
     <artifactId>Fuse</artifactId>
-    <version>3.2.0</version>
+    <version>3.3.0</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <build.version>${project.version}</build.version>
-        <build.number>buildNumber</build.number>
+        <build.codename>Hellstone</build.codename>
+        <build.number>${maven.buildnumber}</build.number>
+        <build.date>${maven.build.timestamp}</build.date>
+        <build.author>${buildAuthor}</build.author>
+        <build.head>${buildHead}</build.head>
         <jar.finalName>${project.name}</jar.finalName>
+        <maven.build.timestamp.format>dd/MM/yyyy hh:mm aa</maven.build.timestamp.format>
     </properties>
     <scm>
         <connection>scm:git:git@github.com:FuseMinecraft/Fuse.git</connection>
@@ -28,6 +33,7 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+
             <!-- Antrun -->
             <plugin>
                 <artifactId>maven-antrun-plugin</artifactId>
@@ -38,7 +44,10 @@
                         <configuration>
                             <target>
                                 <propertyfile file="${basedir}/src/main/resources/build.properties" comment="Build information. Edit this to your liking.">
-                                    <entry key="build.author" default="Telesphoreo"/>
+                                    <entry key="buildAuthor" default="unknown" />
+                                    <entry key="buildNumber" default="0" />
+                                    <entry key="buildCodeName" default="${build.codename}" />
+                                    <entry key="buildVersion" default="${build.version}" />
                                 </propertyfile>
                             </target>
                         </configuration>
@@ -92,36 +101,17 @@
                 <configuration>
                     <dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
                     <prefix>git</prefix>
-                    <dateFormat>yyyy-MM-dd HH:mm:ss</dateFormat>
+                    <dateFormat>dd/MM/yyyy HH:mm</dateFormat>
                     <verbose>false</verbose>
                     <generateGitPropertiesFile>true</generateGitPropertiesFile>
                     <generateGitPropertiesFilename>${basedir}/src/main/resources/git.properties</generateGitPropertiesFilename>
                     <format>properties</format>
                     <failOnNoGitDirectory>true</failOnNoGitDirectory>
                     <failOnUnableToExtractRepoInfo>false</failOnUnableToExtractRepoInfo>
-                    <excludeProperties>
-                        <excludeProperty>git.branch</excludeProperty>
-                        <excludeProperty>git.build.host</excludeProperty>
-                        <excludeProperty>git.build.user.email</excludeProperty>
-                        <excludeProperty>git.build.user.name</excludeProperty>
-                        <excludeProperty>git.closest.tag.commit.count</excludeProperty>
-                        <excludeProperty>git.closest.tag.name</excludeProperty>
-                        <excludeProperty>git.commit.id.describe</excludeProperty>
-                        <excludeProperty>git.commit.id.describe-short</excludeProperty>
-                        <excludeProperty>git.commit.message.full</excludeProperty>
-                        <excludeProperty>git.commit.message.short</excludeProperty>
-                        <excludeProperty>git.commit.time</excludeProperty>
-                        <excludeProperty>git.commit.user.email</excludeProperty>
-                        <excludeProperty>git.dirty</excludeProperty>
-                        <excludeProperty>git.remote.origin.url</excludeProperty>
-                        <excludeProperty>git.tags</excludeProperty>
-                    </excludeProperties>
                     <includeOnlyProperties>
                         <includeOnlyProperty>git.build.time</includeOnlyProperty>
-                        <includeOnlyProperty>git.build.version</includeOnlyProperty>
                         <includeOnlyProperty>git.commit.id</includeOnlyProperty>
                         <includeOnlyProperty>git.commit.id.abbrev</includeOnlyProperty>
-                        <includeOnlyProperty>git.commit.user.name</includeOnlyProperty>
                     </includeOnlyProperties>
                     <gitDescribe>
                         <skip>false</skip>
