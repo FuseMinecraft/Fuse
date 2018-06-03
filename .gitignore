@@ -162,3 +162,5 @@ target/generated-sources/
 /.idea/
 /target/
 /Fuse-maven.iml
+/src/main/resources/git.properties
+/src/main/resources/build.properties
