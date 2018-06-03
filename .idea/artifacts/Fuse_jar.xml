@@ -1,9 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="Fuse:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/Fuse_jar</output-path>
-    <root id="archive" name="Fuse-maven.jar">
-      <element id="module-output" name="Fuse-maven" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/spigotmc/spigot/1.12.2-R0.1-SNAPSHOT/spigot-1.12.2-R0.1-SNAPSHOT.jar" path-in-jar="/" />
-    </root>
-  </artifact>
-</component>
