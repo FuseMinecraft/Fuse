@@ -12,6 +12,12 @@ public class Command_ship extends BaseCommand {
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole)
     {
+        String fun = plugin.getConfig().getString("commands.fun_commands");
+        if (!fun.equalsIgnoreCase("enabled"))
+        {
+            sender.sendMessage(Messages.UNKNOWN_COMMAND);
+            return true;
+        }
         if (!sender.hasPermission("fuse.ship"))
         {
             sender.sendMessage(Messages.MSG_NO_PERMS);

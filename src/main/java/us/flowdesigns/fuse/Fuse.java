@@ -67,9 +67,9 @@ public class Fuse extends JavaPlugin {
         Bukkit.getScheduler().scheduleSyncRepeatingTask(Bukkit.getPluginManager().getPlugin("Fuse"), () -> {
             if ((NUtil.NEntityWiper.wipeEntities(true, true)) == 1)
             {
-                NLog.info((NUtil.NEntityWiper.wipeEntities(true, true)) + " entity removed");
+                NLog.info("[Fuse] " + (NUtil.NEntityWiper.wipeEntities(true, true)) + " entity removed");
             } else if ((NUtil.NEntityWiper.wipeEntities(true, true)) != 0) {
-                NLog.info((NUtil.NEntityWiper.wipeEntities(true, true)) + " entities removed");
+                NLog.info("[Fuse] " + (NUtil.NEntityWiper.wipeEntities(true, true)) + " entities removed");
             }
         }, 1L , (long) 300 * 20);
         instance = this;
@@ -115,10 +115,10 @@ public class Fuse extends JavaPlugin {
                 }
 
                 author = props.getProperty("buildAuthor", "unknown");
-                codename = props.getProperty("buildCodeName", "unknown");
+                codename = props.getProperty("buildCodename", "unknown");
                 version = props.getProperty("buildVersion", pluginVersion);
                 number = props.getProperty("buildNumber", "1");
-                date = gitprops.getProperty("git.build.time", "unknown");
+                date = props.getProperty("buildDate", "unknown");
                 head = gitprops.getProperty("git.commit.id.abbrev", "unknown");
             }
             catch (Exception ex)
@@ -127,11 +127,10 @@ public class Fuse extends JavaPlugin {
                 NLog.severe(ex);
             }
         }
-    }
-
         public String formattedVersion() {
             return build.version + "." + build.number + " (" + build.head + ")";
         }
+    }
 
     public static void warnVersion()
     {

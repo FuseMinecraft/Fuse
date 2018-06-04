@@ -11,10 +11,10 @@ public class Command_admininfo extends BaseCommand {
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole)
     {
-        String applications_enabled = plugin.getConfig().getString("server.applications_enabled");
-        String forums = plugin.getConfig().getString("server.forums");
-        String admin_app_template = plugin.getConfig().getString("server.admin_application_template");
-        String new_thread_link = plugin.getConfig().getString("server.admin_app_new_thread_link");
+        String applications_enabled = plugin.getConfig().getString("commands.applications_enabled");
+        String forums = plugin.getConfig().getString("commands.forums");
+        String admin_app_template = plugin.getConfig().getString("commands.admin_application_template");
+        String new_thread_link = plugin.getConfig().getString("commands.admin_app_new_thread_link");
         if (senderIsConsole)
         {
             sender.sendMessage(Messages.PLAYER_ONLY);
@@ -32,7 +32,7 @@ public class Command_admininfo extends BaseCommand {
         "Do not bug staff members to look at your application or else it will most likely get denied");
         return true;
         } else {
-            sender.sendMessage(ChatColor.RED + "Currently you can not apply for moderator, sorry.");
+            sender.sendMessage(Messages.UNKNOWN_COMMAND);
         }
         return true;
     }

@@ -65,8 +65,8 @@ public class Updater {
                 if (dev.equalsIgnoreCase("true"))
                 {
                     sender.sendMessage("Debug Information:");
-                    sender.sendMessage(versionLink);
-                    sender.sendMessage(dlLink);
+                    sender.sendMessage("versionLink: " + versionLink);
+                    sender.sendMessage("dlLink: " + dlLink);
                     sender.sendMessage("newVersion: " + String.valueOf(newVersion) + " should be >= to oldVersion: " + String.valueOf(oldVersion));
                 }
                 sender.sendMessage(ChatColor.GRAY + "There are no updates available for Fuse.");

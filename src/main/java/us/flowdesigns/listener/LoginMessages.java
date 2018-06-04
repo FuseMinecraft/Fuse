@@ -15,7 +15,7 @@ public class LoginMessages implements Listener {
     @EventHandler
     public boolean onPlayerJoin(PlayerJoinEvent event) {
         String owner = plugin.getConfig().getString("players.owner");
-        String login_messages_enabled = plugin.getConfig().getString("server.login_messages_enabled");
+        String login_messages_enabled = plugin.getConfig().getString("login-messages.enabled");
         Player player = event.getPlayer();
         UUID uuid = player.getUniqueId();
         // Telesphoreo
@@ -31,22 +31,9 @@ public class LoginMessages implements Listener {
         }
         if (login_messages_enabled.equalsIgnoreCase("true"))
         {
-            if (player.getName().equals(owner)) {
-                Bukkit.broadcastMessage("§b" + owner + " is the §4Owner§b!");
-                return true;
-            }
-            if (player.getPlayer().hasPermission("fuse.moderator")) {
-                Bukkit.broadcastMessage(ChatColor.AQUA + player.getName() + " is a §dModerator§b!");
-                return true;
-            } else if (player.getPlayer().hasPermission("fuse.admin")) {
-                Bukkit.broadcastMessage(ChatColor.AQUA + player.getName() + " is an §9Admin§b!");
-                return true;
-            } else if (player.getPlayer().hasPermission("fuse.developer")) {
-                Bukkit.broadcastMessage(ChatColor.AQUA + player.getName() + " is a §5Developer§b!");
-                return true;
-            } else if (player.getPlayer().hasPermission("fuse.builder")) {
-                Bukkit.broadcastMessage(ChatColor.AQUA + player.getName() + " is a §bBuilder!");
-                return true;
+            plugin.getConfig().getConfigurationSection("login-messages").getKeys(false);
+            {
+
             }
         }
         return true;

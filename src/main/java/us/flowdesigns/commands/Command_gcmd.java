@@ -19,6 +19,7 @@ public class Command_gcmd extends BaseCommand {
             sender.sendMessage(Messages.MSG_NO_PERMS);
             return true;
         }
+
         if (args.length < 2)
         {
             sender.sendMessage("/gcmd <player> <command>");

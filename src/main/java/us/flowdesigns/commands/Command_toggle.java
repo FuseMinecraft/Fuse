@@ -17,14 +17,15 @@ public class Command_toggle extends BaseCommand {
         String weather_enabled = plugin.getConfig().getString("server.weather_enabled");
         String fall_damage_enabled = plugin.getConfig().getString("server.fall_damage_enabled");
         String splash_potions_enabled = plugin.getConfig().getString("server.splash_potions_enabled");
-        String applications_enabled = plugin.getConfig().getString("server.applications_enabled");
+        String fun_cmds = plugin.getConfig().getString("commands.fun_commands");
+        String applications_enabled = plugin.getConfig().getString("commands.applications_enabled");
         if (!sender.hasPermission("fuse.toggle"))
         {
             sender.sendMessage(Messages.MSG_NO_PERMS);
             return true;
         }
         if (args.length == 0) {
-            sender.sendMessage(ChatColor.GRAY + "Configuration Toggles: ");
+            sender.sendMessage(ChatColor.GRAY + "Configuration Toggles:");
             sender.sendMessage(ChatColor.GRAY + "Spawn on Join (spawn_on_join): " + spawn_on_join);
             sender.sendMessage(ChatColor.GRAY + "Drop Items on Death (drop_items_on_death): " + drop_items_on_death);
             sender.sendMessage(ChatColor.GRAY + "Clear Inventory on Join (clear_inventory_on_join): " + clear_inventory_on_join);
@@ -32,6 +33,7 @@ public class Command_toggle extends BaseCommand {
             sender.sendMessage(ChatColor.GRAY + "Weather Enabled (weather_enabled): " + weather_enabled);
             sender.sendMessage(ChatColor.GRAY + "Fall Damage Enabled (fall_damage_enabled): " + fall_damage_enabled);
             sender.sendMessage(ChatColor.GRAY + "Splash Potions Enabled (splash_potions_enabled): " + splash_potions_enabled);
+            sender.sendMessage(ChatColor.GRAY + "Fun Commands Enabled (fun_commands): " + fun_cmds);
             sender.sendMessage(ChatColor.GRAY + "Admin Applications Enabled (applications_enabled): " + applications_enabled);
             return true;
         }
@@ -151,6 +153,23 @@ public class Command_toggle extends BaseCommand {
                 plugin.saveConfig();
                 plugin.reloadConfig();
                 sender.sendMessage(ChatColor.GRAY + "Players can now use splash potions");
+                return true;
+            }
+        }
+        // Fun commands enabled
+        if (args[0].equalsIgnoreCase("fun_commands")) {
+            if (fun_cmds.equalsIgnoreCase("true")) {
+                plugin.getConfig().set("commands.fun_commands", "disabled");
+                plugin.saveConfig();
+                plugin.reloadConfig();
+                sender.sendMessage(ChatColor.GRAY + "Fun commands have been disabled");
+                return true;
+            }
+            if (fun_cmds.equalsIgnoreCase("false")) {
+                plugin.getConfig().set("commands.fun_commands", "true");
+                plugin.saveConfig();
+                plugin.reloadConfig();
+                sender.sendMessage(ChatColor.GRAY + "Fun commands have been enabled");
                 return true;
             }
         }

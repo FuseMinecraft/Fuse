@@ -17,10 +17,9 @@ server:
   fall_damage_enabled: 'true'
   # Is developer mode enabled?
   dev: 'false'
-  # Should login messages be enabled?
-  login_messages_enabled: true
   # Are splash potions enabled?
   splash_potions_enabled: 'true'
+commands:
   # Should admin applications be enabled?
   applications_enabled: 'false'
   # What is the link to the admin application template?
@@ -33,8 +32,18 @@ server:
   forums: none
   # What is the link to your servers Discord?
   discord: none
+  # Should fun comamnds like /ship, /deafen, and /lockup be enabled? (enabled/disabled)
+  fun_commands: enabled
 players:
   # Who is the owner?
   owner: Telesphoreo
   # Who should be allowed to use some high level commands
   superusers: Telesphoreo, OxLemonxO
+login-messages:
+  enabled: true
+  Moderator:
+    permission: fuse.moderator
+    message: "&6%player% is a Moderator"
+  Admin:
+    permission: fuse.admin
+    message: "&6%player% is an Admin"

@@ -11,7 +11,7 @@ public class Command_discord extends BaseCommand {
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole)
     {
-        String discord = plugin.getConfig().getString("server.discord");
+        String discord = plugin.getConfig().getString("commands.discord");
         String dev = plugin.getConfig().getString("server.dev");
         if (!discord.equalsIgnoreCase("none"))
         {

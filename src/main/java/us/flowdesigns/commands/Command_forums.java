@@ -11,7 +11,7 @@ public class Command_forums extends BaseCommand {
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole)
     {
-        String forums = plugin.getConfig().getString("server.forums");
+        String forums = plugin.getConfig().getString("commands.forums");
         String dev = plugin.getConfig().getString("server.dev");
         if (!forums.equalsIgnoreCase("none"))
         {

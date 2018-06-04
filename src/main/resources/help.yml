@@ -35,6 +35,10 @@
     description: Shows the people who contributed to Fuse
     aliases: contributers
     usage: /<command>
+  deafen:
+    description: Make some noise
+    permission: fuse.deafen
+    usage: /<command>
   developer:
     description: Developer command (Requires superuser)
     aliases: dev
@@ -68,6 +72,10 @@
     description: Makes yourself invisible and glow
     permission: fuse.glassmode
     usage: /<command> <enable | disable>
+  lockup:
+      description: Block a players Minecraft input
+      permission: fuse.lockup
+      usage: /<command> <all | purge | <<player> on | off>>
   namehistory:
     description: Shows the name history of a player
     aliases: nh

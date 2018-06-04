@@ -8,4 +8,5 @@ public class Messages {
     public static final String PLAYER_ONLY = ChatColor.RED + "This command can only be executed by a player";
     public static final String CONSOLE_ONLY = ChatColor.RED + "This command can only be executed by the console";
     public static final String NO_MSG = ChatColor.RED + "Please provide a message";
+    public static final String UNKNOWN_COMMAND = "Unknown command. Type \"/help\" for help.";
 }

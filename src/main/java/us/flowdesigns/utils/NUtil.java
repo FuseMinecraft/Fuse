@@ -63,12 +63,6 @@ public class NUtil
         }
     }
 
-    public static String getNmsVersion()
-    {
-        String packageName = Bukkit.getServer().getClass().getPackage().getName();
-        return packageName.substring(packageName.lastIndexOf('.') + 1);
-    }
-
     public static String colorize(String string)
     {
         return ChatColor.translateAlternateColorCodes('&', string);
