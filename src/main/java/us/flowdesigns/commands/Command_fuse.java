@@ -6,6 +6,9 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import us.flowdesigns.fuse.Fuse;
 import us.flowdesigns.fuse.Updater;
+import us.flowdesigns.utils.NUtil;
+
+import static us.flowdesigns.fuse.Fuse.plugin;
 
 @CommandPermissions(source = SourceType.BOTH)
 @CommandParameters(description = "Shows information about Fuse", usage = "/<command> [reload | debug | help | update]", aliases = "packscore,oxygen,sky,nitrogen,trident")
@@ -79,7 +82,6 @@ public class Command_fuse extends BaseCommand {
                 sender.sendMessage(ChatColor.GRAY + "players.superusers: " + superusers);
                 sender.sendMessage(ChatColor.GRAY + "Fuse.build.formattedVersion(): " + Fuse.build.formattedVersion());
                 sender.sendMessage(ChatColor.GRAY + "COMPILE_NMS_VERSION: " + Fuse.COMPILE_NMS_VERSION);
-                return true;
         } // debug end
             case "help":
             {
