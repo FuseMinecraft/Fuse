@@ -19,7 +19,7 @@ public class Command_tprandom extends BaseCommand {
             sender.sendMessage(Messages.MSG_NO_PERMS);
             return true;
         }
-        if (sender instanceof Player)
+        if (!senderIsConsole)
         {
         Random r = new Random();
         int x = sender_p.getLocation().getBlockX() + r.nextInt(1000);

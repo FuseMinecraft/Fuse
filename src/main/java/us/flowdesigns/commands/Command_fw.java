@@ -59,7 +59,7 @@ public class Command_fw extends BaseCommand {
         fm.addEffect(effect.build());
         fm.setPower(1);
         fw.setFireworkMeta(fm);
-        sender.sendMessage(ChatColor.GRAY + "You shot a firework in the sky!");
+        sender.sendMessage(ChatColor.GRAY + "You shot a firework into the sky!");
         return true;
     }
     if (loc == null)

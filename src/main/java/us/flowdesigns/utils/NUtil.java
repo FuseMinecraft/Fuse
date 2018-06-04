@@ -44,7 +44,7 @@ public class NUtil
     }
     public static void consoleAdminChat(String name, String message) {
         Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("fuse.adminchat"))).forEach((player) -> {
-            player.sendMessage("§7[AdminChat] " + ChatColor.BLUE + name + " §8[§5Console§8]"+ "§f: " + ChatColor.AQUA + message);
+            player.sendMessage("§7[AdminChat] " + ChatColor.BLUE + name + " §5(Console)§f: " + ChatColor.AQUA + message);
         });
     }
     public static String dateToString(Date date)
