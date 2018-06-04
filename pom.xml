@@ -16,7 +16,7 @@
         <build.head>${buildHead}</build.head>
         <jar.finalName>${project.name}</jar.finalName>
         <timestamp>${maven.build.timestamp}</timestamp>
-        <maven.build.timestamp.format>dd/MM/yyyy HH:mm</maven.build.timestamp.format>
+        <maven.build.timestamp.format>MM/dd/yyyy HH:mm</maven.build.timestamp.format>
     </properties>
     <scm>
         <connection>scm:git:git@github.com:FuseMinecraft/Fuse.git</connection>

@@ -82,6 +82,7 @@ public class Command_fuse extends BaseCommand {
                 sender.sendMessage(ChatColor.GRAY + "players.superusers: " + superusers);
                 sender.sendMessage(ChatColor.GRAY + "Fuse.build.formattedVersion(): " + Fuse.build.formattedVersion());
                 sender.sendMessage(ChatColor.GRAY + "COMPILE_NMS_VERSION: " + Fuse.COMPILE_NMS_VERSION);
+                return true;
         } // debug end
             case "help":
             {
