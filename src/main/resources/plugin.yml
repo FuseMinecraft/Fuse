@@ -65,6 +65,9 @@ commands:
     description: Makes yourself invisible and glow
     permission: fuse.glassmode
     usage: /<command> <enable | disable>
+  links:
+    description: Shows all of the servers links
+    usage: /<command>
   lockup:
     description: Block a players Minecraft input
     permission: fuse.lockup

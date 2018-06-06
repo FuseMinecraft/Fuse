@@ -41,6 +41,9 @@ players:
   owner: 'Telesphoreo'
   # Who should be allowed to use some high level commands
   superusers: 'Telesphoreo, OxLemonxO'
+social_links:
+  GitHub: 'https://www.github.com/FuseMinecraft/Fuse'
+  Discord: 'https://discord.gg/example'
 login-messages:
   Moderator:
     permission: fuse.moderator

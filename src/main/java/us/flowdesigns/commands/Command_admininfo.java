@@ -25,10 +25,10 @@ public class Command_admininfo extends BaseCommand {
                 && !admin_app_template.equalsIgnoreCase("none")
                 && !new_thread_link.equalsIgnoreCase("none"))
         {
-        sender.sendMessage(ChatColor.RED + "To apply for moderator, register an account at: " + forums + "\n" +
+        sender.sendMessage(ChatColor.GOLD + "To apply for moderator, register an account at: " + forums + "\n" +
         "When you've registered, copy the template: " + admin_app_template + "\n" +
         "Create a new thread by clicking here: " + new_thread_link + "\n" +
-        "Paste the template into the thread and fill out the questions. Be sure you meet the requirements.\n" +
+        "Paste the template into the thread and fill out the questions. Be sure you meet the requirements.\n" + ChatColor.RED +
         "Do not bug staff members to look at your application or else it will most likely get denied");
         return true;
         } else {

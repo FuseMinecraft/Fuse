@@ -176,14 +176,14 @@ public class Command_toggle extends BaseCommand {
         // Admin applications enabled
         if (args[0].equalsIgnoreCase("applications_enabled")) {
             if (applications_enabled.equalsIgnoreCase("true")) {
-                plugin.getConfig().set("server.applications_enabled", "false");
+                plugin.getConfig().set("commands.applications_enabled", "false");
                 plugin.saveConfig();
                 plugin.reloadConfig();
                 sender.sendMessage(ChatColor.GRAY + "Players can no longer access the /admininfo command");
                 return true;
             }
             if (applications_enabled.equalsIgnoreCase("false")) {
-                plugin.getConfig().set("server.applications_enabled", "true");
+                plugin.getConfig().set("commands.applications_enabled", "true");
                 plugin.saveConfig();
                 plugin.reloadConfig();
                 sender.sendMessage(ChatColor.GRAY + "Players can now use the /admininfo command");

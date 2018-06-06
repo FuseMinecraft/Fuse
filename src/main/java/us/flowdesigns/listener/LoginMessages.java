@@ -9,6 +9,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import us.flowdesigns.utils.NLog;
 import us.flowdesigns.utils.NUtil;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 import static us.flowdesigns.fuse.Fuse.plugin;
@@ -19,7 +20,7 @@ public class LoginMessages implements Listener {
         Player player = event.getPlayer();
         UUID uuid = player.getUniqueId();
         String owner = plugin.getConfig().getString("players.owner");
-        String login_messages_enabled = plugin.getConfig().getString("login-messages.enabled");
+        String login_messages_enabled = plugin.getConfig().getString("server.login_messages_enabled");
         // Telesphoreo
         /*if (uuid.toString().equals("78408086-1991-4c33-a571-d8fa325465b2") && !player.getName().equals(owner)) {
             Bukkit.broadcastMessage("§b" + player.getName() + " is a Developer for Fuse");
@@ -32,11 +33,11 @@ public class LoginMessages implements Listener {
         }
         if (login_messages_enabled.equalsIgnoreCase("true")) {
             NLog.info("login messages are enabled");
-            ConfigurationSection groups = plugin.getConfig().getConfigurationSection("login-messages");
-            Map<String, Object> values = groups.getValues(false);
-            Set groups2 = values.keySet();
-            NLog.info("key to string: " + groups2.toString());
-            String permission = (String) plugin.getConfig().get("login-messages." + groups2 + ".permission");
+            ConfigurationSection login_messages = plugin.getConfig().getConfigurationSection("login-messages");
+            Map<String, Object> values = login_messages.getValues(false);
+            Set groups = values.keySet();
+            NLog.info("groups to string: " + groups.toString());
+            String permission = plugin.getConfig().getString("login-messages.%s.permission", values.keySet().toString());
             NLog.info("permission: " + permission);
         }
             return true;
