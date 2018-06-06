@@ -1,6 +1,7 @@
 package us.flowdesigns.listener;
 
 import org.bukkit.Bukkit;
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -31,17 +32,13 @@ public class LoginMessages implements Listener {
         }
         if (login_messages_enabled.equalsIgnoreCase("true")) {
             NLog.info("login messages are enabled");
-            for (String string : plugin.getConfig().getConfigurationSection("login-messages").getKeys(false)) {
-                String wtf = plugin.getConfig().getString("login-messages." + string + ".permission");
-                String login_message_message = plugin.getConfig().getString("login-messages." + string + ".message");
-                if (player.hasPermission(plugin.getConfig().getString("login-messages." + string + ".permission"))) {
-                    NLog.info("player " + player.getName() + " has permission " + wtf);
-                    NUtil.bcastMsg(plugin.getConfig().getString("login-messages." + string + ".message").replace("%player%", player.getName()));
-                    NLog.info("so the login message should be " + login_message_message);
-                }
-                return true;
-            }
+            ConfigurationSection groups = plugin.getConfig().getConfigurationSection("login-messages");
+            Map<String, Object> values = groups.getValues(false);
+            Set groups2 = values.keySet();
+            NLog.info("key to string: " + groups2.toString());
+            String permission = (String) plugin.getConfig().get("login-messages." + groups2 + ".permission");
+            NLog.info("permission: " + permission);
         }
-        return true;
+            return true;
+        }
     }
-}
