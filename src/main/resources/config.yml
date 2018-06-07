@@ -28,12 +28,6 @@ commands:
   admin_application_template: 'none'
   # What is the link to create a new thread?
   admin_app_new_thread_link: 'none'
-  # What is the link to the website?
-  website: 'none'
-  # What is the link to your forums?
-  forums: 'none'
-  # What is the link to your servers Discord?
-  discord: 'none'
   # Should fun comamnds like /ship, /deafen, and /lockup be enabled? (enabled/disabled)
   fun_commands: 'enabled'
 players:
