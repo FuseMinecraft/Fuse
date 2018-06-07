@@ -18,6 +18,7 @@ public class Command_toggle extends BaseCommand {
         String fall_damage_enabled = plugin.getConfig().getString("server.fall_damage_enabled");
         String splash_potions_enabled = plugin.getConfig().getString("server.splash_potions_enabled");
         String fun_cmds = plugin.getConfig().getString("commands.fun_commands");
+        String login_messages = plugin.getConfig().getString("server.login_messages_enabled");
         String applications_enabled = plugin.getConfig().getString("commands.applications_enabled");
         if (!sender.hasPermission("fuse.toggle"))
         {
@@ -34,6 +35,7 @@ public class Command_toggle extends BaseCommand {
             sender.sendMessage(ChatColor.GRAY + "Fall Damage Enabled (fall_damage_enabled): " + fall_damage_enabled);
             sender.sendMessage(ChatColor.GRAY + "Splash Potions Enabled (splash_potions_enabled): " + splash_potions_enabled);
             sender.sendMessage(ChatColor.GRAY + "Fun Commands Enabled (fun_commands): " + fun_cmds);
+            sender.sendMessage(ChatColor.GRAY + "Login Messages Enabled (login_messages): " + login_messages);
             sender.sendMessage(ChatColor.GRAY + "Admin Applications Enabled (applications_enabled): " + applications_enabled);
             return true;
         }
@@ -158,18 +160,35 @@ public class Command_toggle extends BaseCommand {
         }
         // Fun commands enabled
         if (args[0].equalsIgnoreCase("fun_commands")) {
-            if (fun_cmds.equalsIgnoreCase("true")) {
+            if (fun_cmds.equalsIgnoreCase("enabled")) {
                 plugin.getConfig().set("commands.fun_commands", "disabled");
                 plugin.saveConfig();
                 plugin.reloadConfig();
-                sender.sendMessage(ChatColor.GRAY + "Fun commands have been disabled");
+                sender.sendMessage(ChatColor.GRAY + "Players can no longer use fun commands");
                 return true;
             }
-            if (fun_cmds.equalsIgnoreCase("false")) {
-                plugin.getConfig().set("commands.fun_commands", "true");
+            if (fun_cmds.equalsIgnoreCase("disabled")) {
+                plugin.getConfig().set("commands.fun_commands", "enabled");
                 plugin.saveConfig();
                 plugin.reloadConfig();
-                sender.sendMessage(ChatColor.GRAY + "Fun commands have been enabled");
+                sender.sendMessage(ChatColor.GRAY + "Players can now use fun commands");
+                return true;
+            }
+        }
+        // Login messages
+        if (args[0].equalsIgnoreCase("login_messages")) {
+            if (login_messages.equalsIgnoreCase("true")) {
+                plugin.getConfig().set("server.login_messages_enabled", "false");
+                plugin.saveConfig();
+                plugin.reloadConfig();
+                sender.sendMessage(ChatColor.GRAY + "Login messages are now disabled");
+                return true;
+            }
+            if (login_messages.equalsIgnoreCase("false")) {
+                plugin.getConfig().set("server.login_messages_enabled", "true");
+                plugin.saveConfig();
+                plugin.reloadConfig();
+                sender.sendMessage(ChatColor.GRAY + "Login messages are now enabled");
                 return true;
             }
         }

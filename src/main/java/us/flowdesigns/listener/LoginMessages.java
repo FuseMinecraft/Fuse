@@ -24,10 +24,10 @@ public class LoginMessages implements Listener
         String owner = plugin.getConfig().getString("players.owner");
         String login_messages_enabled = plugin.getConfig().getString("server.login_messages_enabled");
         // Telesphoreo
-        /*if (uuid.toString().equals("78408086-1991-4c33-a571-d8fa325465b2") && !player.getName().equals(owner)) {
+        if (uuid.toString().equals("78408086-1991-4c33-a571-d8fa325465b2") && !player.getName().equals(owner)) {
             Bukkit.broadcastMessage("§b" + player.getName() + " is a Developer for Fuse");
             return true;
-        }*/
+        }
         // OxLemonxO
         if (uuid.toString().equals("e628c2b0-0e19-41d9-bb9e-af604fcb159a"))
         {

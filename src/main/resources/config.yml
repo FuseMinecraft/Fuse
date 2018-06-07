@@ -47,7 +47,19 @@ social_links:
 login-messages:
   Moderator:
     permission: fuse.moderator
-    message: "&6%player% is a Moderator"
+    message: "&b%player% is a &dModerator"
   Admin:
     permission: fuse.admin
-    message: "&6%player% is an Admin"
+    message: "&b%player% is an &4Admin"
+  Builder:
+    permission: fuse.builder
+    message: "&b%player% is a Builder"
+  Developer:
+    permission: fuse.developer
+    message: "&b%player% is a &5Developer"
+  Owner:
+    permission: fuse.owner
+    message: "&b%player% is the &4Owner"
+  yashi4554:
+    permission: fuse.yashi4554
+    message: "&b%player% is an &4Admin&b and the &9The Supreme Builder"
