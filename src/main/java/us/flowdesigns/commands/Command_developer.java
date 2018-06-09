@@ -16,7 +16,7 @@ public class Command_developer extends BaseCommand {
 
         if (!superusers.contains(sender.getName()))
         {
-            sender.sendMessage(ChatColor.RED + "This command is restricted to superusers.");
+            sender.sendMessage(Messages.RESTRICTED_TO_SUPERUSERS);
             return true;
         }
 

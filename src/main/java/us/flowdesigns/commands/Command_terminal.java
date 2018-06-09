@@ -16,7 +16,7 @@ public class Command_terminal extends BaseCommand {
     String superusers = plugin.getConfig().getString("players.superusers");
     if (!superusers.equals(sender.getName()))
     {
-        sender.sendMessage(Messages.MSG_NO_PERMS);
+        sender.sendMessage(Messages.RESTRICTED_TO_SUPERUSERS);
         return true;
     }
     if (args.length == 0)
