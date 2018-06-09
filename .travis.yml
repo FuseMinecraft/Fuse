@@ -3,4 +3,4 @@ jdk:
   - oraclejdk8
 notifications:
   email: false
-script: mvn package
+script: mvn clean install
