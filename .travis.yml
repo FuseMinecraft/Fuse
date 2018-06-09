@@ -3,4 +3,8 @@ jdk:
   - oraclejdk8
 notifications:
   email: false
+addons:
+  apt:
+    packages:
+      - sshpass
 script: mvn clean install
