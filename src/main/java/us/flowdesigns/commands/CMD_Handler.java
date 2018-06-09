@@ -5,7 +5,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import us.flowdesigns.fuse.Fuse;
+import us.flowdesigns.nitrogen.Nitrogen;
 import us.flowdesigns.utils.NLog;
 
 // Credit to TF
@@ -45,12 +45,12 @@ public class CMD_Handler
         final BaseCommand dispatcher;
         try
         {
-            final ClassLoader classLoader = Fuse.class.getClassLoader();
+            final ClassLoader classLoader = Nitrogen.class.getClassLoader();
             dispatcher = (BaseCommand) classLoader.loadClass(String.format("%s.%s%s",
                     COMMAND_PATH,
                     COMMAND_PREFIX,
                     cmd.getName().toLowerCase())).newInstance();
-            dispatcher.setup(Fuse.plugin, sender, dispatcher.getClass());
+            dispatcher.setup(Nitrogen.plugin, sender, dispatcher.getClass());
         }
         catch (ClassNotFoundException | InstantiationException | IllegalAccessException ex)
         {

@@ -2,7 +2,7 @@ package us.flowdesigns.utils;
 
 import org.bukkit.command.CommandSender;
 import org.bukkit.scheduler.BukkitRunnable;
-import us.flowdesigns.fuse.Fuse;
+import us.flowdesigns.nitrogen.Nitrogen;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -34,7 +34,7 @@ public class Terminal {
                     NLog.severe(ex);
                 }
             }
-        }.runTaskAsynchronously(Fuse.plugin);
+        }.runTaskAsynchronously(Nitrogen.plugin);
 
     }
 

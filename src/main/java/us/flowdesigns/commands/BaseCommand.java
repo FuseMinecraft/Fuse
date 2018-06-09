@@ -4,7 +4,7 @@ import org.bukkit.Server;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import us.flowdesigns.fuse.Fuse;
+import us.flowdesigns.nitrogen.Nitrogen;
 
 import java.util.Collection;
 
@@ -12,7 +12,7 @@ import java.util.Collection;
 
 public abstract class BaseCommand
 {
-    protected Fuse plugin;
+    protected Nitrogen plugin;
     protected Server server;
     private CommandSender commandSender;
     private Class<?> commandClass;
@@ -23,7 +23,7 @@ public abstract class BaseCommand
 
     abstract public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole);
 
-    public void setup(final Fuse plugin, final CommandSender commandSender, final Class<?> commandClass)
+    public void setup(final Nitrogen plugin, final CommandSender commandSender, final Class<?> commandClass)
     {
         this.plugin = plugin;
         this.server = plugin.getServer();

@@ -1,13 +1,13 @@
-name: Fuse
+name: Nitrogen
 version: 4.0.0
 description: Utility plugin for Minecraft servers
 authors: [Telesphoreo, OxLemonxO, Madgeek1450, Prozza, TheMinecraft]
-main: us.flowdesigns.fuse.Fuse
+main: us.flowdesigns.nitrogen.Nitrogen
 commands:
   adminchat:
     description: Talk privately with other admins
     aliases: o
-    permission: fuse.adminchat
+    permission: nitrogen.adminchat
     usage: /<command> <message>
   admininfo:
     description: Tells a person how to apply for admin
@@ -15,25 +15,25 @@ commands:
     usage: /<command>
   clearlag:
     description: Removes server entities
-    permission: fuse.clearlag
+    permission: nitrogen.clearlag
     aliases: [entitywipe, ew, rd]
     usage: /<command> [-s]
   commandspy:
     description: Spy on other players commands
     aliases: cmdspy
-    permission: fuse.commandspy
+    permission: nitrogen.commandspy
     usage: /<command>
   consolesay:
     description: Chat from the console
     aliases: csay
     usage: /<command> <message>
   contributors:
-    description: Shows the people who contributed to Fuse
+    description: Shows the people who contributed to Nitrogen
     aliases: contributers
     usage: /<command>
   deafen:
     description: Make some noise
-    permission: fuse.deafen
+    permission: nitrogen.deafen
     usage: /<command>
   developer:
     description: Developer command (Requires superuser)
@@ -44,43 +44,42 @@ commands:
     usage: /<command>
   expel:
     description: Pushes players away from you
-    permission: fuse.expel
+    permission: nitrogen.expel
     usage: /<command>
   forums:
     description: Gives a link to the forums
     aliases: [forum, fourms, fourm]
     usage: /<command>
-  fuse:
-    description: Shows information about Fuse
-    aliases: [packscore, oxygen, sky, nitrogen, trident]
+  nitrogen:
+    description: Shows information about Nitrogen
     usage: /<command> [reload | debug | help | update]
   fw:
     description: Shoots a firework into the sky
     usage: /<command>
   gcmd:
     description: Makes a player execute a command
-    permission: fuse.gcmd
+    permission: nitrogen.gcmd
     usage: /<command> [player] [command]
   glassmode:
     description: Makes yourself invisible and glow
-    permission: fuse.glassmode
+    permission: nitrogen.glassmode
     usage: /<command> <enable | disable>
   links:
     description: Shows all of the servers links
     usage: /<command>
   lockup:
     description: Block a players Minecraft input
-    permission: fuse.lockup
+    permission: nitrogen.lockup
     usage: /<command> <all | purge | <<player> on | off>>
   namehistory:
     description: Shows the name history of a player
     aliases: nh
-    permission: fuse.namehistory
+    permission: nitrogen.namehistory
     usage: /<command> <player>
   pluginmanage:
     description: Manage plugins
     aliases: [plc, pm]
-    permission: fuse.pluginmanage
+    permission: nitrogen.pluginmanage
     usage: /<command> <<enable | disable | reload> <pluginname>> | list>
   rename:
     description: Renames the item in your hand
@@ -94,16 +93,16 @@ commands:
   toggle:
     description: Toggles configuration options
     usage: /<command>
-    permission: fuse.toggle
+    permission: nitrogen.toggle
   tprandom:
     description: Teleports a player to a random location
     aliases: tpr
-    permission: fuse.tprandom
+    permission: nitrogen.tprandom
     usage: /<command>
   unloadchunks:
     description: Unloads unused chunks
     aliases: [uc, rc]
-    permission: fuse.unloadchunks
+    permission: nitrogen.unloadchunks
     usage: /<command> [-s]
   website:
     description: Gives a link to the website

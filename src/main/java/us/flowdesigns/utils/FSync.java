@@ -3,14 +3,14 @@ package us.flowdesigns.utils;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
-import us.flowdesigns.fuse.Fuse;
+import us.flowdesigns.nitrogen.Nitrogen;
 
 public class FSync
 {
 
     public static void playerMsg(final Player player, final String message)
     {
-        final Fuse plugin = Fuse.plugin;
+        final Nitrogen plugin = Nitrogen.plugin;
         new BukkitRunnable()
         {
 
@@ -24,7 +24,7 @@ public class FSync
     }
     public static void playerMsg(final CommandSender sender, final String message)
     {
-        final Fuse plugin = Fuse.plugin;
+        final Nitrogen plugin = Nitrogen.plugin;
         new BukkitRunnable()
         {
 

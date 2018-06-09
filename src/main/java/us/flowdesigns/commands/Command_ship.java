@@ -18,7 +18,7 @@ public class Command_ship extends BaseCommand {
             sender.sendMessage(Messages.UNKNOWN_COMMAND);
             return true;
         }
-        if (!sender.hasPermission("fuse.ship"))
+        if (!sender.hasPermission("nitrogen.ship"))
         {
             sender.sendMessage(Messages.MSG_NO_PERMS);
             return true;

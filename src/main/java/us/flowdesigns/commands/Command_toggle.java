@@ -20,7 +20,7 @@ public class Command_toggle extends BaseCommand {
         String fun_cmds = plugin.getConfig().getString("commands.fun_commands");
         String login_messages = plugin.getConfig().getString("server.login_messages_enabled");
         String applications_enabled = plugin.getConfig().getString("commands.applications_enabled");
-        if (!sender.hasPermission("fuse.toggle"))
+        if (!sender.hasPermission("nitrogen.toggle"))
         {
             sender.sendMessage(Messages.MSG_NO_PERMS);
             return true;

@@ -1,5 +1,5 @@
 #
-# Fuse v4.0.0 Configuration File
+# Nitrogen v4.0.0 Configuration File
 #
 
 server:
@@ -36,24 +36,24 @@ players:
   # Who should be allowed to use some high level commands
   superusers: 'Telesphoreo, OxLemonxO'
 social_links:
-  GitHub: 'https://www.github.com/FuseMinecraft/Fuse'
+  GitHub: 'https://www.github.com/FuseMinecraft/Nitrogen'
   Discord: 'https://discord.gg/example'
 login-messages:
   Moderator:
-    permission: fuse.moderator
+    permission: nitrogen.moderator
     message: "&b%player% is a &dModerator"
   Admin:
-    permission: fuse.admin
+    permission: nitrogen.admin
     message: "&b%player% is an &4Admin"
   Builder:
-    permission: fuse.builder
+    permission: nitrogen.builder
     message: "&b%player% is a Builder"
   Developer:
-    permission: fuse.developer
+    permission: nitrogen.developer
     message: "&b%player% is a &5Developer"
   Owner:
-    permission: fuse.owner
+    permission: nitrogen.owner
     message: "&b%player% is the &4Owner"
   yashi4554:
-    permission: fuse.yashi4554
+    permission: nitrogen.yashi4554
     message: "&b%player% is an &4Admin&b and the &9The Supreme Builder"

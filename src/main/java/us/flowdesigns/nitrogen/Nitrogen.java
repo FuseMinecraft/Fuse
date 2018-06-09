@@ -1,4 +1,4 @@
-package us.flowdesigns.fuse;
+package us.flowdesigns.nitrogen;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Server;
@@ -21,11 +21,11 @@ import java.io.File;
 import java.io.InputStream;
 import java.util.Properties;
 
-public class Fuse extends JavaPlugin {
+public class Nitrogen extends JavaPlugin {
 
-    public static Fuse plugin;
+    public static Nitrogen plugin;
     public static Server server;
-    public static Fuse instance;
+    public static Nitrogen instance;
 
     public static final BuildProperties build = new BuildProperties();
     public static final String COMPILE_NMS_VERSION = "v1_12_R1";
@@ -36,26 +36,26 @@ public class Fuse extends JavaPlugin {
 
     @Override
     public void onLoad() {
-        Fuse.plugin = this;
-        Fuse.server = plugin.getServer();
+        Nitrogen.plugin = this;
+        Nitrogen.server = plugin.getServer();
         NLog.setServerLogger(server.getLogger());
         NLog.setServerLogger(server.getLogger());
-        Fuse.pluginName = plugin.getDescription().getName();
-        Fuse.pluginVersion = plugin.getDescription().getVersion();
+        Nitrogen.pluginName = plugin.getDescription().getName();
+        Nitrogen.pluginVersion = plugin.getDescription().getVersion();
     }
 
     @Override
     public void onEnable() {
-        build.load(Fuse.plugin);
+        build.load(Nitrogen.plugin);
         warnVersion();
         // Listeners
-        server.getPluginManager().registerEvents(new AutoUpdate(), Fuse.plugin);
-        server.getPluginManager().registerEvents(new ConfigListener(), Fuse.plugin);
-        server.getPluginManager().registerEvents(new LoginMessages(), Fuse.plugin);
-        server.getPluginManager().registerEvents(new Monitors(), Fuse.plugin);
+        server.getPluginManager().registerEvents(new AutoUpdate(), Nitrogen.plugin);
+        server.getPluginManager().registerEvents(new ConfigListener(), Nitrogen.plugin);
+        server.getPluginManager().registerEvents(new LoginMessages(), Nitrogen.plugin);
+        server.getPluginManager().registerEvents(new Monitors(), Nitrogen.plugin);
         // Exploits
-        server.getPluginManager().registerEvents(new Potion(), Fuse.plugin);
-        server.getPluginManager().registerEvents(new Sign(), Fuse.plugin);
+        server.getPluginManager().registerEvents(new Potion(), Nitrogen.plugin);
+        server.getPluginManager().registerEvents(new Sign(), Nitrogen.plugin);
         Config.loadConfigs();
         new BukkitRunnable() {
             @Override
@@ -64,12 +64,12 @@ public class Fuse extends JavaPlugin {
                 CMD_Loader.scan();
             }
         }.runTaskLater(plugin, 20L);
-        Bukkit.getScheduler().scheduleSyncRepeatingTask(Bukkit.getPluginManager().getPlugin("Fuse"), () -> {
+        Bukkit.getScheduler().scheduleSyncRepeatingTask(Bukkit.getPluginManager().getPlugin("Nitrogen"), () -> {
             if ((NUtil.NEntityWiper.wipeEntities(true, true)) == 1)
             {
-                NLog.info("[Fuse] " + (NUtil.NEntityWiper.wipeEntities(true, true)) + " entity removed");
+                NLog.info("[Nitrogen] " + (NUtil.NEntityWiper.wipeEntities(true, true)) + " entity removed");
             } else if ((NUtil.NEntityWiper.wipeEntities(true, true)) != 0) {
-                NLog.info("[Fuse] " + (NUtil.NEntityWiper.wipeEntities(true, true)) + " entities removed");
+                NLog.info("[Nitrogen] " + (NUtil.NEntityWiper.wipeEntities(true, true)) + " entities removed");
             }
         }, 1L , (long) 300 * 20);
         instance = this;
@@ -79,7 +79,7 @@ public class Fuse extends JavaPlugin {
     public void onDisable() {
     }
 
-    public static Fuse getInstance() {
+    public static Nitrogen getInstance() {
         return instance;
     }
 
@@ -97,7 +97,7 @@ public class Fuse extends JavaPlugin {
         public String date;
         public String head;
 
-        public void load(Fuse plugin)
+        public void load(Nitrogen plugin)
         {
             try
             {
@@ -138,7 +138,7 @@ public class Fuse extends JavaPlugin {
 
         if (!COMPILE_NMS_VERSION.equals(nms))
         {
-            NLog.warning("Fuse is compiled for " + COMPILE_NMS_VERSION + " but the server is running version " + nms + "!");
+            NLog.warning("Nitrogen is compiled for " + COMPILE_NMS_VERSION + " but the server is running version " + nms + "!");
             NLog.warning("This might result in unexpected behavior!");
         }
     }

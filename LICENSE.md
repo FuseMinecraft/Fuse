@@ -1,4 +1,4 @@
-Fuse License
+Nitrogen License
 ================
 
 1. You may NOT distribute PacksCore, Oxygen, Sky, Nitrogen, Trident and/or Fuse in any way shape or form, including JAR files or ZIP files
@@ -11,6 +11,6 @@ Fuse License
 - Prozza
 - TheMinecraft
 
-You are allowed to use Fuse on your Minecraft server as long as you follow this license.
+You are allowed to use Nitrogen on your Minecraft server as long as you follow this license.
 
 Copyright (c) Telesphoreo 2018

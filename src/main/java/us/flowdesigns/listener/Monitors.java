@@ -3,7 +3,6 @@ package us.flowdesigns.listener;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -12,16 +11,14 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PotionSplashEvent;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.scheduler.BukkitRunnable;
-import org.bukkit.util.Vector;
-import us.flowdesigns.fuse.Fuse;
+import us.flowdesigns.nitrogen.Nitrogen;
 import us.flowdesigns.utils.PlayerData;
 
-import static us.flowdesigns.fuse.Fuse.plugin;
-import static us.flowdesigns.fuse.Fuse.server;
+import static us.flowdesigns.nitrogen.Nitrogen.plugin;
+import static us.flowdesigns.nitrogen.Nitrogen.server;
 
 public class Monitors implements Listener {
 
@@ -46,7 +43,7 @@ public class Monitors implements Listener {
                             });
                         });
                     }
-                }.runTaskLater(Fuse.getInstance(), 1);
+                }.runTaskLater(Nitrogen.getInstance(), 1);
                 break;
         }
     }

@@ -1,17 +1,17 @@
-# Fuse v4.0.0 Command and Permission Help
-# To block people from dropping items, use the permission node: fuse.nodrop
+# Nitrogen v4.0.0 Command and Permission Help
+# To block people from dropping items, use the permission node: nitrogen.nodrop
 # When a command has a -s option, it allows you to use it silently
 
   adminchat:
     description: Talk privately with other admins
     aliases: o
     permissions:
-    - fuse.adminchat (Required to use it)
-    - fuse.moderator (For moderator)
-    - fuse.admin (For admins)
-    - fuse.developer (For developers)
-    - fuse.builder (For builders)
-    - fuse.owner (For owner)
+    - nitrogen.adminchat (Required to use it)
+    - nitrogen.moderator (For moderator)
+    - nitrogen.admin (For admins)
+    - nitrogen.developer (For developers)
+    - nitrogen.builder (For builders)
+    - nitrogen.owner (For owner)
     usage: /<command> <message>
   admininfo:
     description: Tells a person how to apply for admin
@@ -19,25 +19,25 @@
     usage: /<command>
   clearlag:
     description: Removes server entities
-    permission: fuse.clearlag
+    permission: nitrogen.clearlag
     aliases: [entitywipe, ew, rd]
     usage: /<command> [-s]
   commandspy:
     description: Spy on other players commands
     aliases: cmdspy
-    permission: fuse.commandspy
+    permission: nitrogen.commandspy
     usage: /<command>
   consolesay:
     description: Chat from the console
     aliases: csay
     usage: /<command> <message>
   contributors:
-    description: Shows the people who contributed to Fuse
+    description: Shows the people who contributed to Nitrogen
     aliases: contributers
     usage: /<command>
   deafen:
     description: Make some noise
-    permission: fuse.deafen
+    permission: nitrogen.deafen
     usage: /<command>
   developer:
     description: Developer command (Requires superuser)
@@ -48,43 +48,42 @@
     usage: /<command>
   expel:
     description: Pushes players away from you
-    permission: fuse.expel
+    permission: nitrogen.expel
     usage: /<command>
   forums:
     description: Gives a link to the forums
     aliases: [forum, fourms, fourm]
     usage: /<command>
-  fuse:
-    description: Shows information about Fuse
-    aliases: [packscore, oxygen, sky, nitrogen, trident]
+  nitrogen:
+    description: Shows information about Nitrogen
     permissions:
-    - fuse.update (To update Fuse)
-    - fuse.extendedhelp (Admin commands in Fuse)
+    - nitrogen.update (To update Nitrogen)
+    - nitrogen.extendedhelp (Admin commands in Nitrogen)
     usage: /<command> [reload | debug | help | update]
   fw:
     description: Shoots a firework into the sky
     usage: /<command>
   gcmd:
     description: Makes a player execute a command
-    permission: fuse.gcmd
+    permission: nitrogen.gcmd
     usage: /<command> [player] [command]
   glassmode:
     description: Makes yourself invisible and glow
-    permission: fuse.glassmode
+    permission: nitrogen.glassmode
     usage: /<command> <enable | disable>
   lockup:
       description: Block a players Minecraft input
-      permission: fuse.lockup
+      permission: nitrogen.lockup
       usage: /<command> <all | purge | <<player> on | off>>
   namehistory:
     description: Shows the name history of a player
     aliases: nh
-    permission: fuse.namehistory
+    permission: nitrogen.namehistory
     usage: /<command> <player>
   pluginmanage:
     description: Manage plugins
     aliases: [plc, pm]
-    permission: fuse.pluginmanage
+    permission: nitrogen.pluginmanage
     usage: /<command> <<enable | disable | reload> <pluginname>> | list>
   rename:
     description: Renames the item in your hand
@@ -98,16 +97,16 @@
   tprandom:
     description: Teleports a player to a random location
     aliases: tpr
-    permission: fuse.tprandom
+    permission: nitrogen.tprandom
     usage: /<command>
   toggle:
     description: Toggles configuration options
     usage: /<command>
-    permission: fuse.toggle
+    permission: nitrogen.toggle
   unloadchunks:
     description: Unloads unused chunks
     aliases: [uc, rc]
-    permission: fuse.unloadchunks
+    permission: nitrogen.unloadchunks
     usage: /<command> [-s]
   website:
     description: Gives a link to the website

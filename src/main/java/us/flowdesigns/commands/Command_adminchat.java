@@ -7,15 +7,13 @@ import org.bukkit.entity.Player;
 import us.flowdesigns.utils.NLog;
 import us.flowdesigns.utils.NUtil;
 
-import static us.flowdesigns.fuse.Fuse.plugin;
-
 @CommandPermissions(source = SourceType.BOTH)
 @CommandParameters(description = "Talk privately with other admins", usage = "/<command> [message...]", aliases = "o")
 public class Command_adminchat extends BaseCommand {
 
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole) {
-        if (!sender.hasPermission("fuse.adminchat"))
+        if (!sender.hasPermission("nitrogen.adminchat"))
         {
             sender.sendMessage(Messages.MSG_NO_PERMS);
             return true;

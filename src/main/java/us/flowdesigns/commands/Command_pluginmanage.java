@@ -16,7 +16,7 @@ public class Command_pluginmanage extends BaseCommand {
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole) {
     {
-        if (!sender.hasPermission("fuse.pluginmanage"))
+        if (!sender.hasPermission("nitrogen.pluginmanage"))
         {
             sender.sendMessage(Messages.MSG_NO_PERMS);
             return true;

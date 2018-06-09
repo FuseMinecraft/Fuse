@@ -22,7 +22,7 @@ public class Command_lockup extends BaseCommand {
             sender.sendMessage(Messages.UNKNOWN_COMMAND);
             return true;
         }
-        if (!sender.hasPermission("fuse.lockup"))
+        if (!sender.hasPermission("nitrogen.lockup"))
         {
             sender.sendMessage(Messages.MSG_NO_PERMS);
             return true;

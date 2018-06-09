@@ -20,14 +20,14 @@ import static org.bukkit.Bukkit.getServer;
 
 public class AutoUpdate implements Listener {
     PluginManager pm = getServer().getPluginManager();
-    Plugin p = pm.getPlugin("Fuse");
+    Plugin p = pm.getPlugin("Nitrogen");
     PluginDescriptionFile pdf = p.getDescription();
     int version = this.getVersionFromString(pdf.getVersion());
     final String versionLink = "https://flowdesigns.us/version.txt";
     private Plugin plugin;
     @EventHandler
     public boolean onPlayerJoin(PlayerJoinEvent event) throws IOException {
-        if (event.getPlayer().hasPermission("fuse.update") || event.getPlayer().isOp()) {
+        if (event.getPlayer().hasPermission("nitrogen.update") || event.getPlayer().isOp()) {
             URL url = new URL(versionLink);
             URLConnection con = url.openConnection();
             InputStreamReader isr = new InputStreamReader(con.getInputStream());
@@ -35,7 +35,7 @@ public class AutoUpdate implements Listener {
             reader.ready();
             int newVersion = this.getVersionFromString(reader.readLine());
             if (newVersion > version) {
-                event.getPlayer().sendMessage(ChatColor.RED + "There is an update available for Fuse. To update Fuse, type /fuse update");
+                event.getPlayer().sendMessage(ChatColor.RED + "There is an update available for Nitrogen. To update Nitrogen, type /nitrogen update");
             }
         }
         return true;

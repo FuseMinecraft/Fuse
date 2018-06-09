@@ -3,7 +3,7 @@ package us.flowdesigns.commands;
 import org.bukkit.Bukkit;
 import org.bukkit.command.*;
 import org.bukkit.plugin.Plugin;
-import us.flowdesigns.fuse.Fuse;
+import us.flowdesigns.nitrogen.Nitrogen;
 import us.flowdesigns.utils.NLog;
 import us.flowdesigns.utils.NUtil;
 
@@ -50,7 +50,7 @@ public class CMD_Loader
                 unregisterCommand(existing, commandMap);
             }
 
-            commandMap.register(Fuse.plugin.getDescription().getName(), dynamicCommand);
+            commandMap.register(Nitrogen.plugin.getDescription().getName(), dynamicCommand);
         });
     }
 
@@ -90,7 +90,7 @@ public class CMD_Loader
     @SuppressWarnings("unchecked")
     public static CommandMap getCommandMap()
     {
-        final Object commandMap = NUtil.getField(Bukkit.getServer().getPluginManager(), "Fuse");
+        final Object commandMap = NUtil.getField(Bukkit.getServer().getPluginManager(), "Nitrogen");
         if (commandMap != null)
         {
             if (commandMap instanceof CommandMap)
@@ -104,7 +104,7 @@ public class CMD_Loader
     @SuppressWarnings("unchecked")
     public static HashMap<String, Command> getKnownCommands(CommandMap commandMap)
     {
-        Object knownCommands = NUtil.getField(commandMap, "Fuse");
+        Object knownCommands = NUtil.getField(commandMap, "Nitrogen");
         if (knownCommands != null)
         {
             if (knownCommands instanceof HashMap)
@@ -121,7 +121,7 @@ public class CMD_Loader
 
         try
         {
-            CodeSource codeSource = Fuse.class.getProtectionDomain().getCodeSource();
+            CodeSource codeSource = Nitrogen.class.getProtectionDomain().getCodeSource();
             if (codeSource != null)
             {
                 ZipInputStream zip = new ZipInputStream(codeSource.getLocation().openStream());
@@ -285,7 +285,7 @@ public class CMD_Loader
         @Override
         public Plugin getPlugin()
         {
-            return Fuse.plugin;
+            return Nitrogen.plugin;
         }
 
         public PC_CommandInfo getCommandInfo()

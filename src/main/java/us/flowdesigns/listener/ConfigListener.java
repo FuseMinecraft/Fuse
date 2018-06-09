@@ -10,7 +10,7 @@ import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.weather.WeatherChangeEvent;
 
-import static us.flowdesigns.fuse.Fuse.plugin;
+import static us.flowdesigns.nitrogen.Nitrogen.plugin;
 
 public class ConfigListener implements Listener {
 

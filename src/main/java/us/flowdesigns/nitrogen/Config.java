@@ -1,4 +1,4 @@
-package us.flowdesigns.fuse;
+package us.flowdesigns.nitrogen;
 
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.InvalidConfigurationException;
@@ -36,7 +36,7 @@ public class Config {
     }
 
     public static void loadConfig(ConfigFile configfile) {
-        configFile.put(configfile, new File(Bukkit.getServer().getPluginManager().getPlugin("Fuse").getDataFolder(), configfile.getFile()));
+        configFile.put(configfile, new File(Bukkit.getServer().getPluginManager().getPlugin("Nitrogen").getDataFolder(), configfile.getFile()));
         if (configFile.get(configfile).exists()) {
             config.put(configfile, new YamlConfiguration());
             try {
@@ -51,8 +51,8 @@ public class Config {
             loaded.put(configfile, true);
         } else {
             try {
-                Bukkit.getServer().getPluginManager().getPlugin("Fuse").getDataFolder().mkdir();
-                InputStream jarURL = Fuse.class.getResourceAsStream("/" + configfile.getFile());
+                Bukkit.getServer().getPluginManager().getPlugin("Nitrogen").getDataFolder().mkdir();
+                InputStream jarURL = Nitrogen.class.getResourceAsStream("/" + configfile.getFile());
                 copyFile(jarURL, configFile.get(configfile));
                 config.put(configfile, new YamlConfiguration());
                 config.get(configfile).load(configFile.get(configfile));

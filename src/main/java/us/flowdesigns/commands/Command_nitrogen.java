@@ -4,15 +4,12 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import us.flowdesigns.fuse.Fuse;
-import us.flowdesigns.fuse.Updater;
-import us.flowdesigns.utils.NUtil;
-
-import static us.flowdesigns.fuse.Fuse.plugin;
+import us.flowdesigns.nitrogen.Nitrogen;
+import us.flowdesigns.nitrogen.Updater;
 
 @CommandPermissions(source = SourceType.BOTH)
-@CommandParameters(description = "Shows information about Fuse", usage = "/<command> [reload | debug | help | update]", aliases = "packscore,oxygen,sky,nitrogen,trident")
-public class Command_fuse extends BaseCommand {
+@CommandParameters(description = "Shows information about Nitrogen", usage = "/<command> [reload | debug | help | update]")
+public class Command_nitrogen extends BaseCommand {
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole)
     {
@@ -25,7 +22,7 @@ public class Command_fuse extends BaseCommand {
         String dev = plugin.getConfig().getString("server.dev");
         String owner = plugin.getConfig().getString("players.owner");
         String superusers = plugin.getConfig().getString("players.superusers");
-        Fuse.BuildProperties build = Fuse.build;
+        Nitrogen.BuildProperties build = Nitrogen.build;
         if (args.length == 0)
         {
             sender.sendMessage(ChatColor.GOLD + String.format("Version "
@@ -40,10 +37,10 @@ public class Command_fuse extends BaseCommand {
                             + ChatColor.BLUE + "%s",
                     build.date,
                     build.author));
-        sender.sendMessage(ChatColor.RED + "Fuse is an advanced plugin designed to provide useful utilities for a Minecraft server");
-        sender.sendMessage(ChatColor.GREEN + "Type /contributors to see who contributed to Fuse");
-            sender.sendMessage(ChatColor.GREEN + "Type /fuse reload to reload the configuration file");
-        sender.sendMessage(ChatColor.GREEN + "Type /fuse update to check for and install updates");
+        sender.sendMessage(ChatColor.RED + "Nitrogen is an advanced plugin designed to provide useful utilities for a Minecraft server");
+        sender.sendMessage(ChatColor.GREEN + "Type /contributors to see who contributed to Nitrogen");
+            sender.sendMessage(ChatColor.GREEN + "Type /nitrogen reload to reload the configuration file");
+        sender.sendMessage(ChatColor.GREEN + "Type /nitrogen update to check for and install updates");
         if (dev.equalsIgnoreCase("true"))
         {
         sender.sendMessage(ChatColor.DARK_AQUA + "The server is currently in development mode. "
@@ -54,7 +51,7 @@ public class Command_fuse extends BaseCommand {
         switch (args[0].toLowerCase()) {
             case "reload":
             {
-                if (!sender.hasPermission("fuse.reload"))
+                if (!sender.hasPermission("nitrogen.reload"))
                 {
                     sender.sendMessage(Messages.MSG_NO_PERMS);
                     return true;
@@ -65,7 +62,7 @@ public class Command_fuse extends BaseCommand {
             }
             case "debug":
             {
-                if (!sender.hasPermission("fuse.debug"))
+                if (!sender.hasPermission("nitrogen.debug"))
                 {
                     sender.sendMessage(Messages.MSG_NO_PERMS);
                     return true;
@@ -80,21 +77,21 @@ public class Command_fuse extends BaseCommand {
                 sender.sendMessage(ChatColor.GRAY + "server.fall_damage_enabled: " + fall_damage_enabled);
                 sender.sendMessage(ChatColor.GRAY + "players.owner: " + owner);
                 sender.sendMessage(ChatColor.GRAY + "players.superusers: " + superusers);
-                sender.sendMessage(ChatColor.GRAY + "Fuse.build.formattedVersion(): " + Fuse.build.formattedVersion());
-                sender.sendMessage(ChatColor.GRAY + "COMPILE_NMS_VERSION: " + Fuse.COMPILE_NMS_VERSION);
+                sender.sendMessage(ChatColor.GRAY + "Nitrogen.build.formattedVersion(): " + Nitrogen.build.formattedVersion());
+                sender.sendMessage(ChatColor.GRAY + "COMPILE_NMS_VERSION: " + Nitrogen.COMPILE_NMS_VERSION);
                 return true;
         } // debug end
             case "help":
             {
-                sender.sendMessage(ChatColor.GRAY + "To see Fuse's help, type /help Fuse or /? Fuse. If you are the owner, for additional inforrmation, please read the help.yml file inside of the Fuse folder.");
+                sender.sendMessage(ChatColor.GRAY + "To see Nitrogen's help, type /help Nitrogen or /? Nitrogen. If you are the owner, for additional inforrmation, please read the help.yml file inside of the Nitrogen folder.");
                 return true;
             }
             case "update": {
-                if (!sender.hasPermission("fuse.update")) {
+                if (!sender.hasPermission("nitrogen.update")) {
                     sender.sendMessage(Messages.MSG_NO_PERMS);
                     return true;
                 }
-                Updater updater = new Updater(Fuse.plugin);
+                Updater updater = new Updater(Nitrogen.plugin);
                 updater.update(sender);
                 return true;
             }

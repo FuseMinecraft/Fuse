@@ -12,7 +12,7 @@ public class Command_clearlag extends BaseCommand {
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole)
     {
-        if (!sender.hasPermission("fuse.clearlag"))
+        if (!sender.hasPermission("nitrogen.clearlag"))
         {
         sender.sendMessage(Messages.MSG_NO_PERMS);
         return true;

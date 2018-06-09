@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>us.flowdesigns</groupId>
-    <artifactId>Fuse</artifactId>
+    <artifactId>Nitrogen</artifactId>
     <version>4.0.0</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <fuse.build.version>4.0.0</fuse.build.version>
+        <nitrogen.build.version>4.0.0</nitrogen.build.version>
         <build.codename>Hellstone</build.codename>
         <build.number>${maven.buildnumber}</build.number>
         <build.date>${maven.build.timestamp}</build.date>
@@ -19,9 +19,9 @@
         <maven.build.timestamp.format>MM/dd/yyyy HH:mm</maven.build.timestamp.format>
     </properties>
     <scm>
-        <connection>scm:git:git@github.com:FuseMinecraft/Fuse.git</connection>
-        <developerConnection>scm:git:git@github.com:FuseMinecraft/Fuse.git</developerConnection>
-        <url>git@github.com:FuseMinecraft/Fuse.git</url>
+        <connection>scm:git:git@github.com:FuseMinecraft/Nitrogen.git</connection>
+        <developerConnection>scm:git:git@github.com:FuseMinecraft/Nitrogen.git</developerConnection>
+        <url>git@github.com:FuseMinecraft/Nitrogen.git</url>
     </scm>
 
     <dependencies>
@@ -45,7 +45,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.7.0</version>
                 <configuration>
-                    <outputFileName>Fuse.jar</outputFileName>
+                    <outputFileName>Nitrogen.jar</outputFileName>
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
@@ -64,7 +64,7 @@
                                     <entry key="buildAuthor" default="unknown" />
                                     <entry key="buildNumber" default="0" />
                                     <entry key="buildCodename" default="${build.codename}" />
-                                    <entry key="buildVersion" default="${fuse.build.version}" />
+                                    <entry key="buildVersion" default="${nitrogen.build.version}" />
                                     <entry key="buildDate" default="${timestamp}" />
                                 </propertyfile>
                             </target>

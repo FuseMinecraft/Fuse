@@ -38,12 +38,12 @@ public class NUtil
         NUtil.playerMsg(sender, message, ChatColor.GRAY);
     }
     public static void playerAdminChat(String name, String message) {
-        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("fuse.adminchat"))).forEach((player) -> {
+        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("nitrogen.adminchat"))).forEach((player) -> {
             player.sendMessage("§7[AdminChat] " + ChatColor.BLUE + name + "§f: " + ChatColor.AQUA + message);
         });
     }
     public static void consoleAdminChat(String name, String message) {
-        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("fuse.adminchat"))).forEach((player) -> {
+        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("nitrogen.adminchat"))).forEach((player) -> {
             player.sendMessage("§7[AdminChat] " + ChatColor.BLUE + name + " §5(Console)§f: " + ChatColor.AQUA + message);
         });
     }

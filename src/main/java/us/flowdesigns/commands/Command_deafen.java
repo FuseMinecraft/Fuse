@@ -24,7 +24,7 @@ public class Command_deafen extends BaseCommand {
                 sender.sendMessage(Messages.UNKNOWN_COMMAND);
                 return true;
             }
-            if (!sender.hasPermission("fuse.deafen"))
+            if (!sender.hasPermission("nitrogen.deafen"))
             {
                 sender.sendMessage(Messages.MSG_NO_PERMS);
                 return true;

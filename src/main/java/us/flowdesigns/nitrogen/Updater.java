@@ -1,4 +1,4 @@
-package us.flowdesigns.fuse;
+package us.flowdesigns.nitrogen;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -12,14 +12,13 @@ import java.io.*;
 import java.lang.reflect.Method;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.logging.Level;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Updater {
-    final String dlLink = "https://flowdesigns.us/Fuse.jar";
+    final String dlLink = "https://flowdesigns.us/Nitrogen.jar";
     final String versionLink = "https://flowdesigns.us/version.txt";
-    String dev = Fuse.plugin.getConfig().getString("server.dev");
+    String dev = Nitrogen.plugin.getConfig().getString("server.dev");
     private Plugin plugin;
 
     public Updater (Plugin plugin) {
@@ -55,10 +54,10 @@ public class Updater {
 
                 out.close();
                 in.close();
-                NLog.info(sender.getName() + " - Updating to the latest version of Fuse");
-                sender.sendMessage(ChatColor.GRAY + "Updating to the latest version of Fuse, please wait.");
+                NLog.info(sender.getName() + " - Updating to the latest version of Nitrogen");
+                sender.sendMessage(ChatColor.GRAY + "Updating to the latest version of Nitrogen, please wait.");
                 Bukkit.reload();
-                NUtil.bcastMsg(ChatColor.GRAY + "Fuse was successfully updated.");
+                NUtil.bcastMsg(ChatColor.GRAY + "Nitrogen was successfully updated.");
             }
             else
             {
@@ -69,11 +68,11 @@ public class Updater {
                     sender.sendMessage("dlLink: " + dlLink);
                     sender.sendMessage("newVersion: " + String.valueOf(newVersion) + " should be >= to oldVersion: " + String.valueOf(oldVersion));
                 }
-                sender.sendMessage(ChatColor.GRAY + "There are no updates available for Fuse.");
+                sender.sendMessage(ChatColor.GRAY + "There are no updates available for Nitrogen.");
             }
         } catch (IOException e)
         {
-            sender.sendMessage(ChatColor.GRAY + "There are no over the air updates available for Fuse. Try restarting your server and checking for update. If this does not work, please go to https://github.com/FuseMinecraft/Fuse/releases and download the latest release from there.");
+            sender.sendMessage(ChatColor.GRAY + "There are no over the air updates available for Nitrogen. Try restarting your server and checking for update. If this does not work, please go to https://github.com/FuseMinecraft/Nitrogen/releases and download the latest release from there.");
             NLog.severe(e);
         }
     }

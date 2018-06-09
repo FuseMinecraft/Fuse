@@ -24,7 +24,7 @@ public class Command_expel extends BaseCommand {
             sender.sendMessage(Messages.UNKNOWN_COMMAND);
             return true;
         }
-        if (!sender.hasPermission("fuse.expel"))
+        if (!sender.hasPermission("nitrogen.expel"))
         {
             sender.sendMessage(Messages.MSG_NO_PERMS);
             return true;

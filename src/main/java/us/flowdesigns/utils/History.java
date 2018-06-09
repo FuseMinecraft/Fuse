@@ -5,7 +5,7 @@ import com.google.gson.GsonBuilder;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.scheduler.BukkitRunnable;
-import us.flowdesigns.fuse.Fuse;
+import us.flowdesigns.nitrogen.Nitrogen;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -61,7 +61,7 @@ public class History
                     FSync.playerMsg(sender, ChatColor.RED + "Player not found!");
                 }
             }
-        }.runTaskAsynchronously(Fuse.plugin);
+        }.runTaskAsynchronously(Nitrogen.plugin);
     }
 
     private static void printHistory(CommandSender sender, FName[] oldNames)

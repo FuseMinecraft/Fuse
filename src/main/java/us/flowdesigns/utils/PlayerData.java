@@ -1,10 +1,8 @@
 package us.flowdesigns.utils;
 
 import org.bukkit.Bukkit;
-import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitTask;
-import us.flowdesigns.fuse.Fuse;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -83,7 +81,7 @@ public class PlayerData {
             return tPlayer;
         }
 
-        //tPlayer = new PlayerData(Fuse.plugin, player);
+        //tPlayer = new PlayerData(Nitrogen.plugin, player);
         PLAYER_DATA.put(player.getAddress().getHostName(), tPlayer);
 
         return tPlayer;
