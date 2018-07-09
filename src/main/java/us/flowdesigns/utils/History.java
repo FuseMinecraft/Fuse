@@ -42,7 +42,7 @@ public class History
                         FName[] oldNames = gson.fromJson(reader, FName[].class);
                         if (oldNames == null)
                         {
-                            FSync.playerMsg(sender, ChatColor.RED + "Player not found!");
+                            NUtil.playerMsg(sender, ChatColor.RED + "Player not found!");
                             return;
                         }
                         reader.close();
@@ -52,13 +52,13 @@ public class History
                     }
                     catch (Exception ex)
                     {
-                        FSync.playerMsg(sender, ChatColor.RED + "Error, see logs for more details.");
+                        NUtil.playerMsg(sender, ChatColor.RED + "Error, see logs for more details.");
                         NLog.severe(ex);
                     }
                 }
                 else
                 {
-                    FSync.playerMsg(sender, ChatColor.RED + "Player not found!");
+                    NUtil.playerMsg(sender, ChatColor.RED + "Player not found!");
                 }
             }
         }.runTaskAsynchronously(Nitrogen.plugin);
@@ -68,15 +68,15 @@ public class History
     {
         if (oldNames.length == 1)
         {
-            FSync.playerMsg(sender, ChatColor.GREEN + oldNames[0].getName() + ChatColor.GOLD + " has never changed their name.");
+            NUtil.playerMsg(sender, ChatColor.GREEN + oldNames[0].getName() + ChatColor.GOLD + " has never changed their name.");
             return;
         }
-        FSync.playerMsg(sender, ChatColor.GOLD + "Original name: " + ChatColor.GREEN + oldNames[0].getName());
+        NUtil.playerMsg(sender, ChatColor.GOLD + "Original name: " + ChatColor.GREEN + oldNames[0].getName());
         for (int i = 1; i < oldNames.length; i++)
         {
             Date date = new Date(oldNames[i].getChangedToAt());
             String formattedDate = dateFormat.format(date);
-            FSync.playerMsg(sender, ChatColor.BLUE + formattedDate + ChatColor.GOLD + " changed to " + ChatColor.GREEN + oldNames[i].getName());
+            NUtil.playerMsg(sender, ChatColor.BLUE + formattedDate + ChatColor.GOLD + " changed to " + ChatColor.GREEN + oldNames[i].getName());
         }
     }
 

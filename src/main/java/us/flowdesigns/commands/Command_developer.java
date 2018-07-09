@@ -5,6 +5,8 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import java.util.List;
+
 @CommandPermissions(source = SourceType.BOTH)
 @CommandParameters(description = "Developer command", usage = "/<command> [on | off | status]", aliases = "dev")
 public class Command_developer extends BaseCommand {
@@ -12,7 +14,7 @@ public class Command_developer extends BaseCommand {
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole)
     {
         String dev = plugin.getConfig().getString("server.dev");
-        String superusers = plugin.getConfig().getString("players.superusers");
+        List superusers = plugin.getConfig().getList("players.superusers");
 
         if (!superusers.contains(sender.getName()))
         {
@@ -47,7 +49,7 @@ public class Command_developer extends BaseCommand {
                 sender.sendMessage(ChatColor.BLUE + "Developer mode: " + dev);
                 return true;
             }
-            return true;
+            return false;
         } else {
             sender.sendMessage(Messages.MSG_NO_PERMS);
         }

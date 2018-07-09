@@ -6,9 +6,12 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.permissions.Permission;
+import org.bukkit.permissions.PermissionDefault;
 import us.flowdesigns.utils.NLog;
 import us.flowdesigns.utils.NUtil;
 
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -16,18 +19,17 @@ import static us.flowdesigns.nitrogen.Nitrogen.plugin;
 
 public class LoginMessages implements Listener
 {
+    boolean hasPermission(Player player, String permission)
+    {
+        Permission p = new Permission(permission, PermissionDefault.FALSE);
+        return player.hasPermission(p);
+    }
     @EventHandler
     public boolean onPlayerJoin(PlayerJoinEvent event)
     {
         Player player = event.getPlayer();
         UUID uuid = player.getUniqueId();
-        String owner = plugin.getConfig().getString("players.owner");
         String login_messages_enabled = plugin.getConfig().getString("server.login_messages_enabled");
-        // Telesphoreo
-        if (uuid.toString().equals("78408086-1991-4c33-a571-d8fa325465b2") && !player.getName().equals(owner)) {
-            Bukkit.broadcastMessage("§b" + player.getName() + " is a Developer for Nitrogen");
-            return true;
-        }
         // OxLemonxO
         if (uuid.toString().equals("e628c2b0-0e19-41d9-bb9e-af604fcb159a"))
         {
@@ -38,15 +40,27 @@ public class LoginMessages implements Listener
         {
             try
             {
-                Map<String, Object> login_messages = plugin.getConfig().getConfigurationSection("login-messages").getValues(false);
+                Map<String, Object> login_messages = plugin.getConfig().getConfigurationSection("login-messages.ranks").getValues(false);
+                Map<String, Object> player_login_messages = plugin.getConfig().getConfigurationSection("login-messages.players").getValues(false);
                 for (String key : login_messages.keySet())
                 {
-                    MemorySection h = (MemorySection) login_messages.get(key);
-                    String permission = (String) h.get("permission");
-                    String message = (String) h.get("message");
-                    if (player.hasPermission(permission))
+                    MemorySection login = (MemorySection) login_messages.get(key);
+                    String permission = (String) login.get("permission");
+                    String message = (String) login.get("message");
+                    if (LoginMessages.this.hasPermission(player, permission) && !player_login_messages.keySet().contains(player.getName()))
                     {
                         Bukkit.broadcastMessage(NUtil.colorize(message.replace("%player%", player.getName())));
+                    }
+                }
+
+                for (String playerKeys : player_login_messages.keySet())
+                {
+                    MemorySection login = (MemorySection) player_login_messages.get(playerKeys);
+                    String message = (String) login.get("message");
+                    if (player_login_messages.keySet().contains(player.getName()))
+                    {
+                        Bukkit.broadcastMessage(NUtil.colorize(message.replace("%player%", player.getName())));
+                        return true;
                     }
                 }
             }

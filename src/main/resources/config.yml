@@ -1,9 +1,9 @@
 #
-# Nitrogen v4.0.0 Configuration File
+# Nitrogen v4.1.0 Configuration File
 #
 
 server:
-  # Should players be teleported to spawn when they join?
+  # Should players teleport to spawn when they join?
   spawn_on_join: 'false'
   # Should items be dropped when a person dies?
   drop_items_on_death: 'true'
@@ -28,32 +28,58 @@ commands:
   admin_application_template: 'none'
   # What is the link to create a new thread?
   admin_app_new_thread_link: 'none'
-  # Should fun comamnds like /ship, /deafen, and /lockup be enabled? (enabled/disabled)
+  # Should fun commands like /ship, /deafen, and /lockup be enabled? (enabled/disabled)
   fun_commands: 'enabled'
 players:
   # Who is the owner?
-  owner: 'Telesphoreo'
+  owner:
+    - handleDisconnect
   # Who should be allowed to use some high level commands
-  superusers: 'Telesphoreo, OxLemonxO'
+  superusers:
+    - handleDisconnect
+    - OxLemonxO
 social_links:
   GitHub: 'https://www.github.com/FuseMinecraft/Nitrogen'
   Discord: 'https://discord.gg/example'
+#
+# Login Messages
+#
+# There are two sections, ranks and players
+# The ranks are permission based. Some example ranks are already created, but you can
+# change these to your likings. Use %player% to display their name when they log in.
+#
+# Example:
+# SuperAdmin:
+#   permission: nitrogen.superadmin
+#   message: "&b%player% is a &oSuper Admin"
+#
+# The player section is designed for a player to have their own login message.
+# This is not permission based, but rather username based. Use %player% to display their name when they log in.
+# Example:
+# Madgeek1450:
+#   message: "&b%player% is a &6Master-ass-kicker&b.
+#
 login-messages:
-  Moderator:
-    permission: nitrogen.moderator
-    message: "&b%player% is a &dModerator"
-  Admin:
-    permission: nitrogen.admin
-    message: "&b%player% is an &4Admin"
-  Builder:
-    permission: nitrogen.builder
-    message: "&b%player% is a Builder"
-  Developer:
-    permission: nitrogen.developer
-    message: "&b%player% is a &5Developer"
-  Owner:
-    permission: nitrogen.owner
-    message: "&b%player% is the &4Owner"
-  yashi4554:
-    permission: nitrogen.yashi4554
-    message: "&b%player% is an &4Admin&b and the &9The Supreme Builder"
+  ranks:
+    Moderator:
+      permission: nitrogen.moderator
+      message: "&b%player% is a &d&oModerator"
+    Admin:
+      permission: nitrogen.admin
+      message: "&b%player% is an &4&oAdmin"
+    Builder:
+      permission: nitrogen.builder
+      message: "&b%player% is a &oBuilder"
+    Developer:
+      permission: nitrogen.developer
+      message: "&b%player% is a &5&oDeveloper"
+    Owner:
+      permission: nitrogen.owner
+      message: "&b%player% is the &4&oOwner"
+  players:
+    handleDisconnect:
+      message: "&b%player% is &9&oThe Creator of Nitrogen"
+    yashi4554:
+      message: "&b%player% is an &4&oAdmin&b and the &9The Supreme Builder"
+    OxLemonxO:
+      message: "&b%player% is a Developer for Nitrogen and &4Ki&5ng &6Of &5Le&6mo&7ns&b!"
