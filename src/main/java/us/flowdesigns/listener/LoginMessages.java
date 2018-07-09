@@ -30,12 +30,6 @@ public class LoginMessages implements Listener
         Player player = event.getPlayer();
         UUID uuid = player.getUniqueId();
         String login_messages_enabled = plugin.getConfig().getString("server.login_messages_enabled");
-        // OxLemonxO
-        if (uuid.toString().equals("e628c2b0-0e19-41d9-bb9e-af604fcb159a"))
-        {
-            Bukkit.broadcastMessage("§b" + player.getName() + " is a Developer for Nitrogen and the §4Ki§5ng §6Of §5Le§6mo§7ns§b!");
-            return true;
-        }
         if (login_messages_enabled.equalsIgnoreCase("true"))
         {
             try
