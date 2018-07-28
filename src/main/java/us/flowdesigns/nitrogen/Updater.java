@@ -15,13 +15,15 @@ import java.net.URLConnection;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Updater {
+public class Updater
+{
     final String dlLink = "https://flowdesigns.us/Nitrogen.jar";
     final String versionLink = "https://flowdesigns.us/version.txt";
     String dev = Nitrogen.plugin.getConfig().getString("server.dev");
     private Plugin plugin;
 
-    public Updater (Plugin plugin) {
+    public Updater(Plugin plugin)
+    {
         this.plugin = plugin;
     }
 
@@ -48,7 +50,8 @@ public class Updater {
                 FileOutputStream out = new FileOutputStream(path);
                 byte[] buffer = new byte[1024];
                 int size = 0;
-                while((size = in.read(buffer)) != -1) {
+                while ((size = in.read(buffer)) != -1)
+                {
                     out.write(buffer, 0, size);
                 }
 
@@ -70,7 +73,8 @@ public class Updater {
                 }
                 sender.sendMessage(ChatColor.GRAY + "There are no updates available for Nitrogen.");
             }
-        } catch (IOException e)
+        }
+        catch (IOException e)
         {
             sender.sendMessage(ChatColor.GRAY + "There are no over the air updates available for Nitrogen. Try restarting your server and checking for update. If this does not work, please go to https://github.com/FuseMinecraft/Nitrogen/releases and download the latest release from there.");
             NLog.severe(e);
@@ -90,10 +94,14 @@ public class Updater {
                 method.setAccessible(wasAccessible);
 
                 return file.getPath();
-            } catch (Exception e) {
+            }
+            catch (Exception e)
+            {
                 return "plugins" + File.separator + plugin.getName();
             }
-        } else {
+        }
+        else
+        {
             return "plugins" + File.separator + plugin.getName();
         }
     }
@@ -104,13 +112,11 @@ public class Updater {
         Pattern pattern = Pattern.compile("\\d+");
         Matcher matcher = pattern.matcher(from);
 
-        while(matcher.find())
+        while (matcher.find())
         {
             result += matcher.group();
         }
 
         return result.isEmpty() ? 0 : Integer.parseInt(result);
     }
-
-
 }

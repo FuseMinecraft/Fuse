@@ -28,7 +28,7 @@ public class Nitrogen extends JavaPlugin {
     public static Nitrogen instance;
 
     public static final BuildProperties build = new BuildProperties();
-    public static final String COMPILE_NMS_VERSION = "v1_12_R1";
+    public static final String COMPILE_NMS_VERSION = "v1_13_R1";
     public static String pluginName;
     public static String pluginVersion;
 

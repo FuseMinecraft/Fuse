@@ -14,7 +14,8 @@ import java.util.List;
 
 @CommandPermissions(source = SourceType.BOTH)
 @CommandParameters(description = "Pushes players away from you", usage = "/<command>")
-public class Command_expel extends BaseCommand {
+public class Command_expel extends BaseCommand
+{
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole)
     {
@@ -98,7 +99,9 @@ public class Command_expel extends BaseCommand {
         else if (pushedPlayers.size() == 1)
         {
             sender.sendMessage(ChatColor.GRAY + "Pushed " + pushedPlayers.size() + " player: " + StringUtils.join(pushedPlayers, ""));
-        } else {
+        }
+        else
+        {
             sender.sendMessage(ChatColor.GRAY + "Pushed " + pushedPlayers.size() + " players: " + StringUtils.join(pushedPlayers, ", "));
         }
 

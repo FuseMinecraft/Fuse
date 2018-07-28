@@ -9,7 +9,8 @@ import us.flowdesigns.nitrogen.Updater;
 
 @CommandPermissions(source = SourceType.BOTH)
 @CommandParameters(description = "Shows information about Nitrogen", usage = "/<command> [reload | debug | help | update]")
-public class Command_nitrogen extends BaseCommand {
+public class Command_nitrogen extends BaseCommand
+{
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole)
     {
@@ -37,18 +38,20 @@ public class Command_nitrogen extends BaseCommand {
                             + ChatColor.BLUE + "%s",
                     build.date,
                     build.author));
-        sender.sendMessage(ChatColor.RED + "Nitrogen is an advanced plugin designed to provide useful utilities for a Minecraft server");
-        sender.sendMessage(ChatColor.GREEN + "Type /contributors to see who contributed to Nitrogen");
+            sender.sendMessage(ChatColor.GOLD + "Designed for: " + ChatColor.BLUE + "Spigot 1.13");
+            sender.sendMessage(ChatColor.RED + "Nitrogen is an advanced plugin designed to provide useful utilities for a Minecraft server");
+            sender.sendMessage(ChatColor.GREEN + "Type /contributors to see who contributed to Nitrogen");
             sender.sendMessage(ChatColor.GREEN + "Type /nitrogen reload to reload the configuration file");
-        sender.sendMessage(ChatColor.GREEN + "Type /nitrogen update to check for and install updates");
-        if (dev.equalsIgnoreCase("true"))
+            sender.sendMessage(ChatColor.GREEN + "Type /nitrogen update to check for and install updates");
+            if (dev.equalsIgnoreCase("true"))
+            {
+                sender.sendMessage(ChatColor.DARK_AQUA + "The server is currently in development mode. "
+                        + "This means there may be unstable plugin builds on this server, and the server could crash more than normal!");
+            }
+            return true;
+        }
+        switch (args[0].toLowerCase())
         {
-        sender.sendMessage(ChatColor.DARK_AQUA + "The server is currently in development mode. "
-        + "This means there may be unstable plugin builds on this server, and the server could crash more than normal!");
-        }
-        return true;
-        }
-        switch (args[0].toLowerCase()) {
             case "reload":
             {
                 if (!sender.hasPermission("nitrogen.reload"))
@@ -80,14 +83,16 @@ public class Command_nitrogen extends BaseCommand {
                 sender.sendMessage(ChatColor.GRAY + "Nitrogen.build.formattedVersion(): " + Nitrogen.build.formattedVersion());
                 sender.sendMessage(ChatColor.GRAY + "COMPILE_NMS_VERSION: " + Nitrogen.COMPILE_NMS_VERSION);
                 return true;
-        } // debug end
+            } // debug end
             case "help":
             {
                 sender.sendMessage(ChatColor.GRAY + "To see Nitrogen's help, type /help Nitrogen or /? Nitrogen. If you are the owner, for additional inforrmation, please read the help.yml file inside of the Nitrogen folder.");
                 return true;
             }
-            case "update": {
-                if (!sender.hasPermission("nitrogen.update")) {
+            case "update":
+            {
+                if (!sender.hasPermission("nitrogen.update"))
+                {
                     sender.sendMessage(Messages.MSG_NO_PERMS);
                     return true;
                 }

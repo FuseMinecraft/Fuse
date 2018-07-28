@@ -43,7 +43,8 @@ public class CMD_Loader
         COMMAND_LIST.clear();
         COMMAND_LIST.addAll(getCommands());
 
-        COMMAND_LIST.stream().map((commandInfo) -> new PC_DynamicCommand(commandInfo)).forEach((dynamicCommand) -> {
+        COMMAND_LIST.stream().map((commandInfo) -> new PC_DynamicCommand(commandInfo)).forEach((dynamicCommand) ->
+        {
             Command existing = commandMap.getCommand(dynamicCommand.getName());
             if (existing != null)
             {
@@ -76,7 +77,8 @@ public class CMD_Loader
             if (knownCommands != null)
             {
                 knownCommands.remove(command.getName());
-                command.getAliases().stream().forEach((alias) -> {
+                command.getAliases().stream().forEach((alias) ->
+                {
                     knownCommands.remove(alias);
                 });
             }

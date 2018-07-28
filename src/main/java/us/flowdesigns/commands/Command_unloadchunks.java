@@ -13,12 +13,14 @@ import us.flowdesigns.utils.NUtil;
 
 @CommandPermissions(source = SourceType.BOTH)
 @CommandParameters(description = "Unloads unused chunks", usage = "/<command> [-s]", aliases = "rc,uc")
-public class Command_unloadchunks extends BaseCommand {
+public class Command_unloadchunks extends BaseCommand
+{
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole)
     {
         int numChunks = 0;
-        if (!sender.hasPermission("nitrogen.unloadchunks")) {
+        if (!sender.hasPermission("nitrogen.unloadchunks"))
+        {
             sender.sendMessage(Messages.MSG_NO_PERMS);
             return true;
         }
@@ -26,12 +28,13 @@ public class Command_unloadchunks extends BaseCommand {
         {
             numChunks = server.getWorlds().stream().map((world) -> unloadUnusedChunks(world)).reduce(numChunks, Integer::sum);
             sender.sendMessage(ChatColor.GRAY + "Unloading all unused chunks\n"
-            + numChunks + " chunks unloaded");
+                    + numChunks + " chunks unloaded");
             return true;
         } // end senderIsConsole
-        
-        if (args.length == 0) {
-        numChunks = server.getWorlds().stream().map((world) -> unloadUnusedChunks(world)).reduce(numChunks, Integer::sum);
+
+        if (args.length == 0)
+        {
+            numChunks = server.getWorlds().stream().map((world) -> unloadUnusedChunks(world)).reduce(numChunks, Integer::sum);
             NUtil.adminAction(sender.getName(), "Unloading all unused chunks", false);
             NUtil.playerMsg(sender, numChunks + " chunks unloaded");
             NLog.info(numChunks + " chunks unloaded");
@@ -39,13 +42,14 @@ public class Command_unloadchunks extends BaseCommand {
         } // end if args are 0
         else if (args[0].equalsIgnoreCase("-s"))
         {
-        numChunks = server.getWorlds().stream().map((world) -> unloadUnusedChunks(world)).reduce(numChunks, Integer::sum);
-        NUtil.playerMsg(sender, numChunks + " chunks unloaded");
-        NLog.info(numChunks + " chunks unloaded");
+            numChunks = server.getWorlds().stream().map((world) -> unloadUnusedChunks(world)).reduce(numChunks, Integer::sum);
+            NUtil.playerMsg(sender, numChunks + " chunks unloaded");
+            NLog.info(numChunks + " chunks unloaded");
         } // end silent
-        else {
-        return false;
-    } // else
+        else
+        {
+            return false;
+        } // else
         return true;
     } // end
 

@@ -8,7 +8,8 @@ import org.bukkit.entity.Player;
 
 @CommandPermissions(source = SourceType.BOTH)
 @CommandParameters(description = "Ships a player with another player", usage = "/<command> <player1> <player2>")
-public class Command_ship extends BaseCommand {
+public class Command_ship extends BaseCommand
+{
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole)
     {
@@ -25,8 +26,7 @@ public class Command_ship extends BaseCommand {
         }
         if (args.length != 2)
         {
-            sender.sendMessage(ChatColor.RED + "Invalid Usage: /ship <player1> <player2>");
-            return true;
+            return false;
         }
 
         Player GodzillaxNero = sender_p;

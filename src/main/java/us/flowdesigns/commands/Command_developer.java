@@ -9,7 +9,8 @@ import java.util.List;
 
 @CommandPermissions(source = SourceType.BOTH)
 @CommandParameters(description = "Developer command", usage = "/<command> [on | off | status]", aliases = "dev")
-public class Command_developer extends BaseCommand {
+public class Command_developer extends BaseCommand
+{
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole)
     {
@@ -50,7 +51,9 @@ public class Command_developer extends BaseCommand {
                 return true;
             }
             return false;
-        } else {
+        }
+        else
+        {
             sender.sendMessage(Messages.MSG_NO_PERMS);
         }
         return true;

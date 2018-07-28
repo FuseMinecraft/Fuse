@@ -20,24 +20,30 @@ import us.flowdesigns.utils.PlayerData;
 import static us.flowdesigns.nitrogen.Nitrogen.plugin;
 import static us.flowdesigns.nitrogen.Nitrogen.server;
 
-public class Monitors implements Listener {
-
+public class Monitors implements Listener
+{
     // Potion Listener
     String potions_enabled = plugin.getConfig().getString("server.splash_potions_enabled");
+
     @EventHandler
-    public void onPotionSplashEvent(final PotionSplashEvent event) {
+    public void onPotionSplashEvent(final PotionSplashEvent event)
+    {
         Player player = (Player) event.getEntity().getShooter();
-        Entity entity = event.getEntity();
-        switch (event.getPotion().getType()) {
+        switch (event.getPotion().getType())
+        {
             case SPLASH_POTION:
                 player.getInventory().setItem(player.getInventory().getHeldItemSlot(), new ItemStack(Material.AIR, 1));
                 player.sendMessage(ChatColor.RED + "Splash potions are disabled");
                 event.setCancelled(true);
-                new BukkitRunnable() {
+                new BukkitRunnable()
+                {
                     @Override
-                    public void run() {
-                        event.getAffectedEntities().forEach((entity) -> {
-                            event.getPotion().getEffects().stream().filter((effect) -> (entity instanceof Player)).forEachOrdered((effect) -> {
+                    public void run()
+                    {
+                        event.getAffectedEntities().forEach((entity) ->
+                        {
+                            event.getPotion().getEffects().stream().filter((effect) -> (entity instanceof Player)).forEachOrdered((effect) ->
+                            {
                                 Player player = (Player) entity;
                                 player.removePotionEffect(effect.getType());
                             });
@@ -50,10 +56,12 @@ public class Monitors implements Listener {
 
     // Developer Mode
     @EventHandler
-    public boolean onPlayerJoin(PlayerJoinEvent event) {
+    public boolean onPlayerJoin(PlayerJoinEvent event)
+    {
         String dev = plugin.getConfig().getString("server.dev");
         Player player = event.getPlayer();
-        if (dev.equals("true")) {
+        if (dev.equals("true"))
+        {
             player.sendMessage(ChatColor.DARK_AQUA + "Warning: The server is currently in development mode. "
                     + "This means there may be unstable plugin builds on this server, and the server could crash more than normal!");
             return true;
@@ -63,8 +71,10 @@ public class Monitors implements Listener {
 
     // Command Blocker
     final PluginManager pm = server.getPluginManager();
+
     @EventHandler
-    public boolean PlayerCommandPreprocessEvent(PlayerCommandPreprocessEvent event) {
+    public boolean PlayerCommandPreprocessEvent(PlayerCommandPreprocessEvent event)
+    {
         String command = event.getMessage();
         final String[] commandParts = command.split(" ");
         if (commandParts[0].contains(":"))
@@ -78,11 +88,14 @@ public class Monitors implements Listener {
 
     // Commandspy
     @EventHandler(priority = EventPriority.HIGHEST)
-    public void onPlayerCommandPreprocess(PlayerCommandPreprocessEvent event) {
-        Bukkit.getOnlinePlayers().stream().filter((pl) -> (PlayerData.getPlayerData(pl).cmdspyEnabled())).forEach((Player pl) -> {
+    public void onPlayerCommandPreprocess(PlayerCommandPreprocessEvent event)
+    {
+        Bukkit.getOnlinePlayers().stream().filter((pl) -> (PlayerData.getPlayerData(pl).cmdspyEnabled())).forEach((Player pl) ->
+        {
             final Player player = event.getPlayer();
             String command = event.getMessage();
-            if (pl != player) {
+            if (pl != player)
+            {
                 pl.sendMessage(ChatColor.GRAY + player.getName() + ": " + command);
             }
         });

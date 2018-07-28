@@ -2,7 +2,8 @@ package us.flowdesigns.commands;
 
 import org.bukkit.ChatColor;
 
-public class Messages {
+public class Messages
+{
     public static final String MSG_NO_PERMS = ChatColor.RED + "You do not have permission to do this";
     public static final String PLAYER_NOT_FOUND = ChatColor.RED + "Player not found";
     public static final String PLAYER_ONLY = ChatColor.RED + "This command can only be executed by a player";

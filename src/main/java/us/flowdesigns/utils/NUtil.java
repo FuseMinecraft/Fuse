@@ -14,43 +14,57 @@ import java.util.*;
 public class NUtil
 {
     public static String DATE_STORAGE_FORMAT = "EEE, MMM d, yyyy HH:mm:ss";
+
     public static void bcastMsg(String message, ChatColor color)
     {
         NLog.info(message, true);
-        Bukkit.getOnlinePlayers().stream().forEach((player) -> {
+        Bukkit.getOnlinePlayers().stream().forEach((player) ->
+        {
             player.sendMessage((color == null ? "" : color) + message);
         });
     }
+
     public static void bcastMsg(String message)
     {
         NUtil.bcastMsg(message, null);
     }
+
     public static void adminAction(String adminName, String action, boolean isRed)
     {
         NUtil.bcastMsg(adminName + " - " + action, (isRed ? ChatColor.RED : ChatColor.BLUE));
     }
+
     public static void playerMsg(CommandSender sender, String message, ChatColor color)
     {
         sender.sendMessage(color + message);
     }
+
     public static void playerMsg(CommandSender sender, String message)
     {
         NUtil.playerMsg(sender, message, ChatColor.GRAY);
     }
-    public static void playerAdminChat(String name, String message) {
-        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("nitrogen.adminchat"))).forEach((player) -> {
+
+    public static void playerAdminChat(String name, String message)
+    {
+        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("nitrogen.adminchat"))).forEach((player) ->
+        {
             player.sendMessage("§7[AdminChat] " + ChatColor.BLUE + name + "§f: " + ChatColor.AQUA + message);
         });
     }
-    public static void consoleAdminChat(String name, String message) {
-        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("nitrogen.adminchat"))).forEach((player) -> {
+
+    public static void consoleAdminChat(String name, String message)
+    {
+        Bukkit.getOnlinePlayers().stream().filter((player) -> (player.hasPermission("nitrogen.adminchat"))).forEach((player) ->
+        {
             player.sendMessage("§7[AdminChat] " + ChatColor.BLUE + name + " §5(Console)§f: " + ChatColor.AQUA + message);
         });
     }
+
     public static String dateToString(Date date)
     {
         return new SimpleDateFormat(DATE_STORAGE_FORMAT, Locale.ENGLISH).format(date);
     }
+
     public static Date stringToDate(String dateString)
     {
         try
@@ -74,7 +88,9 @@ public class NUtil
         {
             player.setAllowFlight(true);
             player.setFlying(flying);
-        } else {
+        }
+        else
+        {
             player.setAllowFlight(true);
             player.setFlying(flying);
             player.setAllowFlight(false);
@@ -101,6 +117,7 @@ public class NUtil
                 && ((checkClass = checkClass.getSuperclass()) != null));
         return null;
     }
+
     public static class NEntityWiper
     {
         private static final List<Class<? extends Entity>> WIPEABLES = new ArrayList<>();
@@ -115,10 +132,12 @@ public class NUtil
             WIPEABLES.add(Firework.class);
             WIPEABLES.add(Item.class);
         }
+
         private NEntityWiper()
         {
             throw new AssertionError();
         }
+
         private static boolean canWipe(Entity entity, boolean wipeExplosives, boolean wipeVehicles)
         {
             if (wipeExplosives)
@@ -149,6 +168,7 @@ public class NUtil
             }
             return false;
         }
+
         public static int wipeEntities(boolean wipeExplosives, boolean wipeVehicles)
         {
             int removed = 0;
@@ -169,6 +189,7 @@ public class NUtil
             return removed;
         }
     }
+
     public static String getNMSVersion()
     {
         String packageName = Bukkit.getServer().getClass().getPackage().getName();

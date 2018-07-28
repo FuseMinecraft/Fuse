@@ -10,7 +10,8 @@ import org.bukkit.entity.Player;
 
 @CommandPermissions(source = SourceType.ONLY_IN_GAME)
 @CommandParameters(description = "Makes a player execute a command", usage = "/<command>")
-public class Command_gcmd extends BaseCommand {
+public class Command_gcmd extends BaseCommand
+{
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole)
     {
@@ -33,7 +34,7 @@ public class Command_gcmd extends BaseCommand {
             sender.sendMessage(Messages.PLAYER_NOT_FOUND);
             return true;
         }
-        
+
         final String outCommand = StringUtils.join(args, " ", 1, args.length);
 
         try

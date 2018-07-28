@@ -7,7 +7,8 @@ import org.bukkit.entity.Player;
 
 @CommandPermissions(source = SourceType.ONLY_IN_GAME)
 @CommandParameters(description = "Tells a person how to apply for admin", usage = "/<command>", aliases = "ai, apply")
-public class Command_admininfo extends BaseCommand {
+public class Command_admininfo extends BaseCommand
+{
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole)
     {
@@ -25,13 +26,15 @@ public class Command_admininfo extends BaseCommand {
                 && !admin_app_template.equalsIgnoreCase("none")
                 && !new_thread_link.equalsIgnoreCase("none"))
         {
-        sender.sendMessage(ChatColor.GOLD + "To apply for moderator, register an account at: " + forums + "\n" +
-        "When you've registered, copy the template: " + admin_app_template + "\n" +
-        "Create a new thread by clicking here: " + new_thread_link + "\n" +
-        "Paste the template into the thread and fill out the questions. Be sure you meet the requirements.\n" + ChatColor.RED +
-        "Do not bug staff members to look at your application or else it will most likely get denied");
-        return true;
-        } else {
+            sender.sendMessage(ChatColor.GOLD + "To apply for moderator, register an account at: " + forums + "\n" +
+                    "When you've registered, copy the template: " + admin_app_template + "\n" +
+                    "Create a new thread by clicking here: " + new_thread_link + "\n" +
+                    "Paste the template into the thread and fill out the questions. Be sure you meet the requirements.\n" + ChatColor.RED +
+                    "Do not bug staff members to look at your application or else it will most likely get denied");
+            return true;
+        }
+        else
+        {
             sender.sendMessage(Messages.UNKNOWN_COMMAND);
         }
         return true;

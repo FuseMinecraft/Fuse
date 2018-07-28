@@ -13,7 +13,6 @@ import java.util.UUID;
 // UUIDFetcher retrieves UUIDs from usernames via web requests to Mojang.
 public class UUIDFetcher
 {
-
     private static final String PROFILE_URL = "https://api.mojang.com/profiles/minecraft";
 
     public static UUID fetch(String name)

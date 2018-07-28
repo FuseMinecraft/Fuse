@@ -12,14 +12,16 @@ import org.bukkit.event.weather.WeatherChangeEvent;
 
 import static us.flowdesigns.nitrogen.Nitrogen.plugin;
 
-public class ConfigListener implements Listener {
+public class ConfigListener implements Listener
+{
 
     // Drop items on death
-   @EventHandler
-    public void onPlayerDeath(PlayerDeathEvent e) {
+    @EventHandler
+    public void onPlayerDeath(PlayerDeathEvent e)
+    {
         if (plugin.getConfig().getString("server.drop_items_on_death").equalsIgnoreCase("false"))
         {
-        e.getDrops().clear();
+            e.getDrops().clear();
         }
     }
 
@@ -27,19 +29,22 @@ public class ConfigListener implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e)
     {
-    Player player = e.getPlayer();
-    String teleportSpawn = plugin.getConfig().getString("server.spawn_on_join");
-    String clearInventoryOnJoin = plugin.getConfig().getString("server.clear_inventory_on_join");
-    if ("true".equals(teleportSpawn)) {
-        player.teleport(player.getWorld().getSpawnLocation());
+        Player player = e.getPlayer();
+        String teleportSpawn = plugin.getConfig().getString("server.spawn_on_join");
+        String clearInventoryOnJoin = plugin.getConfig().getString("server.clear_inventory_on_join");
+        if ("true".equals(teleportSpawn))
+        {
+            player.teleport(player.getWorld().getSpawnLocation());
         }
-        if ("true".equals(clearInventoryOnJoin)) {
-        player.getPlayer().getInventory().clear();
+        if ("true".equals(clearInventoryOnJoin))
+        {
+            player.getPlayer().getInventory().clear();
         }
     }
 
     // Hunger Enabled
     String hungerenabled = plugin.getConfig().getString("server.hunger_enabled");
+
     @EventHandler(priority = EventPriority.MONITOR)
     public void onFoodLevelChange(FoodLevelChangeEvent event)
     {
@@ -51,6 +56,7 @@ public class ConfigListener implements Listener {
 
     // Weather enabled
     String weatherenabled = plugin.getConfig().getString("server.weather_enabled");
+
     @EventHandler
     public void onWeatherChange(WeatherChangeEvent event)
     {
@@ -62,6 +68,7 @@ public class ConfigListener implements Listener {
 
     // Fall Damage Enabled
     String falldamage = plugin.getConfig().getString("server.fall_damage_enabled");
+
     @EventHandler(priority = EventPriority.MONITOR)
     public void onPlayerFall(EntityDamageEvent event)
     {

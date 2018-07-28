@@ -7,7 +7,8 @@ import org.bukkit.entity.Player;
 
 @CommandPermissions(source = SourceType.BOTH)
 @CommandParameters(description = "Shows the people who contributed to Nitrogen", usage = "/<command>", aliases = "contributers")
-public class Command_contributors extends BaseCommand {
+public class Command_contributors extends BaseCommand
+{
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole)
     {

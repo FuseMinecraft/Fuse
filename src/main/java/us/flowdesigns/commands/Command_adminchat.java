@@ -9,10 +9,12 @@ import us.flowdesigns.utils.NUtil;
 
 @CommandPermissions(source = SourceType.BOTH)
 @CommandParameters(description = "Talk privately with other admins", usage = "/<command> [message...]", aliases = "o")
-public class Command_adminchat extends BaseCommand {
+public class Command_adminchat extends BaseCommand
+{
 
     @Override
-    public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole) {
+    public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole)
+    {
         if (!sender.hasPermission("nitrogen.adminchat"))
         {
             sender.sendMessage(Messages.MSG_NO_PERMS);

@@ -1,6 +1,5 @@
 package us.flowdesigns.commands;
 
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -12,7 +11,8 @@ import us.flowdesigns.utils.PlayerData;
 
 @CommandPermissions(source = SourceType.BOTH)
 @CommandParameters(description = "Block a players Minecraft input", usage = "/<command> <all | purge | <<name> on | off>>")
-public class Command_lockup extends BaseCommand {
+public class Command_lockup extends BaseCommand
+{
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole)
     {
@@ -27,75 +27,75 @@ public class Command_lockup extends BaseCommand {
             sender.sendMessage(Messages.MSG_NO_PERMS);
             return true;
         }
-    if (args.length == 1)
-    {
-        if (args[0].equalsIgnoreCase("all"))
+        if (args.length == 1)
         {
-            NUtil.adminAction(sender.getName(), "Locking up all players", true);
-
-            for (Player player : server.getOnlinePlayers())
+            if (args[0].equalsIgnoreCase("all"))
             {
-                startLockup(player);
-            }
-            sender.sendMessage(ChatColor.GRAY + "Locked up all players.");
-        }
-        else if (args[0].equalsIgnoreCase("purge"))
-        {
-            NUtil.adminAction(sender.getName(), "Unlocking all players", true);
-            for (Player player : server.getOnlinePlayers())
-            {
-                cancelLockup(player);
-            }
+                NUtil.adminAction(sender.getName(), "Locking up all players", true);
 
-            sender.sendMessage(ChatColor.GRAY + "Unlocked all players.");
+                for (Player player : server.getOnlinePlayers())
+                {
+                    startLockup(player);
+                }
+                sender.sendMessage(ChatColor.GRAY + "Locked up all players.");
+            }
+            else if (args[0].equalsIgnoreCase("purge"))
+            {
+                NUtil.adminAction(sender.getName(), "Unlocking all players", true);
+                for (Player player : server.getOnlinePlayers())
+                {
+                    cancelLockup(player);
+                }
+
+                sender.sendMessage(ChatColor.GRAY + "Unlocked all players.");
+            }
+            else
+            {
+                return false;
+            }
         }
-        else
-        {
-            return false;
-        }
-    }
         else if (args.length == 2)
-    {
-        if (args[1].equalsIgnoreCase("on"))
         {
-            final Player player = getPlayer(args[0]);
-
-            if (player == null)
+            if (args[1].equalsIgnoreCase("on"))
             {
-                sender.sendMessage(Messages.PLAYER_NOT_FOUND);
-                return true;
+                final Player player = getPlayer(args[0]);
+
+                if (player == null)
+                {
+                    sender.sendMessage(Messages.PLAYER_NOT_FOUND);
+                    return true;
+                }
+
+                NUtil.adminAction(sender.getName(), "Locking up " + player.getName(), true);
+                startLockup(player);
+                sender.sendMessage(ChatColor.GRAY + "Locked up " + player.getName() + ".");
             }
-
-            NUtil.adminAction(sender.getName(), "Locking up " + player.getName(), true);
-            startLockup(player);
-            sender.sendMessage(ChatColor.GRAY + "Locked up " + player.getName() + ".");
-        }
-        else if ("off".equals(args[1]))
-        {
-            final Player player = getPlayer(args[0]);
-
-            if (player == null)
+            else if ("off".equals(args[1]))
             {
-                sender.sendMessage(Messages.PLAYER_NOT_FOUND);
-                return true;
-            }
+                final Player player = getPlayer(args[0]);
 
-            NUtil.adminAction(sender.getName(), "Unlocking " + player.getName(), true);
-            cancelLockup(player);
-            sender.sendMessage(ChatColor.GRAY + "Unlocked " + player.getName() + ".");
+                if (player == null)
+                {
+                    sender.sendMessage(Messages.PLAYER_NOT_FOUND);
+                    return true;
+                }
+
+                NUtil.adminAction(sender.getName(), "Unlocking " + player.getName(), true);
+                cancelLockup(player);
+                sender.sendMessage(ChatColor.GRAY + "Unlocked " + player.getName() + ".");
+            }
+            else
+            {
+                return false;
+            }
         }
         else
         {
             return false;
         }
-    }
-        else
-    {
-        return false;
-    }
 
         return true;
-}
+    }
 
     private void cancelLockup(PlayerData playerdata)
     {

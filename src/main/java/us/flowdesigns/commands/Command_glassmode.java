@@ -9,7 +9,8 @@ import org.bukkit.potion.PotionEffectType;
 
 @CommandPermissions(source = SourceType.BOTH)
 @CommandParameters(description = "Makes yourself invisible and glow", usage = "/<command> <enable | disable>")
-public class Command_glassmode extends BaseCommand {
+public class Command_glassmode extends BaseCommand
+{
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole)
     {
@@ -29,20 +30,22 @@ public class Command_glassmode extends BaseCommand {
         }
         if (args[0].equalsIgnoreCase("enable") || args[0].equalsIgnoreCase("on"))
         {
-        PotionEffect invisible = new PotionEffect(PotionEffectType.INVISIBILITY, 99999999 * 20, 3);
-        PotionEffect glow = new PotionEffect(PotionEffectType.GLOWING, 99999999 * 20, 3);
-        sender_p.addPotionEffect(invisible);
-        sender_p.addPotionEffect(glow);
-        sender.sendMessage(ChatColor.BLUE + "Enabled glass mode");
-        return true;
+            PotionEffect invisible = new PotionEffect(PotionEffectType.INVISIBILITY, 99999999 * 20, 3);
+            PotionEffect glow = new PotionEffect(PotionEffectType.GLOWING, 99999999 * 20, 3);
+            sender_p.addPotionEffect(invisible);
+            sender_p.addPotionEffect(glow);
+            sender.sendMessage(ChatColor.BLUE + "Enabled glass mode");
+            return true;
         }
         if (args[0].equalsIgnoreCase("disable") || args[0].equalsIgnoreCase("off"))
         {
-        sender_p.removePotionEffect(PotionEffectType.INVISIBILITY);
-        sender_p.removePotionEffect(PotionEffectType.GLOWING);
-        sender.sendMessage(ChatColor.BLUE + "Disabled glass mode");
-        return true;
-        } else {
+            sender_p.removePotionEffect(PotionEffectType.INVISIBILITY);
+            sender_p.removePotionEffect(PotionEffectType.GLOWING);
+            sender.sendMessage(ChatColor.BLUE + "Disabled glass mode");
+            return true;
+        }
+        else
+        {
             return false;
         }
     }

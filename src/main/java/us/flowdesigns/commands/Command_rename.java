@@ -12,11 +12,13 @@ import us.flowdesigns.utils.NUtil;
 
 @CommandPermissions(source = SourceType.BOTH)
 @CommandParameters(description = "Renames the item in your hand", usage = "/<command> <name>")
-public class Command_rename extends BaseCommand {
+public class Command_rename extends BaseCommand
+{
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole)
     {
-        if (senderIsConsole) {
+        if (senderIsConsole)
+        {
             sender.sendMessage(Messages.PLAYER_ONLY);
             return true;
         }
@@ -31,12 +33,14 @@ public class Command_rename extends BaseCommand {
         {
             sender.sendMessage(ChatColor.RED + "You cannot rename this item");
             return true;
-        } else {
+        }
+        else
+        {
             ItemMeta im = i.getItemMeta();
             im.setDisplayName(StringUtils.replace(itemName, "_", " "));
             i.setItemMeta(im);
             sender.sendMessage(ChatColor.GRAY + "Item renamed to: " + itemRaw);
         }
-    return true;
+        return true;
     }
 }

@@ -18,23 +18,28 @@ import java.util.regex.Pattern;
 
 import static org.bukkit.Bukkit.getServer;
 
-public class AutoUpdate implements Listener {
+public class AutoUpdate implements Listener
+{
     PluginManager pm = getServer().getPluginManager();
     Plugin p = pm.getPlugin("Nitrogen");
     PluginDescriptionFile pdf = p.getDescription();
     int version = this.getVersionFromString(pdf.getVersion());
     final String versionLink = "https://flowdesigns.us/version.txt";
     private Plugin plugin;
+
     @EventHandler
-    public boolean onPlayerJoin(PlayerJoinEvent event) throws IOException {
-        if (event.getPlayer().hasPermission("nitrogen.update") || event.getPlayer().isOp()) {
+    public boolean onPlayerJoin(PlayerJoinEvent event) throws IOException
+    {
+        if (event.getPlayer().hasPermission("nitrogen.update") || event.getPlayer().isOp())
+        {
             URL url = new URL(versionLink);
             URLConnection con = url.openConnection();
             InputStreamReader isr = new InputStreamReader(con.getInputStream());
             BufferedReader reader = new BufferedReader(isr);
             reader.ready();
             int newVersion = this.getVersionFromString(reader.readLine());
-            if (newVersion > version) {
+            if (newVersion > version)
+            {
                 event.getPlayer().sendMessage(ChatColor.RED + "There is an update available for Nitrogen. To update Nitrogen, type /nitrogen update");
             }
         }
@@ -47,7 +52,7 @@ public class AutoUpdate implements Listener {
         Pattern pattern = Pattern.compile("\\d+");
         Matcher matcher = pattern.matcher(from);
 
-        while(matcher.find())
+        while (matcher.find())
         {
             result += matcher.group();
         }

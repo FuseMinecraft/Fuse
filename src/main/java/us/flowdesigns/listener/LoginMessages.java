@@ -11,7 +11,6 @@ import org.bukkit.permissions.PermissionDefault;
 import us.flowdesigns.utils.NLog;
 import us.flowdesigns.utils.NUtil;
 
-import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -24,6 +23,7 @@ public class LoginMessages implements Listener
         Permission p = new Permission(permission, PermissionDefault.FALSE);
         return player.hasPermission(p);
     }
+
     @EventHandler
     public boolean onPlayerJoin(PlayerJoinEvent event)
     {

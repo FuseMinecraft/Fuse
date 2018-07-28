@@ -8,8 +8,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Terminal {
-
+public class Terminal
+{
     public static void runShellCommandAsync(CommandSender sender, String command)
     {
         new BukkitRunnable()
@@ -17,19 +17,24 @@ public class Terminal {
             @Override
             public void run()
             {
-                try {
+                try
+                {
                     runShellCommand(sender, command);
                 }
-                catch (IOException ex) {
+                catch (IOException ex)
+                {
                     NLog.severe(ex);
                     if (ex.toString().contains("error=2"))
                     {
                         sender.sendMessage("Cannot run program \"" + command + "\": error=2, No such file or directory");
-                    } else {
+                    }
+                    else
+                    {
                         sender.sendMessage("Unknown error while executing command");
                     }
                 }
-                catch (InterruptedException ex) {
+                catch (InterruptedException ex)
+                {
                     sender.sendMessage("Error, see logs for more details");
                     NLog.severe(ex);
                 }
@@ -54,5 +59,4 @@ public class Terminal {
 
         proc.waitFor();
     }
-
 }
