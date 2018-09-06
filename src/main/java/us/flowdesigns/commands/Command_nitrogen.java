@@ -38,7 +38,7 @@ public class Command_nitrogen extends BaseCommand
                             + ChatColor.BLUE + "%s",
                     build.date,
                     build.author));
-            sender.sendMessage(ChatColor.GOLD + "Designed for: " + ChatColor.BLUE + "Spigot 1.13");
+            sender.sendMessage(ChatColor.GOLD + "Designed for: " + ChatColor.BLUE + "Spigot 1.13.1");
             sender.sendMessage(ChatColor.RED + "Nitrogen is an advanced plugin designed to provide useful utilities for a Minecraft server");
             sender.sendMessage(ChatColor.GREEN + "Type /contributors to see who contributed to Nitrogen");
             sender.sendMessage(ChatColor.GREEN + "Type /nitrogen reload to reload the configuration file");

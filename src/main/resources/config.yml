@@ -1,5 +1,5 @@
 #
-# Nitrogen v5.0.1 Configuration File
+# Nitrogen v5.0.2 Configuration File
 #
 
 server:
@@ -33,10 +33,10 @@ commands:
 players:
   # Who is the owner?
   owner:
-    - handleDisconnect
+    - Model_3
   # Who should be allowed to use some high level commands
   superusers:
-    - handleDisconnect
+    - Model_3
     - OxLemonxO
 social_links:
   GitHub: 'https://www.github.com/FuseMinecraft/Nitrogen'
@@ -77,7 +77,7 @@ login-messages:
       permission: nitrogen.owner
       message: "&b%player% is the &4&oOwner"
   players:
-    handleDisconnect:
+    Model_3:
       message: "&b%player% is &9&oThe Creator of Nitrogen"
     yashi4554:
       message: "&b%player% is an &4&oAdmin&b and the &9The Supreme Builder"

@@ -1,7 +1,7 @@
 name: Nitrogen
-version: 5.0.1
+version: 5.0.2
 description: Utility plugin for Minecraft servers
-authors: [Telesphoreo, OxLemonxO, Madgeek1450, Prozza, TheMinecraft]
+authors: [Model_3, OxLemonxO, Madgeek1450, Prozza, TheMinecraft]
 main: us.flowdesigns.nitrogen.Nitrogen
 api-version: 1.13
 commands:

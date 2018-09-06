@@ -28,7 +28,7 @@ public class Nitrogen extends JavaPlugin {
     public static Nitrogen instance;
 
     public static final BuildProperties build = new BuildProperties();
-    public static final String COMPILE_NMS_VERSION = "v1_13_R1";
+    public static final String COMPILE_NMS_VERSION = "v1_13_R2";
     public static String pluginName;
     public static String pluginVersion;
 
@@ -102,16 +102,10 @@ public class Nitrogen extends JavaPlugin {
             try
             {
                 final Properties props;
-                final Properties gitprops;
                 try (InputStream in = plugin.getResource("build.properties"))
                 {
                     props = new Properties();
                     props.load(in);
-                }
-                try (InputStream in = plugin.getResource("git.properties"))
-                {
-                    gitprops = new Properties();
-                    gitprops.load(in);
                 }
 
                 author = props.getProperty("buildAuthor", "unknown");
@@ -119,7 +113,7 @@ public class Nitrogen extends JavaPlugin {
                 version = props.getProperty("buildVersion", pluginVersion);
                 number = props.getProperty("buildNumber", "1");
                 date = props.getProperty("buildDate", "unknown");
-                head = gitprops.getProperty("git.commit.id.abbrev", "unknown");
+                head = props.getProperty("buildHead", "unknown".replace("${git.commit.id.abbrev", "unknown"));
             }
             catch (Exception ex)
             {
