@@ -107,7 +107,7 @@ public class NUtil
             {
                 Field field = checkClass.getDeclaredField(name);
                 field.setAccessible(true);
-                return (T) field.get(from);
+                return (T)field.get(from);
             }
             catch (NoSuchFieldException | IllegalAccessException ex)
             {

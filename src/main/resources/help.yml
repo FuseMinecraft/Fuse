@@ -1,113 +1,98 @@
-# Nitrogen v5.0.2 Command and Permission Help
+# Nitrogen v5.1.0 Command and Permission Help
 # To block people from dropping items, use the permission node: nitrogen.nodrop
 # When a command has a -s option, it allows you to use it silently
 
-  adminchat:
-    description: Talk privately with other admins
-    aliases: o
-    permissions:
-    - nitrogen.adminchat (Required to use it)
-    - nitrogen.moderator (For moderator)
-    - nitrogen.admin (For admins)
-    - nitrogen.developer (For developers)
-    - nitrogen.builder (For builders)
-    - nitrogen.owner (For owner)
-    usage: /<command> <message>
-  admininfo:
-    description: Tells a person how to apply for admin
-    aliases: [ai, apply]
-    usage: /<command>
-  clearlag:
-    description: Removes server entities
-    permission: nitrogen.clearlag
-    aliases: [entitywipe, ew, rd]
-    usage: /<command> [-s]
-  commandspy:
-    description: Spy on other players commands
-    aliases: cmdspy
-    permission: nitrogen.commandspy
-    usage: /<command>
-  consolesay:
-    description: Chat from the console
-    aliases: csay
-    usage: /<command> <message>
-  contributors:
-    description: Shows the people who contributed to Nitrogen
-    aliases: contributers
-    usage: /<command>
-  deafen:
-    description: Make some noise
-    permission: nitrogen.deafen
-    usage: /<command>
-  developer:
-    description: Developer command (Requires superuser)
-    aliases: dev
-    usage: /<command> <on | off | status>
-  discord:
-    description: Gives a link to the Discord server
-    usage: /<command>
-  expel:
-    description: Pushes players away from you
-    permission: nitrogen.expel
-    usage: /<command>
-  forums:
-    description: Gives a link to the forums
-    aliases: [forum, fourms, fourm]
-    usage: /<command>
-  nitrogen:
-    description: Shows information about Nitrogen
-    permissions:
-    - nitrogen.update (To update Nitrogen)
-    - nitrogen.extendedhelp (Admin commands in Nitrogen)
-    usage: /<command> [reload | debug | help | update]
-  fw:
-    description: Shoots a firework into the sky
-    usage: /<command>
-  gcmd:
-    description: Makes a player execute a command
-    permission: nitrogen.gcmd
-    usage: /<command> [player] [command]
-  glassmode:
-    description: Makes yourself invisible and glow
-    permission: nitrogen.glassmode
-    usage: /<command> <enable | disable>
-  lockup:
-      description: Block a players Minecraft input
-      permission: nitrogen.lockup
-      usage: /<command> <all | purge | <<player> on | off>>
-  namehistory:
-    description: Shows the name history of a player
-    aliases: nh
-    permission: nitrogen.namehistory
-    usage: /<command> <player>
-  pluginmanage:
-    description: Manage plugins
-    aliases: [plc, pm]
-    permission: nitrogen.pluginmanage
-    usage: /<command> <<enable | disable | reload> <pluginname>> | list>
-  rename:
-    description: Renames the item in your hand
-    usage: /<command> <name>
-  ship:
-    description: Ships a player with another player
-    usage: /<command> <player1> <player2>
-  terminal:
-    description: Send commands from the terminal (Requires superuser)
-    usage: /<command>
-  tprandom:
-    description: Teleports a player to a random location
-    aliases: tpr
-    permission: nitrogen.tprandom
-    usage: /<command>
-  toggle:
-    description: Toggles configuration options
-    usage: /<command>
-    permission: nitrogen.toggle
-  unloadchunks:
-    description: Unloads unused chunks
-    aliases: [uc, rc]
-    permission: nitrogen.unloadchunks
-    usage: /<command> [-s]
-  website:
-    description: Gives a link to the website
-    usage: /<command>
+adminchat:
+  description: Talk privately with other admins
+  aliases: o
+  permissions:
+  - nitrogen.adminchat
+  usage: /<command> <message>
+admininfo:
+  description: Tells a person how to apply for admin
+  aliases: [ai, apply]
+  usage: /<command>
+clearlag:
+  description: Removes server entities
+  permission: nitrogen.clearlag
+  aliases: [entitywipe, ew, rd]
+  usage: /<command> [-s]
+commandspy:
+  description: Spy on other players commands
+  aliases: cmdspy
+  permission: nitrogen.commandspy
+  usage: /<command>
+consolesay:
+  description: Chat from the console
+  aliases: csay
+  usage: /<command> <message>
+contributors:
+  description: Shows the people who contributed to Nitrogen
+  aliases: contributers
+  usage: /<command>
+deafen:
+  description: Make some noise
+  permission: nitrogen.deafen
+  usage: /<command>
+developer:
+  description: Developer command (Requires superuser)
+  aliases: dev
+  usage: /<command> <on | off | status>
+expel:
+  description: Pushes players away from you
+  permission: nitrogen.expel
+  usage: /<command>
+nitrogen:
+  description: Shows information about Nitrogen
+  permissions:
+  - nitrogen.update (To update Nitrogen)
+  - nitrogen.extendedhelp (Admin commands in Nitrogen)
+  usage: /<command> [reload | debug | help | update]
+fw:
+  description: Shoots a firework into the sky
+  usage: /<command>
+gcmd:
+  description: Makes a player execute a command
+  permission: nitrogen.gcmd
+  usage: /<command> [player] [command]
+glassmode:
+  description: Makes yourself invisible and glow
+  permission: nitrogen.glassmode
+  usage: /<command> <enable | disable>
+lockup:
+  description: Block a players Minecraft input
+  permission: nitrogen.lockup
+  usage: /<command> <all | purge | <<player> on | off>>
+namehistory:
+  description: Shows the name history of a player
+  aliases: nh
+  permission: nitrogen.namehistory
+  usage: /<command> <player>
+pluginmanage:
+  description: Manage plugins
+  aliases: [plc, pm]
+  permission: nitrogen.pluginmanage
+  usage: /<command> <<enable | disable | reload> <pluginname>> | list>
+rename:
+  description: Renames the item in your hand
+  usage: /<command> <name>
+ship:
+  description: Ships a player with another player
+  usage: /<command> <player1> <player2>
+terminal:
+  description: Send commands from the terminal (Requires superuser)
+  usage: /<command>
+tprandom:
+  description: Teleports a player to a random location
+  aliases: tpr
+  permission: nitrogen.tprandom
+  usage: /<command>
+toggle:
+  description: Toggles configuration options
+  usage: /<command>
+  permission: nitrogen.toggle
+unloadchunks:
+  description: Unloads unused chunks
+  aliases: [uc, rc]
+  permission: nitrogen.unloadchunks
+  usage: /<command> [-s]

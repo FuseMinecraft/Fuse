@@ -1,5 +1,5 @@
 name: Nitrogen
-version: 5.0.2
+version: 5.1.0
 description: Utility plugin for Minecraft servers
 authors: [Model_3, OxLemonxO, Madgeek1450, Prozza, TheMinecraft]
 main: us.flowdesigns.nitrogen.Nitrogen
@@ -40,20 +40,10 @@ commands:
     description: Developer command (Requires superuser)
     aliases: dev
     usage: /<command> <on | off | status>
-  discord:
-    description: Gives a link to the Discord server
-    usage: /<command>
   expel:
     description: Pushes players away from you
     permission: nitrogen.expel
     usage: /<command>
-  forums:
-    description: Gives a link to the forums
-    aliases: [forum, fourms, fourm]
-    usage: /<command>
-  nitrogen:
-    description: Shows information about Nitrogen
-    usage: /<command> [reload | debug | help | update]
   fw:
     description: Shoots a firework into the sky
     usage: /<command>
@@ -77,6 +67,9 @@ commands:
     aliases: nh
     permission: nitrogen.namehistory
     usage: /<command> <player>
+  nitrogen:
+    description: Shows information about Nitrogen
+    usage: /<command> [reload | debug | help | update]
   pluginmanage:
     description: Manage plugins
     aliases: [plc, pm]
@@ -105,6 +98,3 @@ commands:
     aliases: [uc, rc]
     permission: nitrogen.unloadchunks
     usage: /<command> [-s]
-  website:
-    description: Gives a link to the website
-usage: /<command>

@@ -4,5 +4,5 @@ package us.flowdesigns.commands;
 
 public enum SourceType
 {
-    ONLY_IN_GAME, ONLY_CONSOLE, BOTH;
+    ONLY_IN_GAME, ONLY_CONSOLE, BOTH
 }

@@ -30,7 +30,7 @@ public class Command_links extends BaseCommand
                 {
                     continue;
                 }
-                String link = (String) values.get(key);
+                String link = (String)values.get(key);
                 lines.add(ChatColor.GOLD + "- " + key + ": " + ChatColor.AQUA + link);
             }
 

@@ -37,7 +37,7 @@ public class History
                     try
                     {
                         URL url = new URL("https://api.mojang.com/user/profiles/" + compactUuid + "/names");
-                        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                        HttpURLConnection conn = (HttpURLConnection)url.openConnection();
                         BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                         FName[] oldNames = gson.fromJson(reader, FName[].class);
                         if (oldNames == null)

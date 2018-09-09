@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>us.flowdesigns</groupId>
     <artifactId>Nitrogen</artifactId>
-    <version>5.0.2</version>
+    <version>5.1.0</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <nitrogen.build.version>${project.version}</nitrogen.build.version>
@@ -92,12 +92,13 @@
                         <phase>initialize</phase>
                         <configuration>
                             <target>
-                                <propertyfile file="${basedir}/src/main/resources/build.properties" comment="Build information. Edit this to your liking.">
-                                    <entry key="buildAuthor" default="unknown" />
-                                    <entry key="buildNumber" default="0" />
-                                    <entry key="buildCodename" value="${build.codename}" />
-                                    <entry key="buildVersion" value="${nitrogen.build.version}" />
-                                    <entry key="buildDate" value="${timestamp}" />
+                                <propertyfile file="${basedir}/src/main/resources/build.properties"
+                                              comment="Build information. Edit this to your liking.">
+                                    <entry key="buildAuthor" default="unknown"/>
+                                    <entry key="buildNumber" default="0"/>
+                                    <entry key="buildCodename" value="${build.codename}"/>
+                                    <entry key="buildVersion" value="${nitrogen.build.version}"/>
+                                    <entry key="buildDate" value="${timestamp}"/>
                                     <entry key="buildHead" value="${git.commit.id.abbrev}"/>
                                 </propertyfile>
                             </target>
@@ -144,7 +145,8 @@
                 </executions>
                 <configuration>
                     <buildNumberPropertyName>maven.buildnumber</buildNumberPropertyName>
-                    <buildNumberPropertiesFileLocation>${basedir}/src/main/resources/build.properties</buildNumberPropertiesFileLocation>
+                    <buildNumberPropertiesFileLocation>${basedir}/src/main/resources/build.properties
+                    </buildNumberPropertiesFileLocation>
                     <format>{0,number,#}</format>
                     <items>
                         <item>buildNumber</item>

@@ -14,15 +14,15 @@ public class Command_nitrogen extends BaseCommand
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole)
     {
-        String spawn_on_join = plugin.getConfig().getString("server.spawn_on_join");
-        String applications_enabled = plugin.getConfig().getString("commands.applications_enabled");
-        String drop_items_on_death = plugin.getConfig().getString("server.drop_items_on_death");
-        String clear_inventory_on_join = plugin.getConfig().getString("server.clear_inventory_on_join");
-        String server_hunger = plugin.getConfig().getString("server.hunger_enabled");
-        String fall_damage_enabled = plugin.getConfig().getString("server.fall_damage_enabled");
-        String dev = plugin.getConfig().getString("server.dev");
-        String owner = plugin.getConfig().getString("players.owner");
-        String superusers = plugin.getConfig().getString("players.superusers");
+        boolean spawn_on_join = plugin.getConfig().getBoolean("server.spawn_on_join");
+        boolean applications_enabled = plugin.getConfig().getBoolean("commands.applications_enabled");
+        boolean drop_items_on_death = plugin.getConfig().getBoolean("server.drop_items_on_death");
+        boolean clear_inventory_on_join = plugin.getConfig().getBoolean("server.clear_inventory_on_join");
+        boolean server_hunger = plugin.getConfig().getBoolean("server.hunger_enabled");
+        boolean fall_damage_enabled = plugin.getConfig().getBoolean("server.fall_damage_enabled");
+        boolean dev = plugin.getConfig().getBoolean("server.dev");
+        boolean owner = plugin.getConfig().getBoolean("players.owner");
+        boolean superusers = plugin.getConfig().getBoolean("players.superusers");
         Nitrogen.BuildProperties build = Nitrogen.build;
         if (args.length == 0)
         {
@@ -43,7 +43,7 @@ public class Command_nitrogen extends BaseCommand
             sender.sendMessage(ChatColor.GREEN + "Type /contributors to see who contributed to Nitrogen");
             sender.sendMessage(ChatColor.GREEN + "Type /nitrogen reload to reload the configuration file");
             sender.sendMessage(ChatColor.GREEN + "Type /nitrogen update to check for and install updates");
-            if (dev.equalsIgnoreCase("true"))
+            if (dev)
             {
                 sender.sendMessage(ChatColor.DARK_AQUA + "The server is currently in development mode. "
                         + "This means there may be unstable plugin builds on this server, and the server could crash more than normal!");

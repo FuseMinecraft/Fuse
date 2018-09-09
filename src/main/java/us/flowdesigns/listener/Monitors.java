@@ -23,12 +23,17 @@ import static us.flowdesigns.nitrogen.Nitrogen.server;
 public class Monitors implements Listener
 {
     // Potion Listener
-    String potions_enabled = plugin.getConfig().getString("server.splash_potions_enabled");
+    boolean potions_enabled = plugin.getConfig().getBoolean("server.splash_potions_enabled");
 
     @EventHandler
     public void onPotionSplashEvent(final PotionSplashEvent event)
     {
-        Player player = (Player) event.getEntity().getShooter();
+        if (!potions_enabled)
+        {
+            return;
+        }
+
+        Player player = (Player)event.getEntity().getShooter();
         switch (event.getPotion().getType())
         {
             case SPLASH_POTION:
@@ -41,13 +46,11 @@ public class Monitors implements Listener
                     public void run()
                     {
                         event.getAffectedEntities().forEach((entity) ->
-                        {
-                            event.getPotion().getEffects().stream().filter((effect) -> (entity instanceof Player)).forEachOrdered((effect) ->
-                            {
-                                Player player = (Player) entity;
-                                player.removePotionEffect(effect.getType());
-                            });
-                        });
+                                event.getPotion().getEffects().stream().filter((effect) -> (entity instanceof Player)).forEachOrdered((effect) ->
+                                {
+                                    Player player = (Player)entity;
+                                    player.removePotionEffect(effect.getType());
+                                }));
                     }
                 }.runTaskLater(Nitrogen.getInstance(), 1);
                 break;
@@ -58,9 +61,9 @@ public class Monitors implements Listener
     @EventHandler
     public boolean onPlayerJoin(PlayerJoinEvent event)
     {
-        String dev = plugin.getConfig().getString("server.dev");
+        boolean dev = plugin.getConfig().getBoolean("server.dev");
         Player player = event.getPlayer();
-        if (dev.equals("true"))
+        if (dev)
         {
             player.sendMessage(ChatColor.DARK_AQUA + "Warning: The server is currently in development mode. "
                     + "This means there may be unstable plugin builds on this server, and the server could crash more than normal!");

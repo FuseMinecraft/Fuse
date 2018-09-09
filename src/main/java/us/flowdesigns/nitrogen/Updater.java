@@ -19,7 +19,7 @@ public class Updater
 {
     final String dlLink = "https://flowdesigns.us/Nitrogen.jar";
     final String versionLink = "https://flowdesigns.us/version.txt";
-    String dev = Nitrogen.plugin.getConfig().getString("server.dev");
+    boolean dev = Nitrogen.plugin.getConfig().getBoolean("server.dev");
     private Plugin plugin;
 
     public Updater(Plugin plugin)
@@ -64,7 +64,7 @@ public class Updater
             }
             else
             {
-                if (dev.equalsIgnoreCase("true"))
+                if (dev)
                 {
                     sender.sendMessage("Debug Information:");
                     sender.sendMessage("versionLink: " + versionLink);
@@ -76,7 +76,7 @@ public class Updater
         }
         catch (IOException e)
         {
-            sender.sendMessage(ChatColor.GRAY + "There are no over the air updates available for Nitrogen. Try restarting your server and checking for update. If this does not work, please go to https://github.com/FuseMinecraft/Nitrogen/releases and download the latest release from there.");
+            sender.sendMessage(ChatColor.GRAY + "There are no over the air updates available for Nitrogen. Try restarting your server and checking for updates again. If this does not work, please go to https://github.com/FuseMinecraft/Nitrogen/releases and download the latest release from there.");
             NLog.severe(e);
         }
     }
@@ -90,7 +90,7 @@ public class Updater
                 Method method = JavaPlugin.class.getDeclaredMethod("getFile");
                 boolean wasAccessible = method.isAccessible();
                 method.setAccessible(true);
-                File file = (File) method.invoke(plugin);
+                File file = (File)method.invoke(plugin);
                 method.setAccessible(wasAccessible);
 
                 return file.getPath();

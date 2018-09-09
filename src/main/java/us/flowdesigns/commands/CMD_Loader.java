@@ -97,7 +97,7 @@ public class CMD_Loader
         {
             if (commandMap instanceof CommandMap)
             {
-                return (CommandMap) commandMap;
+                return (CommandMap)commandMap;
             }
         }
         return null;
@@ -111,7 +111,7 @@ public class CMD_Loader
         {
             if (knownCommands instanceof HashMap)
             {
-                return (HashMap<String, Command>) knownCommands;
+                return (HashMap<String, Command>)knownCommands;
             }
         }
         return null;

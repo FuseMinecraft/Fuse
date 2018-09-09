@@ -1,43 +1,43 @@
 #
-# Nitrogen v5.0.2 Configuration File
+# Nitrogen v5.1.0 Configuration File
 #
 
 server:
-  # Should players teleport to spawn when they join?
-  spawn_on_join: 'false'
-  # Should items be dropped when a person dies?
-  drop_items_on_death: 'true'
-  # Should a person's inventory be cleared when they join the game?
-  clear_inventory_on_join: 'false'
-  # Should players lose hunger?
-  hunger_enabled: 'true'
-  # Should weather be enabled?
-  weather_enabled: 'true'
-  # Should fall damage be enabled?
-  fall_damage_enabled: 'true'
-  # Is developer mode enabled?
-  dev: 'false'
-  # Are splash potions enabled?
-  splash_potions_enabled: 'true'
-  # Are login messages enabled?
-  login_messages_enabled: 'true'
+  # Should players teleport to spawn when they join? (true/false)
+  spawn_on_join: false
+  # Should items be dropped when a person dies? (true/false)
+  drop_items_on_death: true
+  # Should a person's inventory be cleared when they join the game? (true/false)
+  clear_inventory_on_join: false
+  # Should players lose hunger? (true/false)
+  hunger_enabled: true
+  # Should weather be enabled? (true/false)
+  weather_enabled: true
+  # Should fall damage be enabled? (true/false)
+  fall_damage_enabled: true
+  # Is developer mode enabled? (true/false)
+  dev: false
+  # Are splash potions enabled? (true/false)
+  splash_potions_enabled: true
+  # Are login messages enabled? (true/false)
+  login_messages_enabled: true
 commands:
-  # Should admin applications be enabled?
-  applications_enabled: 'false'
+  # Should admin applications be enabled? (true/false)
+  applications_enabled: false
   # What is the link to the admin application template?
   admin_application_template: 'none'
   # What is the link to create a new thread?
   admin_app_new_thread_link: 'none'
-  # Should fun commands like /ship, /deafen, and /lockup be enabled? (enabled/disabled)
-  fun_commands: 'enabled'
+  # Should fun commands like /ship, /deafen, and /lockup be enabled? (true/false)
+  fun_commands: true
 players:
   # Who is the owner?
   owner:
-    - Model_3
+  - Model_3
   # Who should be allowed to use some high level commands
   superusers:
-    - Model_3
-    - OxLemonxO
+  - Model_3
+  - OxLemonxO
 social_links:
   GitHub: 'https://www.github.com/FuseMinecraft/Nitrogen'
   Discord: 'https://discord.gg/example'

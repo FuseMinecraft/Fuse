@@ -43,12 +43,12 @@ public class Command_fw extends BaseCommand
             return true;
         }
 
-        Player p = (Player) sender;
+        Player p = (Player)sender;
         Location loc = p.getLocation();
         if (loc != null)
         {
             World w = loc.getWorld();
-            Firework fw = (Firework) w.spawnEntity(loc, EntityType.FIREWORK);
+            Firework fw = (Firework)w.spawnEntity(loc, EntityType.FIREWORK);
             FireworkMeta fm = fw.getFireworkMeta();
             FireworkEffect.Builder effect = FireworkEffect.builder();
             effect.flicker(this.rnd.nextInt(10) > 2);

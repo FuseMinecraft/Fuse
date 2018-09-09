@@ -30,8 +30,8 @@ public class Command_deafen extends BaseCommand
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole)
     {
         {
-            String fun = plugin.getConfig().getString("commands.fun_commands");
-            if (!fun.equalsIgnoreCase("enabled"))
+            boolean fun = plugin.getConfig().getBoolean("commands.fun_commands");
+            if (!fun)
             {
                 sender.sendMessage(Messages.UNKNOWN_COMMAND);
                 return true;
@@ -45,7 +45,7 @@ public class Command_deafen extends BaseCommand
             {
                 for (double percent = 0.0; percent <= 1.0; percent += (1.0 / STEPS))
                 {
-                    final float pitch = (float) (percent * 2.0);
+                    final float pitch = (float)(percent * 2.0);
                     new BukkitRunnable()
                     {
                         @Override

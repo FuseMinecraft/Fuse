@@ -14,12 +14,11 @@ import static us.flowdesigns.nitrogen.Nitrogen.plugin;
 
 public class ConfigListener implements Listener
 {
-
     // Drop items on death
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent e)
     {
-        if (plugin.getConfig().getString("server.drop_items_on_death").equalsIgnoreCase("false"))
+        if (!plugin.getConfig().getBoolean("server.drop_items_on_death"))
         {
             e.getDrops().clear();
         }
@@ -30,49 +29,49 @@ public class ConfigListener implements Listener
     public void onPlayerJoin(PlayerJoinEvent e)
     {
         Player player = e.getPlayer();
-        String teleportSpawn = plugin.getConfig().getString("server.spawn_on_join");
-        String clearInventoryOnJoin = plugin.getConfig().getString("server.clear_inventory_on_join");
-        if ("true".equals(teleportSpawn))
+        boolean teleportSpawn = plugin.getConfig().getBoolean("server.spawn_on_join");
+        boolean clearInventoryOnJoin = plugin.getConfig().getBoolean("server.clear_inventory_on_join");
+        if (teleportSpawn)
         {
             player.teleport(player.getWorld().getSpawnLocation());
         }
-        if ("true".equals(clearInventoryOnJoin))
+        if (clearInventoryOnJoin)
         {
             player.getPlayer().getInventory().clear();
         }
     }
 
     // Hunger Enabled
-    String hungerenabled = plugin.getConfig().getString("server.hunger_enabled");
+    boolean hungerenabled = plugin.getConfig().getBoolean("server.hunger_enabled");
 
     @EventHandler(priority = EventPriority.MONITOR)
     public void onFoodLevelChange(FoodLevelChangeEvent event)
     {
-        if (hungerenabled.equalsIgnoreCase("false"))
+        if (!hungerenabled)
         {
             event.setFoodLevel(20);
         }
     }
 
     // Weather enabled
-    String weatherenabled = plugin.getConfig().getString("server.weather_enabled");
+    boolean weatherenabled = plugin.getConfig().getBoolean("server.weather_enabled");
 
     @EventHandler
     public void onWeatherChange(WeatherChangeEvent event)
     {
-        if (weatherenabled.equalsIgnoreCase("false"))
+        if (!weatherenabled)
         {
             event.setCancelled(true);
         }
     }
 
     // Fall Damage Enabled
-    String falldamage = plugin.getConfig().getString("server.fall_damage_enabled");
+    boolean falldamage = plugin.getConfig().getBoolean("server.fall_damage_enabled");
 
     @EventHandler(priority = EventPriority.MONITOR)
     public void onPlayerFall(EntityDamageEvent event)
     {
-        if (falldamage.equalsIgnoreCase("false"))
+        if (!falldamage)
         {
             if (event.getCause() == EntityDamageEvent.DamageCause.FALL)
             {

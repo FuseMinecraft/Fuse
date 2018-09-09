@@ -21,7 +21,8 @@ import java.io.File;
 import java.io.InputStream;
 import java.util.Properties;
 
-public class Nitrogen extends JavaPlugin {
+public class Nitrogen extends JavaPlugin
+{
 
     public static Nitrogen plugin;
     public static Server server;
@@ -35,7 +36,8 @@ public class Nitrogen extends JavaPlugin {
     File jarFile = this.getFile();
 
     @Override
-    public void onLoad() {
+    public void onLoad()
+    {
         Nitrogen.plugin = this;
         Nitrogen.server = plugin.getServer();
         NLog.setServerLogger(server.getLogger());
@@ -45,7 +47,8 @@ public class Nitrogen extends JavaPlugin {
     }
 
     @Override
-    public void onEnable() {
+    public void onEnable()
+    {
         build.load(Nitrogen.plugin);
         warnVersion();
         // Listeners
@@ -57,38 +60,47 @@ public class Nitrogen extends JavaPlugin {
         server.getPluginManager().registerEvents(new Potion(), Nitrogen.plugin);
         server.getPluginManager().registerEvents(new Sign(), Nitrogen.plugin);
         Config.loadConfigs();
-        new BukkitRunnable() {
+        new BukkitRunnable()
+        {
             @Override
-            public void run() {
+            public void run()
+            {
                 CMD_Loader.getCommandMap();
                 CMD_Loader.scan();
             }
         }.runTaskLater(plugin, 20L);
-        Bukkit.getScheduler().scheduleSyncRepeatingTask(Bukkit.getPluginManager().getPlugin("Nitrogen"), () -> {
+        Bukkit.getScheduler().scheduleSyncRepeatingTask(Bukkit.getPluginManager().getPlugin("Nitrogen"), () ->
+        {
             if ((NUtil.NEntityWiper.wipeEntities(true, true)) == 1)
             {
                 NLog.info("[Nitrogen] " + (NUtil.NEntityWiper.wipeEntities(true, true)) + " entity removed");
-            } else if ((NUtil.NEntityWiper.wipeEntities(true, true)) != 0) {
+            }
+            else if ((NUtil.NEntityWiper.wipeEntities(true, true)) != 0)
+            {
                 NLog.info("[Nitrogen] " + (NUtil.NEntityWiper.wipeEntities(true, true)) + " entities removed");
             }
-        }, 1L , (long) 300 * 20);
+        }, 1L, (long)300 * 20);
         instance = this;
     }
 
     @Override
-    public void onDisable() {
+    public void onDisable()
+    {
     }
 
-    public static Nitrogen getInstance() {
+    public static Nitrogen getInstance()
+    {
         return instance;
     }
 
     @Override
-    public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
+    public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args)
+    {
         return CMD_Handler.handleCommand(sender, cmd, commandLabel, args);
     }
 
-    public static class BuildProperties {
+    public static class BuildProperties
+    {
 
         public String author;
         public String codename;
@@ -121,7 +133,9 @@ public class Nitrogen extends JavaPlugin {
                 NLog.severe(ex);
             }
         }
-        public String formattedVersion() {
+
+        public String formattedVersion()
+        {
             return build.version + "." + build.number + " (" + build.head + ")";
         }
     }

@@ -12,16 +12,18 @@ public class Command_admininfo extends BaseCommand
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole)
     {
-        String applications_enabled = plugin.getConfig().getString("commands.applications_enabled");
+        boolean applications_enabled = plugin.getConfig().getBoolean("commands.applications_enabled");
         String forums = plugin.getConfig().getString("commands.forums");
         String admin_app_template = plugin.getConfig().getString("commands.admin_application_template");
         String new_thread_link = plugin.getConfig().getString("commands.admin_app_new_thread_link");
+
         if (senderIsConsole)
         {
             sender.sendMessage(Messages.PLAYER_ONLY);
             return true;
         }
-        if (applications_enabled.equalsIgnoreCase("true")
+
+        if (applications_enabled
                 && !forums.equalsIgnoreCase("none")
                 && !admin_app_template.equalsIgnoreCase("none")
                 && !new_thread_link.equalsIgnoreCase("none"))

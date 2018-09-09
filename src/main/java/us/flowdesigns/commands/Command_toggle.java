@@ -12,16 +12,16 @@ public class Command_toggle extends BaseCommand
     @Override
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole)
     {
-        String spawn_on_join = plugin.getConfig().getString("server.spawn_on_join");
-        String drop_items_on_death = plugin.getConfig().getString("server.drop_items_on_death");
-        String clear_inventory_on_join = plugin.getConfig().getString("server.clear_inventory_on_join");
-        String hunger_enabled = plugin.getConfig().getString("server.hunger_enabled");
-        String weather_enabled = plugin.getConfig().getString("server.weather_enabled");
-        String fall_damage_enabled = plugin.getConfig().getString("server.fall_damage_enabled");
-        String splash_potions_enabled = plugin.getConfig().getString("server.splash_potions_enabled");
-        String fun_cmds = plugin.getConfig().getString("commands.fun_commands");
-        String login_messages = plugin.getConfig().getString("server.login_messages_enabled");
-        String applications_enabled = plugin.getConfig().getString("commands.applications_enabled");
+        boolean spawn_on_join = plugin.getConfig().getBoolean("server.spawn_on_join");
+        boolean drop_items_on_death = plugin.getConfig().getBoolean("server.drop_items_on_death");
+        boolean clear_inventory_on_join = plugin.getConfig().getBoolean("server.clear_inventory_on_join");
+        boolean hunger_enabled = plugin.getConfig().getBoolean("server.hunger_enabled");
+        boolean weather_enabled = plugin.getConfig().getBoolean("server.weather_enabled");
+        boolean fall_damage_enabled = plugin.getConfig().getBoolean("server.fall_damage_enabled");
+        boolean splash_potions_enabled = plugin.getConfig().getBoolean("server.splash_potions_enabled");
+        boolean fun_cmds = plugin.getConfig().getBoolean("commands.fun_commands");
+        boolean login_messages = plugin.getConfig().getBoolean("server.login_messages_enabled");
+        boolean applications_enabled = plugin.getConfig().getBoolean("commands.applications_enabled");
         if (!sender.hasPermission("nitrogen.toggle"))
         {
             sender.sendMessage(Messages.MSG_NO_PERMS);
@@ -45,17 +45,17 @@ public class Command_toggle extends BaseCommand
         // Spawn on join
         if (args[0].equalsIgnoreCase("spawn_on_join"))
         {
-            if (spawn_on_join.equalsIgnoreCase("true"))
+            if (spawn_on_join)
             {
-                plugin.getConfig().set("server.spawn_on_join", "false");
+                plugin.getConfig().set("server.spawn_on_join", false);
                 plugin.saveConfig();
                 plugin.reloadConfig();
                 sender.sendMessage(ChatColor.GRAY + "People will no longer spawn when they join");
                 return true;
             }
-            if (spawn_on_join.equalsIgnoreCase("false"))
+            if (!spawn_on_join)
             {
-                plugin.getConfig().set("server.spawn_on_join", "true");
+                plugin.getConfig().set("server.spawn_on_join", true);
                 plugin.saveConfig();
                 plugin.reloadConfig();
                 sender.sendMessage(ChatColor.GRAY + "People will now spawn when they join");
@@ -65,17 +65,17 @@ public class Command_toggle extends BaseCommand
         // Drop items on death
         if (args[0].equalsIgnoreCase("drop_items_on_death"))
         {
-            if (drop_items_on_death.equalsIgnoreCase("true"))
+            if (drop_items_on_death)
             {
-                plugin.getConfig().set("server.drop_items_on_death", "false");
+                plugin.getConfig().set("server.drop_items_on_death", false);
                 plugin.saveConfig();
                 plugin.reloadConfig();
                 sender.sendMessage(ChatColor.GRAY + "Items will not be dropped on death");
                 return true;
             }
-            if (drop_items_on_death.equalsIgnoreCase("false"))
+            if (!drop_items_on_death)
             {
-                plugin.getConfig().set("server.drop_items_on_death", "true");
+                plugin.getConfig().set("server.drop_items_on_death", true);
                 plugin.saveConfig();
                 plugin.reloadConfig();
                 sender.sendMessage(ChatColor.GRAY + "Items will now be dropped on death");
@@ -85,17 +85,17 @@ public class Command_toggle extends BaseCommand
         // Clear inventory on join
         if (args[0].equalsIgnoreCase("clear_inventory_on_join"))
         {
-            if (clear_inventory_on_join.equalsIgnoreCase("true"))
+            if (clear_inventory_on_join)
             {
-                plugin.getConfig().set("server.clear_inventory_on_join", "false");
+                plugin.getConfig().set("server.clear_inventory_on_join", false);
                 plugin.saveConfig();
                 plugin.reloadConfig();
                 sender.sendMessage(ChatColor.GRAY + "Players inventories will not be cleared on join");
                 return true;
             }
-            if (clear_inventory_on_join.equalsIgnoreCase("false"))
+            if (!clear_inventory_on_join)
             {
-                plugin.getConfig().set("server.clear_inventory_on_join", "true");
+                plugin.getConfig().set("server.clear_inventory_on_join", true);
                 plugin.saveConfig();
                 plugin.reloadConfig();
                 sender.sendMessage(ChatColor.GRAY + "Players inventories will now be cleared when they join");
@@ -105,17 +105,17 @@ public class Command_toggle extends BaseCommand
         // Hunger enabled
         if (args[0].equalsIgnoreCase("hunger_enabled"))
         {
-            if (hunger_enabled.equalsIgnoreCase("true"))
+            if (hunger_enabled)
             {
-                plugin.getConfig().set("server.hunger_enabled", "false");
+                plugin.getConfig().set("server.hunger_enabled", false);
                 plugin.saveConfig();
                 plugin.reloadConfig();
                 sender.sendMessage(ChatColor.GRAY + "Hunger is now disabled");
                 return true;
             }
-            if (hunger_enabled.equalsIgnoreCase("false"))
+            if (!hunger_enabled)
             {
-                plugin.getConfig().set("server.hunger_enabled", "true");
+                plugin.getConfig().set("server.hunger_enabled", true);
                 plugin.saveConfig();
                 plugin.reloadConfig();
                 sender.sendMessage(ChatColor.GRAY + "Hunger is now enabled");
@@ -125,17 +125,17 @@ public class Command_toggle extends BaseCommand
         // Weather enabled
         if (args[0].equalsIgnoreCase("weather_enabled"))
         {
-            if (weather_enabled.equalsIgnoreCase("true"))
+            if (weather_enabled)
             {
-                plugin.getConfig().set("server.weather_enabled", "false");
+                plugin.getConfig().set("server.weather_enabled", false);
                 plugin.saveConfig();
                 plugin.reloadConfig();
                 sender.sendMessage(ChatColor.GRAY + "Weather is now disabled");
                 return true;
             }
-            if (weather_enabled.equalsIgnoreCase("false"))
+            if (!weather_enabled)
             {
-                plugin.getConfig().set("server.weather_enabled", "true");
+                plugin.getConfig().set("server.weather_enabled", true);
                 plugin.saveConfig();
                 plugin.reloadConfig();
                 sender.sendMessage(ChatColor.GRAY + "Weather is now enabled");
@@ -145,17 +145,17 @@ public class Command_toggle extends BaseCommand
         // Fall damage enabled
         if (args[0].equalsIgnoreCase("fall_damage_enabled"))
         {
-            if (fall_damage_enabled.equalsIgnoreCase("true"))
+            if (fall_damage_enabled)
             {
-                plugin.getConfig().set("server.fall_damage_enabled", "false");
+                plugin.getConfig().set("server.fall_damage_enabled", false);
                 plugin.saveConfig();
                 plugin.reloadConfig();
                 sender.sendMessage(ChatColor.GRAY + "Players will no longer take fall damage");
                 return true;
             }
-            if (fall_damage_enabled.equalsIgnoreCase("false"))
+            if (!fall_damage_enabled)
             {
-                plugin.getConfig().set("server.fall_damage_enabled", "true");
+                plugin.getConfig().set("server.fall_damage_enabled", true);
                 plugin.saveConfig();
                 plugin.reloadConfig();
                 sender.sendMessage(ChatColor.GRAY + "Players will now take fall damage");
@@ -165,17 +165,17 @@ public class Command_toggle extends BaseCommand
         // Splash potions enabled
         if (args[0].equalsIgnoreCase("splash_potions_enabled"))
         {
-            if (splash_potions_enabled.equalsIgnoreCase("true"))
+            if (splash_potions_enabled)
             {
-                plugin.getConfig().set("server.splash_potions_enabled", "false");
+                plugin.getConfig().set("server.splash_potions_enabled", false);
                 plugin.saveConfig();
                 plugin.reloadConfig();
                 sender.sendMessage(ChatColor.GRAY + "Players can no longer use splash potions");
                 return true;
             }
-            if (splash_potions_enabled.equalsIgnoreCase("false"))
+            if (!splash_potions_enabled)
             {
-                plugin.getConfig().set("server.splash_potions_enabled", "true");
+                plugin.getConfig().set("server.splash_potions_enabled", true);
                 plugin.saveConfig();
                 plugin.reloadConfig();
                 sender.sendMessage(ChatColor.GRAY + "Players can now use splash potions");
@@ -185,17 +185,17 @@ public class Command_toggle extends BaseCommand
         // Fun commands enabled
         if (args[0].equalsIgnoreCase("fun_commands"))
         {
-            if (fun_cmds.equalsIgnoreCase("enabled"))
+            if (fun_cmds)
             {
-                plugin.getConfig().set("commands.fun_commands", "disabled");
+                plugin.getConfig().set("commands.fun_commands", false);
                 plugin.saveConfig();
                 plugin.reloadConfig();
                 sender.sendMessage(ChatColor.GRAY + "Players can no longer use fun commands");
                 return true;
             }
-            if (fun_cmds.equalsIgnoreCase("disabled"))
+            if (!fun_cmds)
             {
-                plugin.getConfig().set("commands.fun_commands", "enabled");
+                plugin.getConfig().set("commands.fun_commands", true);
                 plugin.saveConfig();
                 plugin.reloadConfig();
                 sender.sendMessage(ChatColor.GRAY + "Players can now use fun commands");
@@ -205,17 +205,17 @@ public class Command_toggle extends BaseCommand
         // Login messages
         if (args[0].equalsIgnoreCase("login_messages"))
         {
-            if (login_messages.equalsIgnoreCase("true"))
+            if (login_messages)
             {
-                plugin.getConfig().set("server.login_messages_enabled", "false");
+                plugin.getConfig().set("server.login_messages_enabled", false);
                 plugin.saveConfig();
                 plugin.reloadConfig();
                 sender.sendMessage(ChatColor.GRAY + "Login messages are now disabled");
                 return true;
             }
-            if (login_messages.equalsIgnoreCase("false"))
+            if (!login_messages)
             {
-                plugin.getConfig().set("server.login_messages_enabled", "true");
+                plugin.getConfig().set("server.login_messages_enabled", true);
                 plugin.saveConfig();
                 plugin.reloadConfig();
                 sender.sendMessage(ChatColor.GRAY + "Login messages are now enabled");
@@ -225,17 +225,17 @@ public class Command_toggle extends BaseCommand
         // Admin applications enabled
         if (args[0].equalsIgnoreCase("applications_enabled"))
         {
-            if (applications_enabled.equalsIgnoreCase("true"))
+            if (applications_enabled)
             {
-                plugin.getConfig().set("commands.applications_enabled", "false");
+                plugin.getConfig().set("commands.applications_enabled", false);
                 plugin.saveConfig();
                 plugin.reloadConfig();
                 sender.sendMessage(ChatColor.GRAY + "Players can no longer access the /admininfo command");
                 return true;
             }
-            if (applications_enabled.equalsIgnoreCase("false"))
+            if (!applications_enabled)
             {
-                plugin.getConfig().set("commands.applications_enabled", "true");
+                plugin.getConfig().set("commands.applications_enabled", true);
                 plugin.saveConfig();
                 plugin.reloadConfig();
                 sender.sendMessage(ChatColor.GRAY + "Players can now use the /admininfo command");

@@ -23,13 +23,7 @@ public class CMD_Handler
         if (sender instanceof Player)
         {
             senderIsConsole = false;
-            playerSender = (Player) sender;
-
-            /*NLog.info(String.format("[PLAYER_COMMAND] %s (%s): /%s %s",
-                    playerSender.getName(),
-                    ChatColor.stripColor(playerSender.getDisplayName()),
-                    commandLabel,
-                    StringUtils.join(args, " ")), true);*/
+            playerSender = (Player)sender;
         }
         else
         {
@@ -46,7 +40,7 @@ public class CMD_Handler
         try
         {
             final ClassLoader classLoader = Nitrogen.class.getClassLoader();
-            dispatcher = (BaseCommand) classLoader.loadClass(String.format("%s.%s%s",
+            dispatcher = (BaseCommand)classLoader.loadClass(String.format("%s.%s%s",
                     COMMAND_PATH,
                     COMMAND_PREFIX,
                     cmd.getName().toLowerCase())).newInstance();

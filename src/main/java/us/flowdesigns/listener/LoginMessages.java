@@ -29,8 +29,8 @@ public class LoginMessages implements Listener
     {
         Player player = event.getPlayer();
         UUID uuid = player.getUniqueId();
-        String login_messages_enabled = plugin.getConfig().getString("server.login_messages_enabled");
-        if (login_messages_enabled.equalsIgnoreCase("true"))
+        boolean login_messages_enabled = plugin.getConfig().getBoolean("server.login_messages_enabled");
+        if (login_messages_enabled)
         {
             try
             {
@@ -38,9 +38,9 @@ public class LoginMessages implements Listener
                 Map<String, Object> player_login_messages = plugin.getConfig().getConfigurationSection("login-messages.players").getValues(false);
                 for (String key : login_messages.keySet())
                 {
-                    MemorySection login = (MemorySection) login_messages.get(key);
-                    String permission = (String) login.get("permission");
-                    String message = (String) login.get("message");
+                    MemorySection login = (MemorySection)login_messages.get(key);
+                    String permission = (String)login.get("permission");
+                    String message = (String)login.get("message");
                     if (LoginMessages.this.hasPermission(player, permission) && !player_login_messages.keySet().contains(player.getName()))
                     {
                         Bukkit.broadcastMessage(NUtil.colorize(message.replace("%player%", player.getName())));
@@ -49,8 +49,8 @@ public class LoginMessages implements Listener
 
                 for (String playerKeys : player_login_messages.keySet())
                 {
-                    MemorySection login = (MemorySection) player_login_messages.get(playerKeys);
-                    String message = (String) login.get("message");
+                    MemorySection login = (MemorySection)player_login_messages.get(playerKeys);
+                    String message = (String)login.get("message");
                     if (player_login_messages.keySet().contains(player.getName()))
                     {
                         Bukkit.broadcastMessage(NUtil.colorize(message.replace("%player%", player.getName())));
