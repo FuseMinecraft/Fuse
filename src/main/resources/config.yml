@@ -1,5 +1,5 @@
 #
-# Nitrogen v5.1.0 Configuration File
+# Nitrogen v5.2 Configuration File
 #
 
 server:
@@ -33,53 +33,11 @@ commands:
 players:
   # Who is the owner?
   owner:
-  - Model_3
+    - Jewish_Luigi
   # Who should be allowed to use some high level commands
   superusers:
-  - Model_3
-  - OxLemonxO
+    - Jewish_Luigi
+    - OxLemonxO
 social_links:
   GitHub: 'https://www.github.com/FuseMinecraft/Nitrogen'
   Discord: 'https://discord.gg/example'
-#
-# Login Messages
-#
-# There are two sections, ranks and players
-# The ranks are permission based. Some example ranks are already created, but you can
-# change these to your likings. Use %player% to display their name when they log in.
-#
-# Example:
-# SuperAdmin:
-#   permission: nitrogen.superadmin
-#   message: "&b%player% is a &oSuper Admin"
-#
-# The player section is designed for a player to have their own login message.
-# This is not permission based, but rather username based. Use %player% to display their name when they log in.
-# Example:
-# Madgeek1450:
-#   message: "&b%player% is a &6Master-ass-kicker&b.
-#
-login-messages:
-  ranks:
-    Moderator:
-      permission: nitrogen.moderator
-      message: "&b%player% is a &d&oModerator"
-    Admin:
-      permission: nitrogen.admin
-      message: "&b%player% is an &4&oAdmin"
-    Builder:
-      permission: nitrogen.builder
-      message: "&b%player% is a &oBuilder"
-    Developer:
-      permission: nitrogen.developer
-      message: "&b%player% is a &5&oDeveloper"
-    Owner:
-      permission: nitrogen.owner
-      message: "&b%player% is the &4&oOwner"
-  players:
-    Model_3:
-      message: "&b%player% is &9&oThe Creator of Nitrogen"
-    yashi4554:
-      message: "&b%player% is an &4&oAdmin&b and the &9The Supreme Builder"
-    OxLemonxO:
-      message: "&b%player% is a Developer for Nitrogen and &4Ki&5ng &6Of &5Le&6mo&7ns&b!"

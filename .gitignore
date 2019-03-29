@@ -1,6 +1,6 @@
 # Nitrogen excludes
 build.properties
-git.properties
+dependency-reduced-pom.xml
 
 # Netbeans excludes
 /nbproject/private

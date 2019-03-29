@@ -1,4 +1,4 @@
-# Nitrogen v5.1.0 Command and Permission Help
+# Nitrogen v5.2 Command and Permission Help
 # To block people from dropping items, use the permission node: nitrogen.nodrop
 # When a command has a -s option, it allows you to use it silently
 
@@ -6,7 +6,7 @@ adminchat:
   description: Talk privately with other admins
   aliases: o
   permissions:
-  - nitrogen.adminchat
+    - nitrogen.adminchat
   usage: /<command> <message>
 admininfo:
   description: Tells a person how to apply for admin
@@ -45,8 +45,8 @@ expel:
 nitrogen:
   description: Shows information about Nitrogen
   permissions:
-  - nitrogen.update (To update Nitrogen)
-  - nitrogen.extendedhelp (Admin commands in Nitrogen)
+    - nitrogen.update (To update Nitrogen)
+    - nitrogen.extendedhelp (Admin commands in Nitrogen)
   usage: /<command> [reload | debug | help | update]
 fw:
   description: Shoots a firework into the sky
