@@ -21,7 +21,7 @@ public class Command_unloadchunks extends BaseCommand
         int numChunks = 0;
         if (!sender.hasPermission("nitrogen.unloadchunks"))
         {
-            sender.sendMessage(Messages.MSG_NO_PERMS);
+            sender.sendMessage(Messages.NO_PERMISSION);
             return true;
         }
         if (senderIsConsole)

@@ -2,6 +2,7 @@ package me.telesphoreo;
 
 import java.io.File;
 import java.io.InputStream;
+import java.util.Objects;
 import java.util.Properties;
 import me.telesphoreo.commands.CMD_Handler;
 import me.telesphoreo.commands.CMD_Loader;
@@ -28,7 +29,7 @@ public class Nitrogen extends JavaPlugin
     public static Nitrogen instance;
 
     public static final BuildProperties build = new BuildProperties();
-    public static final String COMPILE_NMS_VERSION = "v1_13_R2";
+    public static final String COMPILE_NMS_VERSION = "v1_14_R1";
     public static String pluginName;
     public static String pluginVersion;
 
@@ -50,7 +51,7 @@ public class Nitrogen extends JavaPlugin
     {
         build.load(Nitrogen.plugin);
         warnVersion();
-        Metrics metrics = new Metrics(this);
+        new Metrics(this);
         // Listeners
         server.getPluginManager().registerEvents(new ConfigListener(), Nitrogen.plugin);
         server.getPluginManager().registerEvents(new Monitors(), Nitrogen.plugin);
@@ -67,7 +68,7 @@ public class Nitrogen extends JavaPlugin
                 CMD_Loader.scan();
             }
         }.runTaskLater(plugin, 20L);
-        Bukkit.getScheduler().scheduleSyncRepeatingTask(Bukkit.getPluginManager().getPlugin("Nitrogen"), () ->
+        Bukkit.getScheduler().scheduleSyncRepeatingTask(Objects.requireNonNull(Bukkit.getPluginManager().getPlugin("Nitrogen")), () ->
         {
             if (NUtil.NEntityWiper.wipeEntities(true, true) == 1)
             {
@@ -109,7 +110,6 @@ public class Nitrogen extends JavaPlugin
     public static class BuildProperties
     {
         public String author;
-        public String codename;
         public String version;
         public String number;
         public String date;
@@ -127,7 +127,6 @@ public class Nitrogen extends JavaPlugin
                 }
 
                 author = props.getProperty("buildAuthor", "unknown");
-                codename = props.getProperty("buildCodename", "unknown");
                 version = props.getProperty("buildVersion", pluginVersion);
                 number = props.getProperty("buildNumber", "1");
                 date = props.getProperty("buildDate", "unknown");

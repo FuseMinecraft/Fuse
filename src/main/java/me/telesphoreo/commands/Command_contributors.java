@@ -13,7 +13,7 @@ public class Command_contributors extends BaseCommand
     public boolean run(final CommandSender sender, final Player sender_p, final Command cmd, final String commandLabel, final String[] args, final boolean senderIsConsole)
     {
         sender.sendMessage(ChatColor.RED + "Contributors to Nitrogen:\n" +
-                "Jewish_Luigi - Developer\n" +
+                "Telesphoreo - Developer\n" +
                 "OxLemonxO - Developer\n" +
                 "Madgeek1450, Prozza - TotalFreedomMod code\n" +
                 "TheMinecraft (_Windows) - Unload chunks command");

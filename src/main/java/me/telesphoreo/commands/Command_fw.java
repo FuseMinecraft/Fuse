@@ -46,7 +46,7 @@ public class Command_fw extends BaseCommand
 
         if (!sender.hasPermission("nitrogen.firework"))
         {
-            sender.sendMessage(Messages.MSG_NO_PERMS);
+            sender.sendMessage(Messages.NO_PERMISSION);
             return true;
         }
 

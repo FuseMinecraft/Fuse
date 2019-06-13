@@ -17,7 +17,7 @@ public class Command_gcmd extends BaseCommand
     {
         if (!sender.hasPermission("nitrogen.gcmd"))
         {
-            sender.sendMessage(Messages.MSG_NO_PERMS);
+            sender.sendMessage(Messages.NO_PERMISSION);
             return true;
         }
 

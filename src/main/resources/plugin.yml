@@ -1,9 +1,9 @@
 name: ${project.name}
 version: ${project.version}
 description: Utility plugin for Minecraft servers
-authors: [Jewish_Luigi, OxLemonxO, Madgeek1450, Prozza, TheMinecraft]
+authors: [Telesphoreo, OxLemonxO, Madgeek1450, Prozza, TheMinecraft]
 main: me.telesphoreo.Nitrogen
-api-version: 1.13
+api-version: 1.14
 commands:
   adminchat:
     description: Talk privately with other admins
@@ -69,7 +69,7 @@ commands:
     usage: /<command> <player>
   nitrogen:
     description: Shows information about Nitrogen
-    usage: /<command> [reload | debug | help | update]
+    usage: /<command> [reload | debug | help]
   pluginmanage:
     description: Manage plugins
     aliases: [plc, pm]

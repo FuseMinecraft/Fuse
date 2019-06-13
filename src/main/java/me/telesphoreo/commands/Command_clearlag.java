@@ -15,7 +15,7 @@ public class Command_clearlag extends BaseCommand
     {
         if (!sender.hasPermission("nitrogen.clearlag"))
         {
-            sender.sendMessage(Messages.MSG_NO_PERMS);
+            sender.sendMessage(Messages.NO_PERMISSION);
             return true;
         }
 

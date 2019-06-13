@@ -21,7 +21,7 @@ public class Command_ship extends BaseCommand
         }
         if (!sender.hasPermission("nitrogen.ship"))
         {
-            sender.sendMessage(Messages.MSG_NO_PERMS);
+            sender.sendMessage(Messages.NO_PERMISSION);
             return true;
         }
         if (args.length != 2)

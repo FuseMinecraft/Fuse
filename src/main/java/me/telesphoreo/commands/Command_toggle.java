@@ -24,7 +24,7 @@ public class Command_toggle extends BaseCommand
         boolean applications_enabled = plugin.getConfig().getBoolean("commands.applications_enabled");
         if (!sender.hasPermission("nitrogen.toggle"))
         {
-            sender.sendMessage(Messages.MSG_NO_PERMS);
+            sender.sendMessage(Messages.NO_PERMISSION);
             return true;
         }
         if (args.length == 0)

@@ -16,7 +16,7 @@ public class Command_tprandom extends BaseCommand
     {
         if (!sender.hasPermission("nitrogen.tprandom"))
         {
-            sender.sendMessage(Messages.MSG_NO_PERMS);
+            sender.sendMessage(Messages.NO_PERMISSION);
             return true;
         }
         if (!senderIsConsole)

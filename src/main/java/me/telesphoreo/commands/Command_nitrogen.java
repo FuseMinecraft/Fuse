@@ -7,7 +7,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 @CommandPermissions(source = SourceType.BOTH)
-@CommandParameters(description = "Shows information about Nitrogen", usage = "/<command> [reload | debug | help | update]")
+@CommandParameters(description = "Shows information about Nitrogen", usage = "/<command> [reload | debug | help]")
 public class Command_nitrogen extends BaseCommand
 {
     @Override
@@ -26,9 +26,7 @@ public class Command_nitrogen extends BaseCommand
         if (args.length == 0)
         {
             sender.sendMessage(ChatColor.GOLD + String.format("Version "
-                            + ChatColor.BLUE + "%s - %s Build %s " + ChatColor.GOLD + "("
-                            + ChatColor.BLUE + "%s" + ChatColor.GOLD + ")",
-                    build.codename,
+                            + ChatColor.BLUE + "%s.%s.%s",
                     build.version,
                     build.number,
                     build.head));
@@ -37,7 +35,7 @@ public class Command_nitrogen extends BaseCommand
                             + ChatColor.BLUE + "%s",
                     build.date,
                     build.author));
-            sender.sendMessage(ChatColor.GOLD + "Designed for: " + ChatColor.BLUE + "Spigot 1.13.2");
+            sender.sendMessage(ChatColor.GOLD + "Designed for: " + ChatColor.BLUE + "Minecraft 1.14");
             sender.sendMessage(ChatColor.RED + "Nitrogen is an advanced plugin designed to provide useful utilities for a Minecraft server");
             sender.sendMessage(ChatColor.GREEN + "Type /contributors to see who contributed to Nitrogen");
             sender.sendMessage(ChatColor.GREEN + "Type /nitrogen reload to reload the configuration file");
@@ -54,7 +52,7 @@ public class Command_nitrogen extends BaseCommand
             {
                 if (!sender.hasPermission("nitrogen.reload"))
                 {
-                    sender.sendMessage(Messages.MSG_NO_PERMS);
+                    sender.sendMessage(Messages.NO_PERMISSION);
                     return true;
                 }
                 plugin.reloadConfig();
@@ -65,10 +63,10 @@ public class Command_nitrogen extends BaseCommand
             {
                 if (!sender.hasPermission("nitrogen.debug"))
                 {
-                    sender.sendMessage(Messages.MSG_NO_PERMS);
+                    sender.sendMessage(Messages.NO_PERMISSION);
                     return true;
                 }
-                sender.sendMessage(ChatColor.GRAY + "Config Options");
+                sender.sendMessage(ChatColor.GRAY + "Config Options:");
                 sender.sendMessage(ChatColor.GRAY + "server.spawn_on_join: " + spawn_on_join);
                 sender.sendMessage(ChatColor.GRAY + "server.applications_enabled: " + applications_enabled);
                 sender.sendMessage(ChatColor.GRAY + "server.dev: " + dev);

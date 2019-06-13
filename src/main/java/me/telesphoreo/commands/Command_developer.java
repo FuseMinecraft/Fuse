@@ -16,6 +16,12 @@ public class Command_developer extends BaseCommand
         boolean dev = plugin.getConfig().getBoolean("server.dev");
         List superusers = plugin.getConfig().getList("players.superusers");
 
+        if (superusers == null)
+        {
+            sender.sendMessage(ChatColor.RED + "The superusers list could not be found.");
+            return true;
+        }
+
         if (superusers.contains(sender.getName()))
         {
             if (args.length != 1)

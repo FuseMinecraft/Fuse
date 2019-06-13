@@ -1,4 +1,4 @@
-# Nitrogen v5.2 Command and Permission Help
+# Nitrogen v5.3 Command and Permission Help
 # To block people from dropping items, use the permission node: nitrogen.nodrop
 # When a command has a -s option, it allows you to use it silently
 
@@ -47,7 +47,7 @@ nitrogen:
   permissions:
     - nitrogen.update (To update Nitrogen)
     - nitrogen.extendedhelp (Admin commands in Nitrogen)
-  usage: /<command> [reload | debug | help | update]
+  usage: /<command> [reload | debug | help]
 fw:
   description: Shoots a firework into the sky
   usage: /<command>

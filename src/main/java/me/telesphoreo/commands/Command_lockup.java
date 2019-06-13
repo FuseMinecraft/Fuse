@@ -24,7 +24,7 @@ public class Command_lockup extends BaseCommand
         }
         if (!sender.hasPermission("nitrogen.lockup"))
         {
-            sender.sendMessage(Messages.MSG_NO_PERMS);
+            sender.sendMessage(Messages.NO_PERMISSION);
             return true;
         }
         if (args.length == 1)
@@ -70,7 +70,7 @@ public class Command_lockup extends BaseCommand
                 startLockup(player);
                 sender.sendMessage(ChatColor.GRAY + "Locked up " + player.getName() + ".");
             }
-            else if ("off".equals(args[1]))
+            else if (args[1].equalsIgnoreCase("off"))
             {
                 final Player player = getPlayer(args[0]);
 

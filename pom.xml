@@ -5,11 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>me.telesphoreo</groupId>
     <artifactId>Nitrogen</artifactId>
-    <version>5.2</version>
+    <version>5.3</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <nitrogen.build.version>${project.version}</nitrogen.build.version>
-        <build.codename>Hellstone</build.codename>
         <build.date>${maven.build.timestamp}</build.date>
         <jar.finalName>${project.name}</jar.finalName>
         <timestamp>${maven.build.timestamp}</timestamp>
@@ -25,18 +24,33 @@
         <dependency>
             <groupId>org.bukkit</groupId>
             <artifactId>bukkit</artifactId>
-            <version>1.13.2-R0.1-SNAPSHOT</version>
+            <version>1.14.2-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.bstats</groupId>
             <artifactId>bstats-bukkit</artifactId>
-            <version>1.4</version>
+            <version>1.5</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot</artifactId>
-            <version>1.13.2-R0.1-SNAPSHOT</version>
+            <version>1.14-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.9</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -52,7 +66,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.0</version>
+                <version>3.8.1</version>
                 <configuration>
                     <outputFileName>Nitrogen.jar</outputFileName>
                     <source>1.8</source>
@@ -86,7 +100,7 @@
             <plugin>
                 <groupId>pl.project13.maven</groupId>
                 <artifactId>git-commit-id-plugin</artifactId>
-                <version>2.2.6</version>
+                <version>3.0.0</version>
                 <executions>
                     <execution>
                         <id>get-the-git-infos</id>
@@ -136,7 +150,6 @@
                                               comment="Build information. Edit this to your liking.">
                                     <entry key="buildAuthor" default="unknown"/>
                                     <entry key="buildNumber" default="0"/>
-                                    <entry key="buildCodename" value="${build.codename}"/>
                                     <entry key="buildVersion" value="${nitrogen.build.version}"/>
                                     <entry key="buildDate" value="${timestamp}"/>
                                     <entry key="buildHead" value="${git.commit.id.abbrev}"/>

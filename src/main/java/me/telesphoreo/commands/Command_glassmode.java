@@ -16,7 +16,7 @@ public class Command_glassmode extends BaseCommand
     {
         if (!sender.hasPermission("nitrogen.glassmode"))
         {
-            sender.sendMessage(Messages.MSG_NO_PERMS);
+            sender.sendMessage(Messages.NO_PERMISSION);
             return true;
         }
         if (senderIsConsole)

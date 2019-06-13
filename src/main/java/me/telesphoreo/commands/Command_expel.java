@@ -26,7 +26,7 @@ public class Command_expel extends BaseCommand
         }
         if (!sender.hasPermission("nitrogen.expel"))
         {
-            sender.sendMessage(Messages.MSG_NO_PERMS);
+            sender.sendMessage(Messages.NO_PERMISSION);
             return true;
         }
         if (senderIsConsole)
